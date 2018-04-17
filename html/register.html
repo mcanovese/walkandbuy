@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it" xml:lang="it">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <link type="text/css" rel="stylesheet" href="../css/style_alt.css" media="screen" />
+    <link type="text/css" rel="stylesheet" href="../css/print.css" media="print" />
+    <link type="text/css" rel="stylesheet" href="../css/screenreader.css" media="speech" />
+    <!--[if IE 9]> <link rel="stylesheet" href="" media="screen" /> <![endif]-->
+    <!--[if IE 8]> <link rel="stylesheet" href="" media="screen" /> <![endif]-->
+    <!--[if IE 7]> <link rel="stylesheet" href="" media="screen" /> <![endif]-->
+    <title>Registrazione | WalkAndBuy</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="index,follow" />
+    <meta http-equiv="content-language" content="it" />
+    <meta http-equiv="content-script-type" content="text/javascript" />
+    <meta http-equiv="content-style-type" content="text/css" />
+    <meta http-equiv="window-target" content="_top" />
+
+    <link rel="alternate" type="text/html" hreflang="en-gb" href="#" title="English (UK)" />
+    <link rel="alternate" type="text/html" hreflang="it" href="#" title="Italiano" />
+    <link rel="shortcut icon" href="../img/icon.png" />
+</head>
+
+<body>
+    <div id="header">
+        <a href="../../index.php"><img id="logo" alt="Logo Walk And Buy" src="../img/logo.png" /></a>
+        <ul>
+            <li>
+                <a class="header_button" href="../../help.php" title="Aiuto">Aiuto</a>
+            </li>
+        </ul>
+    </div>
+    <div id="breadcrumb">
+
+
+    </div>
+    <div id="box">
+
+        <div id="box_center">
+            <h1>Registrati con la tua mail</h1>
+            <form action="../../register.php" method="post">
+                <fieldset>
+                    <h2>Nome</h2>
+                    <input required type="text" maxlength="100" name="nome" id="nome" title="nome" />                                    <!-- qui usato HTML 5 per for required -->
+                    <h2>Cognome</h2>
+                    <input required type="text" maxlength="100" name="cognome" id="cognome" title="cognome" />
+                    <h2>Data di Nascita</h2>
+                    <input required type="text" maxlength="10" name="data_nascita" id="data_nascita" title="data_nascita" value="AAAA-MM-GG" />
+                    <br/>
+                    <h2>Genere</h2>
+                    <br/> M <input required type="radio" name="genere" value="M" /> F <input type="radio" name="genere" value="F" />
+                    <br/> <br/>
+
+                    <h2>Indirizzo email</h2>
+                    <input required type="text" maxlength="100" name="email" id="email" title="email" />
+                    <h2>Password</h2>
+                    <input required type="password" maxlength="100" name="password" id="password" title="password" />
+                    <!--<input type="checkbox" title="Mostra password" name="view_pwd" value="view_pwd" /> Mostra password-->
+                   
+                    
+                    <h2>Seleziona il tuo comune di residenza, tra quelli in cui &egrave attivo il servizio</h2>
+                    <select requierd> 
+                        <option selected disabled value="xxx">Seleziona Comune</option>
+                        <option value="xxx">Camposampiero</option>
+                        <option value="xxx">Santa Giustina In colle</option>
+                    </select>
+                    
+                     <input required type="submit" class="search_button" name="register" value="Registrati" />
+                    
+                </fieldset>
+            </form>
+        </div>
+        <p>
+            <span>Cliccando su "Registrati", accetti i</span>
+            <a href="./terms.html" title="Termini e condizioni">Termini e condizioni</a>
+            <span> e la politica sulla </span>
+            <a href="./privacy.html" title="Privacy">Privacy</a>
+            <span> di Homie.</span>
+        </p>
+        <p>
+            <span>Sei già registrato?</span>
+            <a href="./login.html" title="Entra">Entra</a>
+        </p>
+    </div>
+    <div id="footer">
+        <ul>
+            <li>
+                <a class="footer_link" href="./terms.html" title="Termini e condizioni">Termini e condizioni</a>
+            </li>
+            <li>
+                <a class="footer_link" href="./privacy.html" title="Privacy" lang="en">Privacy</a>
+            </li>
+            <li>
+                <a class="footer_link" href="./whoare.html" title="Chi siamo">Chi siamo</a>
+            </li>
+            <li>
+                <a class="footer_link" href="../../help.php" title="Aiuto">Aiuto</a>
+            </li>
+            <li>
+                <a class="footer_link" href="./map.html" title="Mappa del sito">Mappa del sito</a>
+            </li>
+        </ul>
+        <p>
+            <small>Homie&copy;2016 - <span lang="en">All rights reserved</span></small>
+        </p>
+    </div>
+</body>
+
+</html>

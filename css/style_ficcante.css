@@ -1,0 +1,1079 @@
+/*
+COLORI
+blue: #1c65a5
+orange: #ff9400;
+grey: rgba(183, 183, 183, 0.31);
+
+SELETTORI
+a:link      for unvisited links, mutually exclusive to :visit
+a:visited   for visited links, mutually exclusive to :link
+a:focus     for focused elements such as selection by accesskey using keyboard
+a:hover     for elements in the state of being hovered upon by mouse
+a:active    for elements that are in the state of being activiated
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: Verdana, Arial, Helvetica sans-serif;
+    max-width: 100%;
+    margin: auto;
+    font-size: 13px;
+    background-color:#fff;
+}
+
+
+/*a:visited {
+    color: #551A8B;
+} */
+
+
+/*----------------------*/
+
+
+/*        HEADER        */
+
+
+/*----------------------*/
+
+#header {
+    top: 0;
+    position:fixed;
+    height: 3.5em;
+    width: 100%;
+    
+    background-color: #fff;
+}
+
+#logo {
+    position:fixed;
+    float:left;
+
+    margin: 0.4em 0em 0em 1em;
+    height: 5%;
+    text-decoration: none;
+}
+
+#header ul {
+    padding-top:9em;
+    float:left;
+    margin: 0.8em 0.5em;
+  
+}
+
+#header li[class=insert_ad] {
+   padding-right: 10px; 
+}
+
+#header li {
+    font-size: 130%;
+    display:grid;
+    
+}
+
+.header_button {
+    color: #000;
+    text-decoration:none;
+    border-left-style:outset;
+    border-bottom-right-radius:15%;
+    border-top-right-radius:15%;
+    
+    padding: 1.3em 0.5em;
+   
+    
+}
+
+.header_button:hover {
+    
+    background-color:#1c65a5;
+    color: #fff;
+    transition: 0.7s;
+    -left:1em;
+    
+}
+
+#menu_burger {
+    display: none;
+}
+
+
+/*----------------------*/
+
+
+/*         USER         */
+
+
+/*----------------------*/
+
+.highlighted {
+    background-color: #1c65a5;
+    color: #000;
+    text-decoration: none;
+    display: block;
+    padding: 10px 10px;
+    
+}
+
+.user_profile {
+    border: 0.5px solid rgba(111, 111, 111, 0.31);
+    width: 65%;
+    border-bottom: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+
+#profile_fieldset {
+    margin-left: 0;
+}
+
+
+/*----------------------*/
+
+
+/*       MESSAGES       */
+
+
+/*----------------------*/
+
+#messages {
+    width: 100%;
+    margin-bottom: 8%;
+}
+
+#messages .msg_left,
+.msg_right {
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+    padding: 0.2em;
+    display: block;
+    text-align: left;
+    width: 44%;
+    border: 0.5px solid rgb(49, 98, 60);
+    border-radius: 7px;
+}
+
+#messages .msg_right {
+    margin-left: 55%;
+    background-color: rgba(106, 208, 93, 0.24);
+}
+
+#messages .msg_left {
+    background-color: rgb(255, 255, 255);
+}
+
+#messages .message {
+    margin-left: 0.45em;
+    word-wrap: break-word;
+}
+
+#messages #approve {}
+
+#messages #reject {}
+
+#messages .data_ora {
+    text-align: right;
+    font-size: 65%;
+    color: #646464;
+    padding-right: 1em;
+}
+
+#answer_span {
+    font-size: 120%;
+}
+
+#messages h2 {
+    text-align: center;
+}
+
+#messages li {
+    display: block;
+    text-align: center;
+    padding: 1%;
+    border: 1.5px solid rgba(183, 183, 183, 0.31);
+}
+
+#messages span {
+    margin-left: 2%;
+}
+
+#hide_msg {
+    width: 1em;
+    height: auto;
+    float: right;
+    margin: 0;
+}
+
+#send_msg {
+    width: 40em;
+    margin: 0 auto;
+}
+
+#send_msg fieldset {
+    border-radius: 7px;
+    border: 1px solid rgba(183, 183, 183, 0.71);
+    padding: 1em;
+    margin: 2em;
+}
+
+#send_msg fieldset input[type='submit'] {
+    font-size: 140%;
+    float: right;
+    margin-top: 1em;
+}
+
+#send_msg_box {
+    margin-top: 1em;
+    font-size: 120%;
+    border: 1.5px solid rgba(183, 183, 183, 0.31);
+    height: 5em;
+    width: 30em;
+}
+
+#new_message {
+    font-size: 120%;
+    background-color: #1c65a5;
+    color: #fff;
+    border: 1.5px solid #1c65a5;
+    /* perchè altrimenti non me l'avrebbe sovrascritto con hover*/
+    margin-left: 2%;
+    padding: 3px 10px;
+}
+
+
+/*----------------------*/
+
+
+/*        PLACES        */
+
+
+/*----------------------*/
+
+.user_profile select {
+    border: 1.5px solid rgba(183, 183, 183, 0.31);
+    height: 1.5em;
+    width: 20em;
+    margin-bottom: 0.5em;
+}
+
+#insert_ad_form {
+    margin-bottom: 10%;
+}
+
+#places {
+    float: right;
+    margin-right: 15%;
+    display: block;
+    margin-bottom: 15% !important;
+}
+
+#preview_places {
+    margin-bottom: 8% !important;
+}
+
+#user_places {
+    margin-bottom: 10%;
+}
+
+#form_place_send {
+    margin-bottom: 10%;
+}
+
+.ib_profile {
+    float: left;
+}
+
+.user_profile legend {
+    font-size: 1.7em;
+    text-align: center;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+}
+
+.user_profile label {
+    margin: 0.3em 1em 0.3em 3em;
+    font-size: 1.2em;
+    display: inline-block;
+    width: 200px;
+}
+
+#label_description * {
+    vertical-align: top;
+    margin-top: 0.5em;
+}
+
+#preview_places {
+    margin: auto;
+}
+
+#preview_places label {
+    display: inline-block;
+    float: left;
+    text-align: left;
+}
+
+#preview_places legend a {
+    margin: 0;
+    float: none;
+}
+
+#modify_buttons a {
+    margin-left: 2em;
+}
+
+#modify_buttons {
+    margin-top: 1em;
+    margin-right: 2em;
+}
+
+#modify_buttons input[type=reset],
+#modify_buttons input[type=submit] {
+    font-size: 1.1em;
+    margin-right: 2em;
+}
+
+#modify_buttons input[type=submit] {
+    font-size: 1.5em;
+    border: 1.5px solid #1c65a5;
+    background-color: #fff;
+    color: #1c65a5;
+    float: right;
+}
+
+#modify_buttons input[type=submit]:hover,
+#modify_buttons input[type=submit]:active {
+    background-color: #1c65a5;
+    color: #fff;
+    transition: 0.4s;
+}
+
+#modify_buttons input[type=reset],
+#modify_buttons a {
+    margin-top: 0.3em;
+}
+
+#modify_buttons * {
+    margin-bottom: 1.5em;
+}
+
+#back_button_modify {
+    float: left;
+    margin-left: 5em;
+}
+
+.user_profile input[type=text],
+.user_profile input[type=password],
+.user_profile input[type=textarea] {
+    border: 1.5px solid rgba(183, 183, 183, 0.31);
+    height: 1.5em;
+    width: 20em;
+    margin-bottom: 0.5em;
+}
+
+.user_profile textarea {
+    border: 1.5px solid rgba(183, 183, 183, 0.31);
+    width: 20em;
+    height: 8em;
+}
+
+.user_profile a {
+    float: right;
+    margin-right: 1.5em;
+    text-decoration: none;
+}
+
+#fieldset_content {
+    margin-bottom: 3em;
+    margin-top: 1em;
+}
+
+hr {
+    border: 0.1px solid rgba(183, 183, 183, 0.31);
+    margin: auto;
+}
+
+
+/*----------------------*/
+
+
+/*         ADS          */
+
+
+/*----------------------*/
+
+#ads {
+    float: right;
+    margin-right: 15%;
+    display: block;
+    margin-bottom: 15% !important;
+}
+
+#user_ads {
+    margin-bottom: 10%;
+}
+
+
+/*----------------------*/
+
+
+/*        SEARCH        */
+
+
+/*----------------------*/
+
+.search_content {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.search_bar {
+    margin-top: 3.6em;
+}
+
+#search_results_bar {
+    height: 2.7em !important;
+    border-bottom: 1px solid rgba(183, 183, 183, 0.15);
+}
+
+#search_results_bar fieldset {
+    padding: 0.1em 0 0 0;
+    !important;
+    float: right;
+    background-color: rgba(183, 183, 183, 0.15);
+}
+
+#search_results_bar select {
+    height: 1.6em;
+    background-color: #fff;
+}
+
+#search_results_bar fieldset #search {
+    background-color: #fff;
+    font-size: 100%;
+    color: #6d6d6d;
+    height: 1.8em !important;
+}
+
+#search_results_bar .search_button {
+    font-size: 110%;
+}
+
+#search_results {
+    float: left;
+    width: 70%;
+    margin-bottom: 8%;
+    margin-left: 1%;
+}
+
+#search_results h2 {
+    margin: 1em auto;
+    padding-bottom: 0 !important;
+}
+
+#search_results h3 {
+    text-align: center;
+    margin: 1em auto;
+}
+
+#search_filter {
+    padding-top: 8em;
+    float: left;
+    height: 50%;
+    width: 28%;
+}
+
+#search_filter_form legend {
+    font-size: 1.7em;
+    text-align: center;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+}
+
+#search_filter_form select {
+    border: 1.5px solid rgba(183, 183, 183, 0.31);
+    height: 1.5em;
+    width: 10em;
+    margin-bottom: 0.5em;
+}
+
+#search_filter_form #date {
+    width: 15em;
+}
+
+#search_filter_form label {
+    margin: 0.3em 1em;
+    font-size: 1.2em;
+    display: inline-block;
+    width: 8em;
+}
+
+#search_filter_form input[type=text] {
+    border: 1.5px solid rgba(183, 183, 183, 0.31);
+    height: 1.5em;
+    width: 8em;
+    margin-bottom: 0.5em;
+}
+
+#refresh_form {
+    width: 1em;
+    height: auto;
+    margin: 0 0 0 0.5em;
+}
+
+#search_failed {
+    width: 15em;
+    margin: 1em auto 2em auto;
+}
+
+#search_failed ul {
+    list-style: square;
+}
+
+.ad_preview {
+    border: 2px solid rgb(183, 183, 183);
+    height: 13em;
+    margin-bottom: 1em;
+    margin-left: 3em;
+}
+
+.ad_preview_list {
+    height: 13em;
+    display: inline-block;
+}
+
+.ad_preview_info {
+    float: right;
+    width: 40em;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+.ad_preview_attr {
+    margin-bottom: 0.8em;
+    margin-left: 2em;
+    font-weight: 600;
+    color: #898989;
+    width: 10em;
+}
+
+.ad_preview a {
+    float: right;
+}
+
+.ad_preview_info p {
+    display: inline-block;
+}
+
+.ad_preview_info li {
+    display: block;
+}
+
+.ad_preview img {
+    float: left;
+    border-radius: 0% !important;
+    height: 13em !important;
+    margin: 0em !important;
+}
+
+.ad_view,
+#reviews {
+    border: 2px solid rgb(183, 183, 183);
+    height: auto;
+    width: 50em;
+    margin: 1em auto;
+}
+
+.review {
+    width: 20%;
+    display: inline-block;
+    border: 2px solid rgb(183, 183, 183);
+    padding: 0.5em;
+    margin: 1% 1%;
+}
+
+.review label {
+    margin-left: 2%;
+}
+
+.search_bar h1 {
+    font-size: 300%;
+    width: 50%;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin: auto;
+    padding-top: 6%;
+    font-weight: 500;
+}
+
+.search_bar form {
+    padding: 5% 0% 5% 10%;
+}
+
+#search_results_bar form {
+    padding: 0%;
+}
+
+.search_bar fieldset {
+    -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    width: 85%;
+    font-size: 120%;
+    border: 1.5px solid rgba(183, 183, 183, 0.31);
+    padding: 1%;
+    background-color: rgb(255, 255, 255);
+}
+
+#search_results_bar fieldset {
+    -moz-box-shadow: 0em 0em!important;
+    -webkit-box-shadow: 0em 0em !important;
+    float: right;
+    width: 60%;
+    font-size: 110%;
+    border: none;
+    background-color: #fff;
+    padding: 0;
+}
+
+.search_bar fieldset #search {
+    height: 2.15em;
+    font-size: 110%;
+    width: 80%;
+    border: 1.5px solid rgba(183, 183, 183, 0.31);
+    /* aggiunto per eliminare quello di default */
+    background-color: #fff;
+    color: #3c3c3c;
+    padding-left: 2px;
+    margin-left: 3em;
+}
+
+#search_results_bar #search {
+    margin-top: 0.2em;
+    width: 70%;
+    height: 1.4em !important;
+}
+
+#order_results {
+    margin-left: 30em;
+}
+
+#order_results label {
+    font-size: 110%;
+}
+
+#order_results a {
+    text-decoration: none;
+    color: #1c65a5;
+    padding: 0.5em 0.5em 0em 0.2em;
+}
+
+.search_button {
+    border-radius: 4px;
+    font-size: 140%;
+    background-color: #fff;
+    color: #1c65a5;
+    /*rgb(255, 148, 0);*/
+    border: 1.5px solid #1c65a5;
+    /* perchè altrimenti non me l'avrebbe sovrascritto con hover*/
+    margin-left: 2%;
+    padding: 3px 5px;
+}
+
+.search_button:hover,
+.search_button:active {
+    background-color: #1c65a5;
+    color: #fff;
+    transition: 0.4s;
+}
+
+.search_bar select {
+    height: 2.4em;
+    background-color: #fff;
+    font-size: 110%;
+    color: rgb(65, 65, 65);
+    border: 1.5px solid rgba(183, 183, 183, 0.31);
+}
+
+#show_places {
+    display: inline-block;
+    clear: both;
+}
+
+
+/*----------------------*/
+
+
+/*      BREADCRUMB      */
+
+
+/*----------------------*/
+
+#breadcrumb {
+    padding-top: 0.5em;
+    font-size: 110%;
+    margin-left: 2em;
+    height: 1.5em;
+    float: left;
+}
+
+
+/*----------------------*/
+
+
+/*        ASIDE         */
+
+
+/*----------------------*/
+
+#aside {
+    border: 0.5px solid rgb(222, 222, 222);
+    position: fixed;
+    top: 15%;
+    width: 15%;
+    float: left;
+}
+
+#aside ul li {
+    text-align: center;
+}
+
+.aside_button {
+    color: #1c65a5;
+    text-decoration: none;
+    display: block;
+    padding: 10px 10px;
+}
+
+.aside_button.visited:hover {
+    background-color: purple;
+    color: #fff;
+    transition: 0.4s;
+}
+
+.aside_button:hover {
+    background-color: #1c65a5;
+    color: #fff;
+    transition: 0.4s;
+}
+
+.aside_button_highlighted {
+    text-decoration: none;
+    display: block;
+    padding: 10px 10px;
+    background-color: #1c65a5;
+    color: #fff;
+}
+
+
+/*----------------------*/
+
+
+/*        CONTENT       */
+
+
+/*----------------------*/
+
+.content {
+    margin: 0% 5% 0% 5%;
+    width: 90%;
+}
+
+.content h2,
+.search_content h2 {
+    text-align: center;
+}
+
+.content h2 {
+    margin-bottom: 5%;
+}
+
+.search_content h2 {
+    margin
+}
+
+.content img {
+    height: 150px;
+    width: auto;
+    margin: 2em 5em 0em 1em;
+}
+
+#figcaption {
+    margin-right: 3em;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+
+/*----------------------*/
+
+
+/*         INSERT       */
+
+
+/*----------------------*/
+
+.insert {
+    position: fixed;
+    top: 11.5%;
+    left: 25%;
+    min-height: 78%;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.insert h2 {
+    text-align: center;
+}
+
+.insert form label {
+    display: block;
+}
+
+.insert form input[type="number"] {
+    width: 50px;
+}
+
+.insert form input[type="submit"] {
+    display: block;
+}
+
+
+/*----------------------*/
+
+
+/*          BOX         */
+
+
+/*----------------------*/
+
+#box span {
+    margin-left: 7.5em;
+}
+
+#box {
+    height: auto;
+    width: 35em;
+    margin: auto;
+    font-size: 120%;
+    margin-top: 7em;
+}
+
+#p {
+    font-size: 80%;
+    text-align: center;
+    padding-top: 3em;
+}
+
+#box div {
+    box-shadow: 0 1px 4px rgba(41, 51, 57, .5);
+    width: auto;
+    text-align: center;
+}
+
+#box fieldset {
+    margin-bottom: 2em;
+    vertical-align: middle;
+    margin-left: 5em;
+    margin-right: 5em;
+    border: 0em;
+}
+
+#box div h1 {
+    margin-top: 5%;
+    font-weight: 100;
+    font-size: 120%;
+    padding-top: 1em;
+}
+
+#box_center form h2 {
+    float: left;
+    font-size: 100%;
+    margin: 2px 0px 2px 0.8em;
+    padding-top: 0.8em;
+    padding-bottom: 0.4em;
+}
+
+#box_center form input[type="text"],
+#box_center form input[type="password"] {
+    width: 94%;
+    height: 29px;
+    font-size: 100%;
+    align-content: center;
+}
+
+#box_center form input[type="checkbox"] {
+    margin-top: 2em;
+    margin-left: 10em;
+}
+
+.search_button[name="login"] {
+    margin: 10px;
+    padding-bottom: 0.2em;
+    padding-top: 0.2em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.search_button[name="register"] {
+    margin: 24px;
+}
+
+
+/*----------------------*/
+
+
+/*        FOOTER        */
+
+
+/*----------------------*/
+
+#footer p {
+    margin-top: 0 !important;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    height: 9%;
+    width: 100%;
+    background-color: solid rgba(200, 255, 200, 0.09);
+    text-align: center;
+    border-top: 1.5px solid rgba(183, 183, 183, 0.31);
+}
+
+#footer a:hover {
+    border-bottom: 1.5px solid rgba(183, 183, 183, 0.31);
+}
+
+#footer ul {
+    padding: 3px 0px;
+}
+
+#footer ul li {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.footer_link {
+    color: #1c65a5;
+    text-decoration: none;
+}
+
+.footer_link:visited {
+    color: purple;
+}
+
+
+/*-----------------------------------------------------------------------------------------*/
+
+
+/*                                      MOBILE                                             */
+
+
+/*-----------------------------------------------------------------------------------------*/
+
+
+/*@media screen and (max-width:700px) {*/
+
+
+/*----------------------*/
+
+
+/*        HEADER        */
+
+
+/*----------------------*/
+
+
+/*   #header {
+        height: 8%;
+    }
+    #logo {
+        margin: 16px 0px 0px 10px;
+        height: 50%;
+    }
+    .header_button {
+        display: none;
+    }
+    #menu_burger {
+        display: inline;
+        float: right;
+        margin: 10px;
+    }
+    #menu_burger ul {
+        margin: 0;
+    }
+    #menu_burger li ul {
+        display: none;
+    }
+    #menu_burger li:hover ul {
+        display: block;
+        position: fixed;
+        margin-left: -100px;
+        z-index: 1;
+        text-align: center;
+        width: 130px;
+    }
+    #menu_burger li:hover ul li {
+        border: 1.5px solid #1c65a5;
+        background-color: #fff;
+        width: 130px;
+    }
+    #menu_burger li:hover ul li:hover {
+        background-color: #1c65a5;
+        transition: 0.4s;
+    }
+    #icon_burger {
+        width: 40px;
+        height: 40px;
+        -webkit-transition: transform .3s;
+        transition: transform .3s;
+    }
+    #icon_burger:hover {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+    .burger_button {
+        padding: 5px 10px;
+        color: #1c65a5;
+        text-decoration: none;
+        background-color: none;
+        border: none;
+    }
+    .burger_button:hover {
+        color: #fff;
+    }*/
+
+
+/*----------------------*/
+
+
+/*        SEARCH        */
+
+
+/*----------------------*/
+
+
+/*  .search_bar {
+        background-image: none;
+    }
+    .search_bar h1 {
+        font-size: 200%;
+        color: black;
+    }
+    .search_bar fieldset {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    }
+    .search_bar fieldset select,
+    input {
+        background: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
+    }
+}*/
