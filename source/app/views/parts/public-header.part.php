@@ -13,7 +13,7 @@
     <div class="navbar container clearfix">
       <div class="navbar-left left">
         <a class="home-link" href="./" title="Ritorna alla pagina principale">
-          <img lang="en" class="logo-img" src="./../../../../img/logo.jpg" alt="Logo Walk & Buy, rimanda alla home" />
+          <img lang="en" class="logo-img" src="./../../../../img/logo6.png" alt="Logo Walk & Buy, rimanda alla home" />
         </a>
       </div>
       <ul class="list navbar-right right">

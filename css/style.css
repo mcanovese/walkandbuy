@@ -530,8 +530,8 @@ dd {
 /*----------  Pages common sections  ----------*/
 
 .logo-img {
-  height: 4rem;
-  float:left;
+  height: 5rem;
+  
 }
 
 
@@ -555,7 +555,7 @@ dd {
   float:left;
   margin: 0;
   text-align: center;
-  background-color:rgba(0, 167, 42, 0.61);
+  background-color:rgb(116, 155, 44);
   border-block-end: 1px;
   padding-left: 1em;
   padding-right: 1em;
@@ -598,7 +598,7 @@ dd {
 .navbar-link:hover,
 .navbar-littlelink:hover,
 .navbar-link.active {
-  border-bottom: 2px solid #60cf20;
+  border-bottom: 2px solid #60cf20d5;
 }
 
 .intro {
