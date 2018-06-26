@@ -81,7 +81,7 @@ h4,
 h5,
 h6 {
   font-weight: 400;
-  text-transform: uppercase;
+  /*---text-transform: uppercase; ---*/
 }
 
 p {
@@ -618,6 +618,16 @@ dd {
   background-size: cover;
   color: #fff;
   height: 50em;
+  padding: 2rem 0;
+}
+
+.contentintro {
+  background-image: url("./../img/body.jpg");         /*----------  intro da usare x pagine diverse da home  ----------*/ 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  height: 15em;
   padding: 2rem 0;
 }
 
