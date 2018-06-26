@@ -9,22 +9,34 @@
 
 </head>
 <body class="public">
-  <a class="screen-reader" href="#content">Salta la navigazione</a>
-  <header id="top" class="navbar-container"> <!-- Per il back to top -->
+  <header class="navbar-container"> <!-- Per il back to top -->
     <div class="navbar container clearfix">
       <div class="navbar-left left">
         <a class="home-link" href="./" title="Ritorna alla pagina principale">
           <img lang="en" class="logo-img" src="./../../../../img/logo.jpg" alt="Logo Walk & Buy, rimanda alla home" />
-          <h1 lang="en" class="logo-name">Walk & Buy</h1>
         </a>
       </div>
       <ul class="list navbar-right right">
         <li class="list-item">
-        <a class="uppercase" href="./login">Accedi</a>
+        <a class="navbar-link" href="./signin">Accedi</a>
         </li>
+        |&nbsp&nbsp&nbsp
         <li class="list-item">
-        <a class="uppercase" href="./signin">Registrati</a>
+        <a class="navbar-link" href="./signin">Registrati</a>
         </li>   
       </ul>
+
+      <ul class="list navbar center">
+        <li class="list-item">
+        <a class="navbar-littlelink" href="./howWork.php">Come funziona</a>
+        </li>
+        <li class="list-item">
+        <a class="navbar-littlelink" href="./farmer.php">Agricoltori</a>
+        </li>
+        <li class="list-item">
+        <a class="navbar-littlelink" href="./whoAreWe.php">Chi siamo</a>
+        </li>
+      </ul>
+      
     </div>
   </header>

@@ -53,6 +53,7 @@ html {
 }
 
 body {
+  margin:0em;
   background-color: rgba(217, 255, 0, 0.096);
   color: #000000;
   font-family: sans-serif; /*---Da scegliere--- */
@@ -62,6 +63,7 @@ a {
   color: #2629b8e5;
   text-decoration: none;
 }
+
 
 a:hover {
   text-decoration: underline;
@@ -465,6 +467,8 @@ dd {
   display: inline-block;
 }
 
+
+
 .list-item-select {
   font-weight: bold;
 }
@@ -530,32 +534,36 @@ dd {
   float:left;
 }
 
-.logo-name {
-  font-size: 2rem;
-  margin: 0;
-  font-color: rgba(9, 105, 0, 0.76)
-  max-width: 50rem;
-}
 
 .navbar-container {
-  background-color: #fff;
+  background-image: url("./../img/header.jpg");
   width: 100%;
+  position: fixed;
   z-index: 1;
 }
 
 .navbar {
   font-size: 1.15rem;
-  padding: 0.5rem 0;
 }
 
-.navbar-left,
-.navbar-right {
+.navbar-left{
   margin: 0;
   text-align: center;
 }
 
+.navbar-right {
+  float:left;
+  margin: 0;
+  text-align: center;
+  background-color:rgba(0, 167, 42, 0.61);
+  border-block-end: 1px;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 5em;
+}
+
 .navbar .list-item {
-  padding: 1.5rem 0;
+  padding: 0.5rem 0;
 }
 
 .navbar .list-item:not(:last-child) {
@@ -565,31 +573,41 @@ dd {
 .navbar a {
   text-decoration: none;
 }
-
+.navbar .dropdown-toggle,
+.navbar-littlelink{
+  font-size:0.7em;
+  color: white;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+ 
+}
 .navbar .dropdown-toggle,
 .navbar-link {
-  border-bottom: 2px solid transparent;
-  color: inherit;
-  text-transform: uppercase;
+  font-size: 0.9em;
+  border-bottom: 1.5px solid transparent;
+  color: rgb(255, 255, 255);
   -webkit-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
+
 
 .navbar .dropdown:hover .dropdown-toggle,
 .navbar .dropdown-toggle:hover,
 .navbar .dropdown-toggle.active,
 .navbar-link:hover,
+.navbar-littlelink:hover,
 .navbar-link.active {
-  border-bottom: 2px solid #c62828;
+  border-bottom: 2px solid #60cf20;
 }
 
 .intro {
-  background-color: rgba(9, 255, 0, 0.61);;
+  background-image: url("./../img/body.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   color: #fff;
-  height: 10em;
+  height: 50em;
   padding: 2rem 0;
 }
 
