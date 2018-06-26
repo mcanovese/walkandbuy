@@ -16,17 +16,8 @@
           <img lang="en" class="logo-img" src="./../../../../img/logo6.png" alt="Logo Walk & Buy, rimanda alla home" />
         </a>
       </div>
-      <ul class="list navbar-right right">
-        <li class="list-item">
-        <a class="navbar-link" href="./signin">Accedi</a>
-        </li>
-        |&nbsp&nbsp&nbsp
-        <li class="list-item">
-        <a class="navbar-link" href="./signin">Registrati</a>
-        </li>   
-      </ul>
 
-      <ul class="list navbar center">
+      <ul class="list navbar-center center">
         <li class="list-item">
         <a class="navbar-littlelink" href="./howWork.php">Come funziona</a>
         </li>
@@ -37,6 +28,18 @@
         <a class="navbar-littlelink" href="./whoAreWe.php">Chi siamo</a>
         </li>
       </ul>
+
+      <ul class="list navbar-right ">
+        <li class="list-item">
+        <a class="navbar-link" href="./signin">Accedi</a>
+        </li>
+        <li class="list-item">|</li>
+        <li class="list-item">
+        <a class="navbar-link" href="./signin">Registrati</a>
+        </li>   
+      </ul>
+      
+      
       
     </div>
   </header>

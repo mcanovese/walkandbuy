@@ -50,6 +50,7 @@
 
 html {
   font-size: 16px;
+  margin: 0em;
 }
 
 body {
@@ -465,6 +466,7 @@ dd {
 .list-item,
 .list-item-select {
   display: inline-block;
+  color: white;
 }
 
 
@@ -530,7 +532,8 @@ dd {
 /*----------  Pages common sections  ----------*/
 
 .logo-img {
-  height: 5rem;
+  height: 7rem;
+  float:left;
   
 }
 
@@ -543,7 +546,13 @@ dd {
 }
 
 .navbar {
-  font-size: 1.15rem;
+  font-size: 1rem;
+}
+.navbar-center {
+  float:left;
+  margin-left: 12em;          /*----------  DA SISTEMARE  ----------*/
+  text-align: center;
+  margin-top:4em;
 }
 
 .navbar-left{
@@ -552,22 +561,22 @@ dd {
 }
 
 .navbar-right {
-  float:left;
   margin: 0;
   text-align: center;
-  background-color:rgb(116, 155, 44);
-  border-block-end: 1px;
-  padding-left: 1em;
-  padding-right: 1em;
-  border-radius: 5em;
+  float:right;
+  margin-top:2.2em;
+  padding: 0.5em 0.8em 0.5em 0.8em;
+  background-color:rgb(122, 150, 77);
+  border-radius: 7em;
 }
 
 .navbar .list-item {
-  padding: 0.5rem 0;
+  padding: 0.3rem 0;
 }
 
 .navbar .list-item:not(:last-child) {
-  margin-right: 1rem;
+  margin-right: 0.6rem;
+  
 }
 
 .navbar a {
@@ -575,7 +584,7 @@ dd {
 }
 .navbar .dropdown-toggle,
 .navbar-littlelink{
-  font-size:0.7em;
+  font-size:0.8em;
   color: white;
   border-bottom: 2px solid transparent;
   -webkit-transition: all 0.4s ease-out;
@@ -584,6 +593,7 @@ dd {
 }
 .navbar .dropdown-toggle,
 .navbar-link {
+  font-weight: bold;
   font-size: 0.9em;
   border-bottom: 1.5px solid transparent;
   color: rgb(255, 255, 255);
