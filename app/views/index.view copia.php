@@ -1,4 +1,4 @@
-<?php require 'parts/public-header.part.php' ?>
+<?php require 'partials/public-header.partial.php' ?>
 
 <div id="content" class="intro">
   <div class="container v-centered-wrapper">
@@ -93,4 +93,4 @@
   </section>
 </main>
 
-<?php require 'parts/public-footer.part.php' ?>
+<?php require 'partials/public-footer.partial.php' ?>
