@@ -1,6 +1,11 @@
 <?php
 
-namespace Core;
-
-// Define a global constant to facilitate requiring CSS files and images
-
+return [
+    'database' => [
+        'name' => 'marcocan_ifarmer',
+        'username' => 'marcocan_farmer',
+        'password' => 'csp2018farmer',
+        'connection' => 'marcocanovese.it:3306',
+        'options' => []
+    ]
+];

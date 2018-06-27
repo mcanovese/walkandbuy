@@ -1,6 +1,7 @@
 <?php
 
 use App\Core\App;
+use App\Core\Database\{QueryBuilder, Connection};
 
 
 $config = require 'config.php';
