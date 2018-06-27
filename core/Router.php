@@ -2,7 +2,7 @@
     namespace App\Core;
     class Router {
 
-      * @var array
+      /* @var array
       */
      public $routes = [
          'GET' => [],
