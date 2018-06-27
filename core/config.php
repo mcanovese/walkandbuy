@@ -2,11 +2,10 @@
 
 return [
     'database' => [
-        'name' => '',
-        'username' => 'root',
-        'password' => '',
-        'connection' => '',
+        'name' => 'marcocan_ifarmer',
+        'username' => 'marcocan_farmer',
+        'password' => 'csp2018farmer',
+        'connection' => 'marcocanovese.it:3306',
         'options' => []
     ]
 ];
-

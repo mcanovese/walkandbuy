@@ -2,15 +2,18 @@
     namespace App\Core;
     class Router {
 
-      /* @var array
-      */
+      /**
+       * All registered routes.
+       *
+       * @var array
+       */
      public $routes = [
          'GET' => [],
          'POST' => []
      ];
 
 
-    protected $routes = [];
+  //  protected $routes = [];
 
     public function define($routes)
 
