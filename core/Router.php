@@ -1,41 +1,39 @@
 <?php
-    namespace App\Core;
-    class Router {
 
-      /**
-       * All registered routes.
-       *
-       * @var array
-       */
-     public $routes = [
-         'GET' => [],
-         'POST' => []
-     ];
+class Router {
+
+  protected $routes = [];
 
 
-  //  protected $routes = [];
+  public static function load($file)
+  {
 
-    public function define($routes)
+    $router = new static;
+    require $file;
+    return $router;
+  }
 
-    {
 
-        $this->routes = $routes;
+  public function define($routes)
+  {
+     $this->routes = $routes;
+
+  }
+
+
+  public function direct($uri){
+
+    if(array_key_exists($uri, $this->routes)){
+
+      return $this->routes[$uri];
     }
 
+    throw new Exception('No route define for uri');
 
-    public function direct($uri)
-
-    {
-        if(array_key_exists($uri, $this->routes)) {
-
-            return $this->routes[$uri];
-        }
-         throw new Exception('No route defined for this URI.');
-    }
-
-
-
-
+  }
 
 
 }
+
+
+ ?>

@@ -1,18 +1,22 @@
 <?php
-
-namespace App\Core\Database;
-
-class Connection{
-    public static function make($config){
-        try{
+class Connection
+{
+    /**
+     * Create a new PDO connection.
+     *
+     * @param array $config
+     */
+    public static function make($config)
+    {
+        try {
             return new PDO(
-                $config['connection'].';dbname'.$config['name'],
+                $config['connection'].';dbname='.$config['name'],
                 $config['username'],
                 $config['password'],
                 $config['options']
             );
-        } catch (\PDOException $e) {
-            die ('can\'t connect '. $e->getMessage());
+        } catch (PDOException $e) {
+            die($e->getMessage());
         }
     }
 }
