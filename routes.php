@@ -3,11 +3,11 @@
 
 $router->define([
 
-  '' => 'controller/index.php',
-  'about' => 'controller/about.php',
-  'about/culture' => 'controller/about-culture.php',
-  'contact' => 'controller/contact.php',
+  '' => 'app/controller/index.php',
+  'about' => 'app/controller/about.php',
+  'about/culture' => 'app/controller/about-culture.php',
+  'contact' => 'app/controller/contact.php',
 
-  'names' => 'controller/add-name.php',
+  'names' => 'app/controller/add-name.php',
 
 ]);
