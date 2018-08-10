@@ -5,6 +5,7 @@ $router->get('about','app/controller/about.php');
 $router->get('about/culture','app/controller/about-culture.php');
 $router->get('contact','app/controller/contact.php');
 $router->post('names','app/controller/add-name.php');
+$router->get('add-user','app/controller/add-user.php');
 
 
 /* ROUTES PRECEDENTI PRE-MODIFICA
