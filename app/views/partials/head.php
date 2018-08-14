@@ -11,16 +11,15 @@
 
 </head>
 <body>
-  <header id="top" class="navbar-container"> <!-- Per il back to top -->
+  <div  id="top" class="top-container">Roba</div> <!-- Per il back to top -->
+  <header class="navbar-container"> 
+  <div class="header" id="myHeader">
     <div class="navbar container">
       <div class="navbar-left left">
         <a class="navbar-link" href="./" title="Ritorna alla pagina principale">
           <img lang="en" class="logo-img" src="./../../../public/img/logo6.png" alt="Logo Walk & Buy, rimanda alla home" />
         </a>
       </div>
-
-      
-
       <ul class="list navbar-right right log-link-container">
         <li class="log-item">
         <a class="navbar-link log-link" href="./signin">Accedi</a>
@@ -42,10 +41,20 @@
         <a class="navbar-link little" href="./whoAreWe">Chi siamo</a>
         </li>
       </ul>
-
-
-
     </div>
   </header>
+<script>
+  window.onscroll = function() {myFunction()};
 
+  var header = document.getElementById("myHeader");
+  var sticky = header.offsetTop;
+
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+</script>
   <?php require('nav.php');?>

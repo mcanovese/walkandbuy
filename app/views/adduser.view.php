@@ -1,7 +1,7 @@
 <?php require('partials/head.php');?>
 
 <form action="addUser" method='post'>
-  
+<div class="loginbox">
 <div class="loginbox-field">    
   <label class="input-label" for="nome">Email</label>
   <input class="input" id="email"  type="text" name="email" required />
@@ -28,6 +28,6 @@
   <span class="underline"></span>
 </div>
   <button type="submit" class="btn btn-outline">Conferma</button>
-
+</div>
 </form>
 <?php require('partials/footer.php');?>

@@ -59,7 +59,7 @@
   }
   
   a {
-    color: #006400;
+    color: #a50f3c;
     text-decoration: none;
   }
   
@@ -298,7 +298,7 @@
   }
   
   .btn-link {
-    color: #009b0d;
+    color: #741717;
     margin-right: 1rem;
     text-transform: uppercase;
   }
@@ -533,6 +533,7 @@
     background-color:black;
     background-image: url("../img/header.jpg");
     padding-bottom: 0.5rem;
+    height: 7rem;
     width: 100%;
     z-index: 1;
   }
@@ -551,7 +552,7 @@
   }
   
   .navbar .list-item {
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     color: rgb(255, 255, 255);
   }
   
@@ -744,15 +745,7 @@
     }
   }
   
-  @media (min-width: 768px) {
-    textarea {
-      min-height: 10rem;
-    }
-  
-    .container {
-      max-width: 960px;
-      padding: 0 0.5rem;
-    }
+ 
   
     /*----------  Admin common layout  ----------*/
   
@@ -774,7 +767,7 @@
       vertical-align: top;
       width: 75%;
     }
-  }
+  
   
   @media (min-width: 992px) {
     .container {
@@ -791,5 +784,23 @@
     .container {
       max-width: 1140px;
     }
+  }
+  
+  .top-container {
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .header {
+    padding: 0.5em;
+    background-image: url(./../img/header.jpg);
+    height: 8rem;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
   
