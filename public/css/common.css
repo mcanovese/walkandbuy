@@ -527,10 +527,10 @@
   
   .logo-img {
     height: 6rem;
-    float: left;
   }
   
   .navbar-container {
+    background-color:black;
     background-image: url("../img/header.jpg");
     padding-bottom: 0.5rem;
     width: 100%;
@@ -552,7 +552,7 @@
   
   .navbar .list-item {
     padding: 1.5rem 0;
-    color: rgb(203, 233, 155);
+    color: rgb(235, 255, 215);
   }
   
   .navbar .list-item:not(:last-child) {
@@ -565,9 +565,8 @@
   
   .navbar .dropdown-toggle,
   .navbar-link {
-    border-bottom: 2px solid transparent;
     color: inherit;
-    text-transform: uppercase;
+    text-transform: capitalize;
     -webkit-transition: all 0.4s ease-out;
     transition: all 0.4s ease-out;
   }
@@ -615,7 +614,6 @@
   }
   
   /*----------  Utilities  ----------*/
-  /* CSS styles with only one property */
   
   .bold {
     font-weight: bold;
@@ -627,9 +625,29 @@
 
   .little{
     padding-top: 1rem;
-    font-size: 0.75rem;
+    font-size: 0.90rem;
+    text-transform: capitalize;
   }
   
+  .log-link-container{
+    background-color:rgba(140, 201, 0, 0.788);
+    border-radius:3em;
+    margin-top: 2rem;
+    width: 12rem;
+    height: 2em;
+    padding-top:0.5rem;
+  }
+  .log-item{
+    display: inline-block;
+  }
+  .log-item:not(:last-child),
+  .log-item-select:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+  .log-link{
+    color:white;
+    padding-bottom:20em;
+  }
   .text-xl {
     font-size: 1rem;
   }

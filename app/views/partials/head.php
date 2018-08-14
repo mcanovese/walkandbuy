@@ -20,25 +20,25 @@
 
       
 
-      <ul class="list navbar-right right ">
-        <li class="list-item">
-        <a class="navbar-link" href="./signin">Accedi</a>
+      <ul class="list navbar-right right log-link-container">
+        <li class="log-item">
+        <a class="navbar-link log-link" href="./signin">Accedi</a>
         </li>
-        <li class="list-item">|</li>
-        <li class="list-item">
-        <a class="navbar-link" href="./signin">Registrati</a>
+        <li class="log-item">|</li>
+        <li class="log-item">
+        <a class="navbar-link log-link" href="./signin">Iscriviti</a>
         </li>
       </ul>
 
       <ul class="list navbar-center center little">
         <li class="list-item">
-        <a class="navbar-link" href="./howWork">Come funziona</a>
+        <a class="navbar-link little" href="./howWork">Come funziona</a>
         </li>
         <li class="list-item">
-        <a class="navbar-link" href="./farmer">Agricoltori</a>
+        <a class="navbar-link little" href="./farmer">Agricoltori</a>
         </li>
         <li class="list-item">
-        <a class="navbar-link" href="./whoAreWe">Chi siamo</a>
+        <a class="navbar-link little" href="./whoAreWe">Chi siamo</a>
         </li>
       </ul>
 
