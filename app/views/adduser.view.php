@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link type="text/css" rel="stylesheet" href="./../../../public/css/style.css" />
-  <title lang="en">Walk & Buy</title>
+<?php require('partials/head.php');?>
 
-</head>
-<body class="public">
-
-<form action="adduser" method='post'>
+<form action="addUser" method='post'>
   
 <div class="loginbox-field">    
   <label class="input-label" for="nome">Email</label>

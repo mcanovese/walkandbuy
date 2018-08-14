@@ -1,0 +1,56 @@
+.btn {
+  display: block;
+  margin: 2rem auto;
+  text-align: center;
+  width: 50%;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.footer-text {
+  text-align: center;
+}
+
+.loginbox {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  left: 50%;
+  margin: auto;
+  max-width: 100vw;
+  padding: 0 1rem;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 24rem;
+}
+
+.loginbox-field {
+  margin: auto;
+  padding-top: 2rem;
+}
+
+.loginbox-field:first-child {
+  padding-top: 0;
+}
+
+.loginbox-fieldset {
+  margin-top: 1rem;
+}
+
+/*----------  Media queries  ----------*/
+
+@media (min-width: 480px) {
+  .loginbox {
+    -webkit-box-shadow: 1px 1px 10px #888888;
+    box-shadow: 1px 1px 10px #888888;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}

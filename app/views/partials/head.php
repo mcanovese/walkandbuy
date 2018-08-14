@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link type="text/css" rel="stylesheet" href="./../../../public/css/normalize.css" />
   <link type="text/css" rel="stylesheet" href="./../../../public/css/common.css" />
+  <link type="text/css" rel="stylesheet" href="./../../../public/css/<?= $routeName ?>.css" />
   <title lang="en">Walk & Buy</title>
 
 </head>
@@ -26,7 +27,7 @@
         </li>
         <li class="log-item">|</li>
         <li class="log-item">
-        <a class="navbar-link log-link" href="./signin">Iscriviti</a>
+        <a class="navbar-link log-link" href="./add-user">Iscriviti</a>
         </li>
       </ul>
 
