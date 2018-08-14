@@ -59,7 +59,7 @@
   }
   
   a {
-    color: #c62828;
+    color: #a50f3c;
     text-decoration: none;
   }
   
@@ -298,7 +298,7 @@
   }
   
   .btn-link {
-    color: #c62828;
+    color: #741717;
     margin-right: 1rem;
     text-transform: uppercase;
   }
@@ -526,11 +526,13 @@
   /*----------  Pages common sections  ----------*/
   
   .logo-img {
-    height: 4rem;
+    height: 6rem;
+    float: left;
   }
   
   .navbar-container {
-    background-color: #2000;
+    background-image: url("../img/header.jpg");
+    padding-bottom: 0.5rem;
     width: 100%;
     z-index: 1;
   }
@@ -540,6 +542,8 @@
     padding: 0.5rem 0;
   }
   
+
+
   .navbar-left,
   .navbar-right {
     margin: 0;
@@ -548,7 +552,7 @@
   
   .navbar .list-item {
     padding: 1.5rem 0;
-    color: red;
+    color: rgb(203, 233, 155);
   }
   
   .navbar .list-item:not(:last-child) {
@@ -573,7 +577,7 @@
   .navbar .dropdown-toggle.active,
   .navbar-link:hover,
   .navbar-link.active {
-    border-bottom: 2px solid #c62828;
+    color: yellow;
   }
   
   .intro {
@@ -619,6 +623,11 @@
   
   .center {
     text-align: center;
+  }
+
+  .little{
+    padding-top: 1rem;
+    font-size: 0.75rem;
   }
   
   .text-xl {
