@@ -1,3 +1,3 @@
 <?php require('partials/head.php');?>
-<h1>About Culture</h1>
+<h1>Come Funziona</h1>
 <?php require('partials/footer.php');?>

@@ -12,15 +12,21 @@ require 'app/views/index.view.php';
 
 }
 
-public function about(){
-    $routeName="about";
-require 'app/views/about.view.php';
+public function whoAreWe(){
+    $routeName="whoAreWe";
+require 'app/views/whoAreWe.view.php';
+}
+public function partner(){
+    $routeName="partner";
+require 'app/views/partner.view.php';
 }
 
-public function aboutculture(){
-    $routeName="aboutCulture";
-require 'app/views/about-culture.view.php';
+public function howWork(){
+    $routeName="howWork";
+require 'app/views/howWork.view.php';
 }
+
+
 
 public function addUser(){
     $routeName="addUser";
