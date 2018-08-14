@@ -19,7 +19,7 @@
         </a>
       </div>
 
-      
+
 
       <ul class="list navbar-right right log-link-container">
         <li class="log-item">
@@ -36,7 +36,7 @@
         <a class="navbar-link little" href="./howWork">Come funziona</a>
         </li>
         <li class="list-item">
-        <a class="navbar-link little" href="./farmer">Agricoltori</a>
+        <a class="navbar-link little" href="./partner">Partner</a>
         </li>
         <li class="list-item">
         <a class="navbar-link little" href="./whoAreWe">Chi siamo</a>
