@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Controller;
+use Core\App;
+use Core\Request;
 
 class PagesController{
 
