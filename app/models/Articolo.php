@@ -15,7 +15,7 @@ class Articolo{
   public $abilitato;
   public $venditore;
 
-}
+
 
 public function __construct(
   string $idProdotto,
@@ -28,7 +28,7 @@ public function __construct(
   string $categoria,
   string $giacenza,
   string $abilitato,
-  string $venditore, ){
+  string $venditore ){
 
     $this->idProdotto = $idProdotto;
     $this->nome = $nome;
@@ -43,6 +43,8 @@ public function __construct(
     $this->venditore = $venditore;
 
   }
+
+}
 
 
 

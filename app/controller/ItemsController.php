@@ -45,7 +45,7 @@ class ItemsController {
       $result->prezzoPieno,
       $result->unitaMisura,
       $result->foto,
-      $result->percentualeSconto;
+      $result->percentualeSconto,
       $result->categoria,
       $result->giacenza,
       $result->abilitato,

@@ -4,6 +4,10 @@ namespace App\Controller;
 use Core\App;
 use Core\Request;
 
+require_once 'app/controller/ItemsController.php';
+require_once 'app/controller/UsersController.php';
+
+
 class PagesController{
 
 //creare una funzione per ogni pagina, utilizzata poi in routes per
@@ -38,6 +42,20 @@ require 'app/views/addUser.view.php';
 public function contact(){
     $routeName="contact";
 require 'app/views/contact.view.php';
+}
+
+public function item() {
+  $this->protectRoute();
+
+  $routeName = 'item';
+  $currentItem = $this->ItemsController->getItem($itemCod);
+  require 'app/views/item.view.php';
+
+
+
+
+
+
 }
 
 
