@@ -10,6 +10,11 @@ require_once 'app/controller/UsersController.php';
 
 class PagesController{
 
+  public function __construct() {
+    $this->ItemsController = new ItemsController();
+    $this->UsersController = new UsersController();
+  }
+
 //creare una funzione per ogni pagina, utilizzata poi in routes per
 // caricare la view (esempio root -> Router carica controller pages -> carica view home)
 public function home(){
@@ -45,13 +50,15 @@ require 'app/views/contact.view.php';
 }
 
 public function item() {
-  $this->protectRoute();
+//   $this->protectRoute();
 
   $routeName = 'item';
+  $itemCod=1;
   $currentItem = $this->ItemsController->getItem($itemCod);
-  require 'app/views/item.view.php';
-
-
+  //var_dump($currentItem);
+  return \Core\view('item', [
+    'currentItem' => $currentItem
+  ]);
 
 
 

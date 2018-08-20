@@ -7,7 +7,7 @@ $router->get('howWork','PagesController@howWork');
 $router->get('contact','PagesController@contact');
 $router->get('add-user','PagesController@addUser');
 
-$router->get('item','PagesController@addUser');
+$router->get('item','PagesController@item');
 
 
 $router->get('users','UsersController@index');

@@ -22,8 +22,8 @@ App::bind('config', $config);
 App::bind('pdo', Connection::make(App::get('config')['database']));
 App::bind('database', new QueryBuilder(App::get('pdo')));
 
-function view($name){
+function view(string $filename, array $data = []) {
+  extract($data);
 
-  return require "views/{$name}.view.php";
-
+  return require_once "app/views/{$filename}.view.php";
 }

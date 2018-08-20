@@ -2,7 +2,7 @@
 //items controllers
 
 
-namespace App\Controllers;
+namespace App\Controller;
 use Core\App;
 use Core\Request;
 
@@ -21,8 +21,8 @@ class ItemsController {
 
   public function getItem(int $idProdotto): Articolo {
     $table = 'articoli';
-    $where='articolo.idprodotto = :idprodotto';
-    $parameters[':idprodotto'] = $idprodotto;
+    $where='articoli.idprodotto = :idprodotto';
+    $parameters[':idprodotto'] = $idProdotto;
     $result = $this->database->selectWhere(
       $table,
       ['*'],
@@ -42,15 +42,14 @@ class ItemsController {
       $result->idprodotto,
       $result->nome,
       $result->descrizione,
-      $result->prezzoPieno,
-      $result->unitaMisura,
+      $result->prezzopieno,
+      $result->unitamisura,
       $result->foto,
-      $result->percentualeSconto,
+      $result->percentualesconto,
       $result->categoria,
       $result->giacenza,
       $result->abilitato,
-      $result->venditore
-    );
+      $result->venditore);
   }
 
 

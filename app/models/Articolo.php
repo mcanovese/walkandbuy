@@ -28,7 +28,8 @@ public function __construct(
   string $categoria,
   string $giacenza,
   string $abilitato,
-  string $venditore ){
+  string $venditore
+){
 
     $this->idProdotto = $idProdotto;
     $this->nome = $nome;
@@ -44,15 +45,8 @@ public function __construct(
 
   }
 
+
 }
-
-
-
-
-
-
-
-
 
 
 
