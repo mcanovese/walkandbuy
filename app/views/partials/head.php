@@ -11,8 +11,8 @@
 
 </head>
 <body>
-  <div  id="top" class="top-container">Roba</div> <!-- Per il back to top -->
-  <header class="navbar-container"> 
+  <!-- <div  class="top-container">Roba</div>  Per il back to top -->
+  <header class="navbar-container" id="top" > 
   <div class="header" id="myHeader">
     <div class="navbar container">
       <div class="navbar-left left">
