@@ -53,9 +53,8 @@ public function item() {
 //   $this->protectRoute();
 
   $routeName = 'item';
-  $itemCod=1;
+  $itemCod=$_GET['cod'];
   $currentItem = $this->ItemsController->getItem($itemCod);
-  //var_dump($currentItem);
   return \Core\view('item', [
     'currentItem' => $currentItem
   ]);
