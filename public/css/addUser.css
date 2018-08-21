@@ -21,13 +21,13 @@ footer {
   box-shadow: none;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  display: block;
+  margin-top: 50rem;
   left: 50%;
   margin: auto;
   max-width: 100vw;
   padding: 0 1rem;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(0%, -10%);
+  transform: translate(0% , -10%);
   width: 24rem;
 }
 
@@ -37,7 +37,7 @@ footer {
 }
 
 .loginbox-field:first-child {
-  padding-top: 0;
+  padding-top: 1rem;
 }
 
 .loginbox-fieldset {

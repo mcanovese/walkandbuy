@@ -1,6 +1,7 @@
 <?php require('partials/head.php');?>
 
 <form action="addUser" method='post'>
+
 <div class="loginbox">
 <div class="loginbox-field">    
   <label class="input-label" for="nome">Email</label>
