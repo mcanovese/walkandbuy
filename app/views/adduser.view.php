@@ -1,5 +1,6 @@
 <?php require('partials/head.php');?>
 
+<div>
 <form action="addUser" method='post'>
 
 <div class="loginbox">
@@ -31,4 +32,5 @@
   <button type="submit" class="btn btn-outline">Conferma</button>
 </div>
 </form>
+</div>
 <?php require('partials/footer.php');?>
