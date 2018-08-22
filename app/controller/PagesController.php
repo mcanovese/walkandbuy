@@ -23,6 +23,12 @@ require 'app/views/index.view.php';
 
 }
 
+public function notFound(){
+    $routeName="404";
+require 'app/views/404.view.php';
+
+}
+
 public function whoAreWe(){
     $routeName="whoAreWe";
 require 'app/views/whoAreWe.view.php';
@@ -52,15 +58,21 @@ require 'app/views/contact.view.php';
 public function item() {
 //   $this->protectRoute();
 
+if(!isset($_GET['req'])&& !isset($_GET['cod'])) header("Location: 404");
+
   $routeName = 'item';
+  if($_GET['req'] == "newItem"){
+    $action = "newItem";
+   return \Core\view('item',[ 'action' =>$action]);
+
+  }
+  else {
   $itemCod=$_GET['cod'];
   $currentItem = $this->ItemsController->getItem($itemCod);
   return \Core\view('item', [
     'currentItem' => $currentItem
   ]);
-
-
-
+      }
 
 }
 
