@@ -7,9 +7,10 @@ $router->get('howWork','PagesController@howWork');
 $router->get('contact','PagesController@contact');
 $router->get('add-user','PagesController@addUser');
 $router->get('404','PagesController@notFound');
-
 $router->get('item','PagesController@item');
+$router->get('signin', 'PagesController@signIn');
 
 
 $router->get('users','UsersController@index');
 $router->post('insertItem','PagesController@addItem');
+$router->post('registerUser','PagesController@registerUser');

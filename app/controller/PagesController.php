@@ -50,6 +50,11 @@ public function addUser(){
 require 'app/views/addUser.view.php';
 }
 
+public function signIn(){
+    $routeName="signIn";
+require 'app/views/signIn.view.php';
+}
+
 public function contact(){
     $routeName="contact";
 require 'app/views/contact.view.php';
