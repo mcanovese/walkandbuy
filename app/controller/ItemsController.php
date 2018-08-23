@@ -52,6 +52,41 @@ class ItemsController {
       $result->venditore);
   }
 
+  public function insertItem(string $itemName,string $itemDesc,string $itemPrice,string $itemUM,string $itemPhoto,string $itemDiscount,
+string $itemCat,string $itemStock,string $itemStatus): bool {
+//controllo necessario
+
+    $table = 'articoli';
+
+    if (1==1) {
+      return $this->database->insert($table, [
+        'nome' => $itemName,
+        'descrizione' => $itemDesc,
+        'prezzopieno' => $itemPrice,
+        'unitamisura' => 1,
+        'foto' => $itemPhoto,
+        'percentualesconto' => $itemDiscount,
+        'categoria' => $itemCat,
+        'giacenza' => $itemStock,
+        'abilitato' => $itemStatus,
+        'venditore' => 1
+
+      ]);
+    } else {
+      return false;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
 
 }
 

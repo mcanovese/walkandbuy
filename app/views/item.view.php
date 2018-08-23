@@ -45,7 +45,7 @@ object(App\Models\Articolo)#7 (11) { ["idProdotto"]=> string(1) "1"
 
   <div class="loginbox-field">
     <label class="input-label" for="nome">Unit&agrave Misura //da sistemare</label>
-    <input class="input" id="itemPrice"  type="text" name="itemPrice" required />
+    <input class="input" id="itemUM"  type="text" name="itemUM" required />
     <span class="underline"></span>
   </div>
 
@@ -69,13 +69,13 @@ object(App\Models\Articolo)#7 (11) { ["idProdotto"]=> string(1) "1"
 
   <div class="loginbox-field">
     <label class="input-label" for="nome">Giacenza</label>
-    <input class="input" id="itemCat"  type="text" name="itemCat" required />
+    <input class="input" id="itemCat"  type="text" name="itemStock" required />
     <span class="underline"></span>
   </div>
 
   <div class="loginbox-field">
     <label class="input-label" for="nome">Abilitato</label>
-    <input class="input" id="itemCat"  type="text" name="itemCat" required />
+    <input class="input" id="itemCat"  type="text" name="itemStatus" required />
     <span class="underline"></span>
   </div>
 

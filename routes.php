@@ -12,3 +12,4 @@ $router->get('item','PagesController@item');
 
 
 $router->get('users','UsersController@index');
+$router->post('insertItem','PagesController@addItem');

@@ -1,8 +1,8 @@
 <?php
 
 require 'core/bootstrap.php';
-use App\Core\Router;
-use App\Core\Request;
+use Core\Router;
+use Core\Request;
 
 Router::load('routes.php')
   ->direct(Request::uri(),Request::method());
