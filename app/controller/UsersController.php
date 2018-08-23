@@ -9,6 +9,18 @@ public function index()
 }
 
 
+public function insertUser(){
+
+
+
+
+}
+
+
+
+
+
+
 }
 
 

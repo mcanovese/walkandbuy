@@ -108,5 +108,49 @@ else {
 }
 
 
+public function registerUser(){
+  //acquisizione dati da POST
+  $email = Request::getPOST('email');
+  $cognome = Request::getPOST('cognome');
+  $nome = Request::getPOST('nome');
+  $codiceFiscale = Request::getPOST('cf');
+  $password = Request::getPOST('password');
+  $verificaPassword = Request::getPOST('verificaPassword');
+  $telefono = Request::getPOST('telefono');
+
+
+  $result = $this->usersController->addUser(
+    [
+      'email' => $email,
+      'cognome' => $cognome,
+      'nome' => $nome,
+      'codiceFiscale' => $codiceFiscale,
+      'password' => $password,
+      'verificapassword' => $verificaPassword,
+      'telefono' => $telefono
+    ]);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
