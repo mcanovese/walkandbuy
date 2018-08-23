@@ -91,7 +91,7 @@ object(App\Models\Articolo)#7 (11) { ["idProdotto"]=> string(1) "1"
 
 <?php else : var_dump($currentItem);?>
 
-  //var_dump da rimuovere / usare solo x vedere voci array
+  <!-- //var_dump da rimuovere / usare solo x vedere voci array -->
 <?php endif; ?>
 
 
