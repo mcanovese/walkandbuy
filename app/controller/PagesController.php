@@ -44,12 +44,25 @@ public function howWork(){
 require 'app/views/howWork.view.php';
 }
 
-
-
 public function addUser(){
     $routeName="addUser";
-require 'app/views/addUser.view.php';
-}
+
+    $errorcode=$_GET['errorcode'];
+    if(isset($errorcode)){
+      if ($errorcode == '100'){
+    return \Core\view('adduser',[ 'messageDisplay' =>'Le password che hai inserito non sono uguali']);}
+
+    else if($errorcode == '200') {
+      return \Core\view('adduser',[ 'messageDisplay' =>'La mail inserita risulta già associata ad altro utente']);}
+
+    }
+
+require 'app/views/adduser.view.php';
+
+
+
+    }
+
 
 public function signIn(){
     $routeName="signIn";
