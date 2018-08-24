@@ -1,7 +1,7 @@
 <?php require('partials/head.php');?>
 
 <div>
-<form action="addUser" method='post'>
+<form action="registerUser" method='post'>
 
 <div class="loginbox">
 <div class="loginbox-field">

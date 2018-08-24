@@ -13,41 +13,53 @@ public function __construct() {
 
 
 public function insertUser(array $parameters): bool {
-  $codiceFiscale = $parameters['codiceFiscale'];
-  $password = $parameters['password'];
-  $passwordConfirm = $parameters['passwordConfirm'];
+  $email= $parameters['email'];
   $nome = $parameters['nome'];
   $cognome = $parameters['cognome'];
-  $role = $parameters['role'];
-  $table = $this->getRoleTable($role);
-
-  if ($password !== $passwordConfirm) {
+  $password = $parameters['password'];
+  $verificaPassword = $parameters['verificaPassword'];
+  $telefono = $parameters['telefono'];
+  $codiceFiscale = $parameters['codiceFiscale'];
+  $table = 'utenti';
+  if ($password !== $verificaPassword) {
     throw new \Exception('passwordsNotEqual');
   }
 
-  // Check if the user already exists
-  $existing = $this->checkUserCf($codiceFiscale, $role);
+  $existing = $this->checkUserEmail($email);
   if ($existing) {
-    throw new \Exception('alreadyExisting');
+    throw new \Exception('alreadyExistingMail');
   }
 
   $successful = $this->database->insert($table, [
-    'codice_fiscale' => $codiceFiscale,
-    'password_hash' => \password_hash($password, PASSWORD_DEFAULT),
-    'nome' => $nome,
     'cognome' => $cognome,
+    'nome' => $nome,
+    'cf' => $codiceFiscale,
+    'telefono' => $telefono,
+    'email' => $email,
+    'password' => \password_hash($password, PASSWORD_DEFAULT),
   ]);
 
-  if ($role === 'inspector') {
-    // Inspector must be added also the 'ispettore' table
-    $succ = $this->database->insert('ispettore', [
-      'codice_fiscale' => $codiceFiscale
-    ]);
+  return $successful;
+}
 
-    return $succ && $successful;
+
+//verifico l'esistenza di una mail già registrata
+private function checkUserEmail(string $email) {
+  $table = 'utenti';
+  $where = 'email = :email';
+
+  $exist = $this->database->selectWhere(
+    $table,
+    ['*'],
+    $where,
+    [':email' => $email]
+  );
+
+  if (count($exist) > 0) {
+    return true;
   }
 
-  return $successful;
+  return false;
 }
 
 

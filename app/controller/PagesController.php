@@ -124,14 +124,14 @@ public function registerUser(){
   $telefono = Request::getPOST('telefono');
 
 
-  $result = $this->usersController->addUser(
+  $result = $this->UsersController->insertUser(
     [
       'email' => $email,
       'cognome' => $cognome,
       'nome' => $nome,
       'codiceFiscale' => $codiceFiscale,
       'password' => $password,
-      'verificapassword' => $verificaPassword,
+      'verificaPassword' => $verificaPassword,
       'telefono' => $telefono
     ]);
   }
