@@ -22,12 +22,12 @@ public function insertUser(array $parameters): bool {
   $codiceFiscale = $parameters['codiceFiscale'];
   $table = 'utenti';
   if ($password !== $verificaPassword) {
-    throw new \Exception('passwordsNotEqual');
+    throw new \Exception('pwdmatcherror');
   }
 
   $existing = $this->checkUserEmail($email);
   if ($existing) {
-    throw new \Exception('alreadyExistingMail');
+    throw new \Exception('maildbpresent');
   }
 
   $successful = $this->database->insert($table, [

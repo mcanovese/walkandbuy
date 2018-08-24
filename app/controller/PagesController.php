@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controller;
+use Core;
 use Core\App;
 use Core\Request;
 
@@ -123,7 +124,7 @@ public function registerUser(){
   $verificaPassword = Request::getPOST('verificaPassword');
   $telefono = Request::getPOST('telefono');
 
-
+  try{
   $result = $this->UsersController->insertUser(
     [
       'email' => $email,
@@ -134,6 +135,19 @@ public function registerUser(){
       'verificaPassword' => $verificaPassword,
       'telefono' => $telefono
     ]);
+      }catch (\Exception $e) {
+
+          if ($e->getMessage() === 'pwdmatcherror')     header("Location: add-user?errorcode=100");
+          else {if ($e->getMessage() === 'maildbpresent')   header("Location: add-user?errorcode=100");
+
+          }
+
+
+
+
+      }
+
+
   }
 
 

@@ -27,3 +27,9 @@ function view(string $filename, array $data = []) {
 
   return require_once "app/views/{$filename}.view.php";
 }
+
+function redirect(string $path) {
+  $root = 'localhost:8888';
+
+  header("Location: {$root}{$path}");
+}
