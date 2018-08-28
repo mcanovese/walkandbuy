@@ -14,16 +14,16 @@
 </head>
 <body>
   <!-- <div  class="top-container">Roba</div>  Per il back to top -->
-  <header class="navbar-container" id="top" > 
+  <header  class="navbar-container" id="top" > 
   <div class="header" id="myHeader">
     <div class="navbar container">
-      <div class="navbar-left left">
+      <div id="MyNavLeft" class="navbar-left left">
         <a class="navbar-link" href="./" title="Ritorna alla pagina principale">
           <img lang="en" class="logo-img" id="myImg" src="./../../../public/img/logo6.png" alt="Logo Walk & Buy, rimanda alla home" />
           <img lang="en" class="logo-img hidden" id="myImgLittle" src="./../../../public/img/logoNoScritta.png" alt="Logo Walk & Buy, rimanda alla home" />
         </a>
       </div>
-      <ul class="list navbar-right right log-link-container">
+      <ul id="MyNavRight" class="list navbar-right right log-link-container">
         <li class="log-item">
         <a class="navbar-link log-link" href="./signin">Accedi</a>
         </li>
@@ -33,7 +33,7 @@
         </li>
       </ul>
 
-      <ul class="list navbar-center center little">
+      <ul id="MyNavCenter" class="list center little">
         <li class="list-item">
         <a class="navbar-link little" href="./howWork">Come funziona</a>
         </li>
@@ -48,7 +48,10 @@
   </header>
 <script>
   window.onscroll = function() {myFunction()};
-  
+
+  var navLeft = document.getElementById("MyNavLeft");
+  var navRight = document.getElementById("MyNavRight");
+  var navCenter = document.getElementById("MyNavCenter");
   var img = document.getElementById("myImg");
   var imgLittle = document.getElementById("myImgLittle");
   var header = document.getElementById("myHeader");
@@ -57,10 +60,27 @@
   function myFunction() {
     if (window.pageYOffset > sticky) {
       header.classList.add("sticky");
+
+      navRight.classList.remove("navbar-right");
+      navLeft.classList.remove("navbar-left");
+
+      navCenter.classList.add("navbar-center-sticky");
+      navRight.classList.add("navbar-right-sticky");
+      navLeft.classList.add("navbar-left-sticky");
+
       img.classList.add("hidden");
       imgLittle.classList.remove("hidden");
     } else {
       header.classList.remove("sticky");
+
+      navCenter.classList.add("navbar-center");
+      navRight.classList.add("navbar-right");
+      navLeft.classList.add("navbar-left");
+
+      navCenter.classList.remove("navbar-center-sticky");
+      navRight.classList.remove("navbar-right-sticky");
+      navLeft.classList.remove("navbar-left-sticky");
+
       img.classList.remove("hidden");
       imgLittle.classList.add("hidden");
     }
