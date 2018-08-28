@@ -14,3 +14,4 @@ $router->get('signin', 'PagesController@signIn');
 $router->get('users','UsersController@index');
 $router->post('insertItem','PagesController@addItem');
 $router->post('registerUser','PagesController@registerUser');
+$router->post('login','PagesController@loginPOST');

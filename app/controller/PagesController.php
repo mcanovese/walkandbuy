@@ -7,6 +7,7 @@ use Core\Request;
 
 require_once 'app/controller/ItemsController.php';
 require_once 'app/controller/UsersController.php';
+require_once 'app/controller/SessionController.php';
 
 
 class PagesController{
@@ -14,6 +15,7 @@ class PagesController{
   public function __construct() {
     $this->ItemsController = new ItemsController();
     $this->UsersController = new UsersController();
+    $this->SessionController  = new SessionController();
   }
 
 //creare una funzione per ogni pagina, utilizzata poi in routes per
@@ -47,15 +49,6 @@ require 'app/views/howWork.view.php';
 public function addUser(){
     $routeName="addUser";
 
-    $errorcode=$_GET['errorcode'];
-    if(isset($errorcode)){
-      if ($errorcode == '100'){
-    return \Core\view('adduser',[ 'messageDisplay' =>'Le password che hai inserito non sono uguali']);}
-
-    else if($errorcode == '200') {
-      return \Core\view('adduser',[ 'messageDisplay' =>'La mail inserita risulta già associata ad altro utente']);}
-
-    }
 
 require 'app/views/adduser.view.php';
 
@@ -150,39 +143,21 @@ public function registerUser(){
     ]);
       }catch (\Exception $e) {
 
-          if ($e->getMessage() === 'pwdmatcherror')     header("Location: add-user?errorcode=100");
-          else {if ($e->getMessage() === 'maildbpresent')   header("Location: add-user?errorcode=100");
-
+          if ($e->getMessage() === 'pwdmatcherror')    { return \Core\view('adduser',[ 'messageDisplay' =>'Le password che hai inserito non sono uguali', 'routeName' => 'addUser']);}
+          else {if ($e->getMessage() === 'maildbpresent')   return \Core\view('adduser',[ 'messageDisplay' =>'La mail inserita &egrave gi&agrave presente nel database', 'routeName' => 'addUser']);
           }
-
-
-
-
       }
-
-
   }
 
 
+  public function loginPOST() {
+    $email = Request::getPOST('email');
+    $password = Request::getPOST('password');
 
+    $isAuthenticated = $this->SessionController->authenticate($email, $password);
 
+    if ($isAuthenticated) return \Core\view('item');
+    else return \Core\view('item');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  }
 }

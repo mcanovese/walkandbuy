@@ -9,7 +9,7 @@ class User{
   public $codiceFiscale;
   public $telefono;
   public $email;
-  
+
   private $password;
 
   public function __construct(
@@ -19,7 +19,7 @@ class User{
     string $nome,
     string $codiceFiscale,
     string $telefono,
-    string $email, ){
+    string $email ){
 
 
       $this->idUtente = $idUtente;
