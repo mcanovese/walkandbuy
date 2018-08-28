@@ -107,7 +107,7 @@ public function addItem(){
 
     //fine controlli integrità
 
-    $insert = $this->ItemsController->insertItem($itemName,$itemDesc,$itemPrice,$itemUM,$itemPhoto,$itemDiscount,
+  $insert = $this->ItemsController->insertItem($itemName,$itemDesc,$itemPrice,$itemUM,$itemPhoto,$itemDiscount,
   $itemCat,$itemStock,$itemStatus);
 
   if(!$insert)   {
@@ -142,7 +142,7 @@ public function registerUser(){
       'telefono' => $telefono
     ]);
       }catch (\Exception $e) {
-
+          $messageDisplay=0;
           if ($e->getMessage() === 'pwdmatcherror')    { return \Core\view('adduser',[ 'messageDisplay' =>'Le password che hai inserito non sono uguali', 'routeName' => 'addUser']);}
           else {if ($e->getMessage() === 'maildbpresent')   return \Core\view('adduser',[ 'messageDisplay' =>'La mail inserita &egrave gi&agrave presente nel database', 'routeName' => 'addUser']);
           }
