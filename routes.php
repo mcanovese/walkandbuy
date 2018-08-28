@@ -8,6 +8,7 @@ $router->get('contact','PagesController@contact');
 $router->get('add-user','PagesController@addUser');
 $router->get('404','PagesController@notFound');
 $router->get('item','PagesController@item');
+$router->get('category', 'PagesController@category');
 $router->get('signin', 'PagesController@signIn');
 
 
