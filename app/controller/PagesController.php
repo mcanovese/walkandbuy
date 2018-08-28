@@ -142,7 +142,7 @@ public function registerUser(){
       'telefono' => $telefono
     ]);
       }catch (\Exception $e) {
-          $messageDisplay=0;
+        
           if ($e->getMessage() === 'pwdmatcherror')    { return \Core\view('adduser',[ 'messageDisplay' =>'Le password che hai inserito non sono uguali', 'routeName' => 'addUser']);}
           else {if ($e->getMessage() === 'maildbpresent')   return \Core\view('adduser',[ 'messageDisplay' =>'La mail inserita &egrave gi&agrave presente nel database', 'routeName' => 'addUser']);
           }

@@ -1,6 +1,7 @@
 <?php require('partials/head.php');?>
 
-<?php echo $messageDisplay;?>
+<?php
+if(isset($messageDisplay)) echo $messageDisplay;?>
 
 <div>
 <form action="registerUser" method='post'>
