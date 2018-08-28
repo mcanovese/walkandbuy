@@ -36,6 +36,31 @@ class ItemsController {
   }
 
 
+  public function getCategoryItem(int $categoryID) {
+    $table = 'articoli';
+    $where='articoli.categoria = :categoria';
+    $parameters[':categoria'] = $categoryID;
+    $result = $this->database->selectWhere(
+      $table,
+      ['*'],
+      $where,
+      $parameters
+    );
+    $categorygroup = array();
+    foreach($result as $articolo){
+      $categorygroup[] = $this->createItem($articolo);
+    }
+
+    return $categorygroup;
+
+
+  }
+
+
+
+
+
+
 
   private function createItem($result): Articolo {
     return new Articolo(

@@ -52,14 +52,19 @@ public function addUser(){
 
 require 'app/views/adduser.view.php';
 
-
-
     }
 
 
 public function signIn(){
     $routeName="signIn";
 require 'app/views/signIn.view.php';
+}
+
+public function category(){
+  $routeName="category";
+  $itemCod =1;
+  $data = $this->ItemsController->getCategoryItem($itemCod);
+require 'app/views/category.view.php';
 }
 
 public function contact(){
@@ -142,7 +147,7 @@ public function registerUser(){
       'telefono' => $telefono
     ]);
       }catch (\Exception $e) {
-        
+
           if ($e->getMessage() === 'pwdmatcherror')    { return \Core\view('adduser',[ 'messageDisplay' =>'Le password che hai inserito non sono uguali', 'routeName' => 'addUser']);}
           else {if ($e->getMessage() === 'maildbpresent')   return \Core\view('adduser',[ 'messageDisplay' =>'La mail inserita &egrave gi&agrave presente nel database', 'routeName' => 'addUser']);
           }
