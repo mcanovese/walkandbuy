@@ -526,7 +526,11 @@
   /*----------  Pages common sections  ----------*/
   
   .logo-img {
+    max-width: 9rem;
     height: 6rem;
+  }
+  .hidden{
+    display: none;
   }
   
   .navbar-container {
@@ -789,7 +793,7 @@
   .top-container {
     background-color: #f1f1f1;
     display:block;
-    padding: 30px;
+   
     text-align: center;
   }
   
@@ -801,7 +805,8 @@
   
   .sticky {
     position: fixed;
-    top: 0;
+    height: 5rem;
+    top: 0rem;
     width: 100%;
   }
   

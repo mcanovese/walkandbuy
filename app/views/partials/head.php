@@ -19,7 +19,8 @@
     <div class="navbar container">
       <div class="navbar-left left">
         <a class="navbar-link" href="./" title="Ritorna alla pagina principale">
-          <img lang="en" class="logo-img" src="./../../../public/img/logo6.png" alt="Logo Walk & Buy, rimanda alla home" />
+          <img lang="en" class="logo-img" id="myImg" src="./../../../public/img/logo6.png" alt="Logo Walk & Buy, rimanda alla home" />
+          <img lang="en" class="logo-img hidden" id="myImgLittle" src="./../../../public/img/logoNoScritta.png" alt="Logo Walk & Buy, rimanda alla home" />
         </a>
       </div>
       <ul class="list navbar-right right log-link-container">
@@ -47,15 +48,21 @@
   </header>
 <script>
   window.onscroll = function() {myFunction()};
-
+  
+  var img = document.getElementById("myImg");
+  var imgLittle = document.getElementById("myImgLittle");
   var header = document.getElementById("myHeader");
   var sticky = header.offsetTop;
 
   function myFunction() {
     if (window.pageYOffset > sticky) {
       header.classList.add("sticky");
+      img.classList.add("hidden");
+      imgLittle.classList.remove("hidden");
     } else {
       header.classList.remove("sticky");
+      img.classList.remove("hidden");
+      imgLittle.classList.add("hidden");
     }
   }
 </script>
