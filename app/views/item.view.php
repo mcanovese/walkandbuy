@@ -18,6 +18,7 @@ object(App\Models\Articolo)#7 (11) { ["idProdotto"]=> string(1) "1"
 ["abilitato"]=> string(1) "1" ["venditore"]=> string(1) "1" }
 */
 -->
+
 <?php if($action == "newItem") :?> <!-- inserimento nuovo articolo -->
 <h1>Inserimento Nuovo Articolo</h1>
 <p>Completa il form per effettuare l'inserimento di un articolo nel tuo inventario</p>
@@ -81,7 +82,7 @@ object(App\Models\Articolo)#7 (11) { ["idProdotto"]=> string(1) "1"
 
   <button type="submit" class="btn btn-outline">Inserisci Articolo</button>
 
-</div>
+
 
 </form>
 
@@ -90,10 +91,15 @@ object(App\Models\Articolo)#7 (11) { ["idProdotto"]=> string(1) "1"
 
 
 <?php else : var_dump($currentItem);?>
-
+<div class="col-img">
+COLONNA IMMAGINE
+</div>
+<div class="col-text">
+COLONNA TESTO
+</div>
   <!-- //var_dump da rimuovere / usare solo x vedere voci array -->
 <?php endif; ?>
-
+</div>
 
 
 

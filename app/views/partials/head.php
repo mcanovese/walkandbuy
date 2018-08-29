@@ -10,7 +10,6 @@
   <link type="text/css" rel="stylesheet" href="./../../../public/css/common.css" />
   <link type="text/css" rel="stylesheet" href="./../../../public/css/<?= $routeName ?>.css" />
   <title lang="en">Walk & Buy</title>
-
 </head>
 <body>
   <!-- <div  class="top-container">Roba</div>  Per il back to top -->
@@ -46,6 +45,7 @@
       </ul>
     </div>
   </header>
+  <button onclick="topFunction()" id="backToTop" title="Go to top">Top</button>
 <script>
   window.onscroll = function() {myFunction()};
 
@@ -60,6 +60,8 @@
   function myFunction() {
     if (window.pageYOffset > sticky) {
       header.classList.add("sticky");
+      
+      document.getElementById("myBtn").style.display = "block";
 
       navRight.classList.remove("navbar-right");
       navLeft.classList.remove("navbar-left");
@@ -73,6 +75,8 @@
     } else {
       header.classList.remove("sticky");
 
+      document.getElementById("myBtn").style.display = "none";
+
       navCenter.classList.add("navbar-center");
       navRight.classList.add("navbar-right");
       navLeft.classList.add("navbar-left");
@@ -85,5 +89,10 @@
       imgLittle.classList.add("hidden");
     }
   }
+
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
 </script>
   <?php require('nav.php');?>
