@@ -47,8 +47,11 @@
       </ul>
     </div>
   </header>
+  <div>
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><img class="logo-img"src="../../../public/img/up.svg"/></button>
+  </div>
 <script>
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {scroll()};
 </script>
 
   <?php require('nav.php');?>

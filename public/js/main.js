@@ -1,4 +1,4 @@
-function myFunction() {
+function scroll() {
 var navLeft = document.getElementById("MyNavLeft");
 var navRight = document.getElementById("MyNavRight");
 var navCenter = document.getElementById("MyNavCenter");
@@ -18,6 +18,8 @@ var sticky = header.offsetTop;
 
       img.classList.add("hidden");
       imgLittle.classList.remove("hidden");
+
+      document.getElementById("myBtn").style.display = "block";
     } else {
       header.classList.remove("sticky");
 
@@ -31,5 +33,13 @@ var sticky = header.offsetTop;
 
       img.classList.remove("hidden");
       imgLittle.classList.add("hidden");
+
+      document.getElementById("myBtn").style.display = "none";
     }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
