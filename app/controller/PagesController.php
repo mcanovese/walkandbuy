@@ -62,8 +62,11 @@ require 'app/views/signIn.view.php';
 
 public function category(){
   $routeName="category";
-  $itemCod =1;
-  $data = $this->ItemsController->getCategoryItem($itemCod);
+  $catID = (integer)$_GET['id'];
+  $data = $this->ItemsController->getCategoryItem($catID);
+  $catName = $this->Items;
+  $categorie = $this->ItemsController->getAllCat();
+
 require 'app/views/category.view.php';
 }
 
@@ -80,11 +83,11 @@ if(!isset($_GET['req'])&& !isset($_GET['cod'])) header("Location: 404");
   $routeName = 'item';
   if(isset($_GET['req']) && $_GET['req'] == "newItem"){
     $action = "newItem";
-   return \Core\view('item',[ 'action' =>$action]);
+   return \Core\view('item',[ 'action' =>$action, 'routeName'=>'item']);
 
   }
   else {
-    
+
   $itemCod=$_GET['cod'];
   $currentItem = $this->ItemsController->getItem($itemCod);
   return \Core\view('item', [
