@@ -84,6 +84,7 @@ if(!isset($_GET['req'])&& !isset($_GET['cod'])) header("Location: 404");
 
   }
   else {
+    
   $itemCod=$_GET['cod'];
   $currentItem = $this->ItemsController->getItem($itemCod);
   return \Core\view('item', [
