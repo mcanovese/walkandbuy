@@ -48,7 +48,7 @@
     </div>
   </header>
   <div>
-  <button onclick="topFunction()" id="myBtn" title="Go to top"><img class="logo-img"src="../../../public/img/up.svg"/></button>
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><img class="logo-img"src="../../../public/img/up.png"/></button>
   </div>
 <script>
 window.onscroll = function() {scroll()};
