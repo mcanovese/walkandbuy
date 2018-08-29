@@ -1,10 +1,11 @@
 <div id="container">
 <?php require('partials/head.php');?>
 <div id="body">
-<h1>Categoria Singola</h1>
+<h1>Categoria <?php echo $catName; ?></h1>
 
 
 <?php
+
 
 foreach ($data as $articolo){
 echo"<div>";
