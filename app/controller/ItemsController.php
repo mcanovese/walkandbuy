@@ -51,8 +51,24 @@ class ItemsController {
       $categorygroup[] = $this->createItem($articolo);
     }
 
+
+
     return $categorygroup;
 
+
+  }
+
+  public function getAllCat(){
+    $table = 'categoria';
+    $result = $this->database->selectAll($table);
+    return $result;
+
+  }
+
+  public function getCatByID($catID){
+    $table = 'categoria';
+    $result = $this->database->selectWhere($catID);
+    return $result;
 
   }
 
@@ -101,6 +117,8 @@ string $itemCat,string $itemStock,string $itemStatus): bool {
       return false;
     }
   }
+
+
 
 
 
