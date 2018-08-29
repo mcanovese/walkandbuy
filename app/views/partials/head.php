@@ -9,7 +9,9 @@
   <link type="text/css" rel="stylesheet" href="./../../../public/css/normalize.css" />
   <link type="text/css" rel="stylesheet" href="./../../../public/css/common.css" />
   <link type="text/css" rel="stylesheet" href="./../../../public/css/<?= $routeName ?>.css" />
+  <script src="../../../public/js/main.js"></script>
   <title lang="en">Walk & Buy</title>
+
 </head>
 <body>
   <!-- <div  class="top-container">Roba</div>  Per il back to top -->
@@ -45,54 +47,8 @@
       </ul>
     </div>
   </header>
-  <button onclick="topFunction()" id="backToTop" title="Go to top">Top</button>
 <script>
-  window.onscroll = function() {myFunction()};
-
-  var navLeft = document.getElementById("MyNavLeft");
-  var navRight = document.getElementById("MyNavRight");
-  var navCenter = document.getElementById("MyNavCenter");
-  var img = document.getElementById("myImg");
-  var imgLittle = document.getElementById("myImgLittle");
-  var header = document.getElementById("myHeader");
-  var sticky = header.offsetTop;
-
-  function myFunction() {
-    if (window.pageYOffset > sticky) {
-      header.classList.add("sticky");
-      
-      document.getElementById("myBtn").style.display = "block";
-
-      navRight.classList.remove("navbar-right");
-      navLeft.classList.remove("navbar-left");
-
-      navCenter.classList.add("navbar-center-sticky");
-      navRight.classList.add("navbar-right-sticky");
-      navLeft.classList.add("navbar-left-sticky");
-
-      img.classList.add("hidden");
-      imgLittle.classList.remove("hidden");
-    } else {
-      header.classList.remove("sticky");
-
-      document.getElementById("myBtn").style.display = "none";
-
-      navCenter.classList.add("navbar-center");
-      navRight.classList.add("navbar-right");
-      navLeft.classList.add("navbar-left");
-
-      navCenter.classList.remove("navbar-center-sticky");
-      navRight.classList.remove("navbar-right-sticky");
-      navLeft.classList.remove("navbar-left-sticky");
-
-      img.classList.remove("hidden");
-      imgLittle.classList.add("hidden");
-    }
-  }
-
-  function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
+window.onscroll = function() {myFunction()};
 </script>
+
   <?php require('nav.php');?>
