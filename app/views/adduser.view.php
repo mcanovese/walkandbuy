@@ -1,4 +1,6 @@
+<div id="container">
 <?php require('partials/head.php');?>
+<div id="body">
 <h1>Registrazione Utente</h1>
 <?php
 if(isset($messageDisplay)) echo $messageDisplay;?>
@@ -49,4 +51,6 @@ if(isset($messageDisplay)) echo $messageDisplay;?>
 </div>
 </form>
 </div>
+</div>
 <?php require('partials/footer.php');?>
+</div>

@@ -1,6 +1,6 @@
-
+<div id="container">
 <?php require('partials/head.php');?>
-
+<div id="body">
 
 
 <!--
@@ -102,5 +102,6 @@ COLONNA TESTO
 </div>
 
 
-
+</div>
 <?php require('partials/footer.php');?>
+</div>

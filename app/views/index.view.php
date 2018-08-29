@@ -1,4 +1,6 @@
+<div id="container">
 <?php require('partials/head.php');?>
+<div id="body">
 <h1>Walk&Buy Home</h1>
 
 <div>
@@ -32,5 +34,6 @@
 <div> CIAO </div>
 <div> CIAO </div>
 <div> CIAO </div>
-
+</div>
 <?php require('partials/footer.php');?>
+</div>

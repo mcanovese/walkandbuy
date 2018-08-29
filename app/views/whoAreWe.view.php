@@ -1,4 +1,6 @@
+<div id="container">
 <?php require('partials/head.php');?>
+<div id="body">
 <h1>Chi Siamo</h1>
 
 <p>
@@ -9,5 +11,6 @@ La piattaforma è gestita dalla locale associazione degli agricoltori, la quale 
 dei servizi offerti ed in particolare si occupa dell servizio di consegna a domicilio.
 </p>
 
-
+</div>
 <?php require('partials/footer.php');?>
+</div>

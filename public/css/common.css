@@ -50,15 +50,40 @@
   padding: 0;
 }
 
-html {
+html,body{
   font-size: 16px;
   height: 100%;
 }
 
-body {
+body{
   background-color: #fff;
   color: #4e4e4e;
   font-family:  'Lato', Geneva, sans-serif;
+}
+
+#container{
+  min-height:100%;
+  position:relative;
+}
+
+#myHeader {
+  padding:10px;
+}
+
+#body {
+  padding:10px;
+  padding-bottom:60px;   /* Height of the footer */
+}
+
+#footer {
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:3rem;   /* Height of the footer */
+  background-image:url("../img/header.jpg");
+  color: #fff;
+  font-size: 0.875rem;
+  padding: 1rem 0;
 }
 
 a {
@@ -612,14 +637,6 @@ dd {
   color: inherit;
 }
 
-.footer {
-  background-color: #060606;
-  position:relative;
-  top:100%;
-  color: #fff;
-  font-size: 0.875rem;
-  padding: 1rem 0;
-}
 
 /*----------  Utilities  ----------*/
 

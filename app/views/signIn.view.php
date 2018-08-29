@@ -1,4 +1,6 @@
+<div id="container">
 <?php require('partials/head.php');?>
+<div id="body">
 <h1>Login Utente</h1>
 <div>
 <form action="login" method='post'>
@@ -21,4 +23,6 @@
 <a href="lostPassword">Recupero Password</a>
 <a href="contactSupport">Problemi? Contatta l'Help Desk</a>
 </div>
+</div>
 <?php require('partials/footer.php');?>
+</div>
