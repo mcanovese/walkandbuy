@@ -91,7 +91,7 @@ object(App\Models\Articolo)#7 (11) { ["idProdotto"]=> string(1) "1"
 
 
 
-<?php else : var_dump($currentItem);?>
+<?php else : var_dump($currentItem); echo"aaaa"; echo var_dump($routeName);?>
 <div class="col-img">
 COLONNA IMMAGINE
 </div>
