@@ -65,18 +65,20 @@ class ItemsController {
 
   }
 
-  public function getCatByID($catID){
+
+
+  public function getCatName($catID){
     $table = 'categoria';
-    $result = $this->database->selectWhere($catID);
-    return $result;
+    $where='categoria.idcategoria = :idcategoria';
+    $parameters[':idcategoria'] = $catID;
+    $result = $this->database->selectWhere($table,
+    ['*'],
+    $where,
+    $parameters
+  );
+    return $result[0]->descrizione;
 
   }
-
-
-
-
-
-
 
   private function createItem($result): Articolo {
     return new Articolo(
@@ -120,7 +122,30 @@ string $itemCat,string $itemStock,string $itemStatus): bool {
 
 
 
+  private function randomItem(){
+    //genero 5 numeri random, range 0- #maxID_articolo
+    $table = 'articoli';
+    $column = 'idprodotto';
+    $max = $this->database->selectMax($table,$column);
+    $min = 0;
+    $value = rand( 0 ,$max[0]->massimo);
+    return $value;
 
+
+  }
+
+  public function homeEvidenceItem($nrItem){
+
+    while($nrItem >=0){
+      $valore = $this->randomItem();
+
+
+    }
+
+    return $valore;
+
+
+  }
 
 
 

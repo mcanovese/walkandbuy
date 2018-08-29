@@ -64,8 +64,8 @@ public function category(){
   $routeName="category";
   $catID = (integer)$_GET['id'];
   $data = $this->ItemsController->getCategoryItem($catID);
-  $catName = $this->Items;
-  $categorie = $this->ItemsController->getAllCat();
+  $catName = $this->ItemsController->getCatName($catID);
+
 
 require 'app/views/category.view.php';
 }
