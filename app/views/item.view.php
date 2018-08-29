@@ -19,7 +19,7 @@ object(App\Models\Articolo)#7 (11) { ["idProdotto"]=> string(1) "1"
 */
 -->
 
-<?php if($action == "newItem") :?> <!-- inserimento nuovo articolo -->
+<?php if(isset($action) && $action == "newItem") :?> <!-- inserimento nuovo articolo -->
 <h1>Inserimento Nuovo Articolo</h1>
 <p>Completa il form per effettuare l'inserimento di un articolo nel tuo inventario</p>
 

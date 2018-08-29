@@ -78,7 +78,7 @@ public function item() {
 if(!isset($_GET['req'])&& !isset($_GET['cod'])) header("Location: 404");
 
   $routeName = 'item';
-  if($_GET['req'] == "newItem"){
+  if(isset($_GET['req']) && $_GET['req'] == "newItem"){
     $action = "newItem";
    return \Core\view('item',[ 'action' =>$action]);
 
