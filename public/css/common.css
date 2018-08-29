@@ -108,7 +108,6 @@ h6 {
   font-family:  'Amatic SC', Geneva, sans-serif;
   font-size:4rem;
   font-weight:normal;
-  text-align:center;
   text-transform: uppercase;
 }
 
@@ -251,6 +250,11 @@ dd {
 .clearfix:after {
   content: '';
   display: table;
+  clear: both;
+}
+
+.clear {
+  display: block;
   clear: both;
 }
 
@@ -563,7 +567,7 @@ dd {
   background-color:black;
   background-image: url("../img/header.jpg");
   padding-bottom: 0.5rem;
-  height: 6rem;
+  height: 6.5rem;
   width: 100%;
   z-index: 1;
 }

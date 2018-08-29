@@ -15,7 +15,7 @@
 </head>
 <body>
   <!-- <div  class="top-container">Roba</div>  Per il back to top -->
-  <header  class="navbar-container" id="top" > 
+  <header  class="navbar-container clearfix" id="top" > 
   <div class="header" id="myHeader">
     <div class="navbar container">
       <div id="MyNavLeft" class="navbar-left left">

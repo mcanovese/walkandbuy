@@ -97,11 +97,18 @@ object(App\Models\Articolo)#7 (11) { ["idProdotto"]=> string(1) "1"
   <?php echo '<img src="../../public/img/product/'.$currentItem->foto.'.jpg'.'" alt="'.$currentItem->nome.'" title="'.$currentItem->nome.'"/> '; ?>
 </div>
 </div>
-<div class="split col-text">
+
+<div class="split col-text"> <!-- COLONNA DEL TESTO, CON DETTAGLI-->
 <div class="prod-name">
   <h2><?php echo $currentItem->nome; ?><h2>
 </div>
-<div class="prod-descr">
+<div class="prod-little-text"> Prezzo: <?php echo $currentItem->prezzoPieno?>&euro; </div>
+<div class="add-cart center">
+  <button onclick="addCart()" id="add-cart" title="Aggiungi al carrello">
+  <img src="../../public/img/addCart.png" alt="aggiungi al carrello" title="aggiungi al carrello"/>
+  </button>
+</div>
+<p class="prod-descr">
 </div>
 <div class="prod-price">
 </div>
