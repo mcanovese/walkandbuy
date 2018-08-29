@@ -90,12 +90,23 @@ object(App\Models\Articolo)#7 (11) { ["idProdotto"]=> string(1) "1"
 
 
 
-<?php else : var_dump($currentItem);?>
-<div class="col-img">
-COLONNA IMMAGINE
+<?php else : var_dump($routeName);?>
+<div class="split col-img">
+<div class="prod-img">
+  <?php echo '<img src="../../public/img/product/'.$currentItem->foto.'.jpg'.'" alt="'.$currentItem->nome.'" title="'.$currentItem->nome.'"/> '; ?>
 </div>
-<div class="col-text">
-COLONNA TESTO
+</div>
+<div class="split col-text">
+<div class="prod-name">
+  <h2><?php echo $currentItem->nome; ?><h2>
+</div>
+<div class="prod-descr">
+</div>
+<div class="prod-price">
+</div>
+<div class="prod-seller">
+</div>
+
 </div>
   <!-- //var_dump da rimuovere / usare solo x vedere voci array -->
 <?php endif; ?>

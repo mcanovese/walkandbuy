@@ -1,6 +1,19 @@
+
+
+.split{
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 6rem;
+    padding-top: 20px;
+}
+
 .col-text{
-    float: right;
-    background-color: #000000;
-  display:block;
-  text-align: center;
+  right: 0;
+}
+
+.col-img{
+  left: 0;
+
 }

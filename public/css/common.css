@@ -841,10 +841,6 @@ input.screen-reader:focus + .input-label {
 }
 
 
-.col-text{
-  float: right;
-}
-
 #myBtn {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
@@ -865,3 +861,4 @@ input.screen-reader:focus + .input-label {
   transform: translate(0, -0.5rem);
   transition: ease-in 0.5s;
 }
+/* da inserire in item.css */
