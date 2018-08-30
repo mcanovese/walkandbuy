@@ -68,6 +68,7 @@ body{
 
 #myHeader {
   padding:10px;
+  z-index:99;
 }
 
 #body {
@@ -79,6 +80,7 @@ body{
   position:absolute;
   bottom:0;
   width:100%;
+  z-index: 51;
   height:3rem;   /* Height of the footer */
   background-image:url("../img/header.jpg");
   color: #fff;
@@ -109,6 +111,10 @@ h6 {
   font-size:4rem;
   font-weight:normal;
   text-transform: uppercase;
+}
+
+.title{
+  text-align: center;
 }
 
 p {
@@ -352,8 +358,7 @@ dd {
   background-color: #5fad55;
   color: rgb(255, 255, 255);
   text-decoration: none;
-  -webkit-transform: translate(0.3rem, -0.5rem);
-  transform: translate(0.3rem, -0.5rem);
+  box-shadow: inset 0 0 0 2px #3c6d35;
 }
 
 .btn-primary {

@@ -91,7 +91,8 @@ object(App\Models\Articolo)#7 (11) { ["idProdotto"]=> string(1) "1"
 
 
 
-<?php else : var_dump($routeName);?>
+<?php else : ?>
+<div class="breadcrumb">Breadcrumb?</div>
 <div class="split col-img">
 <div class="prod-img">
   <?php echo '<img src="../../public/img/product/'.$currentItem->foto.'.jpg'.'" alt="'.$currentItem->nome.'" title="'.$currentItem->nome.'"/> '; ?>
@@ -108,13 +109,15 @@ object(App\Models\Articolo)#7 (11) { ["idProdotto"]=> string(1) "1"
   <img src="../../public/img/addCart.png" alt="aggiungi al carrello" title="aggiungi al carrello"/>
   </button>
 </div>
-<p class="prod-descr">
+<div class="prod-Info top-border" ><h4 class="prod-Info">Descrizione<h4>
+<p class="info"> <?php echo $currentItem->descrizione ?> </p>
 </div>
-<div class="prod-price">
-</div>
+<div class="prod-Info" ><h4 class="prod-Info">Informazioni generali<h4>
+<p class="prod-price"></p>
+
 <div class="prod-seller">
 </div>
-
+</div>
 </div>
   <!-- //var_dump da rimuovere / usare solo x vedere voci array -->
 <?php endif; ?>
