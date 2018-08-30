@@ -54,5 +54,6 @@ if(isset($messageDisplay)) echo $messageDisplay;?>
 </form>
 </div>
 </div>
+
 <?php require('partials/footer.php');?>
 </div>

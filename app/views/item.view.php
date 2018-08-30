@@ -126,5 +126,6 @@ object(App\Models\Articolo)#7 (11) { ["idProdotto"]=> string(1) "1"
 
 
 </div>
+
 <?php require('partials/footer.php');?>
 </div>

@@ -562,7 +562,7 @@ dd {
 /*----------  Pages common sections  ----------*/
 
 .logo-img {
-  max-width: 9rem;
+  max-width: 11rem;
   height: 6rem;
 }
 .hidden{
@@ -871,4 +871,6 @@ input.screen-reader:focus + .input-label {
   transform: translate(0, -0.5rem);
   transition: ease-in 0.5s;
 }
-/* da inserire in item.css */
+.padding{
+  padding-bottom:3rem;
+}
