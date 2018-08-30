@@ -67,6 +67,7 @@ public function category(){
   $catName = $this->ItemsController->getCatName($catID);
 
 
+
 require 'app/views/category.view.php';
 }
 

@@ -29,8 +29,10 @@ class ItemsController {
       $where,
       $parameters
     );
-
-    return $this->createItem($result[0]);
+    $item = $this->createItem($result[0]);
+    $item->categoria =$this->getCatName($result[0]->categoria);
+    $item->unitamisura = $this->getUmName($result[0]->unitamisura);
+    return $item;
     //passo array result (query db) a funzione createItem, che mi restituisce un articolo
     // ben formato che viene restituito dal return.
   }
@@ -50,13 +52,30 @@ class ItemsController {
     foreach($result as $articolo){
       $categorygroup[] = $this->createItem($articolo);
     }
-
-
-
     return $categorygroup;
+  }
 
+
+  public function getUmName($umID){
+    $table = 'unitamisura';
+    $where='unitamisura.idum = :idum';
+    $parameters[':idum'] = $umID;
+    $result = $this->database->selectWhere($table,
+    ['*'],
+    $where,
+    $parameters
+  );
+    return $result[0]->nomebreve;
 
   }
+
+
+
+
+
+
+
+
 
   public function getAllCat(){
     $table = 'categoria';
