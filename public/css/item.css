@@ -1,16 +1,20 @@
 .split{
-    height: 100%;
+    height: 85%;
     width: 48%;
     position: fixed;
     z-index: 50;
-    top: 9em;
-    padding-top: 20px;
+    overflow: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
 }
 
 .prod-info{
   font-size: 2.5rem;
   margin-top:1.5rem;
   font-weight:bold;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
 }
 
 .info{
@@ -19,16 +23,16 @@
   font-family:  'Lato', Geneva, sans-serif;
   text-transform: none;
   font-weight: normal;
+  overflow: inherit;
+  max-width: 35rem;
+  min-width: 10rem;
 }
 
 .top-border{
+  margin-top: 1.5rem;
   border-top: 1px solid lightgrey;
-}
-.prod-little-text{
-  text-align:left;
-  font-size: 15px;
-  font-family:  'Lato', Geneva, sans-serif;
-  
+  max-width: 35rem;
+  min-width: 10rem;
 }
 
 .prod-name{
@@ -39,7 +43,8 @@
   display:block;
   right: 0rem;
   padding-right:5rem;
-  max-width: 40rem;
+  overflow: auto;
+  
 }
 
 .col-img{
@@ -58,6 +63,7 @@
   background-color: #5fad55;
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
+  margin-top: 1rem;
   max-width: 13rem;
   min-width: 9rem;
   max-height: 2.5rem;
@@ -73,4 +79,49 @@
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
     background: #3b6d35; 
+}
+
+.btn {
+  display: block;
+  margin: 2rem auto;
+  text-align: center;
+  width: 50%;
+}
+
+
+.loginbox {
+
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  left: 50%;
+  margin: auto;
+  max-width: 100vw;
+  padding: 0 1rem;
+  width: 24rem;
+}
+
+.loginbox-field {
+  margin: auto;
+  padding-top: 2rem;
+}
+
+.loginbox-field:first-child {
+  padding-top: 1rem;
+}
+
+.loginbox-fieldset {
+  margin-top: 1rem;
+}
+
+/*----------  Media queries  ----------*/
+
+@media (min-width: 480px) {
+  .loginbox {
+    -webkit-box-shadow: 1px 1px 10px #888888;
+    box-shadow: 1px 1px 10px #888888;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
 }

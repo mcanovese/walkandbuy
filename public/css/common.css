@@ -79,6 +79,7 @@ body{
 #footer {
   position:absolute;
   bottom:0;
+
   width:100%;
   z-index: 51;
   height:3rem;   /* Height of the footer */
