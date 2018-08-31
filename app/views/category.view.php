@@ -14,12 +14,9 @@ echo "<a href='/item?cod=".$articolo->idProdotto."'>";
 echo '<img src="../../public/img/product/'.$articolo->foto.'.jpg'.'" alt="'.$articolo->nome.'" title="'.$articolo->nome.'"/> ';
 echo "</a>";
 echo "</div>";
-echo '<p class="info-text">'.$articolo->nome.'</p>';
-echo '<p class="info-text">'.$articolo->descrizione.'</p>';
-echo '<p class="info-text">'.$articolo->prezzoPieno.'</p>';
-echo '<p class="info-text">'.$articolo->unitaMisura.'</p>';
-echo '<p class="info-text">'.$articolo->foto.'</p>';
-echo '<p class="info-text">'.$articolo->percentualeSconto.'</p>';
+echo '<p class="info-text name">'.$articolo->nome.'</p>';
+echo '<p class="info-text price">Prezzo: '.$articolo->prezzoPieno.'&euro;</p>';
+echo '<p class="info-text discount">'.$articolo->percentualeSconto.'&#37;</p>';
 echo "</div>";
 
 }

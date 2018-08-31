@@ -1,4 +1,6 @@
 .category-item{
+    border-radius: 0.5rem;
+    background-color:white;
     float:left;
     margin-top:2rem;
     margin-left:3rem;
@@ -9,6 +11,7 @@
     padding: 1rem 1rem 1rem 1rem;
     display:flex;
     justify-content: center;
+    
     max-width: 15rem;
     max-height: 10rem;
     transition: all .2s ease-in-out;
@@ -19,6 +22,38 @@
 }
 
 .info-text{
-    text-align:center;
+    max-width: 15rem;
+    
+    text-align:left;
     clear: both;
+    white-space: nowrap;      /*keep text on one line */
+    overflow: hidden;         /*prevent text from being shown outside the border */
+    text-overflow: ellipsis;
+}
+
+.name{
+    border-top:solid lightgrey;
+    font-size: 1.25rem;
+    font-family:  'Lato', Geneva, sans-serif;
+    text-align: left;
+    padding-bottom: 1rem;
+    padding-left:1.5rem;
+
+}
+
+.price{
+    font-size: 2rem;
+    padding: 0.5rem;
+    padding-right:1.5rem;
+    float: right;
+    font-family:  'Amatic SC', Geneva, sans-serif;
+    font-weight: normal;
+}
+
+.discount{
+    padding-top:0.2rem;
+    padding-bottom:0.2rem;
+    font-size: 2rem;
+    float:right;
+    font-family:  'Amatic SC', Geneva, sans-serif;
 }
