@@ -340,7 +340,7 @@ dd {
 }
 
 .btn-link {
-  color: #741717;
+  color: #3545d1;
   margin-right: 1rem;
   text-transform: uppercase;
 }
@@ -873,4 +873,41 @@ input.screen-reader:focus + .input-label {
 }
 .padding{
   padding-bottom:3rem;
+}
+
+.sub-head{
+  height:5.5rem;   
+  background-image:url("../img/header.jpg");
+  background-color:black;
+  border-top:1px solid darkgrey;
+}
+.category{
+  float:left;
+  width:20%;
+  text-align:center;
+  color:lightgrey;
+  font-size: 0.75rem;
+}
+
+.category-img{
+  max-height:3.5rem;
+  transition: all .2s ease-in-out;
+}
+
+.category-img:hover{
+  transform: scale(1.1); 
+  cursor: pointer;
+}
+
+.sub-head-link{
+  color:lightgrey;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+.category-name{
+  margin-top:0.1rem;
+}
+.sub-head-link:hover {
+  color:  #d4ca36;
 }

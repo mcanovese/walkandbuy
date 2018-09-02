@@ -5,12 +5,15 @@ var navCenter = document.getElementById("MyNavCenter");
 var img = document.getElementById("myImg");
 var imgLittle = document.getElementById("myImgLittle");
 var header = document.getElementById("myHeader");
+var subHead = document.getElementById("subHead");
 var sticky = header.offsetTop;
     if (window.pageYOffset > sticky) {
       header.classList.add("sticky");
 
       navRight.classList.remove("navbar-right");
       navLeft.classList.remove("navbar-left");
+      
+      subHead.classList.add("hidden");
 
       navCenter.classList.add("navbar-center-sticky");
       navRight.classList.add("navbar-right-sticky");
@@ -27,6 +30,8 @@ var sticky = header.offsetTop;
       navRight.classList.add("navbar-right");
       navLeft.classList.add("navbar-left");
 
+      subHead.classList.remove("hidden");
+      
       navCenter.classList.remove("navbar-center-sticky");
       navRight.classList.remove("navbar-right-sticky");
       navLeft.classList.remove("navbar-left-sticky");
