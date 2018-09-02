@@ -14,6 +14,7 @@ var sticky = header.offsetTop;
       navLeft.classList.remove("navbar-left");
       
       subHead.classList.add("hidden");
+      subHead.classList.remove("flex");
 
       navCenter.classList.add("navbar-center-sticky");
       navRight.classList.add("navbar-right-sticky");
@@ -31,7 +32,8 @@ var sticky = header.offsetTop;
       navLeft.classList.add("navbar-left");
 
       subHead.classList.remove("hidden");
-      
+      subHead.classList.add("flex");
+
       navCenter.classList.remove("navbar-center-sticky");
       navRight.classList.remove("navbar-right-sticky");
       navLeft.classList.remove("navbar-left-sticky");

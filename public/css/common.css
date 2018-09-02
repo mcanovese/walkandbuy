@@ -562,8 +562,8 @@ dd {
 /*----------  Pages common sections  ----------*/
 
 .logo-img {
-  max-width: 11rem;
-  height: 6rem;
+  max-width: 9rem;
+  max-height: 5rem;
 }
 .hidden{
   display: none;
@@ -871,12 +871,13 @@ input.screen-reader:focus + .input-label {
   transform: translate(0, -0.5rem);
   transition: ease-in 0.5s;
 }
-.padding{
-  padding-bottom:3rem;
+
+.flex{
+  display:flex;
 }
 
 .sub-head{
-  height:5.5rem;   
+  height:5.5rem; 
   background-image:url("../img/header.jpg");
   background-color:black;
   border-top:1px solid darkgrey;
@@ -911,3 +912,4 @@ input.screen-reader:focus + .input-label {
 .sub-head-link:hover {
   color:  #d4ca36;
 }
+

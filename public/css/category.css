@@ -1,59 +1,106 @@
-.category-item{
-    border-radius: 0.5rem;
-    background-color:white;
-    float:left;
-    margin-top:2rem;
-    margin-left:3rem;
-    border:1px solid lightgray ;
+.category-container{
+    width:100%;
 }
 
-.little-img{
+.category-item{
+    margin-top: 1rem;
+    background-color:white;
+    float:left;
+    width:15%;
+    margin-left:2rem;
+    height: 16rem;
+    position:relative;
+}
+
+
+.little-img-container{
     padding: 1rem 1rem 1rem 1rem;
-    display:flex;
     justify-content: center;
-    
-    max-width: 15rem;
-    max-height: 10rem;
+    max-width: 25rem;
+    max-height: 15rem;
     transition: all .2s ease-in-out;
 }
 
-.little-img:hover{
+.little-img-container img{
+    width:13rem;
+    height:5.5rem;
+}
+.little-img-container:hover{
     transform: scale(1.1); 
 }
 
 .info-text{
     max-width: 15rem;
-    
     text-align:left;
     clear: both;
-    white-space: nowrap;      /*keep text on one line */
+    white-space: initial;      /*keep text on one line */
     overflow: hidden;         /*prevent text from being shown outside the border */
     text-overflow: ellipsis;
 }
 
+.info-container{
+    white-space: nowrap;      /*keep text on one line */
+    overflow: hidden;         /*prevent text from being shown outside the border */
+    text-overflow: ellipsis;
+    width:100%;
+    padding-bottom:0.5rem;
+    
+}
 .name{
-    border-top:solid lightgrey;
-    font-size: 1.25rem;
+
+    font-size: 1.15rem;
     font-family:  'Lato', Geneva, sans-serif;
     text-align: left;
-    padding-bottom: 1rem;
-    padding-left:1.5rem;
-
+    padding-left:1rem;
+    padding-top: 1rem;
+    max-width: 65%;
 }
 
 .price{
+    white-space: nowrap;      /*keep text on one line */
+    overflow: hidden;         /*prevent text from being shown outside the border */
+    text-overflow: ellipsis;
     font-size: 2rem;
-    padding: 0.5rem;
-    padding-right:1.5rem;
+    margin-right:0.5rem;
+    margin-top:-1.6rem;
     float: right;
+    max-width:30%;
     font-family:  'Amatic SC', Geneva, sans-serif;
     font-weight: normal;
 }
 
 .discount{
-    padding-top:0.2rem;
+    max-width:60%;
     padding-bottom:0.2rem;
-    font-size: 2rem;
     float:right;
-    font-family:  'Amatic SC', Geneva, sans-serif;
+    font-family:  'Lato', Geneva, sans-serif;
+    padding-right:1rem;
+    padding-top:0.5rem;
+    
+}
+
+.full-price{
+    font-family:  'Lato', Geneva, sans-serif;
+    font-weight: normal;
+    color:red;
+}
+
+.striked{
+     text-decoration:line-through;
+}
+
+
+.add-foot{
+    border-top:0.5px solid lightgray ;
+    position:absolute;
+    left:0;
+    bottom:0;
+}
+
+.add-foot img{
+    transition: all .2s ease-in-out;
+}
+
+.add-foot img:hover{
+    transform: scale(1.1); 
 }
