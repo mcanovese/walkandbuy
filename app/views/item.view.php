@@ -113,7 +113,7 @@ Breadcrumb?
   <?php echo '<img src="../../public/img/product/'.$currentItem->foto.'.jpg'.'" alt="'.$currentItem->nome.'" title="'.$currentItem->nome.'"/> '; ?>
 </div>
 </div>
-
+<?php echo var_dump($currentItem); ?>
 <div class="split col-text"> <!-- COLONNA DEL TESTO, CON DETTAGLI-->
 <div class="prod-name">
   <h2><?php echo $currentItem->nome; ?><h2>
@@ -132,7 +132,7 @@ Prezzo: <?php echo $currentItem->prezzoPieno?>&euro;
 </div>
 <div class="prod-Info" ><h4 class="prod-Info">Informazioni generali<h4>
 <div class="prod-price info">PREZZO</div>
-<div class="prod-seller">VENDITORE
+<div class="prod-seller"><?php echo $currentItem->unitamisura ?>
 </div>
 </div>
 </div>
