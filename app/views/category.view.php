@@ -5,6 +5,11 @@
 <div>
 
 <div class="category-container">
+<div class="go-subcat">
+<button onclick="#" class="go-subcat" alt="Scoprili tutti">
+    <img src="../../public/img/go_subcat.png" alt="Scoprili tutti" />
+</button>
+</div>
 <?php
 
 foreach ($data as $articolo){
@@ -27,7 +32,7 @@ echo '<p class="info-text discount">-'.$articolo->percentualeSconto.'&#37;&nbsp;
 } else {
 echo '<p class="info-text price">&euro;'.$articolo->prezzoPieno.'</p>';
 }
-echo '<p class="info-text quantity">'.$articolo->quantita.' '.$articolo->unitamisura.'</p>';
+echo '<p class=" quantity">'.$articolo->quantita.' '.$articolo->unitaMisura.'</p>';
 echo "</div>";
 
 
