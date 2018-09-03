@@ -918,6 +918,9 @@ input.screen-reader:focus + .input-label {
 }
 
 @media (max-width: 612px) {
+
+}
+@media (max-width: 840px) {
   #MyNavRight,
   #MyNavCenter{
     display:none;
@@ -925,8 +928,5 @@ input.screen-reader:focus + .input-label {
   #MyNavLeft{
     position:center;
   }
-  .category-name{
-    display:none;
-  }
-}
 
+}

@@ -101,6 +101,7 @@ object(App\Models\Articolo)#7 (11) { ["idProdotto"]=> string(1) "1"
 <div class="breadcrumb">
 Breadcrumb?
 </div>
+<div class="split">
 <div class="split col-img">
 <div class="prod-img">
   <?php echo '<img src="../../public/img/product/'.$currentItem->foto.'.jpg'.'" alt="'.$currentItem->nome.'" title="'.$currentItem->nome.'"/> '; ?>

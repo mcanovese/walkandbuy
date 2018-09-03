@@ -1,12 +1,5 @@
 .split{
-    height: 85%;
-    width: 48%;
-    position: fixed;
-    z-index: 50;
-    overflow: auto;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    text-overflow: ellipsis;
+  padding-left:2rem;
 }
 
 .prod-info{
@@ -14,7 +7,8 @@
   margin-top:1.5rem;
   font-weight:bold;
   overflow-y: hidden;
-  text-overflow: ellipsis;
+  text-overflow: initial;
+  word-wrap: break-word;
 }
 
 .info{
@@ -40,16 +34,15 @@
 }
 
 .col-text{
-  display:block;
-  right: 0rem;
-  padding-right:5rem;
+  padding-left: 5rem;
   overflow: auto;
   
 }
 
 .col-img{
-  display:block;
+  float:left;
   left: 1rem;
+  max-width: 50%;
 }
 
 .prod-img{
@@ -124,4 +117,27 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
+}
+@media (max-width: 640px) {
+.category-name{
+  display:none;
+}
+.split{
+padding-left:0;
+clear:both;
+}
+
+.col-text{
+padding-left: 0rem;
+}
+
+.col-img{
+ max-width:100%;
+
+  }
+
+.add-cart{
+  text-align: center;
+}
+
 }
