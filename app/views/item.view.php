@@ -1,6 +1,6 @@
 <div id="container">
 <?php require('partials/head.php');?>
-<div id="body">
+
 
 
 <!--
@@ -25,7 +25,7 @@ object(App\Models\Articolo)#7 (11) { ["idProdotto"]=> string(1) "1"
 <p>Completa il form per effettuare l'inserimento di un articolo nel tuo inventario</p>
 
 <form action="insertItem" method="post">
-
+<div id="body">
   <div class="loginbox">
   <div class="loginbox-field">
     <label class="input-label" for="nome">Nome Prodotto</label>
@@ -86,14 +86,22 @@ object(App\Models\Articolo)#7 (11) { ["idProdotto"]=> string(1) "1"
 
 
 </form>
+</div>
 
 
+</div>
 
+<?php require('partials/footer.php');?>
+</div>
 
 
 <?php else : ?>
+<div id=body>
+
+<div class="breadcrumb">
+Breadcrumb?
+</div>
 <div class="split col-img">
-<div class="breadcrumb">Breadcrumb?</div>
 <div class="prod-img">
   <?php echo '<img src="../../public/img/product/'.$currentItem->foto.'.jpg'.'" alt="'.$currentItem->nome.'" title="'.$currentItem->nome.'"/> '; ?>
 </div>
@@ -103,29 +111,26 @@ object(App\Models\Articolo)#7 (11) { ["idProdotto"]=> string(1) "1"
 <div class="prod-name">
   <h2><?php echo $currentItem->nome; ?><h2>
 </div>
-<div class="info"> Prezzo: <?php echo $currentItem->prezzoPieno?>&euro; </div>
+<div class="info"> 
+Prezzo: <?php echo $currentItem->prezzoPieno?>&euro; 
+</div>
 <div class="add-cart">
   <button onclick="addCart()" id="add-cart" title="Aggiungi al carrello">
   <img src="../../public/img/addCart.png" alt="aggiungi al carrello" title="aggiungi al carrello"/>
   </button>
 </div>
-<div class="top-border"></div>
+<div class="top-border"></div> <!-- SISTEMARE -->
 <div class="prod-Info"><h4 class="prod-Info">Descrizione<h4>
 <p class="info"> <?php echo $currentItem->descrizione ?> </p>
 </div>
 <div class="prod-Info" ><h4 class="prod-Info">Informazioni generali<h4>
-<div class="prod-price info"></div>
+<div class="prod-price info">PREZZO</div>
+<div class="prod-seller">VENDITORE
+</div>
+</div>
+</div>
+</div>
+<?php require('partials/footer.php');?>
 
-<div class="prod-seller">
-</div>
-</div>
-</div>
   <!-- //var_dump da rimuovere / usare solo x vedere voci array -->
 <?php endif; ?>
-</div>
-
-
-</div>
-
-<?php require('partials/footer.php');?>
-</div>

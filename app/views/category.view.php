@@ -1,9 +1,8 @@
 <div id="container">
 <?php require('partials/head.php');?>
 <div id="body">
-<h1>Categoria -> <?php echo $catName; ?></h1>
-
-
+<h1 class="title">Categoria -> <?php echo $catName; ?></h1>
+<div>
 <div class="category-container">
 <?php
 
@@ -40,7 +39,8 @@ echo "</div>";
 
 </div>
 
-
+</div>
 </div>
 <?php require('partials/footer.php');?>
 </div>
+

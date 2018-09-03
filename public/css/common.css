@@ -74,12 +74,12 @@ body{
 #body {
   padding:10px;
   padding-bottom:60px;   /* Height of the footer */
+  height: auto;
 }
 
 #footer {
   position:absolute;
   bottom:0;
-
   width:100%;
   z-index: 51;
   height:3rem;   /* Height of the footer */
@@ -88,6 +88,8 @@ body{
   font-size: 0.875rem;
   padding: 1rem 0;
 }
+
+
 
 a {
   color: #a50f3c;
@@ -326,6 +328,100 @@ dd {
   position: absolute;
   right: 0;
   top: -0.25em;
+}
+
+.top-container {
+  background-color: #000000;
+  display:block;
+  text-align: center;
+}
+
+.header {
+  padding: 0.5rem;
+  background-image: url(./../img/header.jpg);
+  height: 6.5rem;
+}
+
+.sticky {
+  position: fixed;
+  height: 5rem;
+  top: 0rem;
+  width: 100%;
+}
+
+.navbar-left-sticky{
+  margin: -0.5rem 1rem 2rem 2rem;
+}
+.navbar-center-sticky{
+  margin: -0.5rem 1rem 2rem 2rem;
+}
+.navbar-right-sticky{
+  margin: 1.5rem;
+  text-align: center; 
+}
+
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  max-width: 7rem;
+  height: 9.5rem;
+  background-color: transparent;
+  cursor: pointer; /* Add a mouse pointer on hover */
+  border-radius: 500rem; /* Rounded corners */
+}
+
+#myBtn:hover {
+  -webkit-transform: translate(0.3rem, -0.5rem);
+  transform: translate(0, -0.5rem);
+  transition: ease-in 0.5s;
+}
+
+.flex{
+  display:flex;
+}
+
+.sub-head{
+  height:5.5rem; 
+  background-image:url("../img/header.jpg");
+  background-color:black;
+  border-top:1px solid darkgrey;
+}
+.category{
+  float:left;
+  width:19%;
+  text-align:center;
+  color:lightgrey;
+  font-size: 0.8rem;
+}
+
+.category-img{
+  max-height:3.3rem;
+  transition: all .2s ease-in-out;
+}
+
+.category-img:hover{
+  transform: scale(1.1); 
+  cursor: pointer;
+}
+
+.sub-head-link{
+  color:lightgrey;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+.category-name{
+  margin-top:0.1rem;
+  font-size:0.9rem;
+}
+.sub-head-link:hover {
+  color:  #d4ca36;
 }
 
 .btn {
@@ -738,6 +834,7 @@ input.screen-reader:focus + .input-label {
    * Layout
    */
 
+
   .container {
     max-width: 720px;
   }
@@ -820,96 +917,16 @@ input.screen-reader:focus + .input-label {
   }
 }
 
-.top-container {
-  background-color: #000000;
-  display:block;
-  text-align: center;
-}
-
-.header {
-  padding: 0.5rem;
-  background-image: url(./../img/header.jpg);
-  height: 6.5rem;
-}
-
-.sticky {
-  position: fixed;
-  height: 5rem;
-  top: 0rem;
-  width: 100%;
-}
-
-.navbar-left-sticky{
-  margin: -0.5rem 1rem 2rem 2rem;
-}
-.navbar-center-sticky{
-  margin: -0.5rem 1rem 2rem 2rem;
-}
-.navbar-right-sticky{
-  margin: 1.5rem;
-  text-align: center; 
-}
-
-
-#myBtn {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  max-width: 7rem;
-  height: 9.5rem;
-  background-color: transparent;
-  cursor: pointer; /* Add a mouse pointer on hover */
-  border-radius: 500rem; /* Rounded corners */
-}
-
-#myBtn:hover {
-  -webkit-transform: translate(0.3rem, -0.5rem);
-  transform: translate(0, -0.5rem);
-  transition: ease-in 0.5s;
-}
-
-.flex{
-  display:flex;
-}
-
-.sub-head{
-  height:5.5rem; 
-  background-image:url("../img/header.jpg");
-  background-color:black;
-  border-top:1px solid darkgrey;
-}
-.category{
-  float:left;
-  width:20%;
-  text-align:center;
-  color:lightgrey;
-  font-size: 0.75rem;
-}
-
-.category-img{
-  max-height:3.5rem;
-  transition: all .2s ease-in-out;
-}
-
-.category-img:hover{
-  transform: scale(1.1); 
-  cursor: pointer;
-}
-
-.sub-head-link{
-  color:lightgrey;
-  -webkit-transition: all 0.4s ease-out;
-  transition: all 0.4s ease-out;
-}
-
-.category-name{
-  margin-top:0.1rem;
-}
-.sub-head-link:hover {
-  color:  #d4ca36;
+@media (max-width: 612px) {
+  #MyNavRight,
+  #MyNavCenter{
+    display:none;
+  }
+  #MyNavLeft{
+    position:center;
+  }
+  .category-name{
+    display:none;
+  }
 }
 
