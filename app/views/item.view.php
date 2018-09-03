@@ -81,6 +81,12 @@ object(App\Models\Articolo)#7 (11) { ["idProdotto"]=> string(1) "1"
     <span class="underline"></span>
   </div>
 
+   <div class="loginbox-field">
+    <label class="input-label" for="nome">Quantità</label>
+    <input class="input" id="itemCat"  type="text" name="itemQuantity" required />
+    <span class="underline"></span>
+  </div>
+
   <button type="submit" class="btn btn-outline">Inserisci Articolo</button>
 
 
@@ -127,6 +133,7 @@ Prezzo: <?php echo $currentItem->prezzoPieno?>&euro;
 <div class="prod-Info" ><h4 class="prod-Info">Informazioni generali<h4>
 <div class="prod-price info">PREZZO</div>
 <div class="prod-seller">VENDITORE
+</div>
 </div>
 </div>
 </div>

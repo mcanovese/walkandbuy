@@ -3,15 +3,19 @@
 <div id="body">
 <h1 class="title">Categoria -> <?php echo $catName; ?></h1>
 <div>
+
 <div class="category-container">
 <?php
-
+echo var_dump($data);
+/*
 foreach ($data as $articolo){
     $prezzoPieno=$articolo->prezzoPieno;
 echo "<div class='category-item'>";
 echo "<div class='little-img-container'>";
 echo "<a href='/item?cod=".$articolo->idProdotto."'>";
-echo '<img class="little-img" src="../../public/img/product/'.$articolo->foto.'.jpg'.'" alt="'.$articolo->nome.'" title="'.$articolo->nome.'"/> ';
+/*echo '<img class="little-img" src="../../public/img/product/'.$articolo->foto.'.jpg'.'" alt="'.$articolo->nome.'" title="'.$articolo->nome.'"/> ';
+
+echo '<img class="little-img" src="../../public/img/product/a.jpg" alt="'.$articolo->nome.'" title="'.$articolo->nome.'"/> ';
 echo "</a>";
 echo "</div>";
 echo "<div class='info-container'>";
@@ -24,7 +28,7 @@ echo '<p class="info-text discount">-'.$articolo->percentualeSconto.'&#37;&nbsp;
 } else {
 echo '<p class="info-text price">&euro;'.$articolo->prezzoPieno.'</p>';
 }
-echo '<p class="info-text um">'.$articolo->unitaMisura.'</p>';
+echo '<p class="info-text quantity">'.$articolo->quantita.' '.$articolo->unitaMisura.'</p>';
 echo "</div>";
 
 
@@ -34,12 +38,12 @@ echo '<img src="../../public/img/aggiungiCar.png"/>';
 echo "</div>";
 echo "</a>";
 echo "</div>";
-}
+}*/
  ?>
 
 </div>
-
 </div>
+
 </div>
 <?php require('partials/footer.php');?>
 </div>

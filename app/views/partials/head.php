@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
-  <link type="text/css" rel="stylesheet" href="./../../../public/css/normalize.css" />
   <link type="text/css" rel="stylesheet" href="./../../../public/css/common.css" />
   <link type="text/css" rel="stylesheet" href="./../../../public/css/<?= $routeName ?>.css" />
   <script src="../../../public/js/main.js"></script>
@@ -14,19 +13,8 @@
 
 </head>
 <body>
-  <!-- <div  class="top-container">Roba</div>  Per il back to top -->
-  <header  class="navbar-container" id="top" > 
-  <div class="header" id="myHeader">
-    <div class="navbar">
-      <div id="MyNavLeft" class="navbar-left">
-        <a class="navbar-link" href="./" title="Ritorna alla pagina principale">
-          <img lang="en" class="logo-img" id="myImg" src="./../../../public/img/logo6.png" alt="Logo Walk & Buy, rimanda alla home" />
-          <img lang="en" class="logo-img hidden" id="myImgLittle" src="./../../../public/img/logoNoScritta.png" alt="Logo Walk & Buy, rimanda alla home" />
-        </a>
-      </div>
-
-<div id="MyNavCenter">
-      <ul class="little center">
+  <div  class="top-container">
+    <ul class="little">
         <li class="list-item">
         <a class="navbar-link little" href="./howWork">Come funziona</a>
         </li>
@@ -37,7 +25,17 @@
         <a class="navbar-link little" href="./whoAreWe">Chi siamo</a>
         </li>
       </ul>
-</div>
+    </div> 
+  <header  class="navbar-container" id="top" > 
+  <div class="header" id="myHeader">
+    <div class="navbar">
+      <div id="MyNavLeft" class="navbar-left">
+        <a class="navbar-link" href="./" title="Ritorna alla pagina principale">
+          <img lang="en" class="logo-img" id="myImg" src="./../../../public/img/logo6.png" alt="Logo Walk & Buy, rimanda alla home" />
+          <img lang="en" class="logo-img hidden" id="myImgLittle" src="./../../../public/img/logoNoScritta.png" alt="Logo Walk & Buy, rimanda alla home" />
+        </a>
+      </div>
+
       <div id="MyNavRight">
       <!--CONTROLLO SE è LOGGATO O MENO, SE NON è LOGGATO MOSTRO V  -->
       <ul  class="list navbar-right log-link-container">
