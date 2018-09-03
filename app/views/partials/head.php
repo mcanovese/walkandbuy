@@ -15,18 +15,32 @@
 </head>
 <body>
   <!-- <div  class="top-container">Roba</div>  Per il back to top -->
-  <header  class="navbar-container clearfix" id="top" > 
+  <header  class="navbar-container" id="top" > 
   <div class="header" id="myHeader">
-    <div class="navbar container">
-      <div id="MyNavLeft" class="navbar-left left">
+    <div class="navbar">
+      <div id="MyNavLeft" class="navbar-left">
         <a class="navbar-link" href="./" title="Ritorna alla pagina principale">
           <img lang="en" class="logo-img" id="myImg" src="./../../../public/img/logo6.png" alt="Logo Walk & Buy, rimanda alla home" />
           <img lang="en" class="logo-img hidden" id="myImgLittle" src="./../../../public/img/logoNoScritta.png" alt="Logo Walk & Buy, rimanda alla home" />
         </a>
       </div>
 
+<div id="MyNavCenter">
+      <ul class="little center">
+        <li class="list-item">
+        <a class="navbar-link little" href="./howWork">Come funziona</a>
+        </li>
+        <li class="list-item">
+        <a class="navbar-link little" href="./partner">Partner</a>
+        </li>
+        <li class="list-item">
+        <a class="navbar-link little" href="./whoAreWe">Chi siamo</a>
+        </li>
+      </ul>
+</div>
+      <div id="MyNavRight">
       <!--CONTROLLO SE è LOGGATO O MENO, SE NON è LOGGATO MOSTRO V  -->
-      <ul id="MyNavRight" class="list navbar-right right log-link-container">
+      <ul  class="list navbar-right log-link-container">
         <li class="log-item">
         <a class="navbar-link log-link" href="./signin">Accedi</a>
         </li>
@@ -35,6 +49,7 @@
         <a class="navbar-link log-link" href="./add-user">Iscriviti</a>
         </li>
       </ul>
+</div>
       <!--CONTROLLO SE è LOGGATO O MENO, SE è LOGGATO MOSTRO V  
       <ul id="MyNavRight" class="list navbar-right right log-link-container">
         <li class="log-item">
@@ -46,17 +61,7 @@
         </li>
       </ul>
       -->
-      <ul id="MyNavCenter" class="list center little">
-        <li class="list-item">
-        <a class="navbar-link little" href="./howWork">Come funziona</a>
-        </li>
-        <li class="list-item">
-        <a class="navbar-link little" href="./partner">Partner</a>
-        </li>
-        <li class="list-item">
-        <a class="navbar-link little" href="./whoAreWe">Chi siamo</a>
-        </li>
-      </ul>
+    
     </div>
   </header>
   <div>

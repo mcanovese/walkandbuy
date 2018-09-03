@@ -119,9 +119,7 @@
   }
 }
 @media (max-width: 640px) {
-.category-name{
-  display:none;
-}
+
 .split{
 padding-left:0;
 clear:both;
