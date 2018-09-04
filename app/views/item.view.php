@@ -104,6 +104,7 @@ object(App\Models\Articolo)#7 (11) { ["idProdotto"]=> string(1) "1"
   <h2><?php echo $currentItem->nome; ?><h2>
 </div>
 <div class="info"> Prezzo: <?php echo $currentItem->prezzoPieno?>&euro; </div>
+<div class="info"> Quantit&agrave <?php echo $currentItem->quantita.' '.$currentItem->unitamisura?> </div>
 <div class="add-cart">
   <button onclick="addCart()" id="add-cart" title="Aggiungi al carrello">
   <img src="../../public/img/addCart.png" alt="aggiungi al carrello" title="aggiungi al carrello"/>
@@ -120,7 +121,7 @@ object(App\Models\Articolo)#7 (11) { ["idProdotto"]=> string(1) "1"
 </div>
 </div>
 </div>
-  <!-- //var_dump da rimuovere / usare solo x vedere voci array -->
+
 <?php endif; ?>
 </div>
 

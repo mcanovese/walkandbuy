@@ -28,7 +28,7 @@ class SessionController {
 
     if ($user !== null) {
       Session::start();
-      Session::set('user', new $userClass($user->email, $user->nome, $user->cognome));
+      Session::set('user', new User($user->idutente, $user->cognome, $user->nome, $user->cf, $user->telefono,$user->email));
     }
 
     return $user !== null;

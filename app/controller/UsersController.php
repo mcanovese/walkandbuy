@@ -62,19 +62,7 @@ private function checkUserEmail(string $email) {
   return false;
 }
 
-
-
-
-
-
 }
-
-
-
-
-
-
-
 
 
 ?>

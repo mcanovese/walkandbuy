@@ -14,18 +14,18 @@ class User{
 
   public function __construct(
 
-    string $idUtente,
+    string $idutente,
     string $cognome,
     string $nome,
-    string $codiceFiscale,
+    string $cf,
     string $telefono,
     string $email ){
 
 
-      $this->idUtente = $idUtente;
+      $this->idutente = $idutente;
       $this->cognome = $cognome;
       $this->nome = $nome;
-      $this->codiceFiscale = $codiceFiscale;
+      $this->cf = $cf;
       $this->telefono = $telefono;
       $this->email = $email;
     }
@@ -33,7 +33,6 @@ class User{
     public function getPassword(): string {
       return $this->password;
     }
-
 
 
 

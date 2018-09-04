@@ -84,8 +84,6 @@ class ItemsController {
 
   }
 
-
-
   public function getCatName($catID){
     $table = 'categoria';
     $where='categoria.idcategoria = :idcategoria';
@@ -111,7 +109,8 @@ class ItemsController {
       $result->categoria,
       $result->giacenza,
       $result->abilitato,
-      $result->venditore);
+      $result->venditore,
+      $result->quantita);
   }
 
   public function insertItem(string $itemName,string $itemDesc,string $itemPrice,string $itemUM,string $itemPhoto,string $itemDiscount,

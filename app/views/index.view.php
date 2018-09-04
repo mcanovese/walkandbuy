@@ -12,7 +12,7 @@
     <li>Da fare anche view pagina 404 - file già predisposto e indirizzato su routes</li>
     <li>pagina categoria singola: /category?id=1 da sistemare output div</li>
   </lu>
-
+<?php var_dump($session); ?>
 </div>
 <div> CIAO </div>
 <div> CIAO </div>

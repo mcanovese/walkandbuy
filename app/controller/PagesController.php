@@ -22,6 +22,7 @@ class PagesController{
 // caricare la view (esempio root -> Router carica controller pages -> carica view home)
 public function home(){
     $routeName="home";
+    $session = $this->SessionController->getUser();
 require 'app/views/index.view.php';
 
 }
@@ -48,11 +49,16 @@ require 'app/views/howWork.view.php';
 
 public function addUser(){
     $routeName="addUser";
-
-
 require 'app/views/adduser.view.php';
-
     }
+
+public function user(){
+    $routeName="user";
+
+
+require 'users.view.php';
+
+}
 
 
 public function signIn(){
@@ -77,7 +83,7 @@ require 'app/views/contact.view.php';
 }
 
 public function item() {
-//   $this->protectRoute();
+//$this->onlyUser();
 
 if(!isset($_GET['req'])&& !isset($_GET['cod'])) header("Location: 404");
 
@@ -166,8 +172,21 @@ public function registerUser(){
 
     $isAuthenticated = $this->SessionController->authenticate($email, $password);
 
-    if ($isAuthenticated) return \Core\view('item');
-    else return \Core\view('item');
+    if ($isAuthenticated) return \Core\view('index');
+    else return \Core\view('index');
 
   }
+
+  private function onlyUser() {
+    if (!$this->SessionController->isAuthenticated()) {
+      header("Location: /404");
+      exit;
+    }
+  }
+
+
+
+
+
+
 }
