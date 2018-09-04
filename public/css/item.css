@@ -63,7 +63,7 @@
   min-height: 1rem;
   margin-right:6rem;
   cursor: pointer; /* Add a mouse pointer on hover */
-  border-radius: 50rem; /* Rounded corners */
+  border-radius: 5rem; /* Rounded corners */
 }
 
 #add-cart:hover {

@@ -4,12 +4,13 @@
 <h1 class="title">Categoria -> <?php echo $catName; ?></h1>
 <div>
 
-<div class="category-container">
-<div class="go-subcat">
+
+<div class="go-subcat-container">
 <button onclick="#" class="go-subcat" alt="Scoprili tutti">
-    <img src="../../public/img/go_subcat.png" alt="Scoprili tutti" />
+    <img class="go-subcat-img" src="../../public/img/go_subcat.png" alt="Scoprili tutti" />
 </button>
 </div>
+<div class="category-container">
 <?php
 
 foreach ($data as $articolo){
