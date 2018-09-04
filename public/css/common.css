@@ -94,7 +94,7 @@ body{
 
 
 a {
-  color: #a50f3c;
+  color: lightgrey;
   text-decoration: none;
 }
 
@@ -616,6 +616,10 @@ dd {
   display: inline-block;
 }
 
+.back-up{
+  float:right;
+  padding-bottom:1rem;
+}
 .list-item-select {
   font-weight: bold;
 }
@@ -785,7 +789,7 @@ dd {
 .log-link-container{
   background-color:#5fad55;
   border-radius:3em;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   width: 12rem;
   height: 2em;
   padding-top:0.5rem;
