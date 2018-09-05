@@ -40,11 +40,10 @@
       <!--CONTROLLO SE è LOGGATO O MENO, SE NON è LOGGATO MOSTRO V  -->
       <ul  class="list navbar-right log-link-container">
         <li class="log-item">
-        <a class="navbar-link log-link" href="./signin">Accedi</a>
+        <a id="login" class="navbar-link log-link" href="./signin">Accedi</a>
         </li>
-        <li class="log-item">|</li>
         <li class="log-item">
-        <a class="navbar-link log-link" href="./add-user">Iscriviti</a>
+        <a id="signin" class="navbar-link log-link" href="./add-user">Iscriviti</a>
         </li>
       </ul>
 </div>

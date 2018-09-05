@@ -368,7 +368,7 @@ dd {
   
 }
 
-.navbar-left-sticky,
+.left-sticky,
 .navbar-center-sticky,
 .navbar-right-sticky{
   margin: -1.5rem 1rem 2rem 2rem;
@@ -960,6 +960,21 @@ input.screen-reader:focus + .input-label {
   .category-name{
     display:none;
   }
+  .sub-head{
+    height:4rem;
+  }
+
+  #signin{
+    display:none;
+  }
+
+  #login{
+    padding-left:0.7rem;
+  }
+  
+  .log-link-container{
+    width:5.5rem;
+  }
 }
 
 
@@ -969,11 +984,4 @@ input.screen-reader:focus + .input-label {
     margin-left:auto;
   }
 }
-@media (max-width: 390px) {
-  #MyNavLeft{
-    padding-left:30%;
-  }
-  #myNavRight{
-    display:none;
-  }
-  }
+  
