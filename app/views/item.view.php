@@ -113,7 +113,7 @@ Breadcrumb?
   <?php echo '<img src="../../public/img/product/'.$currentItem->foto.'.jpg'.'" alt="'.$currentItem->nome.'" title="'.$currentItem->nome.'"/> '; ?>
 </div>
 </div>
-<?php echo var_dump($currentItem); ?>
+
 <div class="split col-text"> <!-- COLONNA DEL TESTO, CON DETTAGLI-->
 <div class="prod-name">
   <h2><?php echo $currentItem->nome; ?><h2>
@@ -140,6 +140,3 @@ Breadcrumb?
 </div>
 </div>
 <?php require('partials/footer.php');?>
-
-  <!-- //var_dump da rimuovere / usare solo x vedere voci array -->
-<?php endif; ?>

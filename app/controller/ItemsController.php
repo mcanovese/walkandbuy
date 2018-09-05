@@ -51,6 +51,7 @@ class ItemsController {
     $categorygroup = array();
     foreach($result as $articolo){
       $categorygroup[] = $this->createItem($articolo);
+    //  $categorygroup[] = $this->getU;
     }
     return $categorygroup;
   }
@@ -114,8 +115,8 @@ class ItemsController {
   }
 
   public function insertItem(string $itemName,string $itemDesc,string $itemPrice,string $itemUM,string $itemPhoto,string $itemDiscount,
-string $itemCat,string $itemStock,string $itemStatus, string $itemQuantity): bool {
-//controllo necessario  //TUTTE STRING???
+string $itemCat,string $itemStock,string $itemStatus): bool {
+//controllo necessario
 
     $table = 'articoli';
 
@@ -130,8 +131,8 @@ string $itemCat,string $itemStock,string $itemStatus, string $itemQuantity): boo
         'categoria' => $itemCat,
         'giacenza' => $itemStock,
         'abilitato' => $itemStatus,
-        'venditore' => 1,
-        'quantita' => $itemQuantity
+        'venditore' => 1
+
       ]);
     } else {
       return false;
