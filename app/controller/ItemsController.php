@@ -114,8 +114,8 @@ class ItemsController {
   }
 
   public function insertItem(string $itemName,string $itemDesc,string $itemPrice,string $itemUM,string $itemPhoto,string $itemDiscount,
-string $itemCat,string $itemStock,string $itemStatus): bool {
-//controllo necessario
+string $itemCat,string $itemStock,string $itemStatus, string $itemQuantity): bool {
+//controllo necessario  //TUTTE STRING???
 
     $table = 'articoli';
 
@@ -130,8 +130,8 @@ string $itemCat,string $itemStock,string $itemStatus): bool {
         'categoria' => $itemCat,
         'giacenza' => $itemStock,
         'abilitato' => $itemStatus,
-        'venditore' => 1
-
+        'venditore' => 1,
+        'quantita' => $itemQuantity
       ]);
     } else {
       return false;

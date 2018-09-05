@@ -116,6 +116,7 @@ public function addItem(){
     $itemCat = Request::getPOST('itemCat');
     $itemStock = Request::getPOST('itemStock');
     $itemStatus = Request::getPOST('itemStatus');
+    $itemQuantity = Request::getPOST('itemQuantity');
 
     // inizio-controlli integrità
 
@@ -124,7 +125,7 @@ public function addItem(){
     //fine controlli integrità
 
   $insert = $this->ItemsController->insertItem($itemName,$itemDesc,$itemPrice,$itemUM,$itemPhoto,$itemDiscount,
-  $itemCat,$itemStock,$itemStatus);
+  $itemCat,$itemStock,$itemStatus,$itemQuantity);
 
   if(!$insert)   {
     $action="insertFail";

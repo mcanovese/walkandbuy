@@ -45,10 +45,7 @@ public function __construct(
     $this->abilitato = $abilitato;
     $this->venditore = $venditore;
     $this->quantita = $quantita;
-
   }
-
-
 }
 
 
