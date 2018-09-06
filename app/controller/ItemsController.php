@@ -29,10 +29,13 @@ class ItemsController {
       $where,
       $parameters
     );
+    if(isset($result[0])){
     $item = $this->createItem($result[0]);
     $item->categoria =$this->getCatName($result[0]->categoria);
     $item->unitamisura = $this->getUmName($result[0]->unitamisura);
     return $item;
+  }
+  else header("Location: /404");
     //passo array result (query db) a funzione createItem, che mi restituisce un articolo
     // ben formato che viene restituito dal return.
   }

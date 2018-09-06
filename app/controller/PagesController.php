@@ -22,7 +22,7 @@ class PagesController{
 // caricare la view (esempio root -> Router carica controller pages -> carica view home)
 public function home(){
     $routeName="home";
-    
+
 require 'app/views/index.view.php';
 
 }
@@ -165,6 +165,8 @@ public function registerUser(){
           else {if ($e->getMessage() === 'maildbpresent')   return \Core\view('adduser',[ 'messageDisplay' =>'La mail inserita &egrave gi&agrave presente nel database', 'routeName' => 'addUser']);
           }
       }
+
+      
   }
 
 
