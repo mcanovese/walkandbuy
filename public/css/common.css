@@ -409,7 +409,21 @@ dd {
 }
 
 
+.go-cart{
+  background-color: #71b168;
+  border-radius:0.3rem;
+  padding:1rem 1rem 0.7rem 1rem;
+  float:right;
+  margin-top:1rem;
+}
 
+.go-cart:hover{
+  -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    background: #3b6d35; 
+}
 
 
 .header {
@@ -1029,6 +1043,7 @@ input.screen-reader:focus + .input-label {
   #MyNavRight{
     float:right;
   }
+  
   .category-name{
     display:none;
   }

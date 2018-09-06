@@ -49,16 +49,8 @@
       </div>
 
       <div id="MyNavRight">
-      <ul  class="list navbar-right log-link-container" >
-        <li class="log-item">
-        <a id="login" class="navbar-link log-link " href="./signin">NO</a>
-        </li>
-        <li id="signin" class="log-item">
-        <a class="navbar-link log-link " href="./add-user">NO</a>
-        </li>
-      </ul>
-     
-</div>
+        <a class="go-cart" href="#"><img src="../../../public/img/cart.png"/></a>
+      </div>
   </header>
   <div>
   <button onclick="topFunction()" id="myBtn" title="Go to top"><img class="logo-img"src="../../../public/img/up.png"/></button>
