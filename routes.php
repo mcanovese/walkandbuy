@@ -10,7 +10,7 @@ $router->get('404','PagesController@notFound');
 $router->get('item','PagesController@item');
 $router->get('category', 'PagesController@category');
 $router->get('signin', 'PagesController@signIn');
-
+$router->get('user','PagesController@user');
 
 $router->get('users','UsersController@index');
 $router->post('insertItem','PagesController@addItem');

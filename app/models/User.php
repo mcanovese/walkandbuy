@@ -3,10 +3,10 @@ namespace App\Models;
 
 class User{
 
-  public $idUtente;
+  public $idutente;
   public $cognome;
   public $nome;
-  public $codiceFiscale;
+  public $cf;
   public $telefono;
   public $email;
 

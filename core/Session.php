@@ -7,7 +7,7 @@ class Session {
     if (!isset($_SESSION)) {
       \session_start([
 
-        'cookie_lifetime' => 86400,  
+        //'cookie_lifetime' => 86400,  
       ]);
     }
   }

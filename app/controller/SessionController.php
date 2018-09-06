@@ -22,13 +22,14 @@ class SessionController {
   }
 
   public function authenticate($email, $password): bool {
-
+    $userClass = '\App\models\User';
 
     $user = $this->getUserByCredentials($email, $password);
 
     if ($user !== null) {
       Session::start();
-      Session::set('user', new User($user->idutente, $user->cognome, $user->nome, $user->cf, $user->telefono,$user->email));
+    
+      Session::set('user', new $userClass($user->idutente, $user->cognome, $user->nome, $user->cf, $user->telefono,$user->email));
 
     }
 
@@ -49,10 +50,11 @@ class SessionController {
   }
 
   function getUserByCredentials($email, $password) {
+    $tabella='utenti';
 
     $results = $this->database->selectWhere(
-      'utenti',
-      ['email', 'password', 'nome', 'cognome'],
+      $tabella,
+      ['idutente','cognome', 'nome', 'cf', 'telefono','password','email'],
       'email = :email',
       [':email' => $email]
     );
@@ -68,6 +70,9 @@ class SessionController {
 
     }
   }
+
+
+
 
   public function checkPassword($codiceFiscale, $password) {
 

@@ -53,10 +53,11 @@ require 'app/views/adduser.view.php';
     }
 
 public function user(){
-    $routeName="user";
+    $routeName = "user";
+    $this->onlyUser();
+    $user = $this->SessionController->getUser();
 
-
-require 'users.view.php';
+require 'app/views/users.view.php';
 
 }
 
@@ -83,7 +84,7 @@ require 'app/views/contact.view.php';
 }
 
 public function item() {
-//$this->onlyUser();
+  $this->onlyUser();
 
 if(!isset($_GET['req'])&& !isset($_GET['cod'])) header("Location: 404");
 
@@ -180,7 +181,7 @@ public function registerUser(){
 
   private function onlyUser() {
     if (!$this->SessionController->isAuthenticated()) {
-      header("Location: /404");
+      header("Location: /signin");
       exit;
     }
   }
