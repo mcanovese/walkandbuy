@@ -136,7 +136,10 @@ Breadcrumb?
 </div>
 </div>
   <!-- //var_dump da rimuovere / usare solo x vedere voci array -->
-<?php endif; ?>
+
 </div>
+
 </div>
 <?php require('partials/footer.php');?>
+<?php endif; ?>
+
