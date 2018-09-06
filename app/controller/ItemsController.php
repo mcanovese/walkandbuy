@@ -51,7 +51,7 @@ class ItemsController {
     $categorygroup = array();
     foreach($result as $articolo){
       $categorygroup[] = $this->createItem($articolo);
-    //  $categorygroup[] = $this->getU;
+
     }
     return $categorygroup;
   }

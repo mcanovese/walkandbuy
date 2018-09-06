@@ -22,13 +22,14 @@ class SessionController {
   }
 
   public function authenticate($email, $password): bool {
-    $userClass = 'utenti';
+
 
     $user = $this->getUserByCredentials($email, $password);
 
     if ($user !== null) {
       Session::start();
       Session::set('user', new User($user->idutente, $user->cognome, $user->nome, $user->cf, $user->telefono,$user->email));
+
     }
 
     return $user !== null;
@@ -56,12 +57,15 @@ class SessionController {
       [':email' => $email]
     );
 
+
     if (\count($results) !== 1) return null;
     else {
       $user = $results[0];
       $isAuthorized = \password_verify($password, $user->password);
 
-      return $isAuthorized ? $user : null;
+      if($isAuthorized) return $user;
+      else return null;
+
     }
   }
 

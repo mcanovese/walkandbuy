@@ -174,7 +174,7 @@ public function registerUser(){
     $isAuthenticated = $this->SessionController->authenticate($email, $password);
 
     if ($isAuthenticated) return \Core\view('index');
-    else return \Core\view('index');
+    else return \Core\view('404');
 
   }
 
