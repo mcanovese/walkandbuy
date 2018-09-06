@@ -24,9 +24,14 @@
         <li class="list-item">
         <a class="navbar-link little" href="./whoAreWe">Chi siamo</a>
         </li>
+        <li class="list-item">
+        <a class="navbar-link little" href="./user">Profilo Utente</a>
+        </li>
+
+
       </ul>
-    </div> 
-  <header  class="navbar-container" id="top" > 
+    </div>
+  <header  class="navbar-container" id="top" >
   <div class="header" id="myHeader">
     <div class="navbar">
       <div id="MyNavLeft" class="navbar-left">
@@ -47,7 +52,7 @@
         </li>
       </ul>
 </div>
-      <!--CONTROLLO SE è LOGGATO O MENO, SE è LOGGATO MOSTRO V  
+      <!--CONTROLLO SE è LOGGATO O MENO, SE è LOGGATO MOSTRO V
       <ul id="MyNavRight" class="list navbar-right right log-link-container">
         <li class="log-item">
         <a class="navbar-link log-link" href="./profile">Profilo</a>
@@ -58,7 +63,7 @@
         </li>
       </ul>
       -->
-    
+
     </div>
   </header>
   <div>

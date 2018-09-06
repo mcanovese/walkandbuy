@@ -22,7 +22,7 @@ class PagesController{
 // caricare la view (esempio root -> Router carica controller pages -> carica view home)
 public function home(){
     $routeName="home";
-    $session = $this->SessionController->getUser();
+    
 require 'app/views/index.view.php';
 
 }
