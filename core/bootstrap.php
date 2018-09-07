@@ -23,6 +23,9 @@ App::bind('config', $config);
 App::bind('pdo', Connection::make(App::get('config')['database']));
 App::bind('database', new QueryBuilder(App::get('pdo')));
 
+
+
+
 function view(string $filename, array $data = []) {
   extract($data);
 

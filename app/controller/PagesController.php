@@ -20,6 +20,13 @@ class PagesController{
 
 //creare una funzione per ogni pagina, utilizzata poi in routes per
 // caricare la view (esempio root -> Router carica controller pages -> carica view home)
+
+public function globalsUser(){
+  $logeduser = $this->SessionController->getUser();
+  $GLOBALS['utente'] = $logeduser;
+}
+
+
 public function home(){
     $routeName="home";
 
@@ -29,46 +36,65 @@ require 'app/views/index.view.php';
 
 public function notFound(){
     $routeName="404";
+
 require 'app/views/404.view.php';
 
 }
 
 public function whoAreWe(){
     $routeName="whoAreWe";
+
 require 'app/views/whoAreWe.view.php';
 }
 public function partner(){
     $routeName="partner";
+
 require 'app/views/partner.view.php';
 }
 
 public function howWork(){
     $routeName="howWork";
+
 require 'app/views/howWork.view.php';
 }
 
 public function addUser(){
     $routeName="addUser";
+
 require 'app/views/adduser.view.php';
     }
 
 public function user(){
     $routeName = "user";
     $this->onlyUser();
-    $user = $this->SessionController->getUser();
+
 
 require 'app/views/users.view.php';
 
 }
 
+public function cart(){
+    $routeName = "cart";
+    $this->onlyUser();
+
+
+require 'app/views/cart.view.php';
+
+}
+
+
+
+
 
 public function signIn(){
     $routeName="signIn";
+
 require 'app/views/signIn.view.php';
 }
 
 public function logout(){
   $routeName="logout";
+
 $this->SessionController->logout();
 $logout=true;
 require 'app/views/signIn.view.php';
@@ -89,6 +115,7 @@ require 'app/views/category.view.php';
 
 public function contact(){
     $routeName="contact";
+
 require 'app/views/contact.view.php';
 }
 

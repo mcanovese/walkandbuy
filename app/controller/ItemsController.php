@@ -53,7 +53,9 @@ class ItemsController {
     );
     $categorygroup = array();
     foreach($result as $articolo){
+      $articolo->unitamisura = $this->getUmName($articolo->unitamisura);
       $categorygroup[] = $this->createItem($articolo);
+
 
     }
     return $categorygroup;

@@ -13,6 +13,7 @@ $router->get('signin', 'PagesController@signIn');
 $router->get('user','PagesController@user');
 $router->get('addtocart','PagesController@addToCart');
 $router->get('logout','PagesController@logout');
+$router->get('cart','PagesController@cart');
 
 
 

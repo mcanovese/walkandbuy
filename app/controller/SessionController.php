@@ -36,6 +36,10 @@ class SessionController {
     return $user !== null;
   }
 
+  public function sessionStart(){
+    Session::start();
+  }
+
   public function getUser() {
     return Session::get('user');
   }
