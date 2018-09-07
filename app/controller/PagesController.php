@@ -29,38 +29,38 @@ public function globalsUser(){
 
 public function home(){
     $routeName="home";
-
+    $this->SessionController->isAuthenticated();
 require 'app/views/index.view.php';
 
 }
 
 public function notFound(){
     $routeName="404";
-
+$this->SessionController->isAuthenticated();
 require 'app/views/404.view.php';
 
 }
 
 public function whoAreWe(){
     $routeName="whoAreWe";
-
+$this->SessionController->isAuthenticated();
 require 'app/views/whoAreWe.view.php';
 }
 public function partner(){
     $routeName="partner";
-
+$this->SessionController->isAuthenticated();
 require 'app/views/partner.view.php';
 }
 
 public function howWork(){
     $routeName="howWork";
-
+$this->SessionController->isAuthenticated();
 require 'app/views/howWork.view.php';
 }
 
 public function addUser(){
     $routeName="addUser";
-
+$this->SessionController->isAuthenticated();
 require 'app/views/adduser.view.php';
     }
 
@@ -83,9 +83,6 @@ require 'app/views/cart.view.php';
 }
 
 
-
-
-
 public function signIn(){
     $routeName="signIn";
 
@@ -103,6 +100,7 @@ require 'app/views/signIn.view.php';
 
 
 public function category(){
+  $this->SessionController->isAuthenticated();
   $routeName="category";
   $catID = (integer)$_GET['id'];
   $data = $this->ItemsController->getCategoryItem($catID);
