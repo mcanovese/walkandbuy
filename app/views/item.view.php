@@ -3,22 +3,6 @@
 
 
 
-<!--
-View dedicata ad un singolo articolo.
-l'array currentItem fornisce tutti i campi di un singolo articolo forniti dal db
-di seguito il var_dump dell'array con un articolo demo dove si possono visualizzare
-le voci dell'array
-
-COMMENTO DA ELIMINARE / SOLO DI AIUTO X CSS
-object(App\Models\Articolo)#7 (11) { ["idProdotto"]=> string(1) "1"
- ["nome"]=> string(4) "Mela" ["descrizione"]=> string(12) "Mela Succosa"
- ["prezzoPieno"]=> string(1) "1" ["unitaMisura"]=> string(1) "1"
- ["foto"]=> string(1) "a" ["percentualeSconto"]=> string(1) "0"
- ["categoria"]=> string(1) "1" ["giacenza"]=> string(1) "1"
-["abilitato"]=> string(1) "1" ["venditore"]=> string(1) "1" }
-*/
--->
-
 <?php if(isset($action) && $action == "newItem") :?> <!-- inserimento nuovo articolo -->
 
 <h1>Inserimento Nuovo Articolo</h1>
@@ -46,8 +30,20 @@ object(App\Models\Articolo)#7 (11) { ["idProdotto"]=> string(1) "1"
   </div>
 
   <div class="loginbox-field">
-    <label class="input-label" for="nome">Unit&agrave Misura //da sistemare</label>
-    <input class="input" id="itemUM"  type="text" name="itemUM" required />
+    <label class="input-label" for="nome">Unit&agrave Misura</label>
+    <select class="input" id="itemUM"  type="select" name="itemUM" required />
+    <?php
+
+    foreach($um as $umisura)
+    echo'<option value='.$umisura->idum.'>'.$umisura->descrizione.'</option> ';
+
+    ?>
+
+  </select>
+
+
+
+
     <span class="underline"></span>
   </div>
 
@@ -64,8 +60,16 @@ object(App\Models\Articolo)#7 (11) { ["idProdotto"]=> string(1) "1"
   </div>
 
   <div class="loginbox-field">
-    <label class="input-label" for="nome">Categoria //da sistemare</label>
-    <input class="input" id="itemCat"  type="text" name="itemCat" required />
+    <label class="input-label" for="nome">Categoria</label>
+    <select class="input" id="itemCat"  type="select" name="itemCat" required />
+    <?php
+
+    foreach($cat as $categoria)
+    echo'<option value='.$categoria->idcategoria.'>'.$categoria->descrizione.'</option> ';
+
+    ?>
+
+</select>
     <span class="underline"></span>
   </div>
 
@@ -142,4 +146,3 @@ Breadcrumb?
 </div>
 <?php require('partials/footer.php');?>
 <?php endif; ?>
-

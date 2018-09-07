@@ -28,7 +28,7 @@ class SessionController {
 
     if ($user !== null) {
       Session::start();
-    
+
       Session::set('user', new $userClass($user->idutente, $user->cognome, $user->nome, $user->cf, $user->telefono,$user->email));
 
     }
@@ -71,11 +71,7 @@ class SessionController {
     }
   }
 
-
-
-
   public function checkPassword($codiceFiscale, $password) {
-
 
     $results = $this->database->selectWhere(
       'utenti',
@@ -92,4 +88,43 @@ class SessionController {
       return $isAuthorized;
     }
   }
+
+public function addSessionCart($itemID,$qta){
+  $cart = array();
+  $cart = Session::get('cart');
+  if(!isset($cart)){
+    $item = (['itemID' -> $itemID,
+    'qta' -> $qta ]);
+    array_push($cart,$item);
+
+    Session::set('cart',$cart);
+  }
+
+  if(isset($cart)){
+
+if(in_array($itemID,$cart)){
+    foreach($cart as $a){
+      if($a['itemID'] == $itemID) $a['qta'] == $a['qta'] + $qta;
+    }
+  } else {
+    $item = (['itemID' -> $itemID,
+    'qta' -> $qta ]);
+    array_push($cart,$item);
+  }
+}
+
+return $cart;
+
+}
+
+
+
+
+
+
+
+
+
+
+
 }

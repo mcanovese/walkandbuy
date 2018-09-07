@@ -67,6 +67,15 @@ public function signIn(){
 require 'app/views/signIn.view.php';
 }
 
+public function logout(){
+  $routeName="logout";
+$this->SessionController->logout();
+$logout=true;
+require 'app/views/signIn.view.php';
+}
+
+
+
 public function category(){
   $routeName="category";
   $catID = (integer)$_GET['id'];
@@ -91,7 +100,9 @@ if(!isset($_GET['req'])&& !isset($_GET['cod'])) header("Location: 404");
   $routeName = 'item';
   if(isset($_GET['req']) && $_GET['req'] == "newItem"){
     $action = "newItem";
-   return \Core\view('item',[ 'action' =>$action, 'routeName'=>'item']);
+    $cat = $this->ItemsController->getAllCat();
+    $um = $this->ItemsController->getAllUm();
+   return \Core\view('item',[ 'action' =>$action, 'routeName'=>'item', 'cat'=>$cat, 'um'=>$um]);
 
   }
   else {
@@ -102,6 +113,25 @@ if(!isset($_GET['req'])&& !isset($_GET['cod'])) header("Location: 404");
     'currentItem' => $currentItem, 'routeName' => 'item'
   ]);
       }
+
+}
+
+public function addToCart(){
+
+$cart = $this->SessionController->addSessionCart(104,1);
+
+$cart = array();
+$item1 = (['itemID' => "1a",
+'qta' => "10" ]);
+$item2 = (['itemID' => "1a",
+'qta' => "10" ]);
+
+array_push($cart,$item1);
+array_push($cart,$item2);
+
+var_dump($cart);
+require 'app/views/test.view.php';
+
 
 }
 
@@ -166,7 +196,7 @@ public function registerUser(){
           }
       }
 
-      
+
   }
 
 

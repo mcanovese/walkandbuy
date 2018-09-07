@@ -32,12 +32,12 @@
    <div tabindex="0" class="logged-info right">
      <span >Ciao <!-- $user->nome --> &#x25BC;</span> <!--DEVI SISTEMARMI QUA-->
     <ul class="logged-info-content">
-        <li><a href="#">Profilo</a></li>
-        <li><a href="#">Logout</a></li>
+        <li><a href="user">Profilo</a></li>
+        <li><a href="logout">Logout</a></li>
     </ul>
 </div>
 </div>
-    
+
   <header  class="navbar-container" id="top" >
   <div class="header" id="myHeader">
     <div class="navbar">
@@ -92,7 +92,7 @@ window.onscroll = function() {scroll()};
         <a class="navbar-link log-link " href="./add-user">Iscriviti</a>
         </li>
       </ul>
-     
+
 </div>
   </header>
   <div>

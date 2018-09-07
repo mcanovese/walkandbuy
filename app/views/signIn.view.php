@@ -2,6 +2,11 @@
 <?php require('partials/head.php');?>
 <div id="body">
 
+<?php if($logout) : ?>
+
+  <?php echo "<h1>Logout Effettuato</h1>"; ?>
+
+<?php else : ?>
 <h1 class="title">Login Utente</h1>
 
 <div>
@@ -27,6 +32,7 @@
 </form>
 
 </div>
+<?php endif;?>
 </div>
 <?php require('partials/footer.php');?>
 </div>

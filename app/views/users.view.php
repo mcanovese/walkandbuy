@@ -18,12 +18,5 @@ echo $user->email;
 
 
 
-
-
-
-
-
-
-
 <?php require('partials/footer.php');?>
 </div>

@@ -73,19 +73,16 @@ class ItemsController {
 
   }
 
-
-
-
-
-
-
-
+  public function getAllUm(){
+    $table = 'unitamisura';
+    $result = $this->database->selectAll($table);
+    return $result;
+  }
 
   public function getAllCat(){
     $table = 'categoria';
     $result = $this->database->selectAll($table);
     return $result;
-
   }
 
   public function getCatName($catID){
@@ -160,23 +157,9 @@ string $itemCat,string $itemStock,string $itemStatus): bool {
 
     while($nrItem >=0){
       $valore = $this->randomItem();
-
-
     }
-
     return $valore;
-
-
   }
-
-
-
-
-
-
-
-
-
 
 }
 
