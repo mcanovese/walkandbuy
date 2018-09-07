@@ -30,7 +30,7 @@
     </ul>
     </div>
    <div tabindex="0" class="logged-info right">
-     <span >Ciao <?php echo $_SESSION['user']->nome;  ?>&#x25BC;</span> <!--DEVI SISTEMARMI QUA-->
+     <span >Ciao <?php if(isset($_SESSION['user'])) echo $_SESSION['user']->nome;  ?>&#x25BC;</span> <!--DEVI SISTEMARMI QUA-->
     <ul class="logged-info-content">
         <li><a href="user">Profilo</a></li>
         <li><a href="logout">Logout</a></li>

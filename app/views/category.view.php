@@ -37,7 +37,7 @@ echo '<p class=" quantity">'.$articolo->quantita.' '.$articolo->unitaMisura.'</p
 echo "</div>";
 
 
-echo "<a href='#'>";
+echo "<a href='addtocart?cod='.>";
 echo '<div class="add-foot">';
 echo '<img src="../../public/img/aggiungiCar.png"/>';
 echo "</div>";

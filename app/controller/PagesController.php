@@ -85,13 +85,13 @@ require 'app/views/cart.view.php';
 
 public function signIn(){
     $routeName="signIn";
-
+$this->SessionController->isAuthenticated();
 require 'app/views/signIn.view.php';
 }
 
 public function logout(){
   $routeName="logout";
-
+$this->SessionController->isAuthenticated();
 $this->SessionController->logout();
 $logout=true;
 require 'app/views/signIn.view.php';
@@ -105,7 +105,7 @@ public function category(){
   $catID = (integer)$_GET['id'];
   $data = $this->ItemsController->getCategoryItem($catID);
   $catName = $this->ItemsController->getCatName($catID);
-
+  var_dump($_SESSION);
 
 
 require 'app/views/category.view.php';
@@ -144,15 +144,6 @@ if(!isset($_GET['req'])&& !isset($_GET['cod'])) header("Location: 404");
 public function addToCart(){
 
 $cart = $this->SessionController->addSessionCart(104,1);
-
-$cart = array();
-$item1 = (['itemID' => "1a",
-'qta' => "10" ]);
-$item2 = (['itemID' => "1a",
-'qta' => "10" ]);
-
-array_push($cart,$item1);
-array_push($cart,$item2);
 
 var_dump($cart);
 require 'app/views/test.view.php';
