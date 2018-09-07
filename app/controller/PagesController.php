@@ -105,7 +105,7 @@ public function category(){
   $catID = (integer)$_GET['id'];
   $data = $this->ItemsController->getCategoryItem($catID);
   $catName = $this->ItemsController->getCatName($catID);
-  var_dump($_SESSION);
+
 
 
 require 'app/views/category.view.php';
