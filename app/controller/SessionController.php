@@ -94,26 +94,38 @@ class SessionController {
   }
 
 public function addSessionCart($itemID,$qta){
-  $cart = array();
+
   $cart = Session::get('cart');
+
   if(!isset($cart)){
-    $item = (['itemID' -> $itemID,
-    'qta' -> $qta ]);
+    $cart = array();
+    $item = array('itemId'=>$itemID,"qta"=>$qta);
     array_push($cart,$item);
 
+var_dump($cart);
+
     Session::set('cart',$cart);
+
+    return $cart;
   }
 
   if(isset($cart)){
 
 if(in_array($itemID,$cart)){
-    foreach($cart as $a){
-      if($a['itemID'] == $itemID) $a['qta'] == $a['qta'] + $qta;
+  echo"sono in IF";
+    foreach($cart as $a=>$item){
+      if($item['itemId'] === $itemID) {
+        echo"bingo";
+      $actqta = $a->qta;
+      $a->qta = $actqta+1;
+      Session::set('cart',$a);}
     }
   } else {
-    $item = (['itemID' -> $itemID,
-    'qta' -> $qta ]);
+    
+    $item = array('itemId'=>$itemID,"qta"=>$qta);
     array_push($cart,$item);
+    Session::set('cart',$cart);
+
   }
 }
 
