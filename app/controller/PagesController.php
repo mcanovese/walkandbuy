@@ -29,7 +29,7 @@ public function globalsUser(){
 
 public function home(){
     $routeName="home";
-    $this->SessionController->isAuthenticated();
+    //$this->SessionController->isAuthenticated();
 require 'app/views/index.view.php';
 
 }
@@ -67,7 +67,7 @@ require 'app/views/adduser.view.php';
 public function user(){
     $routeName = "user";
     $this->onlyUser();
-
+    $user = $this->SessionController->getUser();
 
 require 'app/views/users.view.php';
 
@@ -142,10 +142,11 @@ if(!isset($_GET['req'])&& !isset($_GET['cod'])) header("Location: 404");
 }
 
 public function addToCart(){
+$idItem = $_GET['cod'];
+$qta = 1;
+$cart = $this->SessionController->addSessionCart($idItem,$qta);
 
-$cart = $this->SessionController->addSessionCart(104,1);
-
-var_dump($cart);
+var_dump($_SESSION['cart']);
 require 'app/views/test.view.php';
 
 
