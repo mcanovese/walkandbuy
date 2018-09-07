@@ -1,4 +1,7 @@
-<?php session_start();?>
+<?php 
+if(!isset($_SESSION)){ 
+    session_start();
+}?>
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -14,7 +17,7 @@
 
 </head>
 <body>
-  <?php if(isset($_SESSION)): ?>
+  <?php if(isset($_SESSION['user'])): ?>
   <div class="top-container">
   <div class="top-info">
     <ul class="little">
