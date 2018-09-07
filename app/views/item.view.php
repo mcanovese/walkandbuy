@@ -126,7 +126,8 @@ Breadcrumb?
 <div class="info"> Prezzo: <?php echo $currentItem->prezzoPieno?>&euro; </div>
 <div class="info"> Quantit&agrave <?php echo $currentItem->quantita.' '.$currentItem->unitamisura?> </div>
 <div class="add-cart">
-  <button onclick="addCart()" id="add-cart" title="Aggiungi al carrello">
+
+  <button onclick="location.href='addtocart?cod=<?php echo $currentItem->idProdotto?>'" id="add-cart" title="Aggiungi al carrello">
   <img src="../../public/img/addCart.png" alt="aggiungi al carrello" title="aggiungi al carrello"/>
   </button>
 </div>
