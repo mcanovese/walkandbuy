@@ -41,6 +41,18 @@ class QueryBuilder
     return $statement->fetchAll(\PDO::FETCH_OBJ);
   }
 
+  public function selectWhere5(string $table, array $columns, string $where, array $parameters) {
+    $query = \sprintf('select  %s from %s where %s', \implode(', ', $columns), $table, $where);
+
+
+    $statement = $this->pdo->prepare($query);
+    $statement->execute($parameters);
+
+    if (!$statement) return null;
+
+    return $statement->fetchAll(\PDO::FETCH_OBJ);
+  }
+
   public function insert(string $table, array $parameters): bool {
     $columns = \implode(', ', array_keys($parameters));
     $placeholders = \implode(

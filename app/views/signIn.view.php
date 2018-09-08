@@ -2,7 +2,7 @@
 <?php require('partials/head.php');?>
 <div id="body">
 
-<?php if($logout) : ?>
+<?php if(isset($logout)) : ?>
 
   <?php echo "<h1>Logout Effettuato</h1>"; ?>
 

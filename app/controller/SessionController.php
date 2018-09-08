@@ -94,15 +94,14 @@ class SessionController {
   }
 
 public function addSessionCart($itemID,$qta){
-
+  $operation = false;
   $cart = Session::get('cart');
+  var_dump($cart);
 
   if(!isset($cart)){
     $cart = array();
     $item = array('itemId'=>$itemID,"qta"=>$qta);
     array_push($cart,$item);
-
-var_dump($cart);
 
     Session::set('cart',$cart);
 
@@ -110,24 +109,31 @@ var_dump($cart);
   }
 
   if(isset($cart)){
+    foreach($cart as $a=>$val){
 
-if(in_array($itemID,$cart)){
-  echo"sono in IF";
-    foreach($cart as $a=>$item){
-      if($item['itemId'] === $itemID) {
-        echo"bingo";
-      $actqta = $a->qta;
-      $a->qta = $actqta+1;
-      Session::set('cart',$a);}
-    }
-  } else {
-    
-    $item = array('itemId'=>$itemID,"qta"=>$qta);
-    array_push($cart,$item);
-    Session::set('cart',$cart);
+    if($val['itemId'] == $itemID)
+    {
+      $val['qta']='999';
+      $operation = true;
+  }
+
+}
+if($operation){
+Session::set('cart',$val);
+return;}
+
+
+$item = array('itemId'=>$itemID,"qta"=>$qta);
+array_push($cart,$item);
+Session::set('cart',$cart);
 
   }
-}
+
+
+
+
+
+
 
 return $cart;
 
