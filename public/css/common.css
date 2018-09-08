@@ -349,6 +349,7 @@ dd {
 .exit-container{
   display:inline;
   max-width:3rem;
+  overflow:hidden;
 }
 
 .go-cart,
@@ -371,6 +372,7 @@ dd {
   border-radius:0.3rem;
   padding:0.7rem 0.7rem 0.4rem 0.7rem;
   margin-top:1rem;
+
 }
 
 .go-exit:hover{
@@ -416,15 +418,20 @@ dd {
   padding-right: 5%;
 }
 .navbar-right{
-  float:right;
   display:block;
-  width:30%;
+  width:25%;
   padding-top:2rem;
 }
 
-.navbar-left-sticky,
-.navbar-right-sticky{
+.navbar-left-sticky{
   margin: -1rem 1rem 2rem 2rem;
+}
+
+.navbar-right-sticky{
+  float:right;
+  display:block;
+  width:25%;
+  margin: 1rem 1rem 5rem 1rem;
 }
 
 
@@ -758,8 +765,13 @@ dd {
 
 
 
-.navbar-left,
+.navbar-left{
+  margin: 0;
+  text-align: center;
+}
+
 .navbar-right {
+  float:right;
   margin: 0;
   text-align: center;
 }
