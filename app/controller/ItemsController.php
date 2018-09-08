@@ -40,6 +40,26 @@ class ItemsController {
     // ben formato che viene restituito dal return.
   }
 
+public function catMainGroup (int $catID){
+  $table = 'categoria';
+  $where='categoria.categoriapadre = :categoria';
+  $parameters[':categoria'] = $catID;
+  $result = $this->database->selectWhere5(
+    $table,
+    ['*'],
+    $where,
+    $parameters
+  );
+  $maingroup = array();
+  foreach($result as $categoria){
+    $maingroup[]['catName'] = $categoria->descrizione;
+    $maingroup[]['products'] = $this->getCategoryItem($categoria->idcategoria);
+  }
+
+  return $maingroup;
+
+
+}
 
   public function getCategoryItem(int $categoryID) {
     $table = 'articoli';
@@ -140,6 +160,8 @@ string $itemCat,string $itemStock,string $itemStatus): bool {
       return false;
     }
   }
+
+
 
 
 

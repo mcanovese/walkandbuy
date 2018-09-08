@@ -29,7 +29,7 @@ public function globalsUser(){
 
 public function home(){
     $routeName="home";
-    //$this->SessionController->isAuthenticated();
+    $this->SessionController->isAuthenticated();
 require 'app/views/index.view.php';
 
 }
@@ -98,7 +98,7 @@ require 'app/views/signIn.view.php';
 }
 
 
-
+/*
 public function category(){
   $this->SessionController->isAuthenticated();
   $routeName="category";
@@ -109,7 +109,23 @@ public function category(){
 
 
 require 'app/views/category.view.php';
+}*/
+
+public function category(){
+  $this->SessionController->isAuthenticated();
+  $routeName="category";
+  $catID = (integer)$_GET['id'];
+  $data = $this->ItemsController->catMainGroup($catID);
+  $catName = $this->ItemsController->getCatName($catID);
+
+
+
+require 'app/views/category.view.php';
 }
+
+
+
+
 
 public function contact(){
     $routeName="contact";
@@ -146,10 +162,7 @@ $idItem = $_GET['cod'];
 $qta = 1;
 $cart = $this->SessionController->addSessionCart($idItem,$qta);
 
-var_dump($_SESSION['cart']);
 require 'app/views/test.view.php';
-
-
 }
 
 
