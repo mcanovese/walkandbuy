@@ -13,6 +13,20 @@
 <div class="category-container">
 <?php
 
+foreach($data as $id => $category) {
+  echo $category['catName'];
+  echo"<br>";
+    foreach($category['products'] as $item)
+    {
+      echo $item->nome;
+      echo $item->percentualeSconto;
+      echo"</br>";
+    }
+
+}
+
+
+
 foreach ($data as $articolo){
     $prezzoPieno=$articolo->prezzoPieno;
 echo "<div class='category-item'>";

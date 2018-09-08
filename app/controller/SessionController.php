@@ -94,50 +94,34 @@ class SessionController {
   }
 
 public function addSessionCart($itemID,$qta){
-  $operation = false;
-  $cart = Session::get('cart');
-  var_dump($cart);
 
-  if(!isset($cart)){
-    $cart = array();
-    $item = array('itemId'=>$itemID,"qta"=>$qta);
-    array_push($cart,$item);
+$postedQuantity = $qta;
+$postedProduct = $itemID;
 
-    Session::set('cart',$cart);
+$productId = $itemID;
 
-    return $cart;
-  }
+if(empty($_SESSION)){
+$_SESSION['cart_items'] = array();
+}
 
-  if(isset($cart)){
-    foreach($cart as $a=>$val){
+if(empty($_SESSION['cart_items'])) {
+  $_SESSION['cart_items'][$productId] = array('itemID'=> $itemID,
+                                          'quantity'=> $qta);
 
-    if($val['itemId'] == $itemID)
-    {
-      $val['qta']='999';
-      $operation = true;
-  }
+} elseif(!array_key_exists($itemID,$_SESSION['cart_items'])) {
+  $_SESSION['cart_items'][$productId] = array('itemID'=> $itemID,
+                                'quantity'=> $qta);
+
 
 }
-if($operation){
-Session::set('cart',$val);
-return;}
+else {
+ $_SESSION['cart_items'][$productId]['quantity'] += $postedQuantity;
+}
 
-
-$item = array('itemId'=>$itemID,"qta"=>$qta);
-array_push($cart,$item);
-Session::set('cart',$cart);
-
+var_dump($_SESSION);
   }
 
 
-
-
-
-
-
-return $cart;
-
-}
 
 
 
