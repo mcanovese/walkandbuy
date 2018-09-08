@@ -33,7 +33,7 @@ if(!isset($_SESSION)){
     </ul>
     </div>
    <div tabindex="0" class="logged-info right">
-     <span >Ciao <?php if(isset($_SESSION['user'])) echo $_SESSION['user']->nome;  ?>&#x25BC;</span> <!--DEVI SISTEMARMI QUA-->
+    <a class="user-interface" >Ciao <?php if(isset($_SESSION['user'])) echo $_SESSION['user']->nome;  ?>&#x25BC;</a> 
     <ul class="logged-info-content">
         <li><a href="user">Profilo</a></li>
         <li><a href="logout">Logout</a></li>
@@ -65,6 +65,7 @@ window.onscroll = function() {scroll()};
 
 <?php else : ?>
 <div  class="top-container">
+<div class="top-info">
     <ul class="little">
         <li class="list-item">
         <a class="navbar-link little" href="./howWork">Come funziona</a>
@@ -76,6 +77,7 @@ window.onscroll = function() {scroll()};
         <a class="navbar-link little" href="./whoAreWe">Chi siamo</a>
         </li>
       </ul>
+    </div>
     </div>
   <header  class="navbar-container" id="top" >
   <div class="header" id="myHeader">
