@@ -55,7 +55,7 @@ public function catMainGroup (int $catID){
     $maingroup[]['catName'] = $categoria->descrizione;
     $maingroup[]['products'] = $this->getCategoryItem($categoria->idcategoria);
   }
-  var_dump($maingroup);
+
   return $maingroup;
 
 
