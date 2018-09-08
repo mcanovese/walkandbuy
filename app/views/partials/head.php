@@ -32,13 +32,6 @@ if(!isset($_SESSION)){
         </li>
     </ul>
     </div>
-   <div tabindex="0" class="logged-info right">
-    <a class="user-interface" >Ciao <?php if(isset($_SESSION['user'])) echo $_SESSION['user']->nome;  ?>&#x25BC;</a> 
-    <ul class="logged-info-content">
-        <li><a href="user">Profilo</a></li>
-        <li><a href="logout">Logout</a></li>
-    </ul>
-</div>
 </div>
 
   <header  class="navbar-container" id="top" >
@@ -51,8 +44,16 @@ if(!isset($_SESSION)){
         </a>
       </div>
 
-      <div id="MyNavRight">
-        <a class="go-cart" href="cart"><img src="../../../public/img/cart.png"/></a>
+      <div id="MyNavRight" class="navbar-right right">
+        <div class="cart-container">
+        <a class="go-cart" href="cart"><img alt="carrello" title="carrello" src="../../../public/img/cart.png"/></a>
+        </div>
+        <div class="profile-container">
+        <a class="go-profile" href="user"><img alt="profilo" title="profilo" src="../../../public/img/profile.png"/></a>
+        </div>
+        <div class="exit-container">
+        <a class="go-exit" href="logout"><img alt="logout" title="logout" src="../../../public/img/exit.png"/></a>
+        </div>
       </div>
   </header>
   <div>
