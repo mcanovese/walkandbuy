@@ -76,6 +76,7 @@ require 'app/views/users.view.php';
 public function cart(){
     $routeName = "cart";
     $this->onlyUser();
+    $data= $this->ItemsController->cartView();
 
 
 require 'app/views/cart.view.php';
@@ -158,6 +159,7 @@ if(!isset($_GET['req'])&& !isset($_GET['cod'])) header("Location: 404");
 }
 
 public function addToCart(){
+  $this->onlyUser();
 $idItem = $_GET['cod'];
 $qta = 1;
 $cart = $this->SessionController->addSessionCart($idItem,$qta);

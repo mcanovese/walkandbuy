@@ -6,17 +6,10 @@
 
 <?php
 foreach($data as $id => $category) {
-    echo '<div class="go-subcat-container">';
-    echo '<button onclick="#" class="go-subcat" alt="Scoprili tutti">';
-    echo '<img class="go-subcat-img" src="../../public/img/go_subcat.png" alt="Scoprili tutti" /></button>';
-    echo "<div class='subcat-name'>";
-    echo "<h3>".$category['catName']."</h3>";
-?>
-</div>
-</div>
-
-<?php
-    foreach($category['products'] as $articolo)
+  echo $category['catName'];
+  echo $category['products']->nome;
+  echo"<br>";
+    foreach($category['products'] as $item)
     {
         echo '<div class="category-container">';
      /*       $prezzoPieno=$articolo->prezzoPieno;
@@ -40,13 +33,13 @@ foreach($data as $id => $category) {
         }
         echo '<p class=" quantity">'.$articolo->quantita.' '.$articolo->unitaMisura.'</p>';
         echo "</div>";
-        
-        
+
+
         echo "<a href='addtocart?cod=".$articolo->idProdotto."'>";
         echo '<div class="add-foot">';
         echo '<img src="../../public/img/aggiungiCar.png"/>';
         echo "</div>";
-        echo "</a>"; */
+        echo "</a>";
         echo "</div>";
        }
 

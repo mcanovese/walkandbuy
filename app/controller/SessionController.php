@@ -95,30 +95,18 @@ class SessionController {
 
 public function addSessionCart($itemID,$qta){
 
-$postedQuantity = $qta;
-$postedProduct = $itemID;
+if(empty($_SESSION)){ $_SESSION['cart'] = array(); }
 
-$productId = $itemID;
+if(empty($_SESSION['cart'])) {
+  $_SESSION['cart'][$itemID] = array('itemID'=> $itemID,'qta'=> $qta);
 
-if(empty($_SESSION)){
-$_SESSION['cart_items'] = array();
+} elseif(!array_key_exists($itemID,$_SESSION['cart'])) {
+
+  $_SESSION['cart'][$itemID] = array('itemID'=> $itemID,'qta'=> $qta);
 }
+else {$_SESSION['cart'][$itemID]['qta'] += $qta;}
 
-if(empty($_SESSION['cart_items'])) {
-  $_SESSION['cart_items'][$productId] = array('itemID'=> $itemID,
-                                          'quantity'=> $qta);
-
-} elseif(!array_key_exists($itemID,$_SESSION['cart_items'])) {
-  $_SESSION['cart_items'][$productId] = array('itemID'=> $itemID,
-                                'quantity'=> $qta);
-
-
-}
-else {
- $_SESSION['cart_items'][$productId]['quantity'] += $postedQuantity;
-}
-
-var_dump($_SESSION);
+var_dump($_SESSION['cart']);
   }
 
 

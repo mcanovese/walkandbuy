@@ -162,9 +162,6 @@ string $itemCat,string $itemStock,string $itemStatus): bool {
   }
 
 
-
-
-
   private function randomItem(){
     //genero 5 numeri random, range 0- #maxID_articolo
     $table = 'articoli';
@@ -184,6 +181,25 @@ string $itemCat,string $itemStock,string $itemStatus): bool {
     }
     return $valore;
   }
+
+  public function cartView(){
+
+    $cart = $_SESSION['cart'];
+    $cartgroup = array();
+    foreach($cart as $item){
+
+      $itemID = $item['itemID'];
+      $cartgroup[]=array('item'=> $this->getItem($itemID),'qta'=>$item['qta']);
+
+    }
+    return $cartgroup;
+
+
+
+  }
+
+
+
 
 }
 
