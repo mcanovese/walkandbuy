@@ -9,10 +9,9 @@
 foreach($data as $id => $category) {
   echo $category['catName'].'<br/>';
 
-    foreach($category['items'] as $item)
+    foreach($category['items'] as $articolo)
     {
-      echo $item->nome;
-      echo $item->descrizione;
+
 
         echo '<div class="category-container">';
      /*       $prezzoPieno=$articolo->prezzoPieno;
@@ -21,7 +20,7 @@ foreach($data as $id => $category) {
         echo "<a href='/item?cod=".$articolo->idProdotto."'>";
         /*echo '<img class="little-img" src="../../public/img/product/'.$articolo->foto.'.jpg'.'" alt="'.$articolo->nome.'" title="'.$articolo->nome.'"/> ';
         */
-    /*    echo '<img class="little-img" src="../../public/img/product/a.jpg" alt="'.$articolo->nome.'" title="'.$articolo->nome.'"/> ';
+        echo '<img class="little-img" src="../../public/img/product/a.jpg" alt="'.$articolo->nome.'" title="'.$articolo->nome.'"/> ';
         echo "</a>";
         echo "</div>";
         echo "<div class='info-container'>";
@@ -42,7 +41,7 @@ foreach($data as $id => $category) {
         echo '<div class="add-foot">';
         echo '<img src="../../public/img/aggiungiCar.png"/>';
         echo "</div>";
-        echo "</a>"; */
+        echo "</a>"; 
         echo "</div>";
        }
 
