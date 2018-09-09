@@ -106,8 +106,17 @@ if(empty($_SESSION['cart'])) {
 }
 else {$_SESSION['cart'][$itemID]['qta'] += $qta;}
 
-var_dump($_SESSION['cart']);
   }
+
+public function decreaseCartSession($itemID){
+
+$_SESSION['cart'][$itemID]['qta']--;
+
+if($_SESSION['cart'][$itemID]['qta'] == 0 ){
+  unset($_SESSION['cart'][$itemID]);
+}
+
+}
 
 
 

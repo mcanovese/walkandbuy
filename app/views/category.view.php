@@ -5,12 +5,15 @@
 <div>
 
 <?php
+
 foreach($data as $id => $category) {
-  echo $category['catName'];
-  echo $category['products']->nome;
-  echo"<br>";
-    foreach($category['products'] as $item)
+  echo $category['catName'].'<br/>';
+
+    foreach($category['items'] as $item)
     {
+      echo $item->nome;
+      echo $item->descrizione;
+
         echo '<div class="category-container">';
      /*       $prezzoPieno=$articolo->prezzoPieno;
         echo "<div class='category-item'>";
@@ -39,7 +42,7 @@ foreach($data as $id => $category) {
         echo '<div class="add-foot">';
         echo '<img src="../../public/img/aggiungiCar.png"/>';
         echo "</div>";
-        echo "</a>";
+        echo "</a>"; */
         echo "</div>";
        }
 

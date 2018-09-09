@@ -79,6 +79,7 @@ public function cart(){
     $data= $this->ItemsController->cartView();
 
 
+
 require 'app/views/cart.view.php';
 
 }
@@ -159,12 +160,18 @@ if(!isset($_GET['req'])&& !isset($_GET['cod'])) header("Location: 404");
 }
 
 public function addToCart(){
-  $this->onlyUser();
+$this->onlyUser();
 $idItem = $_GET['cod'];
+if(isset($_GET['req']) && $_GET['req'] == 'dec'){
+  $cart = $this->SessionController->decreaseCartSession($idItem,1);
+  var_dump($_SESSION['cart']);
+  require 'app/views/test.view.php';
+}else {
+
 $qta = 1;
 $cart = $this->SessionController->addSessionCart($idItem,$qta);
-
-require 'app/views/test.view.php';
+var_dump($_SESSION['cart']);
+require 'app/views/test.view.php';}
 }
 
 

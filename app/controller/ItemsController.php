@@ -52,8 +52,8 @@ public function catMainGroup (int $catID){
   );
   $maingroup = array();
   foreach($result as $categoria){
-    $maingroup[]['catName'] = $categoria->descrizione;
-    $maingroup[]['products'] = $this->getCategoryItem($categoria->idcategoria);
+    //$maingroup[]['catName'] = $categoria->descrizione;
+    $maingroup[]=array("catName"=> $categoria->descrizione,"items"=>$this->getCategoryItem($categoria->idcategoria));
   }
 
   return $maingroup;

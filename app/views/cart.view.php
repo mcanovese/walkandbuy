@@ -4,7 +4,7 @@
 <h1>Carrello</h1>
 
 <?php foreach($data as $item){
-
+  if($item['item']->nome == null) continue;
 echo"<br/>";
 echo $item['item']->nome." ";
 echo "Qta: ";
