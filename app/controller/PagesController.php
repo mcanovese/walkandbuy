@@ -119,7 +119,7 @@ public function category(){
   $catID = (integer)$_GET['id'];
   $data = $this->ItemsController->catMainGroup($catID);
   $catName = $this->ItemsController->getCatName($catID);
-  $order = $this->ItemsController->creaRigheOrdine();
+
 
 require 'app/views/category.view.php';
 }
@@ -160,16 +160,16 @@ if(!isset($_GET['req'])&& !isset($_GET['cod'])) header("Location: 404");
 
 public function addToCart(){
 $this->onlyUser();
+if(!isset($_GET['cod'])) header('Location: 404');
 $idItem = $_GET['cod'];
 if(isset($_GET['req']) && $_GET['req'] == 'dec'){
   $cart = $this->SessionController->decreaseCartSession($idItem,1);
-  var_dump($_SESSION['cart']);
+
   require 'app/views/test.view.php';
 }else {
 
 $qta = 1;
-$cart = $this->SessionController->addSessionCart($idItem,$qta);
-var_dump($_SESSION['cart']);
+
 require 'app/views/test.view.php';}
 }
 
