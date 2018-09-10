@@ -28,6 +28,16 @@ class QueryBuilder
       return $statement->fetchAll(\PDO::FETCH_CLASS);
   }
 
+  public function selectMaxWhere($table,$column,$param,$column1){
+
+      $statement = $this->pdo->prepare("select max({$column1}) as massimo from {$table} where {$column}={$param}");
+      $statement->execute();
+
+      return $statement->fetchAll(\PDO::FETCH_CLASS);
+  }
+
+
+
 
   public function selectWhere(string $table, array $columns, string $where, array $parameters) {
     $query = \sprintf('select %s from %s where %s', \implode(', ', $columns), $table, $where);

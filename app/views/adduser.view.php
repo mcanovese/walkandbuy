@@ -5,6 +5,8 @@
 <h1 class="title">Registrazione Utente</h1>
 
 <?php
+if(isset($result)) echo"<h2>>Registrazione Effettuata</h2> <a href='home'>Vai Alla Home</a>";
+else {
 if(isset($messageDisplay)) echo $messageDisplay;?>
 
 <div>
@@ -55,5 +57,5 @@ if(isset($messageDisplay)) echo $messageDisplay;?>
 </div>
 </div>
 
-<?php require('partials/footer.php');?>
+<?php }require('partials/footer.php');?>
 </div>

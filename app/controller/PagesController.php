@@ -119,8 +119,7 @@ public function category(){
   $catID = (integer)$_GET['id'];
   $data = $this->ItemsController->catMainGroup($catID);
   $catName = $this->ItemsController->getCatName($catID);
-
-
+  $order = $this->ItemsController->creaRigheOrdine();
 
 require 'app/views/category.view.php';
 }
@@ -208,6 +207,7 @@ else {
 
 
 public function registerUser(){
+    $this->SessionController->isAuthenticated();
   //acquisizione dati da POST
   $email = Request::getPOST('email');
   $cognome = Request::getPOST('cognome');
@@ -235,6 +235,8 @@ public function registerUser(){
           }
       }
 
+    if(isset($result))
+    {return \Core\view('adduser',[ 'result' =>'true', 'routeName' => 'addUser']);}
 
   }
 

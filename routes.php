@@ -1,6 +1,7 @@
 <?php
 
 $router->get('','PagesController@home');
+$router->get('home','PagesController@home');
 $router->get('whoAreWe','PagesController@whoAreWe');
 $router->get('partner','PagesController@partner');
 $router->get('howWork','PagesController@howWork');

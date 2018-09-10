@@ -41,7 +41,7 @@ foreach($data as $id => $category) {
         echo '<div class="add-foot">';
         echo '<img src="../../public/img/aggiungiCar.png"/>';
         echo "</div>";
-        echo "</a>"; 
+        echo "</a>";
         echo "</div>";
        }
 

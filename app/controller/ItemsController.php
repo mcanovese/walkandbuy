@@ -193,7 +193,64 @@ string $itemCat,string $itemStock,string $itemStatus): bool {
 
     }
     return $cartgroup;
+  }
 
+  public function createOrder(){
+
+    $cart = $_SESSION['cart'];
+    $table = 'ordini';
+    $this->database->insert($table, [
+      'dataordine' => date("d-m-y"),
+      'statoordine' => 'creato',
+      'metodopagamento' => 'alla consegna',
+      'metodospedizione' => 'consegna web',
+      'idutente' => $_SESSION['user']->idutente
+    ]);
+  }
+
+  public function getOrderNumber(){
+    //restituisce l'ultimo ordine inserito dall'utente corrente,
+    //funzione da usare solo in fase di creazione righe ordine
+    $userID = $_SESSION['user']->idutente;
+    $table = 'ordini';
+    $column = 'idutente';
+    $column1 = 'idordine';
+    $maxorder = $this->database->selectMaxWhere($table,$column,$userID,$column1);
+    $max = (int) $maxorder[0]->massimo;
+    return $max;
+  }
+
+  public function creaRigheOrdine(){
+
+    $cart = $_SESSION['cart'];
+    $nrorder = $this->getOrderNumber();
+    $table = 'righeordine';
+    foreach($cart as $item){
+
+      //$itemID = $item['item']->itemID;
+      $itemID = (int)$item['itemID'];
+      $articolo = $this->getItem($itemID);
+      $price=$articolo->prezzoPieno-(($articolo->prezzoPieno*$articolo->percentualeSconto)/100);
+
+      $this->database->insert($table, [
+        'idordine' => $nrorder,
+        'idprodotto' => $itemID,
+        'quantita' => $item['qta'],
+        'unitamisura' => $articolo->unitaMisura,
+        'prezzounitario' => $price,
+        'totaleriga' => $item['qta']*$price
+
+      ]);
+    }
+
+
+      public function finalizeOrder(){
+        // da invocare dopo aver creato l'ordine e le righe ordine
+        // aggiorna tabella ordine, caricando il totale 
+
+
+
+      }
 
 
   }
