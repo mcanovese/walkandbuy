@@ -241,12 +241,12 @@ string $itemCat,string $itemStock,string $itemStatus): bool {
         'totaleriga' => $item['qta']*$price
 
       ]);
-    }
+    }}
 
 
       public function finalizeOrder(){
         // da invocare dopo aver creato l'ordine e le righe ordine
-        // aggiorna tabella ordine, caricando il totale 
+        // aggiorna tabella ordine, caricando il totale
 
 
 
