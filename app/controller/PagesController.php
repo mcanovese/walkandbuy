@@ -162,14 +162,16 @@ public function addToCart(){
 $this->onlyUser();
 if(!isset($_GET['cod'])) header('Location: 404');
 $idItem = $_GET['cod'];
+
 if(isset($_GET['req']) && $_GET['req'] == 'dec'){
-  $cart = $this->SessionController->decreaseCartSession($idItem,1);
+$cart = $this->SessionController->decreaseCartSession($idItem,1);
 
   require 'app/views/test.view.php';
-}else {
+}
 
+else {
 $qta = 1;
-
+$cart = $this->SessionController->addSessionCart($idItem,$qta);
 require 'app/views/test.view.php';}
 }
 

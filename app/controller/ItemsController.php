@@ -183,7 +183,7 @@ string $itemCat,string $itemStock,string $itemStatus): bool {
   }
 
   public function cartView(){
-
+  
     $cart = $_SESSION['cart'];
     $cartgroup = array();
     foreach($cart as $item){
@@ -220,10 +220,10 @@ string $itemCat,string $itemStock,string $itemStatus): bool {
     return $max;
   }
 
-  public function creaRigheOrdine(){
+  public function creaRigheOrdine($nroder){
 
     $cart = $_SESSION['cart'];
-    $nrorder = $this->getOrderNumber();
+    //$nrorder = $this->getOrderNumber();
     $table = 'righeordine';
     foreach($cart as $item){
 
@@ -244,9 +244,21 @@ string $itemCat,string $itemStock,string $itemStatus): bool {
     }}
 
 
-      public function finalizeOrder(){
+      public function finalizeOrder($order){
         // da invocare dopo aver creato l'ordine e le righe ordine
         // aggiorna tabella ordine, caricando il totale
+        // cancella la SESSION Carrello
+        $table = 'righeordine';
+        $column = 'idorde';
+        $column1 = 'totaleriga';
+        $param = $order;
+
+        //ricavo totale ordine sommando tutte le righe dell'ordine
+        $total = $this->database->selectSUM($table,$column,$userID,$column1);
+
+        //aggiornamento tabella ordine con totale
+
+        unset($_SESSION['cart']);
 
 
 

@@ -36,6 +36,23 @@ class QueryBuilder
       return $statement->fetchAll(\PDO::FETCH_CLASS);
   }
 
+  public function selectSUM($table,$column,$param,$column1){
+
+      $statement = $this->pdo->prepare("select sum({$column1}) as totale from {$table} where {$column}={$param}");
+      $statement->execute();
+
+      return $statement->fetchAll(\PDO::FETCH_CLASS);
+  }
+
+  public function update(string $table, string $changes, string $where, array $parameters): bool {
+    $query = \sprintf('update %s set %s where (%s)', $table, $changes, $where);
+    Logger::log($query);
+
+    $statement = $this->pdo->prepare($query);
+    return $statement->execute($parameters);
+  }
+
+
 
 
 
