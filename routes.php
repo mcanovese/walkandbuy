@@ -15,6 +15,10 @@ $router->get('user','PagesController@user');
 $router->get('addtocart','PagesController@addToCart');
 $router->get('logout','PagesController@logout');
 $router->get('cart','PagesController@cart');
+$router->get('checkout','PagesController@checkout');
+
+$router->get('cassa','PagesController@cassa');
+
 
 
 

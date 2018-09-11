@@ -76,13 +76,31 @@ require 'app/views/users.view.php';
 public function cart(){
     $routeName = "cart";
     $this->onlyUser();
-    $data= $this->ItemsController->cartView();
+
+    if($_SESSION['cart']) $data= $this->ItemsController->cartView();
+    else $data=false;
+
 
 
 
 require 'app/views/cart.view.php';
 
 }
+
+public function cassa(){
+  $routeName = "cart";
+  $this->onlyUser();
+  $userID = $_SESSION['user']->idutente;
+  $creaordine = $this->ItemsController->createOrder();
+  //$orderNumber= $this->ItemsController->getOrderNumber();
+  //$this->ItemsController->creaRigheOrdine($orderNumber);
+  //$this->ItemsController->finalizeOrder($orderNumber,$userID);
+
+    require 'app/views/index.view.php';
+
+}
+
+
 
 
 public function signIn(){

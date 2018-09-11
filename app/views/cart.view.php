@@ -8,14 +8,24 @@ chiamata per aggiungere va fatta a :  /addtocart?cod=##  ##=nr idordine
 /addtocart?cod=##req=dec invece va chiamata x decrementare di 1
 
 tutte le operazioni di incremento e decremento hanno effetto sulla session[cart]
+
+NOTA:
+x confermare l'ordine serve un pulsante di conferma, che effettua una chiamata Alla
+pagina "checkout", la quale poi richiamerà la view di cart per l'output della conferma
+ordine
 -->
-<?php foreach($data as $item){
+<?php
+
+if(!$data) echo "niente nel carrello";
+else {
+foreach($data as $item){
   if($item['item']->nome == null) continue;
 echo"<br/>";
 echo $item['item']->nome." ";
 echo "Qta: ";
 echo $item['qta'];
-echo"<br/>";
+echo"<br/>";}
+
 
 
 

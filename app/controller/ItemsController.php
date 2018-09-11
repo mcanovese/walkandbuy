@@ -183,7 +183,7 @@ string $itemCat,string $itemStock,string $itemStatus): bool {
   }
 
   public function cartView(){
-  
+    if(isset($_SESSION['cart'])){
     $cart = $_SESSION['cart'];
     $cartgroup = array();
     foreach($cart as $item){
@@ -194,18 +194,27 @@ string $itemCat,string $itemStock,string $itemStatus): bool {
     }
     return $cartgroup;
   }
+  }
 
-  public function createOrder(){
+  public function createOrder(): bool{
 
+
+    //'idutente' => $_SESSION['user']->idutente
+    //date("y-m-d")
+    $userID = (int)$_SESSION['user']->idutente;
     $cart = $_SESSION['cart'];
     $table = 'ordini';
-    $this->database->insert($table, [
-      'dataordine' => date("d-m-y"),
+    $inserimento = $this->database->insert($table, [
+      'dataordine' => date("y-m-d"),
       'statoordine' => 'creato',
       'metodopagamento' => 'alla consegna',
       'metodospedizione' => 'consegna web',
-      'idutente' => $_SESSION['user']->idutente
+      'idutente' => $userID
+
     ]);
+
+    return $inserimento;
+
   }
 
   public function getOrderNumber(){
@@ -220,10 +229,11 @@ string $itemCat,string $itemStock,string $itemStatus): bool {
     return $max;
   }
 
-  public function creaRigheOrdine($nroder){
+  public function creaRigheOrdine($nrorder){
 
     $cart = $_SESSION['cart'];
     //$nrorder = $this->getOrderNumber();
+
     $table = 'righeordine';
     foreach($cart as $item){
 
@@ -244,17 +254,26 @@ string $itemCat,string $itemStock,string $itemStatus): bool {
     }}
 
 
-      public function finalizeOrder($order){
+      public function finalizeOrder($order,$userID){
         // da invocare dopo aver creato l'ordine e le righe ordine
         // aggiorna tabella ordine, caricando il totale
         // cancella la SESSION Carrello
         $table = 'righeordine';
-        $column = 'idorde';
+        $column = 'idordine';
         $column1 = 'totaleriga';
         $param = $order;
 
+
         //ricavo totale ordine sommando tutte le righe dell'ordine
-        $total = $this->database->selectSUM($table,$column,$userID,$column1);
+        $totale =$this->database->selectSUM($table,$column,$param,$column1);
+        $changes = 'totaleordine = :totaleordine';
+        $where = 'idordine = :idordine';
+        $total = (int)($totale[0]->totale);
+
+        $updateordine = $this->database->update('ordini', $changes, $where, [
+          ':totaleordine' => $total,
+          ':idordine' =>$order
+        ]);
 
         //aggiornamento tabella ordine con totale
 

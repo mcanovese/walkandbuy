@@ -45,6 +45,7 @@ class SessionController {
   }
 
 
+
   public function isAuthenticated(): bool {
     return $this->getUser() !== null;
   }
