@@ -196,24 +196,25 @@ string $itemCat,string $itemStock,string $itemStatus): bool {
   }
   }
 
-  public function createOrder(): bool{
+  public function createNewOrder(){
 
 
     //'idutente' => $_SESSION['user']->idutente
     //date("y-m-d")
-    $userID = (int)$_SESSION['user']->idutente;
+
+    $uID =$_SESSION['user']->idutente;
+
     $cart = $_SESSION['cart'];
-    $table = 'ordini';
-    $inserimento = $this->database->insert($table, [
+
+      $this->database->insert('ordini', [
       'dataordine' => date("y-m-d"),
       'statoordine' => 'creato',
-      'metodopagamento' => 'alla consegna',
-      'metodospedizione' => 'consegna web',
-      'idutente' => $userID
-
+      'metodopagamento' => 'carta',
+      'metodospedizione' => 'consegna',
+      'idutente' => $uID
     ]);
 
-    return $inserimento;
+
 
   }
 
@@ -278,6 +279,7 @@ string $itemCat,string $itemStock,string $itemStatus): bool {
         //aggiornamento tabella ordine con totale
 
         unset($_SESSION['cart']);
+        return $result=true;
 
 
 

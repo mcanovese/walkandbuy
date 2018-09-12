@@ -79,11 +79,7 @@ public function cart(){
 
     if($_SESSION['cart']) $data= $this->ItemsController->cartView();
     else $data=false;
-
-
-
-
-require 'app/views/cart.view.php';
+    require 'app/views/cart.view.php';
 
 }
 
@@ -91,12 +87,14 @@ public function cassa(){
   $routeName = "cart";
   $this->onlyUser();
   $userID = $_SESSION['user']->idutente;
-  $creaordine = $this->ItemsController->createOrder();
-  //$orderNumber= $this->ItemsController->getOrderNumber();
-  //$this->ItemsController->creaRigheOrdine($orderNumber);
-  //$this->ItemsController->finalizeOrder($orderNumber,$userID);
 
-    require 'app/views/index.view.php';
+  $creaordine = $this->ItemsController->createNewOrder();
+  $orderNumber= $this->ItemsController->getOrderNumber();
+  $this->ItemsController->creaRigheOrdine($orderNumber);
+    $result = $this->ItemsController->finalizeOrder($orderNumber,$userID);
+
+
+    require 'app/views/cart.view.php';
 
 }
 
@@ -169,8 +167,13 @@ if(!isset($_GET['req'])&& !isset($_GET['cod'])) header("Location: 404");
 
   $itemCod=$_GET['cod'];
   $currentItem = $this->ItemsController->getItem($itemCod);
+  $userID =(int) $this->SessionController->getUserID();
+  $itemID =(int) $currentItem->venditore;
+  if($itemID == $userID) $edit = true;
+  else $edit = false;
+
   return \Core\view('item', [
-    'currentItem' => $currentItem, 'routeName' => 'item'
+    'currentItem' => $currentItem, 'routeName' => 'item','edit'=>$edit
   ]);
       }
 

@@ -44,6 +44,10 @@ class SessionController {
     return Session::get('user');
   }
 
+  public function getUserID() {
+    return $_SESSION['user']->idutente;
+  }
+
 
 
   public function isAuthenticated(): bool {

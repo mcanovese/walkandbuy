@@ -26,7 +26,7 @@ echo "Qta: ";
 echo $item['qta'];
 echo"<br/>";}
 
-
+echo"<a href='cassa'/>Procedi conferma ordine</a>";
 
 
 
