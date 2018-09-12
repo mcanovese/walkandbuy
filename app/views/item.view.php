@@ -106,6 +106,11 @@
 </div>
 
 
+<?php elseif (isset($action) && $action == "edit") : ?>
+
+
+<?php echo"modifica"; ?>
+
 <?php else : ?>
 <div id=body>
 
@@ -119,7 +124,8 @@ Breadcrumb?
 </div>
 </div>
 <?php
-if($edit) echo"<br>PULSANTE MODIFICA"; ?>
+
+if($edit) echo'<a href="item?cod='.$currentItem->idProdotto.'&req=edit">Modifica</a>'; ?>
 <div class="split col-text"> <!-- COLONNA DEL TESTO, CON DETTAGLI-->
 <div class="prod-name">
   <h2><?php echo $currentItem->nome; ?><h2>

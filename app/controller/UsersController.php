@@ -42,6 +42,55 @@ public function insertUser(array $parameters): bool {
   return $successful;
 }
 
+public function getifAzienda ($userCF){
+
+  $table = 'utenti';
+  $where='utenti.cf = :cf';
+  $parameters[':cf'] = $userCF;
+  $result = $this->database->selectWhere(
+    $table,
+    ['*'],
+    $where,
+    $parameters
+  );
+
+  return $result[0]->azienda;
+
+}
+
+
+public function getAllCF(){
+  $table = 'utenti';
+  $result = $this->database->selectAll($table);
+  
+  return $result;
+}
+
+
+public function changeRole ($userCF){
+
+  $status = $this->getifAzienda($userCF);
+
+  $changes = 'azienda = :azienda';
+  $where = 'cf = :cf';
+
+   if($status == 0){
+  $updateordine = $this->database->update('utenti', $changes, $where, [
+    ':azienda' => 1,
+    ':cf'=>$userCF
+  ]); }
+
+  if($status == 1){
+ $updateordine = $this->database->update('utenti', $changes, $where, [
+   ':azienda' => 0,
+   ':cf'=>$userCF
+ ]); }
+
+
+
+
+
+}
 
 //verifico l'esistenza di una mail già registrata
 private function checkUserEmail(string $email) {

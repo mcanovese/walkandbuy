@@ -161,6 +161,19 @@ string $itemCat,string $itemStock,string $itemStatus): bool {
     }
   }
 
+  public function itemUpdate(){
+
+    Request::getPOST('itemName');
+
+
+
+
+
+  }
+
+
+
+
 
   private function randomItem(){
     //genero 5 numeri random, range 0- #maxID_articolo

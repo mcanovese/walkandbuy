@@ -73,6 +73,29 @@ require 'app/views/users.view.php';
 
 }
 
+public function admin(){
+    $routeName = "admin";
+    $this->onlyUser();
+  $allUser = $this->UsersController->getAllCF();
+require 'app/views/admin.view.php';
+
+}
+
+public function assegnaAzienda(){
+    $routeName = "admin";
+    $this->onlyUser();
+
+
+
+    $userCF = Request::getPOST('cf');
+    $this->UsersController->changeRole($userCF);
+
+    header('Location: admin');
+
+}
+
+
+
 public function cart(){
     $routeName = "cart";
     $this->onlyUser();
@@ -92,7 +115,6 @@ public function cassa(){
   $orderNumber= $this->ItemsController->getOrderNumber();
   $this->ItemsController->creaRigheOrdine($orderNumber);
     $result = $this->ItemsController->finalizeOrder($orderNumber,$userID);
-
 
     require 'app/views/cart.view.php';
 
@@ -116,18 +138,7 @@ require 'app/views/signIn.view.php';
 }
 
 
-/*
-public function category(){
-  $this->SessionController->isAuthenticated();
-  $routeName="category";
-  $catID = (integer)$_GET['id'];
-  $data = $this->ItemsController->getCategoryItem($catID);
-  $catName = $this->ItemsController->getCatName($catID);
 
-
-
-require 'app/views/category.view.php';
-}*/
 
 public function category(){
   $this->SessionController->isAuthenticated();
@@ -135,8 +146,6 @@ public function category(){
   $catID = (integer)$_GET['id'];
   $data = $this->ItemsController->catMainGroup($catID);
   $catName = $this->ItemsController->getCatName($catID);
-
-
 require 'app/views/category.view.php';
 }
 
@@ -152,23 +161,30 @@ require 'app/views/contact.view.php';
 
 public function item() {
   $this->onlyUser();
+  $userID =(int) $this->SessionController->getUserID();
+  if(isset($_GET['cod']))$itemCod=$_GET['cod'];
+  $currentItem = $this->ItemsController->getItem($itemCod);
+  $itemID =(int) $currentItem->venditore;
+  $cat = $this->ItemsController->getAllCat();
+  $um = $this->ItemsController->getAllUm();
 
 if(!isset($_GET['req'])&& !isset($_GET['cod'])) header("Location: 404");
-
   $routeName = 'item';
   if(isset($_GET['req']) && $_GET['req'] == "newItem"){
     $action = "newItem";
-    $cat = $this->ItemsController->getAllCat();
-    $um = $this->ItemsController->getAllUm();
    return \Core\view('item',[ 'action' =>$action, 'routeName'=>'item', 'cat'=>$cat, 'um'=>$um]);
 
   }
   else {
+    if($_GET['req']=='edit'){
+    if($itemID != $userID) header("Location: 404");
+    $action = 'edit';
+    return \Core\view('item',[ 'action' =>$action,'currentItem'=> $currentItem, 'routeName'=>'item', 'cat'=>$cat, 'um'=>$um]);
 
-  $itemCod=$_GET['cod'];
-  $currentItem = $this->ItemsController->getItem($itemCod);
-  $userID =(int) $this->SessionController->getUserID();
-  $itemID =(int) $currentItem->venditore;
+    }
+
+else {
+
   if($itemID == $userID) $edit = true;
   else $edit = false;
 
@@ -177,7 +193,7 @@ if(!isset($_GET['req'])&& !isset($_GET['cod'])) header("Location: 404");
   ]);
       }
 
-}
+} }
 
 public function addToCart(){
 $this->onlyUser();
