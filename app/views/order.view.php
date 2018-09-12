@@ -5,8 +5,8 @@
 
 <?php
 
-echo"Dettagli Ordine Numero :".$order->idordine;
-echo"<br>";
+echo"Dettagli Ordine";
+echo"Elenco Articoli<br>";
 foreach($linecomplete as $line){
 echo $line['item']->idProdotto.'</br>';
 echo $line['item']->nome.'</br>';
@@ -24,6 +24,7 @@ echo $line['item']->nome.'</br>';
 <?php else : ?>
 <h1>Elenco Ordini Utente</h1>
 <?php
+
 foreach($order as $ordine){
 echo"<div>";
 echo "ID :".$ordine->idordine."<br/>";

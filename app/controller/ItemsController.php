@@ -308,7 +308,7 @@ string $itemCat,string $itemStock,string $itemStatus): bool {
           $parameters
         );
         if(isset($result[0])){
-        return $result[0];
+        return $result;
       }}
 
       public function getOrderLine($orderID){
