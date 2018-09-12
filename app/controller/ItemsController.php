@@ -294,9 +294,40 @@ string $itemCat,string $itemStock,string $itemStatus): bool {
         unset($_SESSION['cart']);
         return $result=true;
 
-
-
       }
+
+      public function getAllOrder(){
+        $userID = $_SESSION['user']->idutente;
+        $table = 'ordini';
+        $where='ordini.idutente = :idutente';
+        $parameters[':idutente'] = $userID;
+        $result = $this->database->selectWhere(
+          $table,
+          ['*'],
+          $where,
+          $parameters
+        );
+        if(isset($result[0])){
+        return $result[0];
+      }}
+
+      public function getOrderLine($orderID){
+        $table = 'righeordine';
+        $where='righeordine.idordine = :idordine';
+        $parameters[':idordine'] = $orderID;
+        $result = $this->database->selectWhere(
+          $table,
+          ['*'],
+          $where,
+          $parameters
+        );
+        if(isset($result[0])){
+        return $result;
+      }
+      }
+
+
+
 
 
   }

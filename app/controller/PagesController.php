@@ -84,38 +84,57 @@ require 'app/views/admin.view.php';
 public function assegnaAzienda(){
     $routeName = "admin";
     $this->onlyUser();
-
-
-
     $userCF = Request::getPOST('cf');
     $this->UsersController->changeRole($userCF);
-
     header('Location: admin');
 
 }
 
 
-
 public function cart(){
     $routeName = "cart";
     $this->onlyUser();
-
     if($_SESSION['cart']) $data= $this->ItemsController->cartView();
     else $data=false;
     require 'app/views/cart.view.php';
 
 }
 
+public function order(){
+    $routeName = "order";
+    $this->onlyUser();
+
+    $order = $this->ItemsController->getAllOrder();
+
+    if(isset($_GET['orderid'])){
+    $orderline = $this->ItemsController->getOrderLine($_GET['orderid']);
+
+
+    foreach($orderline as $line){
+
+      $linecomplete[]= array('item'=>$this->ItemsController->getItem($line->idprodotto));
+    }
+
+
+
+    }
+
+    require 'app/views/order.view.php';
+
+}
+
+
+
 public function cassa(){
   $routeName = "cart";
   $this->onlyUser();
   $userID = $_SESSION['user']->idutente;
-
+  if(isset($_SESSION['cart'])){
   $creaordine = $this->ItemsController->createNewOrder();
   $orderNumber= $this->ItemsController->getOrderNumber();
   $this->ItemsController->creaRigheOrdine($orderNumber);
     $result = $this->ItemsController->finalizeOrder($orderNumber,$userID);
-
+}
     require 'app/views/cart.view.php';
 
 }

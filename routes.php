@@ -18,6 +18,7 @@ $router->get('cart','PagesController@cart');
 $router->get('cassa','PagesController@cassa');
 $router->get('itemUpdate','ItemsController@itemUpdate');
 $router->get('admin','PagesController@admin');
+$router->get('order','PagesController@order');
 
 
 
