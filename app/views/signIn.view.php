@@ -10,6 +10,9 @@
 <h1 class="title">Login Utente</h1>
 
 <div>
+<div class="not-user">
+    <span>Non sei ancora uno di noi?<a href="add-user"> Iscriviti &#8594;</a></span>
+</div>
 <form action="login" method='post'>
 
 <div class="loginbox">
@@ -25,7 +28,6 @@
   <span class="underline"></span>
 </div>
   <button type="submit" class="btn btn-outline">Login</button>
-
   <a class="little-inpage left" href="lostPassword">Recupero Password</a>
   <a class="little-inpage right" href="contactSupport">Problemi? Contatta l'Help Desk</a>
 </div>

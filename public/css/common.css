@@ -403,9 +403,9 @@ dd {
 .go-exit img,
 .go-profile img,
 .go-cart img{
-  max-width:2rem;
+  max-width:1.7rem;
   height:auto;
-  margin-bottom: -0.5rem;
+  margin-bottom: -0.2rem;
 }
 
 .go-exit{

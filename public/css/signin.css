@@ -31,7 +31,12 @@
 .loginbox-fieldset {
   margin-top: 1rem;
 }
-
+.not-user{
+  text-align:center;
+  font-size:1.5rem;
+  padding-top:1rem;
+  padding-bottom:1rem;
+}
 /*----------  Media queries  ----------*/
 
 @media (min-width: 480px) {

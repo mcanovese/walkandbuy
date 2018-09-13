@@ -53,14 +53,14 @@ if(!isset($_SESSION)){
         <a class="go-profile" href="user"><img alt="profilo" title="profilo" src="../../../public/img/profile.png"/></a>
         </div>
         <div class="exit-container">
-        <a class="go-exit" href="logout"><img alt="logout" title="logout" src="../../../public/img/exit.png"/></a>
+        <a class="go-exit" href="logout" ><img alt="logout" title="logout" src="../../../public/img/exit.png"/></a>
         </div>
       </div>
     <div class="topnav">
       <div id="myLinks">
           <a href="cart">Carrello</a>
           <a href="user">Profilo</a>
-          <a href="logout">Logout</a>
+          <a href="logout" style="color:red;">Logout</a>
       </div>
       <a href="javascript:void(0);" class="icon" onclick="hamMenu()">
       <i class="fa fa-bars"></i>
