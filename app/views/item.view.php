@@ -72,11 +72,7 @@
     <span class="underline"></span>
   </div>
 
-  <div class="loginbox-field">
-    <label class="input-label" for="nome">Giacenza</label>
-    <input class="input" id="itemCat"  type="text" name="itemStock" required />
-    <span class="underline"></span>
-  </div>
+
 
   <div class="loginbox-field">
     <label class="input-label" for="nome">Abilitato</label>
@@ -176,11 +172,7 @@
       <span class="underline"></span>
     </div>
 
-    <div class="loginbox-field">
-      <label class="input-label" for="nome">Giacenza</label>
-      <input class="input" id="itemCat" value="<?php echo $currentItem->giacenza; ?>" type="text" name="itemStock" required />
-      <span class="underline"></span>
-    </div>
+
 
 
      <div class="loginbox-field">

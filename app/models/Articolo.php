@@ -11,9 +11,9 @@ class Articolo{
   public $foto;
   public $percentualeSconto;
   public $categoria;
-  public $giacenza;
   public $venditore;
   public $quantita;
+
 
 
 
@@ -26,9 +26,10 @@ public function __construct(
   string $foto,
   string $percentualeSconto,
   string $categoria,
-  string $giacenza,
   string $venditore,
   string $quantita
+
+
 ){
 
     $this->idProdotto = $idProdotto;
@@ -37,11 +38,11 @@ public function __construct(
     $this->prezzoPieno = $prezzoPieno;
     $this->unitaMisura = $unitaMisura;
     $this->foto = $foto;
-    $this->percentualeSconto = $percentualeSconto;
+    $this->percentualeSconto = $quantita;
     $this->categoria = $categoria;
-    $this->giacenza = $giacenza;
     $this->venditore = $venditore;
     $this->quantita = $quantita;
+
   }
 }
 
