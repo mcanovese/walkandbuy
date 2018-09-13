@@ -12,7 +12,6 @@ class Articolo{
   public $percentualeSconto;
   public $categoria;
   public $giacenza;
-  public $abilitato;
   public $venditore;
   public $quantita;
 
@@ -28,7 +27,6 @@ public function __construct(
   string $percentualeSconto,
   string $categoria,
   string $giacenza,
-  string $abilitato,
   string $venditore,
   string $quantita
 ){
@@ -42,7 +40,6 @@ public function __construct(
     $this->percentualeSconto = $percentualeSconto;
     $this->categoria = $categoria;
     $this->giacenza = $giacenza;
-    $this->abilitato = $abilitato;
     $this->venditore = $venditore;
     $this->quantita = $quantita;
   }

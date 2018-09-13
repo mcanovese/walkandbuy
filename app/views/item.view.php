@@ -63,7 +63,8 @@
     <?php
 
     foreach($cat as $categoria)
-    echo'<option value='.$categoria->idcategoria.'>'.$categoria->descrizione.'</option> ';
+    if($categoria->categoriapadre == NULL) continue;
+    else {echo'<option value='.$categoria->idcategoria.'>'.$categoria->descrizione.'</option> ';}
 
     ?>
 
@@ -106,8 +107,92 @@
 
 <?php elseif (isset($action) && $action == "edit") : ?>
 
+<h1>Modifica Articolo</h1>
 
-<?php echo"modifica"; ?>
+  <form action="updateItem" enctype="multipart/form-data" method="post">
+  <input type="hidden" id="itemID" name="itemID" value="<?php echo $_GET['cod']; ?>" ?>
+  <div id="body">
+    <div class="loginbox">
+    <div class="loginbox-field">
+      <label class="input-label" for="nome">Nome Prodotto</label>
+      <input class="input" id="itemName"  type="text" value="<?php echo $currentItem->nome; ?>" name="itemName" required />
+      <span class="underline"></span>
+    </div>
+
+    <div class="loginbox-field">
+      <label class="input-label" for="nome">Descrizione Prodotto</label>
+      <input class="input" id="itemDesc" value="<?php echo $currentItem->descrizione; ?>" type="text" name="itemDesc" required />
+      <span class="underline"></span>
+    </div>
+
+    <div class="loginbox-field">
+      <label class="input-label" for="nome">Prezzo di Listino</label>
+      <input class="input" id="itemPrice" value="<?php echo $currentItem->prezzoPieno; ?>" type="text" name="itemPrice" required />
+      <span class="underline"></span>
+    </div>
+
+    <div class="loginbox-field">
+      <label class="input-label" for="nome">Unit&agrave Misura</label>
+      <select class="input" id="itemUM"  type="select" name="itemUM" required />
+      <?php
+
+      foreach($um as $umisura)
+      echo'<option value='.$umisura->idum.'>'.$umisura->descrizione.'</option> ';
+
+      ?>
+
+    </select>
+
+
+
+
+      <span class="underline"></span>
+    </div>
+
+    <div class="loginbox-field">
+      <label class="input-label" for="nome">Carica Foto</label>
+      <input class="input" id="itemPhoto"  type="file" name="itemPhoto" />
+      <span class="underline"></span>
+    </div>
+
+    <div class="loginbox-field">
+      <label class="input-label" for="nome">Sconto</label>
+      <input class="input" id="itemDiscount" value="<?php echo $currentItem->percentualeSconto; ?>" type="text" name="itemDiscount"  />
+      <span class="underline"></span>
+    </div>
+
+    <div class="loginbox-field">
+      <label class="input-label" for="nome">Categoria</label>
+      <select class="input" id="itemCat" value="<?php echo $currentItem->categoria; ?>" type="select" name="itemCat" required />
+      <?php
+
+      foreach($cat as $categoria)
+      echo'<option value='.$categoria->idcategoria.'>'.$categoria->descrizione.'</option> ';
+
+      ?>
+
+  </select>
+      <span class="underline"></span>
+    </div>
+
+    <div class="loginbox-field">
+      <label class="input-label" for="nome">Giacenza</label>
+      <input class="input" id="itemCat" value="<?php echo $currentItem->giacenza; ?>" type="text" name="itemStock" required />
+      <span class="underline"></span>
+    </div>
+
+
+     <div class="loginbox-field">
+      <label class="input-label" for="nome">Quantità</label>
+      <input class="input" id="itemCat" value="<?php echo $currentItem->quantita; ?>" type="text" name="itemQuantity" required />
+      <span class="underline"></span>
+    </div>
+
+    <button type="submit" class="btn btn-outline">Aggiorna Articolo</button>
+
+
+
+  </form>
 
 <?php else : ?>
 <div id=body>

@@ -16,6 +16,7 @@ class PagesController{
     $this->ItemsController = new ItemsController();
     $this->UsersController = new UsersController();
     $this->SessionController  = new SessionController();
+
   }
 
 //creare una funzione per ogni pagina, utilizzata poi in routes per
@@ -239,12 +240,10 @@ public function addItem(){
     $itemDesc = Request::getPOST('itemDesc');
     $itemPrice = Request::getPOST('itemPrice');
     $itemUM = Request::getPOST('itemUM');
-    //$itemPhoto = Request::getPOST('itemPhoto');
-
     $itemDiscount = Request::getPOST('itemDiscount');
     $itemCat = Request::getPOST('itemCat');
     $itemStock = Request::getPOST('itemStock');
-    $itemStatus = Request::getPOST('itemStatus');
+
     $itemQuantity = Request::getPOST('itemQuantity');
 
 
@@ -259,7 +258,7 @@ public function addItem(){
 
     if(!isset($itemDiscount)) $itemDiscount = 0;
   $insert = $this->ItemsController->insertItem($itemName,$itemDesc,$itemPrice,$itemUM,$itemPhoto,$itemDiscount,
-  $itemCat,$itemStock,$itemStatus,$itemQuantity);
+  $itemCat,$itemStock,$itemQuantity);
 
   if(!$insert)   {
     $action="insertFail";
@@ -269,6 +268,34 @@ else {
   return \Core\view('index',[ 'action' =>$action]);}
 
 }
+public function updateItem(){
+$this->onlyUser();
+$itemID = Request::getPOST('itemID');
+$itemName = Request::getPOST('itemName');
+$itemDesc = Request::getPOST('itemDesc');
+$itemPrice = Request::getPOST('itemPrice');
+$itemUM = Request::getPOST('itemUM');
+$itemDiscount = Request::getPOST('itemDiscount');
+$itemCat = Request::getPOST('itemCat');
+$itemStock = Request::getPOST('itemStock');
+$itemQuantity = Request::getPOST('itemQuantity');
+
+if (file_exists($_FILES['itemPhoto']['tmp_name']) || is_uploaded_file($_FILES['itemPhoto']['tmp_name']))
+{
+$temp = explode(".", $_FILES["itemPhoto"]["name"]);
+$newfilename = round(microtime(true)) . '.' . end($temp);
+$dir = 'public/userimg/';
+move_uploaded_file($_FILES["itemPhoto"]["tmp_name"],$dir.$newfilename);
+$itemPhoto = $newfilename;
+}
+
+
+$update = $this->ItemsController->setUpdateItem($itemID,$itemName,$itemDesc,$itemPrice,$itemUM,$itemPhoto,$itemDiscount,$itemCat,$itemStock,$itemQuantity);
+
+if($update) return \Core\view('index');
+
+}
+
 
 
 public function registerUser(){
