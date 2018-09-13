@@ -26,9 +26,6 @@ if(!isset($_SESSION)){
         <a class="navbar-link little" href="./howWork">Come funziona</a>
         </li>
         <li class="list-item">
-        <a class="navbar-link little" href="./partner">Partner</a>
-        </li>
-        <li class="list-item">
         <a class="navbar-link little" href="./whoAreWe">Chi siamo</a>
         </li>
     </ul>
@@ -46,8 +43,12 @@ if(!isset($_SESSION)){
       </div>
 
       <div id="MyNavRight" class="navbar-right-logged">
+
         <div class="cart-container">
         <a class="go-cart" href="cart"><img alt="carrello" title="carrello" src="../../../public/img/cart.png"/></a>
+        </div>
+        <div class="cart-container">
+        <a class="go-cart" href="order"><img alt="ordini" title="ordini" src="../../../public/img/cart.png"/></a>
         </div>
         <div class="profile-container">
         <a class="go-profile" href="user"><img alt="profilo" title="profilo" src="../../../public/img/profile.png"/></a>

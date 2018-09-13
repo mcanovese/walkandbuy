@@ -1,13 +1,8 @@
 <?php
 
 namespace Core;
-
-/**
- * Container of application globally needed variables like database
- */
 class App {
   private static $registry = [];
-
   public static function bind($key, $value) {
     static::$registry[$key] = $value;
   }

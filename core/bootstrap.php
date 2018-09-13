@@ -24,16 +24,12 @@ App::bind('pdo', Connection::make(App::get('config')['database']));
 App::bind('database', new QueryBuilder(App::get('pdo')));
 
 
-
-
 function view(string $filename, array $data = []) {
   extract($data);
-
   return require_once "app/views/{$filename}.view.php";
 }
 
 function redirect(string $path) {
   $root = 'localhost:8888';
-
   header("Location: {$root}{$path}");
 }

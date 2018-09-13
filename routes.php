@@ -28,7 +28,7 @@ $router->post('assegnaAzienda','PagesController@assegnaAzienda');
 
 
 
-
+$router->post('updateUser','PagesController@updateUser');
 $router->get('users','UsersController@index');
 $router->post('insertItem','PagesController@addItem');
 $router->post('updateItem','PagesController@updateItem');

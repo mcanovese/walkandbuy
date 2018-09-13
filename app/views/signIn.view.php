@@ -8,6 +8,7 @@
 
 <?php else : ?>
 <h1 class="title">Login Utente</h1>
+<?php if(isset($result)) echo"<h1 class='title'>Errore di Autenticazione, verificare le credenziali</h1>";?>
 
 <div>
 <div class="not-user">

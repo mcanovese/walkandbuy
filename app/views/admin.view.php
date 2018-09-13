@@ -2,6 +2,7 @@
 <?php require('partials/head.php');?>
 <div id="body">
 <h1 class="title">Area Amministrazione</h1>
+<p class="title">Per modificare un articolo, utilizza il link di modifica disponibile in ogni pagina articolo </p>
 
 <p>Assegna/Rimuovi Ruolo Azienda</p>
 <p>Selezionare il codice fiscale / P.IVA di cui variariare la posizione</p>

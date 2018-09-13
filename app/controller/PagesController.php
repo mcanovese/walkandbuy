@@ -19,9 +19,6 @@ class PagesController{
 
   }
 
-//creare una funzione per ogni pagina, utilizzata poi in routes per
-// caricare la view (esempio root -> Router carica controller pages -> carica view home)
-
 public function globalsUser(){
   $logeduser = $this->SessionController->getUser();
   $GLOBALS['utente'] = $logeduser;
@@ -94,14 +91,12 @@ public function assegnaAzienda(){
 
 }
 
-
 public function cart(){
     $routeName = "cart";
     $this->onlyUser();
     if(isset($_SESSION['cart'])) $data= $this->ItemsController->cartView();
     else $data=false;
     require 'app/views/cart.view.php';
-
 }
 
 public function order(){
@@ -109,25 +104,16 @@ public function order(){
     $this->onlyUser();
 
     $order = $this->ItemsController->getAllOrder();
-
     if(isset($_GET['orderid'])){
     $orderline = $this->ItemsController->getOrderLine($_GET['orderid']);
-
 
     foreach($orderline as $line){
 
       $linecomplete[]= array('item'=>$this->ItemsController->getItem($line->idprodotto));
     }
-
-
-
     }
-
     require 'app/views/order.view.php';
-
 }
-
-
 
 public function cassa(){
   $routeName = "cart";
@@ -139,12 +125,8 @@ public function cassa(){
   $this->ItemsController->creaRigheOrdine($orderNumber);
     $result = $this->ItemsController->finalizeOrder($orderNumber,$userID);
 }
-    require 'app/views/cart.view.php';
-
+    header("Location: order?result=true");
 }
-
-
-
 
 public function signIn(){
     $routeName="signIn";
@@ -159,9 +141,6 @@ $this->SessionController->logout();
 $logout=true;
 require 'app/views/signIn.view.php';
 }
-
-
-
 
 public function category(){
   $this->SessionController->isAuthenticated();
@@ -183,13 +162,9 @@ public function singCat(){
 require 'app/views/singcat.view.php';
 }
 
-
-
-
 public function contact(){
     $routeName="contact";
-
-require 'app/views/contact.view.php';
+    require 'app/views/contact.view.php';
 }
 
 public function item() {
@@ -199,7 +174,6 @@ public function item() {
   if(isset($_GET['cod'])){
   $itemCod=$_GET['cod'];
   $currentItem = $this->ItemsController->getItem($itemCod);
-
   $itemID =(int) $currentItem->venditore;}
   $cat = $this->ItemsController->getAllCat();
   $um = $this->ItemsController->getAllUm();
@@ -213,7 +187,6 @@ public function item() {
   }
   else {
     if(isset($_GET['req']) && $_GET['req']=='edit'){
-
     if($itemID != $userID && $user->azienda !=3) header("Location: 404");
     $action = 'edit';
     return \Core\view('item',[ 'action' =>$action,'currentItem'=> $currentItem, 'routeName'=>'item', 'cat'=>$cat, 'um'=>$um]);
@@ -224,12 +197,10 @@ else {
 
   if($itemID == $userID || $user->azienda == 3  ) $edit = true;
   else $edit = false;
-
   return \Core\view('item', [
     'currentItem' => $currentItem, 'routeName' => 'item','edit'=>$edit
   ]);
       }
-
 } }
 
 public function addToCart(){
@@ -239,15 +210,13 @@ $idItem = $_GET['cod'];
 
 if(isset($_GET['req']) && $_GET['req'] == 'dec'){
 $cart = $this->SessionController->decreaseCartSession($idItem,1);
-
   header('Location: '.$_SERVER['HTTP_REFERER']);
 }
 
 else {
 $qta = 1;
 $cart = $this->SessionController->addSessionCart($idItem,$qta);
-header('Location: '.$_SERVER['HTTP_REFERER']);}
-}
+header('Location: '.$_SERVER['HTTP_REFERER']);}}
 
 
 public function addItem(){
@@ -259,18 +228,13 @@ public function addItem(){
     $itemUM = Request::getPOST('itemUM');
     $itemDiscount = Request::getPOST('itemDiscount');
     $itemCat = Request::getPOST('itemCat');
-
-
     $itemQuantity = Request::getPOST('itemQuantity');
-
 
     $temp = explode(".", $_FILES["itemPhoto"]["name"]);
 
     $newfilename = round(microtime(true)) . '.' . end($temp);
-
     $dir = 'public/userimg/';
     move_uploaded_file($_FILES["itemPhoto"]["tmp_name"],$dir.$newfilename);
-
     $itemPhoto = $newfilename;
 
     if(!isset($itemDiscount)) $itemDiscount = 0;
@@ -299,14 +263,46 @@ $dir = 'public/userimg/';
 move_uploaded_file($_FILES["itemPhoto"]["tmp_name"],$dir.$newfilename);
 $itemPhoto = $newfilename;
 }else $itemPhoto = null;
-
 $update = $this->ItemsController->setUpdateItem($itemID,$itemName,$itemDesc,$itemPrice,$itemUM,$itemPhoto,$itemDiscount,$itemCat,$itemQuantity);
-
 if($update) header("Location: home");
 
 }
 
+public function updateUser(){
+$this->SessionController->isAuthenticated();
+//acquisizione dati da POST
+$userID = $_SESSION['user']->idutente;
+$email = Request::getPOST('email');
+$cognome = Request::getPOST('cognome');
+$nome = Request::getPOST('nome');
+$codiceFiscale = Request::getPOST('cf');
+$password = Request::getPOST('password');
+$verificaPassword = Request::getPOST('verificaPassword');
+$telefono = Request::getPOST('telefono');
+$via = Request::getPOST('via');
+$paese = Request::getPOST('paese');
 
+try{
+$result = $this->UsersController->updateUser(
+  [
+    'userID' => $userID,
+    'email' => $email,
+    'cognome' => $cognome,
+    'nome' => $nome,
+    'codiceFiscale' => $codiceFiscale,
+    'password' => $password,
+    'verificaPassword' => $verificaPassword,
+    'telefono' => $telefono,
+    'via' => $via,
+    'paese' => $paese
+  ]);
+    }catch (\Exception $e) {
+        if ($e->getMessage() === 'pwdmatcherror')    { return \Core\view('adduser',[ 'messageDisplay' =>'Le password che hai inserito non sono uguali', 'routeName' => 'addUser']);}
+        }
+  if(isset($result))
+  {return Header('Location: user');}
+
+}
 
 public function registerUser(){
     $this->SessionController->isAuthenticated();
@@ -348,13 +344,13 @@ public function registerUser(){
 
 
   public function loginPOST() {
+      $this->SessionController->isAuthenticated();
     $email = Request::getPOST('email');
     $password = Request::getPOST('password');
 
     $isAuthenticated = $this->SessionController->authenticate($email, $password);
-
     if ($isAuthenticated) return \Core\view('index');
-    else return \Core\view('404');
+    else return \Core\view('signin',[ 'result' =>'error', 'routeName' => 'signin']);
 
   }
 
@@ -364,10 +360,6 @@ public function registerUser(){
       exit;
     }
   }
-
-
-
-
 
 
 }

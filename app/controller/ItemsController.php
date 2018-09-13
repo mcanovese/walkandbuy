@@ -55,10 +55,7 @@ public function catMainGroup (int $catID){
   foreach($result as $categoria){
     $maingroup[]=array("catName"=> $categoria->descrizione,"catID"=>$categoria->idcategoria,"items"=>$this->getCategoryItem($categoria->idcategoria));
   }
-
   return $maingroup;
-
-
 }
 
   public function getCategoryItem(int $categoryID) {
@@ -75,8 +72,6 @@ public function catMainGroup (int $catID){
     foreach($result as $articolo){
       $articolo->unitamisura = $this->getUmName($articolo->unitamisura);
       $categorygroup[] = $this->createItem($articolo);
-
-
     }
     return $categorygroup;
   }
@@ -121,7 +116,6 @@ public function catMainGroup (int $catID){
   }
 
   private function createItem($result): Articolo {
-
     return new Articolo(
       $result->idprodotto,
       $result->nome,
@@ -138,11 +132,7 @@ public function catMainGroup (int $catID){
   public function insertItem(string $itemName,string $itemDesc,string $itemPrice,string $itemUM,string $itemPhoto,int $itemDiscount,
 string $itemCat, int $quantita): bool {
 
-
-
-    $table = 'articoli';
-
-    if (1==1) {
+      $table = 'articoli';
       return $this->database->insert($table, [
         'nome' => $itemName,
         'descrizione' => $itemDesc,
@@ -153,11 +143,8 @@ string $itemCat, int $quantita): bool {
         'categoria' => $itemCat,
         'quantita' => $quantita,
         'venditore' => $userID
-
       ]);
-    } else {
-      return false;
-    }
+
   }
 
   public function setUpdateItem($itemID,$itemName,$itemDesc,$itemPrice,$itemUM,$itemPhoto,$itemDiscount,$itemCat,int $itemQuantity){
@@ -210,35 +197,9 @@ $updateordine = $this->database->update('articoli', $changes, $where, [
 }
 
 return true;
-
-
   }
 
 
-
-
-
-
-  private function randomItem(){
-    //genero 5 numeri random, range 0- #maxID_articolo
-    $table = 'articoli';
-    $column = 'idprodotto';
-    $max = $this->database->selectMax($table,$column);
-    $min = 0;
-    $value = rand( 0 ,$max[0]->massimo);
-    return $value;
-
-
-  }
-
-  public function homeEvidenceItem($nrItem){
-
-    while($nrItem >0){
-      $valore = $this->randomItem();
-      $nrItem-1;
-    }
-    return $valore;
-  }
 
   public function cartView(){
     if(isset($_SESSION['cart'])){
@@ -285,12 +246,8 @@ return true;
   public function creaRigheOrdine($nrorder){
 
     $cart = $_SESSION['cart'];
-    //$nrorder = $this->getOrderNumber();
-
     $table = 'righeordine';
     foreach($cart as $item){
-
-      //$itemID = $item['item']->itemID;
       $itemID = (int)$item['itemID'];
       $articolo = $this->getItem($itemID);
       $price=$articolo->prezzoPieno-(($articolo->prezzoPieno*$articolo->percentualeSconto)/100);
@@ -308,9 +265,6 @@ return true;
 
 
       public function finalizeOrder($order,$userID){
-        // da invocare dopo aver creato l'ordine e le righe ordine
-        // aggiorna tabella ordine, caricando il totale
-        // cancella la SESSION Carrello
         $table = 'righeordine';
         $column = 'idordine';
         $column1 = 'totaleriga';
@@ -336,7 +290,9 @@ return true;
       }
 
       public function getAllOrder(){
+
         $userID = $_SESSION['user']->idutente;
+
         $table = 'ordini';
         $where='ordini.idutente = :idutente';
         $parameters[':idutente'] = $userID;
@@ -346,6 +302,7 @@ return true;
           $where,
           $parameters
         );
+
         if(isset($result[0])){
         return $result;
       }}
@@ -362,11 +319,7 @@ return true;
         );
         if(isset($result[0])){
         return $result;
-      }
-      }
-
-
-
+      }}
 
 
   }

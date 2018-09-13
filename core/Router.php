@@ -21,11 +21,6 @@ class Router {
   }
 
 
-  //public function define($routes)
-  //{
-    // $this->routes = $routes;
-
-  //}
 
   public function get($uri, $controller)
   {
