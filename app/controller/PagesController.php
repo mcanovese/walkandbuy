@@ -31,6 +31,8 @@ public function globalsUser(){
 public function home(){
     $routeName="home";
     $this->SessionController->isAuthenticated();
+
+
 require 'app/views/index.view.php';
 
 }

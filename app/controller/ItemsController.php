@@ -238,8 +238,9 @@ $updateordine = $this->database->update('articoli', $changes, $where, [
 
   public function homeEvidenceItem($nrItem){
 
-    while($nrItem >=0){
+    while($nrItem >0){
       $valore = $this->randomItem();
+      $nrItem-1;
     }
     return $valore;
   }
@@ -323,8 +324,7 @@ $updateordine = $this->database->update('articoli', $changes, $where, [
 
         //ricavo totale ordine sommando tutte le righe dell'ordine
         $totale =$this->database->selectSUM($table,$column,$param,$column1);
-        $changes = 'totaleordine = :totaleordine,
-                    ';
+        $changes = 'totaleordine = :totaleordine';
         $where = 'idordine = :idordine';
         $total = (int)($totale[0]->totale);
 
