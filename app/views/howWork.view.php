@@ -2,7 +2,7 @@
 <?php require('partials/head.php');?>
 <div id="body">
 <h1 class="title">Come Funziona</h1>
-</div>
+
 <p>
   Walk&Buy è un ecommerce realizato dal Consorzio Agricoltori del Camposampierese, che permette ai piccoli
   agricoltori e commercianti di promuovere e commercializzare i loro prodotti sul web.</br>
@@ -15,6 +15,6 @@
 
 </p>
 
-
+</div>
 <?php require('partials/footer.php');?>
 </div>

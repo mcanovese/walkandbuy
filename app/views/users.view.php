@@ -6,8 +6,8 @@
 
 <?php if(isset($action) && $action == "edit") :?>
 <h1 class="title">Modifica Profilo Utente</h1>
-<p class="title">Di seguito puoi modificare i tuoi dati, &egrave sempre necessario confermare la password, i dati aggiornati </br>
-  saranno visibili dal prossimo login</p>
+<div class="text">Di seguito puoi modificare i tuoi dati, &egrave sempre necessario confermare la password, i dati aggiornati 
+  saranno visibili dal prossimo login.</div>
   <form action="updateUser" method='post'>
 
 
@@ -52,12 +52,12 @@
   </div>
 
   <div class="loginbox-field">
-    <label class="input-label" for="telefono">Via </label>
+    <label class="input-label" for="via">Via </label>
     <input class="input" id="via" value="<?php echo $user->via; ?>" type="text" name="via" required />
     <span class="underline"></span>
   </div>
   <div class="loginbox-field">
-    <label class="input-label" for="nome">Paese</label>
+    <label class="input-label" for="paese">Paese</label>
     <select class="input" id="paese"  type="select" name="paese" required />
 
     <option <?php if($user->paese === 'Camposampiero')echo"selected"; ?>value='Camposampiero'>Camposampiero</option>
@@ -76,7 +76,7 @@
     <button type="submit" class="btn btn-outline">Conferma</button>
   </div>
   </form>
-
+  </div>
 
 
 
@@ -84,7 +84,13 @@
 
 <?php require('partials/footer.php');?>
 <?php else: ?>
+
 <h1 class="title">Profilo Utente</h1>
+<?php if($_SESSION['user']->azienda == 3): ?>
+<div class="admin-area">
+<a class="admin-area" href="admin">Accedi Al Pannello Amministrativo</a>
+</div>
+<?php endif;?>
 
 <div class="content">
     <div class="user-data">
@@ -102,13 +108,9 @@
     <div class="data"> <?php echo $user->via; ?> </div>
     <label class="label-detail">Paese:</label>
     <div class="data"> <?php echo $user->paese; ?> </div>
-
+    <a class="modify-profile" href="user?action=edit">Modifica Profilo</a>
 </div>
 </div>
-<a class="title" href="user?action=edit">Modifica Profilo</a></br>
-<?php if($_SESSION['user']->azienda == 3): ?>
-<a href="admin">Accedi Al Pannello Amministrativo</a>
-<?php endif;?>
 </div>
 
 

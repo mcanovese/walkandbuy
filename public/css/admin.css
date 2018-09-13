@@ -1,0 +1,26 @@
+.content{
+    border:2px solid lightgrey;
+    overflow:auto;
+    -webkit-box-shadow: 1px 1px 10px #888888;
+    box-shadow: 1px 1px 10px #888888;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: auto;
+    max-width: 100vw;
+    padding: 0 1rem;
+    max-width: 33rem;
+}
+
+.text{
+    padding:1rem 1rem 1rem 1rem;
+    text-align:center;
+}
+
+.btn {
+    display: block;
+    margin: 1rem auto;
+    text-align: center;
+    width: 50%;
+  }
+  
+  

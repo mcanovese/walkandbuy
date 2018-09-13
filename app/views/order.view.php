@@ -5,20 +5,26 @@
 
 <?php
 
-echo"Dettagli Ordine";
-echo"Elenco Articoli<br>";
+echo"<h1 class='title'>Dettagli Ordine</h1>";
+
 if(isset($linecomplete)){
 foreach($linecomplete as $line){
-echo $line['item']->idProdotto.'</br>';
-echo $line['item']->nome.'</br>';
+    echo "<div class='order-container'>";
+    echo "<div class='img-box'>";
+    echo '<img src="../../public/userimg/'.$line['item']->foto.'" alt="'.$line['item']->nome.'" title="'.$line['item']->nome.'"/> ';
+    echo "</div>";
+    echo "<div class='product-info'>";
+    echo "<div class='prod-name'>";
+    echo "<a href='/item?cod=".$line['item']->idProdotto."'>";
+    echo $line['item']->nome;
+    echo "</a>";
+    echo "</div>";
+    echo "</div>";
+    echo "</div>";
 }
 }
-
-
-
-
 ?>
-
+</div>
 
 <?php require('partials/footer.php');?>
 <?php else : ?>
