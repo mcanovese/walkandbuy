@@ -20,6 +20,7 @@
   overflow: inherit;
   max-width: 35rem;
   min-width: 10rem;
+  
 }
 
 .top-border{
@@ -107,6 +108,58 @@
 .loginbox-fieldset {
   margin-top: 1rem;
 }
+
+.info-text{
+  max-width: 20rem;
+  text-align:left;
+  clear: right;
+  white-space: initial;      /*keep text on one line */
+  overflow: hidden;         /*prevent text from being shown outside the border */
+  text-overflow: ellipsis;
+}
+
+.price{
+  white-space: nowrap;      /*keep text on one line */
+  overflow: hidden;         /*prevent text from being shown outside the border */
+  text-overflow: ellipsis;
+  font-size: 2.5rem;
+  margin-right:2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  float: right;
+  max-width:30%;
+  font-family:  'Amatic SC', Geneva, sans-serif;
+  font-weight: normal;
+}
+
+.discount{
+  max-width:60%;
+  padding-bottom:0.2rem;
+  float:right;
+  font-family:  'Lato', Geneva, sans-serif;
+
+  padding-top:0.5rem;
+  
+}
+
+.full-price{
+  font-family:  'Lato', Geneva, sans-serif;
+  font-weight: normal;
+  color:red;
+}
+
+.striked{
+   text-decoration:line-through;
+}
+
+
+.modify{
+  font-size: 1.5rem;
+  color: orangered;
+  text-decoration: underline;
+  margin-left:1rem;
+}
+
 
 /*----------  Media queries  ----------*/
 
