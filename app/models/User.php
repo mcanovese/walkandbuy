@@ -9,6 +9,9 @@ class User{
   public $cf;
   public $telefono;
   public $email;
+  public $azienda;
+  public $via;
+  public $paese;
 
   private $password;
 
@@ -19,7 +22,10 @@ class User{
     string $nome,
     string $cf,
     string $telefono,
-    string $email ){
+    string $email,
+    int $azienda,
+    string $via,
+    string $paese){
 
 
       $this->idutente = $idutente;
@@ -28,6 +34,9 @@ class User{
       $this->cf = $cf;
       $this->telefono = $telefono;
       $this->email = $email;
+      $this->azienda = $azienda;
+      $this->via = $via;
+      $this->paese = $paese;
     }
 
     public function getPassword(): string {

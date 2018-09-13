@@ -218,7 +218,7 @@ if($edit) echo'<a href="item?cod='.$currentItem->idProdotto.'&req=edit">Modifica
 <div class="info"> Quantit&agrave <?php echo $currentItem->quantita.' '.$currentItem->unitamisura?> </div>
 <div class="add-cart">
 
-  <button onclick="location.href='addtocart?cod=<?php echo $currentItem->idProdotto?>'" id="add-cart" title="Aggiungi al carrello">
+  <button onclick="location.href='addtocart?cod=<?php echo $currentItem->idProdotto?>'" id="add-cart" alt="Aggiungi al carrello">
   <img src="../../public/img/addCart.png" alt="aggiungi al carrello" title="aggiungi al carrello"/>
   </button>
 </div>

@@ -53,7 +53,7 @@ public function catMainGroup (int $catID){
 
   $maingroup = array();
   foreach($result as $categoria){
-    $maingroup[]=array("catName"=> $categoria->descrizione,"items"=>$this->getCategoryItem($categoria->idcategoria));
+    $maingroup[]=array("catName"=> $categoria->descrizione,"catID"=>$categoria->idcategoria,"items"=>$this->getCategoryItem($categoria->idcategoria));
   }
 
   return $maingroup;

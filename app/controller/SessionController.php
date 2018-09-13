@@ -28,8 +28,7 @@ class SessionController {
 
     if ($user !== null) {
       Session::start();
-
-      Session::set('user', new $userClass($user->idutente, $user->cognome, $user->nome, $user->cf, $user->telefono,$user->email));
+      Session::set('user', new $userClass($user->idutente, $user->cognome, $user->nome, $user->cf,$user->telefono,$user->email,$user->azienda,$user->via,$user->paese));
 
     }
 
@@ -41,6 +40,7 @@ class SessionController {
   }
 
   public function getUser() {
+
     return Session::get('user');
   }
 
@@ -63,7 +63,7 @@ class SessionController {
 
     $results = $this->database->selectWhere(
       $tabella,
-      ['idutente','cognome', 'nome', 'cf', 'telefono','password','email'],
+      ['idutente','cognome', 'nome', 'cf', 'telefono','password','email','azienda','via','paese'],
       'email = :email',
       [':email' => $email]
     );
@@ -84,7 +84,7 @@ class SessionController {
 
     $results = $this->database->selectWhere(
       'utenti',
-      ['email', 'password', 'nome', 'cognome'],
+      ['email', 'password', 'nome', 'cognome','azienda'],
       'email = :email',
       [':email' => $email]
     );

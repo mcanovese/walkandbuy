@@ -20,6 +20,8 @@ public function insertUser(array $parameters): bool {
   $verificaPassword = $parameters['verificaPassword'];
   $telefono = $parameters['telefono'];
   $codiceFiscale = $parameters['codiceFiscale'];
+  $via = $parameters['via'];
+  $paese = $parameters['paese'];
   $table = 'utenti';
   if ($password !== $verificaPassword) {
     throw new \Exception('pwdmatcherror');
@@ -36,6 +38,8 @@ public function insertUser(array $parameters): bool {
     'cf' => $codiceFiscale,
     'telefono' => $telefono,
     'email' => $email,
+    'via'=>$via,
+    'paese' => $paese,
     'password' => \password_hash($password, PASSWORD_DEFAULT),
   ]);
 
@@ -62,7 +66,7 @@ public function getifAzienda ($userCF){
 public function getAllCF(){
   $table = 'utenti';
   $result = $this->database->selectAll($table);
-  
+
   return $result;
 }
 
