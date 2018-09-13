@@ -160,3 +160,7 @@
 .add-foot img:hover{
     transform: scale(1.1); 
 }
+@media (max-width: 790px) {
+.subcat-name h3{
+    float:left;
+}}

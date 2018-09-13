@@ -11,12 +11,15 @@ foreach($data as $id => $category) {
     echo "<div class='subcat-name'>";
     //location.href='singcat?id='.$category['catID'].''
     ?>
-    <button onclick="location.href='singcat?id=<?php echo $category['catID']?>'" class="go-subcat" alt="Scoprili Tutti">
-    <img class="go-subcat-img" src="../../public/img/go_subcat.png" alt="Scoprili tutti" /></button>
+    
     <?php
     echo "<h3>";
     echo $category['catName'];
     echo "</h3>";
+    ?>
+    <button onclick="location.href='singcat?id=<?php echo $category['catID']?>'" class="go-subcat" alt="Scoprili Tutti">
+    <img class="go-subcat-img" src="../../public/img/go_subcat.png" alt="Scoprili tutti" /></button>
+    <?php
     echo '</div>';
     echo '</div>';
   echo '<div class="category-container">';

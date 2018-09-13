@@ -92,9 +92,6 @@ window.onscroll = function() {scroll()};
         <a class="navbar-link little" href="./howWork">Come funziona</a>
         </li>
         <li class="list-item">
-        <a class="navbar-link little" href="./partner">Partner</a>
-        </li>
-        <li class="list-item">
         <a class="navbar-link little" href="./whoAreWe">Chi siamo</a>
         </li>
       </ul>
