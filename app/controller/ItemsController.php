@@ -129,7 +129,7 @@ public function catMainGroup (int $catID){
       $result->quantita);
   }
 
-  public function insertItem(string $itemName,string $itemDesc,string $itemPrice,string $itemUM,string $itemPhoto,int $itemDiscount,
+  public function insertItem(int $userID,string $itemName,string $itemDesc,string $itemPrice,string $itemUM,string $itemPhoto,int $itemDiscount,
 string $itemCat, int $quantita): bool {
 
       $table = 'articoli';
