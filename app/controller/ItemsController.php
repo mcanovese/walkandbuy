@@ -136,9 +136,10 @@ public function catMainGroup (int $catID){
       $result->quantita);
   }
 
-  public function insertItem(string $itemName,string $itemDesc,string $itemPrice,string $itemUM,string $itemPhoto,string $itemDiscount,
+  public function insertItem(string $itemName,string $itemDesc,string $itemPrice,string $itemUM,string $itemPhoto,int $itemDiscount,
 string $itemCat,string $itemStock,string $itemStatus): bool {
-//controllo necessario
+
+
 
     $table = 'articoli';
 

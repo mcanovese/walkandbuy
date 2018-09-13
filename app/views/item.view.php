@@ -1,14 +1,12 @@
 <div id="container">
 <?php require('partials/head.php');?>
 
-
-
 <?php if(isset($action) && $action == "newItem") :?> <!-- inserimento nuovo articolo -->
 
 <h1>Inserimento Nuovo Articolo</h1>
 <p>Completa il form per effettuare l'inserimento di un articolo nel tuo inventario</p>
 
-<form action="insertItem" method="post">
+<form action="insertItem" enctype="multipart/form-data" method="post">
 <div id="body">
   <div class="loginbox">
   <div class="loginbox-field">
@@ -55,7 +53,7 @@
 
   <div class="loginbox-field">
     <label class="input-label" for="nome">Sconto</label>
-    <input class="input" id="itemDiscount"  type="text" name="itemDiscount" required />
+    <input class="input" id="itemDiscount"  type="text" name="itemDiscount"  />
     <span class="underline"></span>
   </div>
 
@@ -120,7 +118,7 @@ Breadcrumb?
 <div class="split">
 <div class="split col-img">
 <div class="prod-img">
-  <?php echo '<img src="../../public/img/product/'.$currentItem->foto.'.jpg'.'" alt="'.$currentItem->nome.'" title="'.$currentItem->nome.'"/> '; ?>
+  <?php echo '<img src="../../public/userimg/'.$currentItem->foto.'" alt="'.$currentItem->nome.'" title="'.$currentItem->nome.'"/> '; ?>
 </div>
 </div>
 <?php
@@ -148,7 +146,7 @@ if($edit) echo'<a href="item?cod='.$currentItem->idProdotto.'&req=edit">Modifica
 </div>
 </div>
 </div>
-  <!-- //var_dump da rimuovere / usare solo x vedere voci array -->
+
 
 </div>
 

@@ -181,9 +181,10 @@ require 'app/views/contact.view.php';
 public function item() {
   $this->onlyUser();
   $userID =(int) $this->SessionController->getUserID();
-  if(isset($_GET['cod']))$itemCod=$_GET['cod'];
+  if(isset($_GET['cod'])){
+  $itemCod=$_GET['cod'];
   $currentItem = $this->ItemsController->getItem($itemCod);
-  $itemID =(int) $currentItem->venditore;
+  $itemID =(int) $currentItem->venditore;}
   $cat = $this->ItemsController->getAllCat();
   $um = $this->ItemsController->getAllUm();
 
@@ -233,33 +234,39 @@ require 'app/views/test.view.php';}
 
 
 public function addItem(){
-
+    $this->onlyUser();
     $itemName = Request::getPOST('itemName');
     $itemDesc = Request::getPOST('itemDesc');
     $itemPrice = Request::getPOST('itemPrice');
     $itemUM = Request::getPOST('itemUM');
-    $itemPhoto = Request::getPOST('itemPhoto');
+    //$itemPhoto = Request::getPOST('itemPhoto');
+
     $itemDiscount = Request::getPOST('itemDiscount');
     $itemCat = Request::getPOST('itemCat');
     $itemStock = Request::getPOST('itemStock');
     $itemStatus = Request::getPOST('itemStatus');
     $itemQuantity = Request::getPOST('itemQuantity');
 
-    // inizio-controlli integrità
 
-      //todo
+    $temp = explode(".", $_FILES["itemPhoto"]["name"]);
 
-    //fine controlli integrità
+    $newfilename = round(microtime(true)) . '.' . end($temp);
 
+    $dir = 'public/userimg/';
+    move_uploaded_file($_FILES["itemPhoto"]["tmp_name"],$dir.$newfilename);
+
+    $itemPhoto = $newfilename;
+
+    if(!isset($itemDiscount)) $itemDiscount = 0;
   $insert = $this->ItemsController->insertItem($itemName,$itemDesc,$itemPrice,$itemUM,$itemPhoto,$itemDiscount,
   $itemCat,$itemStock,$itemStatus,$itemQuantity);
 
   if(!$insert)   {
     $action="insertFail";
-    return \Core\view('item',[ 'action' =>$action]);}
+    return \Core\view('index',[ 'action' =>$action]);}
 else {
   $action="insertSuccess";
-  return \Core\view('item',[ 'action' =>$action]);}
+  return \Core\view('index',[ 'action' =>$action]);}
 
 }
 
