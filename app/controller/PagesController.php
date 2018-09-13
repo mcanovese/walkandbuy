@@ -296,11 +296,10 @@ $newfilename = round(microtime(true)) . '.' . end($temp);
 $dir = 'public/userimg/';
 move_uploaded_file($_FILES["itemPhoto"]["tmp_name"],$dir.$newfilename);
 $itemPhoto = $newfilename;
+}else $itemPhoto = 0;
+
+
 $update = $this->ItemsController->setUpdateItem($itemID,$itemName,$itemDesc,$itemPrice,$itemUM,$itemPhoto,$itemDiscount,$itemCat,$itemStock,$itemQuantity);
-}
-
-
-$update = $this->ItemsController->setUpdateItem($itemID,$itemName,$itemDesc,$itemPrice,$itemUM,$itemDiscount,$itemCat,$itemStock,$itemQuantity);
 
 if($update) return \Core\view('index');
 

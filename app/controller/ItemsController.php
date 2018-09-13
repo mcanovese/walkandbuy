@@ -162,7 +162,7 @@ string $itemCat,string $itemStock): bool {
   }
 
   public function setUpdateItem($itemID,$itemName,$itemDesc,$itemPrice,$itemUM,$itemPhoto,$itemDiscount,$itemCat,$itemStock,$itemQuantity){
-
+    
     if(isset($itemPhoto)){
     $changes = 'nome = :itemName,
                 descrizione = :itemDesc,
