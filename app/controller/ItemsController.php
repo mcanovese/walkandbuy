@@ -273,9 +273,10 @@ return true;
 
         //ricavo totale ordine sommando tutte le righe dell'ordine
         $totale =$this->database->selectSUM($table,$column,$param,$column1);
+        var_dump($totale);
         $changes = 'totaleordine = :totaleordine';
         $where = 'idordine = :idordine';
-        $total = (int)($totale[0]->totale);
+        $total = (double)($totale[0]->totale);
 
         $updateordine = $this->database->update('ordini', $changes, $where, [
           ':totaleordine' => $total,

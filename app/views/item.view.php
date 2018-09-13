@@ -185,7 +185,7 @@
 <div class="split">
 <div class="split col-img">
 <div class="prod-img">
-  <?php echo '<img src="../../public/userimg/'.$currentItem->foto.'" alt="'.$currentItem->nome.'" title="'.$currentItem->nome.'"/> '; 
+  <?php echo '<img src="../../public/userimg/'.$currentItem->foto.'" alt="'.$currentItem->nome.'" title="'.$currentItem->nome.'"/> ';
   if($edit) echo'<a class="modify" href="item?cod='.$currentItem->idProdotto.'&req=edit">Modifica articolo</a>';?>
 </div>
 </div>

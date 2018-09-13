@@ -38,7 +38,7 @@ class QueryBuilder
 
   public function selectSUM($table,$column,$param,$column1){
 
-      $statement = $this->pdo->prepare("select sum({$column1}) as totale from {$table} where {$column}={$param}");
+      $statement = $this->pdo->prepare("select cast(sum({$column1}) as decimal(12,2)) as totale from {$table} where {$column}={$param}");
       $statement->execute();
 
       return $statement->fetchAll(\PDO::FETCH_CLASS);
@@ -46,7 +46,7 @@ class QueryBuilder
 
   public function update(string $table, string $changes, string $where, array $parameters): bool {
     $query = \sprintf('update %s set %s where (%s)', $table, $changes, $where);
-  
+
     $statement = $this->pdo->prepare($query);
     return $statement->execute($parameters);
   }

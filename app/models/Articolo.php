@@ -24,7 +24,7 @@ public function __construct(
   string $prezzoPieno,
   string $unitaMisura,
   string $foto,
-  string $percentualeSconto,
+  int $percentualeSconto,
   string $categoria,
   string $venditore,
   string $quantita
