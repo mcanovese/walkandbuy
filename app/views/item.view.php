@@ -74,12 +74,7 @@
 
 
 
-  <div class="loginbox-field">
-    <label class="input-label" for="nome">Abilitato</label>
-    <input class="input" id="itemCat"  type="radio" name="itemStatus" value='1'  required checked/> Si
-    <input class="input" id="itemCat"  type="radio" name="itemStatus" value ='0' required /> No
-    <span class="underline"></span>
-  </div>
+  
 
    <div class="loginbox-field">
     <label class="input-label" for="nome">Quantità</label>

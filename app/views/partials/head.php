@@ -28,6 +28,13 @@ if(!isset($_SESSION)){
         <li class="list-item">
         <a class="navbar-link little" href="./whoAreWe">Chi siamo</a>
         </li>
+        <?php ?>
+        <?php if($_SESSION['user']->azienda == 1 ||$_SESSION['user']->azienda == 3 ): ?>
+          <li class="list-item">
+          <a class="navbar-link little" href="./item?req=newItem">Nuovo Articolo</a>
+        <?php endif;?>
+        </li>
+
     </ul>
     </div>
 </div>
