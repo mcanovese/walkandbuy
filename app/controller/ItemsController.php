@@ -250,7 +250,7 @@ $updateordine = $this->database->update('articoli', $changes, $where, [
     $cartgroup = array();
     foreach($cart as $item){
 
-      $itemID = $item['itemID'];
+      $itemID =(int) $item['itemID'];
       $cartgroup[]=array('item'=> $this->getItem($itemID),'qta'=>$item['qta']);
 
     }
@@ -260,14 +260,8 @@ $updateordine = $this->database->update('articoli', $changes, $where, [
 
   public function createNewOrder(){
 
-
-    //'idutente' => $_SESSION['user']->idutente
-    //date("y-m-d")
-
     $uID =$_SESSION['user']->idutente;
-
     $cart = $_SESSION['cart'];
-
       $this->database->insert('ordini', [
       'dataordine' => date("y-m-d"),
       'statoordine' => 'creato',
