@@ -391,13 +391,14 @@ public function registerUser(){
 
 
   public function loginPOST() {
+      $this->SessionController->isAuthenticated();
     $email = Request::getPOST('email');
     $password = Request::getPOST('password');
 
     $isAuthenticated = $this->SessionController->authenticate($email, $password);
 
     if ($isAuthenticated) return \Core\view('index');
-    else return \Core\view('404');
+    else return \Core\view('signin',[ 'result' =>'error', 'routeName' => 'signin']);
 
   }
 
