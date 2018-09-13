@@ -173,7 +173,7 @@ require 'app/views/category.view.php';
 
 public function singCat(){
   $this->SessionController->isAuthenticated();
-  $routeName="category";
+  $routeName="singCat";
   $catID = (integer)$_GET['id'];
 
   $data = $this->ItemsController->getCategoryItem($catID);

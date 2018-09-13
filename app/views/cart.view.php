@@ -16,7 +16,10 @@ ordine
 -->
 <?php
 echo"<div class='content'>";
-if(!$data) echo "<span class='empty-cart'>Il tuo carrello si sente solo :(</span>";
+if(!$data){
+      echo "<span class='empty-cart'>Il tuo carrello si sente solo :(</span>";
+      echo "</div>";
+}
 else {
 foreach($data as $item){
   if($item['item']->nome == null) continue;
@@ -56,8 +59,6 @@ echo "</div>";
 
 
 } ?>
-
-
 
 </div>
 <?php require('partials/footer.php');?>
