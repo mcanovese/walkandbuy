@@ -4,31 +4,30 @@
 <?php if(isset($action) && $action == "newItem") :?> <!-- inserimento nuovo articolo -->
 
 <h1 class="title">Inserimento Nuovo Articolo</h1>
-<p>Completa il form per effettuare l'inserimento di un articolo nel tuo inventario</p>
 
 <form action="insertItem" enctype="multipart/form-data" method="post">
 <div id="body">
   <div class="loginbox">
   <div class="loginbox-field">
-    <label class="input-label" for="nome">Nome Prodotto</label>
-    <input class="input" id="itemName"  type="text" name="itemName" required />
+    <label class="input-label" for="itemName">Nome Prodotto</label>
+    <input class="input" id="itemName" type="text" name="itemName" required />
     <span class="underline"></span>
   </div>
 
   <div class="loginbox-field">
-    <label class="input-label" for="nome">Descrizione Prodotto</label>
+    <label class="input-label" for="itemDesc">Descrizione Prodotto</label>
     <input class="input" id="itemDesc"  type="text" name="itemDesc" required />
     <span class="underline"></span>
   </div>
 
   <div class="loginbox-field">
-    <label class="input-label" for="nome">Prezzo di Listino</label>
+    <label class="input-label" for="itemPrice">Prezzo di Listino</label>
     <input class="input" id="itemPrice"  type="text" name="itemPrice" required />
     <span class="underline"></span>
   </div>
 
   <div class="loginbox-field">
-    <label class="input-label" for="nome">Unit&agrave Misura</label>
+    <label class="input-label" for="itemUM">Unit&agrave Misura</label>
     <select class="input" id="itemUM"  type="select" name="itemUM" required />
     <?php
 
@@ -46,19 +45,19 @@
   </div>
 
   <div class="loginbox-field">
-    <label class="input-label" for="nome">Carica Foto</label>
+    <label class="input-label" for="itemPhoto">Carica Foto</label>
     <input class="input" id="itemPhoto"  type="file" name="itemPhoto" required />
     <span class="underline"></span>
   </div>
 
   <div class="loginbox-field">
-    <label class="input-label" for="nome">Sconto</label>
+    <label class="input-label" for="itemDiscount">Sconto</label>
     <input class="input" id="itemDiscount"  type="text" name="itemDiscount"  />
     <span class="underline"></span>
   </div>
 
   <div class="loginbox-field">
-    <label class="input-label" for="nome">Categoria</label>
+    <label class="input-label" for="itemCat">Categoria</label>
     <select class="input" id="itemCat"  type="select" name="itemCat" required />
     <?php
 
@@ -72,22 +71,10 @@
     <span class="underline"></span>
   </div>
 
-  <div class="loginbox-field">
-    <label class="input-label" for="nome">Giacenza</label>
-    <input class="input" id="itemCat"  type="text" name="itemStock" required />
-    <span class="underline"></span>
-  </div>
-
-  <div class="loginbox-field">
-    <label class="input-label" for="nome">Abilitato</label>
-    <input class="input" id="itemCat"  type="radio" name="itemStatus" value='1'  required checked/> Si
-    <input class="input" id="itemCat"  type="radio" name="itemStatus" value ='0' required /> No
-    <span class="underline"></span>
-  </div>
 
    <div class="loginbox-field">
-    <label class="input-label" for="nome">Quantità</label>
-    <input class="input" id="itemCat"  type="text" name="itemQuantity" required />
+    <label class="input-label" for="itemQnt">Quantità</label>
+    <input class="input" id="itemQnt"  type="text" name="itemQuantity" required />
     <span class="underline"></span>
   </div>
 
@@ -114,25 +101,25 @@
   <div id="body">
     <div class="loginbox">
     <div class="loginbox-field">
-      <label class="input-label" for="nome">Nome Prodotto</label>
+      <label class="input-label" for="itemName">Nome Prodotto</label>
       <input class="input" id="itemName"  type="text" value="<?php echo $currentItem->nome; ?>" name="itemName" required />
       <span class="underline"></span>
     </div>
 
     <div class="loginbox-field">
-      <label class="input-label" for="nome">Descrizione Prodotto</label>
+      <label class="input-label" for="itemDesc">Descrizione Prodotto</label>
       <input class="input" id="itemDesc" value="<?php echo $currentItem->descrizione; ?>" type="text" name="itemDesc" required />
       <span class="underline"></span>
     </div>
 
     <div class="loginbox-field">
-      <label class="input-label" for="nome">Prezzo di Listino</label>
+      <label class="input-label" for="itemPrice">Prezzo di Listino</label>
       <input class="input" id="itemPrice" value="<?php echo $currentItem->prezzoPieno; ?>" type="text" name="itemPrice" required />
       <span class="underline"></span>
     </div>
 
     <div class="loginbox-field">
-      <label class="input-label" for="nome">Unit&agrave Misura</label>
+      <label class="input-label" for="itemUM">Unit&agrave Misura</label>
       <select class="input" id="itemUM"  type="select" name="itemUM" required />
       <?php
 
@@ -150,19 +137,19 @@
     </div>
 
     <div class="loginbox-field">
-      <label class="input-label" for="nome">Carica Foto</label>
+      <label class="input-label" for="itemPhoto">Carica Foto</label>
       <input class="input" id="itemPhoto"  type="file" name="itemPhoto" />
       <span class="underline"></span>
     </div>
 
     <div class="loginbox-field">
-      <label class="input-label" for="nome">Sconto</label>
+      <label class="input-label" for="itemDiscount">Sconto</label>
       <input class="input" id="itemDiscount" value="<?php echo $currentItem->percentualeSconto; ?>" type="text" name="itemDiscount"  />
       <span class="underline"></span>
     </div>
 
     <div class="loginbox-field">
-      <label class="input-label" for="nome">Categoria</label>
+      <label class="input-label" for="itemCat">Categoria</label>
       <select class="input" id="itemCat" value="<?php echo $currentItem->categoria; ?>" type="select" name="itemCat" required />
       <?php
 
@@ -176,16 +163,11 @@
       <span class="underline"></span>
     </div>
 
-    <div class="loginbox-field">
-      <label class="input-label" for="nome">Giacenza</label>
-      <input class="input" id="itemCat" value="<?php echo $currentItem->giacenza; ?>" type="text" name="itemStock" required />
-      <span class="underline"></span>
-    </div>
 
 
      <div class="loginbox-field">
-      <label class="input-label" for="nome">Quantità</label>
-      <input class="input" id="itemCat" value="<?php echo $currentItem->quantita; ?>" type="text" name="itemQuantity" required />
+      <label class="input-label" for="itemQnt">Quantità</label>
+      <input class="input" id="itemQnt" value="<?php echo $currentItem->quantita; ?>" type="text" name="itemQuantity" required />
       <span class="underline"></span>
     </div>
 
