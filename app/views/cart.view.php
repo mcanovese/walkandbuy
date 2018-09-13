@@ -5,7 +5,7 @@
 <!-- LEGGERE IMPORTANTE
 ogni riga deve avere un pulsante azione + e - per incrementare e decrementare
 chiamata per aggiungere va fatta a :  /addtocart?cod=##  ##=nr idordine
-/addtocart?cod=##req=dec invece va chiamata x decrementare di 1
+/addtocart?cod=##&req=dec invece va chiamata x decrementare di 1
 
 tutte le operazioni di incremento e decremento hanno effetto sulla session[cart]
 
@@ -42,7 +42,7 @@ echo "<span class='add'>
       </a>
       </span>";
 echo "<span class='remove'>
-      <a href='/addtocart?cod=".$item['item']->idProdotto."req=dec'>
+      <a href='/addtocart?cod=".$item['item']->idProdotto."&req=dec'>
       <img src='../../public/img/minus.png'>
       </a>
       </span>";

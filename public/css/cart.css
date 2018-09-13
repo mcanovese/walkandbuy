@@ -81,7 +81,7 @@
       -o-transition: all .2s ease-in;
       -webkit-transition: all .2s ease-in;
       transition: all .2s ease-in;
-      background: rgb(77, 177, 82); 
+      background: rgb(103, 194, 108); 
 }
 .remove:hover {
     -moz-transition: all .2s ease-in;
