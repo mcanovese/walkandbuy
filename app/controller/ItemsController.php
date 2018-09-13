@@ -238,8 +238,9 @@ $updateordine = $this->database->update('articoli', $changes, $where, [
 
   public function homeEvidenceItem($nrItem){
 
-    while($nrItem >=0){
+    while($nrItem >0){
       $valore = $this->randomItem();
+      $nrItem-1;
     }
     return $valore;
   }
