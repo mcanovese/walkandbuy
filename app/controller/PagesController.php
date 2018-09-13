@@ -199,6 +199,7 @@ public function item() {
   if(isset($_GET['cod'])){
   $itemCod=$_GET['cod'];
   $currentItem = $this->ItemsController->getItem($itemCod);
+
   $itemID =(int) $currentItem->venditore;}
   $cat = $this->ItemsController->getAllCat();
   $um = $this->ItemsController->getAllUm();
@@ -251,13 +252,14 @@ header('Location: '.$_SERVER['HTTP_REFERER']);}
 
 public function addItem(){
     $this->onlyUser();
+    $userID =  $userID = $_SESSION['user']->idutente;
     $itemName = Request::getPOST('itemName');
     $itemDesc = Request::getPOST('itemDesc');
     $itemPrice = Request::getPOST('itemPrice');
     $itemUM = Request::getPOST('itemUM');
     $itemDiscount = Request::getPOST('itemDiscount');
     $itemCat = Request::getPOST('itemCat');
-    $itemStock = Request::getPOST('itemStock');
+
 
     $itemQuantity = Request::getPOST('itemQuantity');
 
@@ -272,11 +274,12 @@ public function addItem(){
     $itemPhoto = $newfilename;
 
     if(!isset($itemDiscount)) $itemDiscount = 0;
-  $insert = $this->ItemsController->insertItem($itemName,$itemDesc,$itemPrice,$itemUM,$itemPhoto,$itemDiscount,
-  $itemCat,$itemStock,$itemQuantity);
+  $insert = $this->ItemsController->insertItem($userID,$itemName,$itemDesc,$itemPrice,$itemUM,$itemPhoto,$itemDiscount,
+  $itemCat,$itemQuantity);
 
   header('Location: home');
 }
+
 public function updateItem(){
 $this->onlyUser();
 $itemID = Request::getPOST('itemID');
@@ -286,7 +289,6 @@ $itemPrice = Request::getPOST('itemPrice');
 $itemUM = Request::getPOST('itemUM');
 $itemDiscount = Request::getPOST('itemDiscount');
 $itemCat = Request::getPOST('itemCat');
-$itemStock = Request::getPOST('itemStock');
 $itemQuantity = Request::getPOST('itemQuantity');
 
 if (file_exists($_FILES['itemPhoto']['tmp_name']) || is_uploaded_file($_FILES['itemPhoto']['tmp_name']))
@@ -296,12 +298,11 @@ $newfilename = round(microtime(true)) . '.' . end($temp);
 $dir = 'public/userimg/';
 move_uploaded_file($_FILES["itemPhoto"]["tmp_name"],$dir.$newfilename);
 $itemPhoto = $newfilename;
-}else $itemPhoto = 0;
+}else $itemPhoto = null;
 
+$update = $this->ItemsController->setUpdateItem($itemID,$itemName,$itemDesc,$itemPrice,$itemUM,$itemPhoto,$itemDiscount,$itemCat,$itemQuantity);
 
-$update = $this->ItemsController->setUpdateItem($itemID,$itemName,$itemDesc,$itemPrice,$itemUM,$itemPhoto,$itemDiscount,$itemCat,$itemStock,$itemQuantity);
-
-if($update) return \Core\view('index');
+if($update) header("Location: home");
 
 }
 

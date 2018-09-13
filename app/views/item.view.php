@@ -165,6 +165,7 @@
 
 
 
+
      <div class="loginbox-field">
       <label class="input-label" for="itemQnt">Quantità</label>
       <input class="input" id="itemQnt" value="<?php echo $currentItem->quantita; ?>" type="text" name="itemQuantity" required />

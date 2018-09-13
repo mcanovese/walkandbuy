@@ -98,6 +98,7 @@
 
 </div>
 </div>
+<a class="title" href="user?action=edit">Modifica Profilo</a>
 </div>
 
 

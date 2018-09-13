@@ -121,6 +121,7 @@ public function catMainGroup (int $catID){
   }
 
   private function createItem($result): Articolo {
+
     return new Articolo(
       $result->idprodotto,
       $result->nome,
@@ -130,14 +131,12 @@ public function catMainGroup (int $catID){
       $result->foto,
       $result->percentualesconto,
       $result->categoria,
-      $result->giacenza,
-      $result->abilitato,
       $result->venditore,
       $result->quantita);
   }
 
   public function insertItem(string $itemName,string $itemDesc,string $itemPrice,string $itemUM,string $itemPhoto,int $itemDiscount,
-string $itemCat,string $itemStock): bool {
+string $itemCat, int $quantita): bool {
 
 
 
@@ -148,12 +147,12 @@ string $itemCat,string $itemStock): bool {
         'nome' => $itemName,
         'descrizione' => $itemDesc,
         'prezzopieno' => $itemPrice,
-        'unitamisura' => 1,
+        'unitamisura' => $itemUM,
         'foto' => $itemPhoto,
         'percentualesconto' => $itemDiscount,
         'categoria' => $itemCat,
-        'giacenza' => $itemStock,
-        'venditore' => 1
+        'quantita' => $quantita,
+        'venditore' => $userID
 
       ]);
     } else {
@@ -161,8 +160,8 @@ string $itemCat,string $itemStock): bool {
     }
   }
 
-  public function setUpdateItem($itemID,$itemName,$itemDesc,$itemPrice,$itemUM,$itemPhoto,$itemDiscount,$itemCat,$itemStock,$itemQuantity){
-    
+  public function setUpdateItem($itemID,$itemName,$itemDesc,$itemPrice,$itemUM,$itemPhoto,$itemDiscount,$itemCat,int $itemQuantity){
+
     if(isset($itemPhoto)){
     $changes = 'nome = :itemName,
                 descrizione = :itemDesc,
@@ -171,7 +170,6 @@ string $itemCat,string $itemStock): bool {
                 foto = :itemPhoto,
                 percentualesconto = :itemDiscount,
                 categoria = :itemCat,
-                giacenza = :itemStock,
                 quantita = :itemQuantity';
     $where = 'idprodotto = :idprodotto';
 
@@ -185,8 +183,7 @@ string $itemCat,string $itemStock): bool {
       ':itemPhoto' => $itemPhoto,
       ':itemDiscount' => $itemDiscount,
       ':itemCat' => $itemCat,
-      ':itemStock' => $itemStock,
-      ':itemQuantity' => $itemQuantity,
+      ':itemQuantity' => $itemQuantity
     ]);
 }
 else {
@@ -194,10 +191,8 @@ else {
             descrizione = :itemDesc,
             prezzopieno = :itemPrice,
             unitamisura = :itemUM,
-
             percentualesconto = :itemDiscount,
             categoria = :itemCat,
-            giacenza = :itemStock,
             quantita = :itemQuantity';
 $where = 'idprodotto = :idprodotto';
 
@@ -210,11 +205,11 @@ $updateordine = $this->database->update('articoli', $changes, $where, [
   ':itemUM' =>$itemUM,
   ':itemDiscount' => $itemDiscount,
   ':itemCat' => $itemCat,
-  ':itemStock' => $itemStock,
-  ':itemQuantity' => $itemQuantity,
+  ':itemQuantity' => $itemQuantity
 ]);
 }
 
+return true;
 
 
   }
