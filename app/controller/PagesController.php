@@ -337,10 +337,10 @@ $result = $this->UsersController->updateUser(
     }catch (\Exception $e) {
         if ($e->getMessage() === 'pwdmatcherror')    { return \Core\view('adduser',[ 'messageDisplay' =>'Le password che hai inserito non sono uguali', 'routeName' => 'addUser']);}
         }
-    
+
 
   if(isset($result))
-  {return \Core\view('user',[ 'result' =>'true', 'routeName' => 'addUser']);}
+  {return Header('Location: user');}
 
 
 

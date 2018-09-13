@@ -46,6 +46,11 @@ if(!isset($_SESSION)){
       </div>
 
       <div id="MyNavRight" class="navbar-right-logged">
+        <?php if($_SESSION['user']->azienda == 3): ?>
+        <div class="cart-container">
+        <a class="go-cart" href="admin"><img alt="amministrazione" title="amministrazione" src="../../../public/img/cart.png"/></a>
+        </div>
+        <?php endif;?>
         <div class="cart-container">
         <a class="go-cart" href="cart"><img alt="carrello" title="carrello" src="../../../public/img/cart.png"/></a>
         </div>

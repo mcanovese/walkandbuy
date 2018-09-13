@@ -2,8 +2,12 @@
 <?php require('partials/head.php');?>
 <div id="body">
 
-<?php if(isset($action) && $action == "edit") :?>
 
+
+<?php if(isset($action) && $action == "edit") :?>
+<h1 class="title">Modifica Profilo Utente</h1>
+<p class="title">Di seguito puoi modificare i tuoi dati, &egrave sempre necessario confermare la password, i dati aggiornati </br>
+  saranno visibili dal prossimo login</p>
   <form action="updateUser" method='post'>
 
 
@@ -55,12 +59,14 @@
   <div class="loginbox-field">
     <label class="input-label" for="nome">Paese</label>
     <select class="input" id="paese"  type="select" name="paese" required />
-    <option selected='<?php if($user->paese == 'Camposampiero')echo"selected"; ?>'value='Camposampiero'>Camposampiero</option>
-    <option selected='<?php if($user->paese == 'Campodarsego')echo"selected"; ?>'value='Campodarsego'>Campodarsego</option>
-    <option selected='<?php if($user->paese == 'Loreggia')echo"selected"; ?>'value='Loreggia'>Loreggia</option>
-    <option selected='<?php if($user->paese == 'Massanzago')echo"selected"; ?>' value='Massanzago'>Massanzago</option>
-    <option selected='<?php if($user->paese == 'Trebaseleghe')echo"selected"; ?>'value='Trebaseleghe'>Trebaseleghe</option>
+
+    <option <?php if($user->paese === 'Camposampiero')echo"selected"; ?>value='Camposampiero'>Camposampiero</option>
+    <option <?php if($user->paese === 'Campodarsego')echo"selected"; ?>value='Campodarsego'>Campodarsego</option>
+    <option <?php if($user->paese === 'Loreggia')echo"selected"; ?>value='Loreggia'>Loreggia</option>
+    <option <?php if($user->paese === 'Massanzago')echo"selected"; ?> value='Massanzago'>Massanzago</option>
+    <option <?php if($user->paese === 'Trebaseleghe')echo"selected"; ?>value='Trebaseleghe'>Trebaseleghe</option>
     </select>
+  
     <span class="underline"></span>
   </div>
 

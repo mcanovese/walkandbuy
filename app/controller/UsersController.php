@@ -47,6 +47,7 @@ public function insertUser(array $parameters): bool {
 }
 
 public function updateUser(array $parameters):bool {
+
   $userID = $parameters['userID'];
   $email= $parameters['email'];
   $nome = $parameters['nome'];
@@ -71,19 +72,20 @@ public function updateUser(array $parameters):bool {
               paese = :paese,
               email = :email,
               password = :password';
+              
   $where = 'idutente = :idutente';
 
 
   $updateordine = $this->database->update('utenti', $changes, $where, [
     ':idutente' => $userID,
-    ':email' =>$email,
-    ':nome' => $nome,
     ':cognome' => $cognome,
-    ':password' => \password_hash($password, PASSWORD_DEFAULT),
+    ':nome' => $nome,
     ':cf' =>$codiceFiscale,
     ':telefono' => $telefono,
     ':via'=>$via,
-    ':paese'=>$paese
+    ':paese'=>$paese,
+    ':email' =>$email,
+    ':password' => \password_hash($password, PASSWORD_DEFAULT),
   ]);
 
   return $updateordine;
