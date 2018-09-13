@@ -52,9 +52,15 @@ var sticky = header.offsetTop;
 
   function hamMenu() {
     var x = document.getElementById("myLinks");
+    var subHead = document.getElementById("subHead");
     if (x.style.display === "block") {
       x.style.display = "none";
+           
+      subHead.classList.remove("hidden");
+      subHead.classList.add("flex");
     } else {
       x.style.display = "block";
+      subHead.classList.add("hidden");
+      subHead.classList.remove("flex");
     }
   }

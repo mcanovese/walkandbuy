@@ -22,24 +22,24 @@ echo $line['item']->nome.'</br>';
 
 <?php require('partials/footer.php');?>
 <?php else : ?>
-<h1>Elenco Ordini Utente</h1>
+<h1 class="title">Elenco Ordini Utente</h1>
 <?php
 
-if(isset($_GET['result'])) echo "<h1 class='title'>Ordine Inserito con Successo</h1>";
+if(isset($_GET['result'])) echo "<h1 class='message'>Ordine Inserito con Successo</h1>";
 
 if(isset($order)){
 foreach($order as $ordine){
-echo"<div>";
-echo "ID :".$ordine->idordine."<br/>";
-echo "Data :".$ordine->dataordine."<br/>";
-echo "Totale Euro :".$ordine->totaleordine."<br/>";
-echo "Stato :".$ordine->statoordine."<br/>";
-echo "Metodo Pagamento :".$ordine->metodopagamento."<br/>";
-echo "Metodo Spedizione :".$ordine->metodospedizione."<br/>";
-echo "<a href='order?req=show&orderid=".$ordine->idordine."'>Dettagli Ordine</a>";
+echo"<div class='order-container'>";
+echo "<label class='label-detail'>ID</label><div class='data'>".$ordine->idordine."</div>";
+echo "<label class='label-detail'>Data</label><div class='data'>".$ordine->dataordine."</div>";
+echo "<label class='label-detail'>Totale Euro</label><div class='data'>".$ordine->totaleordine."</div>";
+echo "<label class='label-detail'>Stato</label><div class='data'>".$ordine->statoordine."</div>";
+echo "<label class='label-detail'>Metodo Pagamento </label><div class='data'>".$ordine->metodopagamento."</div>";
+echo "<label class='label-detail'>Metodo Spedizione </label><div class='data'>".$ordine->metodospedizione."</div>";
+echo "<a class='detail' href='order?req=show&orderid=".$ordine->idordine."'>Dettagli Ordine</a>";
 echo"</div>";
 
-}} else echo"<h1 class ='title'>Nessun ordine ancora effettuato</h1>";
+}} else echo"<h1 class ='message'>Nessun ordine ancora effettuato</h1>";
 
 
 ?>
