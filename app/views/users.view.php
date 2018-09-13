@@ -1,7 +1,7 @@
 <div id="container">
 <?php require('partials/head.php');?>
 <div id="body">
-<h1>Profilo Utente</h1>
+<h1 class="title">Profilo Utente</h1>
 
 <div class="content">
     <div class="user-data">

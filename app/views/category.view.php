@@ -23,8 +23,6 @@ foreach($data as $id => $category) {
         echo "<div class='category-item'>";
         echo "<div class='little-img-container'>";
         echo "<a href='/item?cod=".$articolo->idProdotto."'>";
-        /*echo '<img class="little-img" src="../../public/img/product/'.$articolo->foto.'.jpg'.'" alt="'.$articolo->nome.'" title="'.$articolo->nome.'"/> ';
-        */
         echo '<img class="little-img" src="../../public/userimg/'.$articolo->foto.'" alt="'.$articolo->nome.'" title="'.$articolo->nome.'"/> ';
         echo "</a>";
         echo "</div>";
