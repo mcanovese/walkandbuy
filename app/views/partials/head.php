@@ -55,7 +55,7 @@ if(!isset($_SESSION)){
         <a class="go-cart" href="cart"><img alt="carrello" title="carrello" src="../../../public/img/cart.png"/></a>
         </div>
         <div class="cart-container">
-        <a class="go-cart" href="order"><img alt="ordini" title="ordini" src="../../../public/img/cart.png"/></a>
+        <a class="go-cart" href="order"><img alt="ordini" title="ordini" src="../../../public/img/order.png"/></a>
         </div>
         <div class="profile-container">
         <a class="go-profile" href="user"><img alt="profilo" title="profilo" src="../../../public/img/profile.png"/></a>
@@ -67,6 +67,7 @@ if(!isset($_SESSION)){
     <div class="topnav">
       <div id="myLinks">
           <a href="cart">Carrello</a>
+          <a href="order">Ordini</a>
           <a href="user">Profilo</a>
           <a href="logout" style="color:red;">Logout</a>
       </div>
