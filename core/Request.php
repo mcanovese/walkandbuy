@@ -32,8 +32,6 @@ private static function sanitize($value) {
   return \htmlentities(\trim($value));
 }
 
-
-
 }
 
 

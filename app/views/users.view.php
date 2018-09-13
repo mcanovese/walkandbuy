@@ -66,7 +66,7 @@
     <option <?php if($user->paese === 'Massanzago')echo"selected"; ?> value='Massanzago'>Massanzago</option>
     <option <?php if($user->paese === 'Trebaseleghe')echo"selected"; ?>value='Trebaseleghe'>Trebaseleghe</option>
     </select>
-  
+
     <span class="underline"></span>
   </div>
 
@@ -105,8 +105,13 @@
 
 </div>
 </div>
-<a class="title" href="user?action=edit">Modifica Profilo</a>
+<a class="title" href="user?action=edit">Modifica Profilo</a></br>
+<?php if($_SESSION['user']->azienda == 3): ?>
+<a href="admin">Accedi Al Pannello Amministrativo</a>
+<?php endif;?>
 </div>
+
+
 
 
 <?php require('partials/footer.php');?>
