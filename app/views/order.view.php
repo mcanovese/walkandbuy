@@ -25,6 +25,8 @@ echo $line['item']->nome.'</br>';
 <h1>Elenco Ordini Utente</h1>
 <?php
 
+if(isset($_GET['result'])) echo "<h1 class='title'>Ordine Inserito con Successo</h1>";
+
 if(isset($order)){
 foreach($order as $ordine){
 echo"<div>";

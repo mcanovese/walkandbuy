@@ -139,7 +139,7 @@ public function cassa(){
   $this->ItemsController->creaRigheOrdine($orderNumber);
     $result = $this->ItemsController->finalizeOrder($orderNumber,$userID);
 }
-    require 'app/views/cart.view.php';
+    header("Location: order?result=true");
 
 }
 
