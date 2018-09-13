@@ -25,8 +25,9 @@
   <span class="underline"></span>
 </div>
   <button type="submit" class="btn btn-outline">Login</button>
-  <a class="little left" href="lostPassword">Recupero Password</a>
-  <a class="little right right" href="contactSupport">Problemi? Contatta l'Help Desk</a>
+
+  <a class="little-inpage left" href="lostPassword">Recupero Password</a>
+  <a class="little-inpage right" href="contactSupport">Problemi? Contatta l'Help Desk</a>
 </div>
 
 </form>

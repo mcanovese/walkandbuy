@@ -10,8 +10,8 @@ var sticky = header.offsetTop;
     if (window.pageYOffset > sticky) {
       header.classList.add("sticky");
 
-      navRight.classList.remove("navbar-right");
       navLeft.classList.remove("navbar-left");
+      
       
       subHead.classList.add("hidden");
       subHead.classList.remove("flex");
@@ -27,9 +27,8 @@ var sticky = header.offsetTop;
     } else {
       header.classList.remove("sticky");
 
-
-      navRight.classList.add("navbar-right");
       navLeft.classList.add("navbar-left");
+      
 
       subHead.classList.remove("hidden");
       subHead.classList.add("flex");
@@ -49,4 +48,13 @@ var sticky = header.offsetTop;
   function topFunction() {
       document.body.scrollTop = 0; // For Safari
       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+
+  function hamMenu() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
   }

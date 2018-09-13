@@ -10,6 +10,7 @@ if(!isset($_SESSION)){
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
   <link type="text/css" rel="stylesheet" href="./../../../public/css/common.css" />
   <link type="text/css" rel="stylesheet" href="./../../../public/css/<?= $routeName ?>.css" />
   <script src="../../../public/js/main.js"></script>
@@ -44,7 +45,7 @@ if(!isset($_SESSION)){
         </a>
       </div>
 
-      <div id="MyNavRight" class="navbar-right ">
+      <div id="MyNavRight" class="navbar-right">
         <div class="cart-container">
         <a class="go-cart" href="cart"><img alt="carrello" title="carrello" src="../../../public/img/cart.png"/></a>
         </div>
@@ -55,6 +56,17 @@ if(!isset($_SESSION)){
         <a class="go-exit" href="logout"><img alt="logout" title="logout" src="../../../public/img/exit.png"/></a>
         </div>
       </div>
+    <div class="topnav">
+      <a class="active"></a> 
+      <div id="myLinks">
+          <a href="cart">Carrello</a>
+          <a href="user">Profilo</a>
+          <a href="logout">Logout</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="hamMenu()">
+      <i class="fa fa-bars"></i>
+      </a>
+    </div>
   </header>
   <div>
   <button onclick="topFunction()" id="myBtn" title="Go to top"><img class="logo-img"src="../../../public/img/up.png"/></button>

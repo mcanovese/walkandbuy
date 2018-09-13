@@ -94,7 +94,7 @@ body{
 
 
 a {
-  color: lightgrey;
+  color: orange;
   text-decoration: none;
 }
 
@@ -337,6 +337,42 @@ dd {
   background-image: url(./../img/header.jpg);
 }
 
+.topnav {
+  overflow: none;
+  background-color: #333;
+  float:right;
+  display:none;
+}
+
+#myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background: transparent;
+}
+
 .top-info {
   height:0rem;
   display:block;
@@ -400,7 +436,7 @@ dd {
 
 .sticky {
   position: fixed;
-  height: 5rem;
+  height: 6rem;
   top: 0rem;
   width: 100%;
 }
@@ -420,7 +456,7 @@ dd {
 .navbar-right{
   display:block;
   width:25%;
-  padding-top:2rem;
+  padding-top:1.5rem;
 }
 
 .navbar-left-sticky{
@@ -431,7 +467,7 @@ dd {
   float:right;
   display:block;
   width:25%;
-  margin: 1rem 1rem 5rem 1rem;
+  margin: -1rem 1rem 5rem 1rem;
 }
 
 
@@ -852,6 +888,13 @@ dd {
   text-transform: capitalize;
 }
 
+.little-inpage{
+  color: darkblue;
+  padding-top: 0.3rem;
+  font-size: 0.80rem;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
 .log-link-container{
   margin-top: 1.5rem;
   width: 12rem;
@@ -1046,6 +1089,14 @@ input.screen-reader:focus + .input-label {
   #MyNavLeft{
     padding-left:0%;
     margin-left:auto;
+  }}
+
+  @media (max-width: 890px) {
+    .navbar-right{
+      display:none;
+    }
+    .topnav{
+      display:block;
+    }
   }
-}
   
