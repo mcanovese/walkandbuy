@@ -185,18 +185,27 @@
 <div class="split">
 <div class="split col-img">
 <div class="prod-img">
-  <?php echo '<img src="../../public/userimg/'.$currentItem->foto.'" alt="'.$currentItem->nome.'" title="'.$currentItem->nome.'"/> '; ?>
+  <?php echo '<img src="../../public/userimg/'.$currentItem->foto.'" alt="'.$currentItem->nome.'" title="'.$currentItem->nome.'"/> '; 
+  if($edit) echo'<a class="modify" href="item?cod='.$currentItem->idProdotto.'&req=edit">Modifica articolo</a>';?>
 </div>
 </div>
 <?php
-
-if($edit) echo'<a href="item?cod='.$currentItem->idProdotto.'&req=edit">Modifica</a>'; ?>
+$prezzoPieno=$currentItem->prezzoPieno;
+ ?>
 <div class="split col-text"> <!-- COLONNA DEL TESTO, CON DETTAGLI-->
 <div class="prod-name">
   <h2><?php echo $currentItem->nome; ?><h2>
 </div>
-<div class="info"> Prezzo: <?php echo $currentItem->prezzoPieno?>&euro; </div>
-<div class="info"> Quantit&agrave <?php echo $currentItem->quantita.' '.$currentItem->unitamisura?> </div>
+<div class="info">Prezzo: <?php if ($currentItem->percentualeSconto>0){
+            $price=$prezzoPieno-(($prezzoPieno*$currentItem->percentualeSconto)/100);
+        echo '<p class="info-text price">&euro;'.$price.'</p>';
+        echo '<p class="info-text discount">-'.$currentItem->percentualeSconto.'&#37;&nbsp;|
+        <del class="full-price striked">&euro;'.$currentItem->prezzoPieno.'</del></p>';
+        } else {
+        echo '<p class="info-text price">&euro;'.$currentItem->prezzoPieno.'</p>';
+        }
+        ?> </div>
+<div class="info"> Quantit&agrave: <?php echo $currentItem->quantita.' '.$currentItem->unitamisura?> </div>
 <div class="add-cart">
 
   <button onclick="location.href='addtocart?cod=<?php echo $currentItem->idProdotto?>'" id="add-cart" alt="Aggiungi al carrello">
@@ -207,13 +216,7 @@ if($edit) echo'<a href="item?cod='.$currentItem->idProdotto.'&req=edit">Modifica
 <div class="prod-Info"><h4 class="prod-Info">Descrizione<h4>
 <p class="info"> <?php echo $currentItem->descrizione ?> </p>
 </div>
-<div class="prod-Info" ><h4 class="prod-Info">Informazioni generali<h4>
-<div class="prod-price info">PREZZO</div>
-<div class="prod-seller"><?php echo $currentItem->unitamisura ?>
 </div>
-</div>
-</div>
-
 
 </div>
 
