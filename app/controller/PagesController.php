@@ -164,11 +164,21 @@ public function category(){
   $this->SessionController->isAuthenticated();
   $routeName="category";
   $catID = (integer)$_GET['id'];
+
   $data = $this->ItemsController->catMainGroup($catID);
   $catName = $this->ItemsController->getCatName($catID);
 require 'app/views/category.view.php';
 }
 
+public function singCat(){
+  $this->SessionController->isAuthenticated();
+  $routeName="category";
+  $catID = (integer)$_GET['id'];
+
+  $data = $this->ItemsController->getCategoryItem($catID);
+  $catName = $this->ItemsController->getCatName($catID);
+require 'app/views/singcat.view.php';
+}
 
 
 
@@ -189,7 +199,7 @@ public function item() {
   $cat = $this->ItemsController->getAllCat();
   $um = $this->ItemsController->getAllUm();
 
-if(!isset($_GET['req'])&& !isset($_GET['cod'])) header("Location: 404");
+  if(!isset($_GET['req'])&& !isset($_GET['cod'])) header("Location: 404");
   $routeName = 'item';
   if(isset($_GET['req']) && $_GET['req'] == "newItem"){
     $action = "newItem";
@@ -197,7 +207,7 @@ if(!isset($_GET['req'])&& !isset($_GET['cod'])) header("Location: 404");
 
   }
   else {
-    if($_GET['req']=='edit'){
+    if(isset($_GET['req']) && $_GET['req']=='edit'){
     if($itemID != $userID) header("Location: 404");
     $action = 'edit';
     return \Core\view('item',[ 'action' =>$action,'currentItem'=> $currentItem, 'routeName'=>'item', 'cat'=>$cat, 'um'=>$um]);

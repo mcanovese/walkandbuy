@@ -50,9 +50,9 @@ public function catMainGroup (int $catID){
     $where,
     $parameters
   );
+
   $maingroup = array();
   foreach($result as $categoria){
-    //$maingroup[]['catName'] = $categoria->descrizione;
     $maingroup[]=array("catName"=> $categoria->descrizione,"items"=>$this->getCategoryItem($categoria->idcategoria));
   }
 

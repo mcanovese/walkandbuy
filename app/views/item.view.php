@@ -167,7 +167,8 @@
       <?php
 
       foreach($cat as $categoria)
-      echo'<option value='.$categoria->idcategoria.'>'.$categoria->descrizione.'</option> ';
+      if($categoria->categoriapadre == NULL) continue;
+      else {echo'<option value='.$categoria->idcategoria.'>'.$categoria->descrizione.'</option> ';}
 
       ?>
 
