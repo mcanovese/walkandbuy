@@ -69,6 +69,7 @@ public function user(){
     $routeName = "user";
     $this->onlyUser();
     $user = $this->SessionController->getUser();
+    if(isset($_GET['action'])) $action = $_GET['action'];
 
 require 'app/views/users.view.php';
 
@@ -95,7 +96,7 @@ public function assegnaAzienda(){
 public function cart(){
     $routeName = "cart";
     $this->onlyUser();
-    if($_SESSION['cart']) $data= $this->ItemsController->cartView();
+    if(isset($_SESSION['cart'])) $data= $this->ItemsController->cartView();
     else $data=false;
     require 'app/views/cart.view.php';
 
@@ -192,6 +193,7 @@ require 'app/views/contact.view.php';
 public function item() {
   $this->onlyUser();
   $userID =(int) $this->SessionController->getUserID();
+  $user = $this->SessionController->getUser();
   if(isset($_GET['cod'])){
   $itemCod=$_GET['cod'];
   $currentItem = $this->ItemsController->getItem($itemCod);
@@ -208,7 +210,8 @@ public function item() {
   }
   else {
     if(isset($_GET['req']) && $_GET['req']=='edit'){
-    if($itemID != $userID) header("Location: 404");
+
+    if($itemID != $userID && $user->azienda !=3) header("Location: 404");
     $action = 'edit';
     return \Core\view('item',[ 'action' =>$action,'currentItem'=> $currentItem, 'routeName'=>'item', 'cat'=>$cat, 'um'=>$um]);
 
@@ -216,7 +219,7 @@ public function item() {
 
 else {
 
-  if($itemID == $userID) $edit = true;
+  if($itemID == $userID || $user->azienda == 3  ) $edit = true;
   else $edit = false;
 
   return \Core\view('item', [
@@ -234,13 +237,13 @@ $idItem = $_GET['cod'];
 if(isset($_GET['req']) && $_GET['req'] == 'dec'){
 $cart = $this->SessionController->decreaseCartSession($idItem,1);
 
-  require 'app/views/test.view.php';
+  header('Location: '.$_SERVER['HTTP_REFERER']);
 }
 
 else {
 $qta = 1;
 $cart = $this->SessionController->addSessionCart($idItem,$qta);
-require 'app/views/test.view.php';}
+header('Location: '.$_SERVER['HTTP_REFERER']);}
 }
 
 
@@ -270,13 +273,7 @@ public function addItem(){
   $insert = $this->ItemsController->insertItem($itemName,$itemDesc,$itemPrice,$itemUM,$itemPhoto,$itemDiscount,
   $itemCat,$itemStock,$itemQuantity);
 
-  if(!$insert)   {
-    $action="insertFail";
-    return \Core\view('index',[ 'action' =>$action]);}
-else {
-  $action="insertSuccess";
-  return \Core\view('index',[ 'action' =>$action]);}
-
+  header('Location: home');
 }
 public function updateItem(){
 $this->onlyUser();
@@ -318,6 +315,8 @@ public function registerUser(){
   $password = Request::getPOST('password');
   $verificaPassword = Request::getPOST('verificaPassword');
   $telefono = Request::getPOST('telefono');
+  $via = Request::getPOST('via');
+  $paese = Request::getPOST('paese');
 
   try{
   $result = $this->UsersController->insertUser(
@@ -328,7 +327,9 @@ public function registerUser(){
       'codiceFiscale' => $codiceFiscale,
       'password' => $password,
       'verificaPassword' => $verificaPassword,
-      'telefono' => $telefono
+      'telefono' => $telefono,
+      'via' => $via,
+      'paese' => $paese
     ]);
       }catch (\Exception $e) {
 

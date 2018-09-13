@@ -9,8 +9,11 @@
 foreach($data as $id => $category) {
     echo '<div class="go-subcat-container">';
     echo "<div class='subcat-name'>";
-    echo '<button onclick="#" class="go-subcat" alt="Scoprili tutti">';
-    echo '<img class="go-subcat-img" src="../../public/img/go_subcat.png" alt="Scoprili tutti" /></button>';
+    //location.href='singcat?id='.$category['catID'].''
+    ?>
+    <button onclick="location.href='singcat?id=<?php echo $category['catID']?>'" class="go-subcat" alt="Scoprili Tutti">
+    <img class="go-subcat-img" src="../../public/img/go_subcat.png" alt="Scoprili tutti" /></button>
+    <?php
     echo "<h3>";
     echo $category['catName'];
     echo "</h3>";
