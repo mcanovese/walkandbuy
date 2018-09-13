@@ -46,6 +46,60 @@ public function insertUser(array $parameters): bool {
   return $successful;
 }
 
+public function updateUser(array $parameters):bool {
+  $userID = $parameters['userID'];
+  $email= $parameters['email'];
+  $nome = $parameters['nome'];
+  $cognome = $parameters['cognome'];
+  $password = $parameters['password'];
+  $verificaPassword = $parameters['verificaPassword'];
+  $telefono = $parameters['telefono'];
+  $codiceFiscale = $parameters['codiceFiscale'];
+  $via = $parameters['via'];
+  $paese = $parameters['paese'];
+  $table = 'utenti';
+  if ($password !== $verificaPassword) {
+    throw new \Exception('pwdmatcherror');
+  }
+
+
+  $changes = 'cognome = :cognome,
+              nome = :nome,
+              cf = :cf,
+              telefono = :telefono,
+              via = :via,
+              paese = :paese,
+              email = :email,
+              password = :password';
+  $where = 'idutente = :idutente';
+
+
+  $updateordine = $this->database->update('utenti', $changes, $where, [
+    ':idutente' => $userID,
+    ':email' =>$email,
+    ':nome' => $nome,
+    ':cognome' => $cognome,
+    ':password' => \password_hash($password, PASSWORD_DEFAULT),
+    ':cf' =>$codiceFiscale,
+    ':telefono' => $telefono,
+    ':via'=>$via,
+    ':paese'=>$paese
+  ]);
+
+  return $updateordine;
+
+
+
+
+
+}
+
+
+
+
+
+
+
 public function getifAzienda ($userCF){
 
   $table = 'utenti';

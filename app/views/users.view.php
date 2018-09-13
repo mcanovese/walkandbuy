@@ -1,9 +1,11 @@
 <div id="container">
 <?php require('partials/head.php');?>
 <div id="body">
+
 <?php if(isset($action) && $action == "edit") :?>
 
-  <form action="registerUser" method='post'>
+  <form action="updateUser" method='post'>
+
 
   <div class="loginbox">
   <div class="loginbox-field">
@@ -23,13 +25,13 @@
   </div>
   <div class="loginbox-field">
     <label class="input-label" for="codicefiscale">Codice Fiscale</label>
-    <input class="input" id="codicefiscale" value="<?php echo $user->nome; ?>" type="text" name="cf" required />
+    <input class="input" id="codicefiscale" value="<?php echo $user->cf; ?>" type="text" name="cf" required />
     <span class="underline"></span>
   </div>
 
   <div class="loginbox-field">
     <label class="input-label" for="password">Password</label>
-    <input class="input" id="password"  type="password" name="password" required />
+    <input class="input" id="password"  type="password" name="password"  />
     <span class="underline"></span>
   </div>
 
@@ -41,24 +43,23 @@
 
   <div class="loginbox-field">
     <label class="input-label" for="telefono">Telefono</label>
-    <input class="input" id="telefono"  type="text" name="telefono" required />
+    <input class="input" id="telefono" value="<?php echo $user->telefono; ?>" type="text" name="telefono" required />
     <span class="underline"></span>
   </div>
 
   <div class="loginbox-field">
     <label class="input-label" for="telefono">Via </label>
-    <input class="input" id="via"  type="text" name="via" required />
+    <input class="input" id="via" value="<?php echo $user->via; ?>" type="text" name="via" required />
     <span class="underline"></span>
   </div>
-
   <div class="loginbox-field">
     <label class="input-label" for="nome">Paese</label>
     <select class="input" id="paese"  type="select" name="paese" required />
-    <option value='Camposampiero'>Camposampiero</option>
-    <option value='Campodarsego'>Campodarsego</option>
-    <option value='Loreggia'>Loreggia</option>
-    <option value='Massanzago'>Massanzago</option>
-    <option value='Trebaseleghe'>Trebaseleghe</option>
+    <option selected='<?php if($user->paese == 'Camposampiero')echo"selected"; ?>'value='Camposampiero'>Camposampiero</option>
+    <option selected='<?php if($user->paese == 'Campodarsego')echo"selected"; ?>'value='Campodarsego'>Campodarsego</option>
+    <option selected='<?php if($user->paese == 'Loreggia')echo"selected"; ?>'value='Loreggia'>Loreggia</option>
+    <option selected='<?php if($user->paese == 'Massanzago')echo"selected"; ?>' value='Massanzago'>Massanzago</option>
+    <option selected='<?php if($user->paese == 'Trebaseleghe')echo"selected"; ?>'value='Trebaseleghe'>Trebaseleghe</option>
     </select>
     <span class="underline"></span>
   </div>

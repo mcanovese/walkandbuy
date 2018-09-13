@@ -106,7 +106,7 @@
 <h1 class="title">Modifica Articolo</h1>
 
   <form action="updateItem" enctype="multipart/form-data" method="post">
-  <input type="hidden" id="itemID" name="itemID" value="<?php echo $_GET['cod']; ?>" ?>
+  <input type="hidden" id="itemID" name="itemID" value="<?php echo $_GET['cod']; ?>">
   <div id="body">
     <div class="loginbox">
     <div class="loginbox-field">

@@ -38,7 +38,7 @@ public function __construct(
     $this->prezzoPieno = $prezzoPieno;
     $this->unitaMisura = $unitaMisura;
     $this->foto = $foto;
-    $this->percentualeSconto = $quantita;
+    $this->percentualeSconto = $percentualeSconto;
     $this->categoria = $categoria;
     $this->venditore = $venditore;
     $this->quantita = $quantita;

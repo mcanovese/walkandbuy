@@ -306,7 +306,50 @@ if($update) header("Location: home");
 
 }
 
+public function updateUser(){
+$this->SessionController->isAuthenticated();
+//acquisizione dati da POST
+$userID = $_SESSION['user']->idutente;
+$email = Request::getPOST('email');
+$cognome = Request::getPOST('cognome');
+$nome = Request::getPOST('nome');
+$codiceFiscale = Request::getPOST('cf');
+$password = Request::getPOST('password');
+$verificaPassword = Request::getPOST('verificaPassword');
+$telefono = Request::getPOST('telefono');
+$via = Request::getPOST('via');
+$paese = Request::getPOST('paese');
 
+try{
+$result = $this->UsersController->updateUser(
+  [
+    'userID' => $userID,
+    'email' => $email,
+    'cognome' => $cognome,
+    'nome' => $nome,
+    'codiceFiscale' => $codiceFiscale,
+    'password' => $password,
+    'verificaPassword' => $verificaPassword,
+    'telefono' => $telefono,
+    'via' => $via,
+    'paese' => $paese
+  ]);
+    }catch (\Exception $e) {
+        if ($e->getMessage() === 'pwdmatcherror')    { return \Core\view('adduser',[ 'messageDisplay' =>'Le password che hai inserito non sono uguali', 'routeName' => 'addUser']);}
+        }
+    
+
+  if(isset($result))
+  {return \Core\view('user',[ 'result' =>'true', 'routeName' => 'addUser']);}
+
+
+
+
+
+
+
+
+}
 
 public function registerUser(){
     $this->SessionController->isAuthenticated();

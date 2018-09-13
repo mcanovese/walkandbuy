@@ -7,11 +7,11 @@
 
 echo"Dettagli Ordine";
 echo"Elenco Articoli<br>";
+if(isset($linecomplete)){
 foreach($linecomplete as $line){
 echo $line['item']->idProdotto.'</br>';
 echo $line['item']->nome.'</br>';
-
-
+}
 }
 
 
@@ -24,7 +24,7 @@ echo $line['item']->nome.'</br>';
 <?php else : ?>
 <h1>Elenco Ordini Utente</h1>
 <?php
-
+if(isset($linecomplete)){
 foreach($order as $ordine){
 echo"<div>";
 echo "ID :".$ordine->idordine."<br/>";
@@ -36,10 +36,7 @@ echo "Metodo Spedizione :".$ordine->metodospedizione."<br/>";
 echo "<a href='order?req=show&orderid=".$ordine->idordine."'>Dettagli Ordine</a>";
 echo"</div>";
 
-
-
-
-}
+}} else echo"<h1 class ='title'>Nessun ordine ancora effettuato</h1>";
 
 
 ?>
