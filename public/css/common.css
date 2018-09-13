@@ -346,14 +346,7 @@ dd {
 
 #myLinks {
   display: none;
-}
-
-.topnav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
+  padding-top:1.7rem;
 }
 
 .topnav a.icon {
@@ -363,6 +356,18 @@ dd {
   right: 0;
   top: 0;
 }
+
+.topnav a {
+  color: white;
+  background-color: #333;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: inline-block;
+  
+}
+
+
 
 .topnav a:hover {
   background-color: #ddd;
@@ -453,11 +458,8 @@ dd {
 #MyNavRight{
   padding-right: 5%;
 }
-.navbar-right{
-  display:block;
-  width:25%;
-  padding-top:1.5rem;
-}
+
+
 
 .navbar-left-sticky{
   margin: -1rem 1rem 2rem 2rem;
@@ -806,7 +808,11 @@ dd {
   text-align: center;
 }
 
-.navbar-right {
+.navbar-right,
+.navbar-right-logged {
+  display:block;
+  width:25%;
+  padding-top:1.5rem;
   float:right;
   margin: 0;
   text-align: center;
@@ -1092,7 +1098,7 @@ input.screen-reader:focus + .input-label {
   }}
 
   @media (max-width: 890px) {
-    .navbar-right{
+    .navbar-right-logged{
       display:none;
     }
     .topnav{

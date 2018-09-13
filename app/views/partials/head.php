@@ -45,7 +45,7 @@ if(!isset($_SESSION)){
         </a>
       </div>
 
-      <div id="MyNavRight" class="navbar-right">
+      <div id="MyNavRight" class="navbar-right-logged">
         <div class="cart-container">
         <a class="go-cart" href="cart"><img alt="carrello" title="carrello" src="../../../public/img/cart.png"/></a>
         </div>
@@ -57,7 +57,6 @@ if(!isset($_SESSION)){
         </div>
       </div>
     <div class="topnav">
-      <a class="active"></a> 
       <div id="myLinks">
           <a href="cart">Carrello</a>
           <a href="user">Profilo</a>
