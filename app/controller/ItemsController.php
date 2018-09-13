@@ -137,7 +137,7 @@ public function catMainGroup (int $catID){
   }
 
   public function insertItem(string $itemName,string $itemDesc,string $itemPrice,string $itemUM,string $itemPhoto,int $itemDiscount,
-string $itemCat,string $itemStock,string $itemStatus): bool {
+string $itemCat,string $itemStock): bool {
 
 
 
@@ -153,7 +153,6 @@ string $itemCat,string $itemStock,string $itemStatus): bool {
         'percentualesconto' => $itemDiscount,
         'categoria' => $itemCat,
         'giacenza' => $itemStock,
-        'abilitato' => $itemStatus,
         'venditore' => 1
 
       ]);
@@ -162,15 +161,64 @@ string $itemCat,string $itemStock,string $itemStatus): bool {
     }
   }
 
-  public function itemUpdate(){
+  public function setUpdateItem($itemID,$itemName,$itemDesc,$itemPrice,$itemUM,$itemPhoto,$itemDiscount,$itemCat,$itemStock,$itemQuantity){
 
-    Request::getPOST('itemName');
+    if(isset($itemPhoto)){
+    $changes = 'nome = :itemName,
+                descrizione = :itemDesc,
+                prezzopieno = :itemPrice,
+                unitamisura = :itemUM,
+                foto = :itemPhoto,
+                percentualesconto = :itemDiscount,
+                categoria = :itemCat,
+                giacenza = :itemStock,
+                quantita = :itemQuantity';
+    $where = 'idprodotto = :idprodotto';
 
 
+    $updateordine = $this->database->update('articoli', $changes, $where, [
+      ':idprodotto' =>$itemID,
+      ':itemName' => $itemName,
+      ':itemDesc' => $itemDesc,
+      ':itemPrice' => $itemPrice,
+      ':itemUM' =>$itemUM,
+      ':itemPhoto' => $itemPhoto,
+      ':itemDiscount' => $itemDiscount,
+      ':itemCat' => $itemCat,
+      ':itemStock' => $itemStock,
+      ':itemQuantity' => $itemQuantity,
+    ]);
+}
+else {
+    $changes = 'nome = :itemName,
+            descrizione = :itemDesc,
+            prezzopieno = :itemPrice,
+            unitamisura = :itemUM,
+
+            percentualesconto = :itemDiscount,
+            categoria = :itemCat,
+            giacenza = :itemStock,
+            quantita = :itemQuantity';
+$where = 'idprodotto = :idprodotto';
+
+
+$updateordine = $this->database->update('articoli', $changes, $where, [
+  ':idprodotto' =>$itemID,
+  ':itemName' => $itemName,
+  ':itemDesc' => $itemDesc,
+  ':itemPrice' => $itemPrice,
+  ':itemUM' =>$itemUM,
+  ':itemDiscount' => $itemDiscount,
+  ':itemCat' => $itemCat,
+  ':itemStock' => $itemStock,
+  ':itemQuantity' => $itemQuantity,
+]);
+}
 
 
 
   }
+
 
 
 
@@ -281,7 +329,8 @@ string $itemCat,string $itemStock,string $itemStatus): bool {
 
         //ricavo totale ordine sommando tutte le righe dell'ordine
         $totale =$this->database->selectSUM($table,$column,$param,$column1);
-        $changes = 'totaleordine = :totaleordine';
+        $changes = 'totaleordine = :totaleordine,
+                    ';
         $where = 'idordine = :idordine';
         $total = (int)($totale[0]->totale);
 
