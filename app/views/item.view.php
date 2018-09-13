@@ -198,9 +198,7 @@
 <?php else : ?>
 <div id=body>
 
-<div class="breadcrumb">
-Breadcrumb?
-</div>
+
 <div class="split">
 <div class="split col-img">
 <div class="prod-img">
