@@ -3,7 +3,7 @@
 
 <?php if(isset($action) && $action == "newItem") :?> <!-- inserimento nuovo articolo -->
 
-<h1>Inserimento Nuovo Articolo</h1>
+<h1 class="title">Inserimento Nuovo Articolo</h1>
 <p>Completa il form per effettuare l'inserimento di un articolo nel tuo inventario</p>
 
 <form action="insertItem" enctype="multipart/form-data" method="post">
@@ -103,7 +103,7 @@
 
 <?php elseif (isset($action) && $action == "edit") : ?>
 
-<h1>Modifica Articolo</h1>
+<h1 class="title">Modifica Articolo</h1>
 
   <form action="updateItem" enctype="multipart/form-data" method="post">
   <input type="hidden" id="itemID" name="itemID" value="<?php echo $_GET['cod']; ?>" ?>

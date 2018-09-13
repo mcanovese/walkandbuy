@@ -1,7 +1,7 @@
 <div id="container">
 <?php require('partials/head.php');?>
 <div id="body">
-<h1>Chi Siamo</h1>
+<h1 class="title">Chi Siamo</h1>
 
 <p>
 Walk&Buy è un portale dedicato ai negozzi di vicinato del tuo comune e di quelli limitrofi, si pone l'obiettivo

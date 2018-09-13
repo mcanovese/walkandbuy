@@ -1,7 +1,7 @@
 <div id="container">
 <?php require('partials/head.php');?>
 <div id="body">
-<h1>Area Amministrazione</h1>
+<h1 class="title">Area Amministrazione</h1>
 
 <p>Assegna/Rimuovi Ruolo Azienda</p>
 <p>Selezionare il codice fiscale / P.IVA di cui variariare la posizione</p>
