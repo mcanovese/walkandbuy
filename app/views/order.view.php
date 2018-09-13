@@ -24,7 +24,8 @@ echo $line['item']->nome.'</br>';
 <?php else : ?>
 <h1>Elenco Ordini Utente</h1>
 <?php
-if(isset($linecomplete)){
+
+if(isset($order)){
 foreach($order as $ordine){
 echo"<div>";
 echo "ID :".$ordine->idordine."<br/>";

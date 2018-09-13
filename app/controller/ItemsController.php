@@ -336,7 +336,9 @@ return true;
       }
 
       public function getAllOrder(){
+
         $userID = $_SESSION['user']->idutente;
+
         $table = 'ordini';
         $where='ordini.idutente = :idutente';
         $parameters[':idutente'] = $userID;
@@ -346,6 +348,7 @@ return true;
           $where,
           $parameters
         );
+        
         if(isset($result[0])){
         return $result;
       }}
