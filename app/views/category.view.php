@@ -7,6 +7,7 @@
 <?php
 
 foreach($data as $id => $category) {
+    echo "<div class='content'>";
     echo '<div class="go-subcat-container">';
     echo "<div class='subcat-name'>";
     //location.href='singcat?id='.$category['catID'].''
@@ -55,10 +56,14 @@ foreach($data as $id => $category) {
         echo "</div>";
         echo "</a>";
         echo "</div>";
-    }else{}
+        
+    }else{ }
        }
        echo "</div>";
+       echo "</div>";
+    
     }
+    
  ?>
 </div>
 </div>

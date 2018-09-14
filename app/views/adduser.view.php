@@ -3,7 +3,7 @@
 <div id="body">
 
 <h1 class="title">Registrazione Utente</h1>
-<p class ="title"> Procedi alla creazione del tuo account, l'indirizzo richiesto &egrave quello relativo alla consegna
+<p class ="text"> Procedi alla creazione del tuo account, l'indirizzo richiesto &egrave quello relativo alla consegna
   degli ordini, che pu&ograve avvenire solo nei comuni del nostro consorzio </p>
 <?php
 if(isset($result)) echo"<h2>>Registrazione Effettuata</h2> <a href='signin'>Vai al login</a>";

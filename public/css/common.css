@@ -98,6 +98,11 @@ body{
   color:red;
 }
 
+.text{
+  padding:1rem 1rem 1rem 1rem;
+  text-align:center;
+}
+
 a {
   color: orange;
   text-decoration: none;
