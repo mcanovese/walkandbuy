@@ -46,7 +46,7 @@ Hanno inoltre a disposizione una pagina in cui possono visualizzare i singoli or
 L’Associazione, attraverso un account amministrativo ha potere di modificare qualsiasi articolo e di assegnare o revocare il ruolo di “azienda” ad un singolo utente. 
 \newpage
 \section{Descrizione dell'interfaccia}
-\subsection{Parte - Utente non autenticato}
+\subsection{Utente non autenticato}
 Nella parte pubblica, ovvero raggiungibili senza effettuare login, abbiamo le seguenti pagine:
 \begin{itemize}
 	\item \underline{Homepage} -> raggiungibile cliccando sul logo o comunque al primo accesso al sito.\\ Presenta in breve il servizio offerto e rende disponibili alcuni immagini promozionali.
@@ -60,7 +60,7 @@ Nella parte pubblica, ovvero raggiungibili senza effettuare login, abbiamo le se
 	Permette di iscriversi dopo aver compilato un apposito form.
 \end{itemize}
 \textit{Login} e \textit{Registrazione} sono raggiungibili solo da utenti non autenticati (per ovvie ragioni).
-\subsection{Parte - Utente autenticato - Standard}
+\subsection{Utente autenticato - Standard}
 Dopo aver effettuato l'autenticazione, se si è utenti \textit{normali}, si potranno raggiungere le seguenti pagine:
 
 \begin{itemize}
@@ -72,7 +72,7 @@ Dopo aver effettuato l'autenticazione, se si è utenti \textit{normali}, si potr
 	Presenta maggiori dettagli del prodotto, con una schermata divisa da una grande foto sulla sinistra, e sulla destra le informazioni e la possibilità di aggiunta al carrello.
 \end{itemize}
 
-\subsection{Parte - Utente autenticato - Azienda}
+\subsection{Utente autenticato - Azienda}
 Un utente segnato come \textbf{Azienda} può, oltre che avere tutte le funzionalità dell'utente standard, inserire nuovi articoli e modificare i propri.\\ 
 \textbf{NOTA:}La differenza tra azienda e utente standard è designabile solo dall'amministratore.
 Le pagine in più sono quindi:
@@ -82,7 +82,7 @@ Le pagine in più sono quindi:
 	Da questa pagina è possibile visualizzare un form in cui è possibile modificare i campi di quel dato prodotto.
 \end{itemize}
 
-\subsection{Parte - Utente autenticato - Amministratore}
+\subsection{Utente autenticato - Amministratore}
 L'amministratore ha pieni poteri, in particolare tramite la pagina:
 \begin{itemize}
 	\item "\underline{Admin}" -> Ha la possibilità di modificare la tipologia degli account registrati al sito da "Azienda -> utente standard" o viceversa.
@@ -106,7 +106,8 @@ Il design si è basato su accessibilità e responsività, per la prima sono stat
 Il sito è stato sviluppato tenendo in considerazione le diverse dimensioni di dispositivo utilizzabile, risulta infatti perfettamente fruibile anche con schermi più piccoli, testato fino a 400px senza avere effetti disastrosi.
 
 \subsection{Verifica}
-Le verifiche e i test sono stati effettuati sui principali browser, quali \textit{Internet Explorer v10-11}, \textit{Microsoft Edge v16-v17},  \textit{Google Chrome v68}
+Le verifiche e i test sono stati effettuati sui principali browser, quali \textit{Internet Explorer v10-11}, \textit{Microsoft Edge v16-v17},  \textit{Google Chrome v68},
+\textit{Mozilla Firefox} e \textit{Safari}, non è stato riscontrato nessun problema di navigazione e/o visualizzazione.
 \section{Progettazione tecnica}
 La progettazione tecnica suddivide il sito in parte front-end e back-end.
 \subsection{Front-end}
@@ -174,7 +175,6 @@ Il progetto è sviluppato secondo il pattern MVC (Model-View-Controller) le cui 
 \end{itemize}
 Per testare l'accessibilità sono stati effettuati test con \textit{Total Validator}, in particolare è stato utilizzato per testare la correttezza e l'accessibilità dei form secondo lo standard WCAG2-A.
 
-\section{Adattabilità ed usabilità del sito}
 
 
 \section{Suddivisone del lavoro}
