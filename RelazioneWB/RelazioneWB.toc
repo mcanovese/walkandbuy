@@ -7,8 +7,8 @@
 \contentsline {subsection}{\numberline {2.1}Analisi dei requisiti}{2}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Realizzazione ed implementazione delle funzionalit\IeC {\`a}}{2}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Fase di test}{2}{subsection.2.3}
-\contentsline {section}{\numberline {3}Struttura del progetto}{2}{section.3}
-\contentsline {section}{\numberline {4}Database}{2}{section.4}
-\contentsline {section}{\numberline {5}Struttura sito}{2}{section.5}
-\contentsline {section}{\numberline {6}Adattabilit\IeC {\`a} ed usabilit\IeC {\`a} del sito}{2}{section.6}
-\contentsline {section}{\numberline {7}Compatibilit\IeC {\`a} browser}{2}{section.7}
+\contentsline {section}{\numberline {3}Struttura del progetto}{3}{section.3}
+\contentsline {section}{\numberline {4}Database}{3}{section.4}
+\contentsline {section}{\numberline {5}Struttura sito}{3}{section.5}
+\contentsline {section}{\numberline {6}Adattabilit\IeC {\`a} ed usabilit\IeC {\`a} del sito}{3}{section.6}
+\contentsline {section}{\numberline {7}Compatibilit\IeC {\`a} browser}{3}{section.7}
