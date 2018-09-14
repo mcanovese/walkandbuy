@@ -23,8 +23,11 @@ foreach($data as $id => $category) {
     echo '</div>';
     echo '</div>';
   echo '<div class="category-container">';
+  $n=0;
     foreach($category['items'] as $articolo)
-    {
+    {   if ($n<4){
+        $n=$n+1;
+        
         $prezzoPieno=$articolo->prezzoPieno;
         echo "<div class='category-item'>";
         echo "<div class='little-img-container'>";
@@ -52,7 +55,7 @@ foreach($data as $id => $category) {
         echo "</div>";
         echo "</a>";
         echo "</div>";
-
+    }else{}
        }
        echo "</div>";
     }

@@ -30,13 +30,13 @@
       <div class="category-name">Conserve e Uova
       </div>
 </a>
-    </div>
+</div>
     <div class="category">
     <a class="sub-head-link" href="./category?id=5">
       <div class="category-img"><img class="category-img" src="./../../../public/img/vino.png"/>
       </div>
       <div class="category-name">Vino e Bevande
       </div>
-    </div>
-    </a>
+</a>
+</div>
   </div>

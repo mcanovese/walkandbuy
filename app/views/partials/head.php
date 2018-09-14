@@ -101,7 +101,7 @@ window.onscroll = function() {scroll()};
   <div class="header" id="myHeader">
     <div class="navbar">
       <div id="MyNavLeft" class="navbar-left">
-        <a class="navbar-link" href="./" title="Ritorna alla pagina principale">
+        <a tabindex=1 class="navbar-link" href="./" title="Ritorna alla pagina principale">
           <img lang="en" class="logo-img" id="myImg" src="./../../../public/img/logo6.png" alt="Logo Walk & Buy, rimanda alla home" />
           <img lang="en" class="logo-img hidden" id="myImgLittle" src="./../../../public/img/logoNoScritta.png" alt="Logo Walk & Buy, rimanda alla home" />
         </a>
@@ -109,10 +109,10 @@ window.onscroll = function() {scroll()};
       <div id="MyNavRight">
       <ul  class="list navbar-right log-link-container" >
         <li class="log-item">
-        <a id="login" class="navbar-link log-link " href="./signin">Accedi</a>
+        <a tabindex=2 id="login" class="navbar-link log-link " href="./signin">Accedi</a>
         </li>
         <li id="signin" class="log-item">
-        <a class="navbar-link log-link " href="./add-user">Iscriviti</a>
+        <a tabindex=3 class="navbar-link log-link " href="./add-user">Iscriviti</a>
         </li>
       </ul>
 
