@@ -11,7 +11,7 @@ require_once 'app/models/User.php';
 
 class SessionController {
   /**
-   * QueryBuilder instance
+   * 
    *
    * @var \Core\Database\QueryBuilder
    */

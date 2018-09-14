@@ -221,9 +221,9 @@ return true;
     $cart = $_SESSION['cart'];
       $this->database->insert('ordini', [
       'dataordine' => date("y-m-d"),
-      'statoordine' => 'creato',
-      'metodopagamento' => 'carta',
-      'metodospedizione' => 'consegna',
+      'statoordine' => 'Confermato',
+      'metodopagamento' => 'Alla Consegna',
+      'metodospedizione' => 'Corriere Consorzio',
       'idutente' => $uID
     ]);
 
@@ -273,7 +273,7 @@ return true;
 
         //ricavo totale ordine sommando tutte le righe dell'ordine
         $totale =$this->database->selectSUM($table,$column,$param,$column1);
-        var_dump($totale);
+
         $changes = 'totaleordine = :totaleordine';
         $where = 'idordine = :idordine';
         $total = (double)($totale[0]->totale);

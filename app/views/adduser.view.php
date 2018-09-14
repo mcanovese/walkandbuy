@@ -16,52 +16,52 @@ if(isset($messageDisplay)) echo $messageDisplay;?>
 <div class="loginbox">
 <div class="loginbox-field">
   <label class="input-label" for="email">Email</label>
-  <input class="input" id="email"  type="text" name="email" required />
+  <input class="input" id="email"  type="text" name="email" required='required' />
   <span class="underline"></span>
 </div>
 <div class="loginbox-field">
   <label class="input-label" for="cognome">Cognome</label>
-  <input class="input" id="cognome"  type="text" name="cognome" required />
+  <input class="input" id="cognome"  type="text" name="cognome" required='required' />
   <span class="underline"></span>
 </div>
 <div class="loginbox-field">
   <label class="input-label" for="nome">Nome</label>
-  <input class="input" id="nome"  type="text" name="nome" required />
+  <input class="input" id="nome"  type="text" name="nome" required='required' />
   <span class="underline"></span>
 </div>
 <div class="loginbox-field">
   <label class="input-label" for="codicefiscale">Codice Fiscale</label>
-  <input class="input" id="codicefiscale"  type="text" name="cf" required />
+  <input class="input" id="codicefiscale"  type="text" name="cf" required='required' />
   <span class="underline"></span>
 </div>
 
 <div class="loginbox-field">
   <label class="input-label" for="password">Password</label>
-  <input class="input" id="password"  type="password" name="password" required />
+  <input class="input" id="password"  type="password" name="password" required='required' />
   <span class="underline"></span>
 </div>
 
 <div class="loginbox-field">
   <label class="input-label" for="verificapassword">Verifica Password</label>
-  <input class="input" id="verificapassword"  type="password" name="verificaPassword" required />
+  <input class="input" id="verificapassword"  type="password" name="verificaPassword" required='required' />
   <span class="underline"></span>
 </div>
 
 <div class="loginbox-field">
   <label class="input-label" for="telefono">Telefono</label>
-  <input class="input" id="telefono"  type="text" name="telefono" required />
+  <input class="input" id="telefono"  type="text" name="telefono" required='required' />
   <span class="underline"></span>
 </div>
 
 <div class="loginbox-field">
   <label class="input-label" for="telefono">Via </label>
-  <input class="input" id="via"  type="text" name="via" required />
+  <input class="input" id="via"  type="text" name="via" required='required' />
   <span class="underline"></span>
 </div>
 
 <div class="loginbox-field">
   <label class="input-label" for="nome">Paese</label>
-  <select class="input" id="paese"  type="select" name="paese" required />
+  <select class="input" id="paese"  name="paese" required='required' />
   <option value='Camposampiero'>Camposampiero</option>
   <option value='Campodarsego'>Campodarsego</option>
   <option value='Loreggia'>Loreggia</option>
