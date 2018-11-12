@@ -1,0 +1,266 @@
+\input{StyleLatex/global.tex}
+\input{StyleLatex/layout.tex}
+\input{res/local}
+
+\title{\textbf{Relazione progetto TecWeb}}
+\author{WalkAndBuy}
+
+\date{11 Settembre 2018}
+
+\begin{document}
+
+%\maketitle
+
+\makeFrontPage
+
+\tableofcontents
+
+\newpage
+
+\section{Introduzione}
+
+Lo scopo del progetto è quello di creare un e-commerce gestito dall’Associazione Agricoltori del Camposampierese, la quale a fronte dell'inarrestabile concorrenza dei grandi colossi del commercio online ha deciso di favorire un servizio dedicato agli agricoltori e commercianti del territorio.\\
+Il sito web permette infatti alle aziende del territorio, previo accordo con l’Associazione, di promuovere e vendere i propri prodotti online. \\
+Il servizio offerto è limitati ai cittadini residenti nei comuni ove l’Associazione ha dei soci attivi. 
+I prodotti vendibili devono essere afferenti ad una delle macro categorie previste, ovvero:
+\begin{itemize}
+	\item frutta e Verdura;
+	\item carne e Pesce;
+	\item formaggi;
+	\item conserve e Uova;
+	\item vino e Bevande.
+\end{itemize}
+Ogni articolo viene presentato mediante:
+\begin{itemize}
+	\item titolo;
+	\item sintetica descrizione;
+	\item un’immagine rappresentativa;
+	\item la quantità venduta;
+	\item il prezzo di rivendita al netto di eventuali sconti promozionali applicati.
+\end{itemize}
+I commercianti abilitati possono modificare gli articoli da essi pubblicati.\\
+
+Gli utenti una volta autenticati possono consultare il catalogo online, aggiungere e rimuovere articoli dal carrello e una volta selezionati tutti gli articoli di loro interesse, concludere l’ordine. \\
+Hanno inoltre a disposizione una pagina in cui possono visualizzare i singoli ordini effettuati.\\
+
+L’Associazione viene registrata tramite un account amministrativo ed ha potere di modificare qualsiasi articolo e di assegnare o revocare il ruolo di “azienda” ad un singolo utente. 
+\newpage
+\section{Descrizione dei tipi di utente}
+In questa sezione verranno analizzate le diverse tipologie di utenti che possono usufruire del sito, cosi da avere un chiaro target su cui costruire le varie pagine del sito.
+\subsection{Utente non autenticato}
+	Si tratta dell'utente che non è iscritto al sito, può essere di passaggio o comunque supponiamo questo tipo di utente non abbia alcuna relazione con il nostro sito, il nostro obiettivo quindi è fare in modo che l'utente resti positivamente colpito dal sito e venga invogliato ad iscriversi.\\
+	Per ottenerlo abbiamo deciso di minimizzare il livello di profondità del sito, rendendo sempre chiaro all'utente dove si trova tramite titoli chiari e ben visibili e un menù di categoria sempre presente.\\
+	Gli utenti non autenticati hanno la possibilità di visionare tutti i prodotti, tuttavia viene richiesta la registrazione se si vuole procedere con l'acquisto.
+
+\subsection{Utente autenticato - Standard}
+	Con utente autenticato si intende un utente che ha deciso di effettuare la registrazione presso il nostro sito, esistono due tipologie di utenti autenticati, Standard e Azienda, questa differenza è designabile solamente dall'amministratore. \\
+	L'utente standard è un utente normale, senza particolari privilegi o esigenze, il suo obiettivo è accedere al sito e acquistare i prodotti presenti in vetrina. Per raggiungere il suo scopo, oltre alla possibilità di visionare i diversi prodotti gli è possibile aggiungerli al carrello, visionare quest'ultimo con possibilità di modifica delle quantità.\\
+	E' presente inoltre una pagina di riepilogo degli acquisti, in cui l'utente può visualizzare lo storico degli acquisti effettuati!\\\\
+	Ovviamente, essendosi registrato, l'utente ha accesso alla propria pagina profilo, in cui può aggiornare o aggiungere dati relativi alla propria persona.
+
+\subsection{Utente autenticato - Azienda}
+Un utente segnato come \textbf{Azienda} può, oltre che avere tutte le funzionalità dell'utente standard, inserire nuovi articoli e modificare i propri.\\ 	
+L'interfaccia quindi sarà uguale a quella degli altri due utenti, a differenza dell'header in cui ci sarà un link che permetterà all'utente di arrivare al form di inserimento di un nuovo articolo.\\
+Oltre a questo, nella pagina di dettaglio di un articolo, nel caso in cui questo sia stato inserito dall'azienda loggata, quest'ultima, tramite l'apposito bottone, ha la possibilità di accedere al form di modifica di quel determinato articolo.
+	
+\subsection{Utente autenticato - Amministratore}
+L'amministratore è un utente speciale, rappresenta il consorzio, di conseguenza ha pieni poteri.\\
+In particolare, tramite un link inserito nella pagina del profilo, ha la possibilità di accedere al pannello amministrativo in cui ha la possibilità di modificare la tipologia di un utente registrato, da \textit{Azienda} a \textit{Standard} o viceversa
+
+\newpage
+
+\section{Analisi delle pagine}
+In questa sezione verranno analizzate tutte le pagine del sito con le diverse azioni che possono essere effettuate e i privilegi in base alla tipologia di utente che vi accede.\\
+Verranno esposte in base alle tipologie di account che vi accedono, dall'utente non autenticato fino all'amministratore.
+\subsection{Pagine accessibili da tutti}
+	\subsubsection{Header}
+		Menzione particolare va fatta all'header, presente in ogni singola pagina per rendere la navigazione chiara e semplice, essendo comune a tutte le pagine verrà esposta all'inizio.
+		nella parte più alta dell'header sono presenti due link che riportano alle omonime pagine informative:
+		\begin{itemize}
+			\item \textit{Chi siamo};
+			\item \textit{Come funziona}.
+		\end{itemize}
+	
+		Nella parte centrale troviamo :
+		\begin{itemize}
+			\item logo del sito, posto in alto a sinistra, che, nel caso di click, riporta alla \textit{Homepage};
+			\item (da utente non autenticato) link per accedere alle pagine di \textit{Login} e \textit{Registrazione}, posti in alto a destra;
+			\item (da utente autenticato, di qualsiasi tipo) pagina di carrello, profilo, ordini. Queste si possono trovare in alto a destra, identificabili tramite apposite icone.
+		\end{itemize} 
+		
+		Nella parte bassa invece, abbiamo un menù fisso orizzontale, che riporta le macro-categorie visitabili.
+		\begin{itemize}
+			\item \textit{Frutta e Verdura};
+			\item \textit{Carne e Pesce};
+			\item \textit{Formaggi};
+			\item \textit{Conserve e Uova};
+			\item \textit{Vino e Bevande}.
+		\end{itemize}
+	
+	\subsubsection{Footer}
+	Il footer, come l'header, è presente in tutte le pagine.\\
+	Riporta solamente dati anagrafici del consorzio proprietario del sito e sulla destra un comodo link \textbf{Torna su} per ritornare in testa alla pagina in modo immediato.
+	\subsubsection{Homepage}
+	Landing page del sito, è raggiungibile da qualsiasi punto del sito cliccando sul logo in alto a sinistra.\\
+	Presenta in breve il servizio offerto e rende disponibili alcune immagini promozionali.\\
+	\subsubsection{Homepage}
+	\subsubsection{Homepage}
+	\subsubsection{Homepage}
+	
+\subsection{}
+\subsection{}
+\subsection{}
+Nella parte pubblica, ovvero raggiungibili senza effettuare login, abbiamo le seguenti pagine:
+\begin{itemize}
+	\item \underline{Homepage} -> raggiungibile cliccando sul logo o comunque al primo accesso al sito.\\ Presenta in breve il servizio offerto e rende disponibili alcuni immagini promozionali.
+	\item Pagina \underline{"Macro-categoria"} -> si visualizza dopo aver cliccato su una delle voci del sotto-menù ove ogni categoria è rappresentata da un’icona e un nome identificativi.\\ La pagina si presenta a sua volta divisa in sottosezioni dedicate ad ogni sotto-categoria.\\
+	Da qui è possibile aggiungere al carrello un determinato prodotto oppure, cliccando sull'immagine passare alla pagina \textit{singolo prodotto}\\ \textbf{NOTA:}Queste ultime due funzionalità sono disponibili solo da utenti autenticati.
+	\item Pagina \underline{"Sotto-categoria"} -> si visualizza cliccando sul pulsante “\textit{scoprili tutti}” nella pagina dedicata alla macro-categoria.\\L’interfaccia rende disponibili tutti gli articoli di una determinata categoria, allo stesso modo della precedente pagina.
+	\item "\underline{Chi siamo}"  e "\underline{Come funziona}"-> sono semplici pagine di carattere informativo, raggiungibili dal menù superiore.
+	\item Pagina di \underline{Login} -> Raggiungibile tramite il pulsante "\textit{Accedi}" in alto a destra.\\
+	Permette di inserire le proprie credenziali per autenticarsi al sito.
+	\item Pagina di \underline{Iscrizione} -> Raggiungibile tramite il pulsante "\textit{Iscriviti}" in alto a destra oppure direttamente dalla pagina di "\textit{login}".\\
+	Permette di iscriversi dopo aver compilato un apposito form.
+\end{itemize}
+\textit{Login} e \textit{Registrazione} sono raggiungibili solo da utenti non autenticati (per ovvie ragioni).
+
+
+\begin{itemize}
+	\item Pagina "\underline{Carrello}" -> vi si accede cliccando sull’apposita icona posta nella parte destra dell'header da qualsiasi punto del sito, presenta la sagoma di un carrello.\\
+	permette di visualizzare tutti gli articoli con .
+	\item Pagina "\underline{Profilo}" ->  vi si accede cliccando sull’apposita icona posta nella parte destra dell'header da qualsiasi punto del sito, presenta la sagoma di un omino stilizzato.\\ Permette di visualizzare e, in caso di necessità, modificare i dettagli dell’utente autenticato.
+	\item Pagina "\underline{Ordini}" ->  vi si accede cliccando sull’apposita icona posta nella parte destra dell'header da qualsiasi punto del sito, presenta la sagoma di un piccolo blocco note.\\ Permette di visualizzare gli ordini effettuati (in caso di necessità è possibile raggiungere un successivo livello di profondità visualizzando i dettagli dell'ordine scelto).
+	\item Pagina "\underline{Singolo prodotto}" -> si raggiunge cliccando l'immagine del prodotto nelle pagine di \textit{Categoria} e \textit{sotto-categoria}, oppure dal nome dell'articolo nel \textit{carrello} o nel \textit{dettaglio ordine}.\\
+	Presenta maggiori dettagli del prodotto, con una schermata divisa da una grande foto sulla sinistra, e sulla destra le informazioni e la possibilità di aggiunta al carrello.
+\end{itemize}
+
+
+\textbf{NOTA:}La differenza tra azienda e utente standard è designabile solo dall'amministratore.
+Le pagine in più sono quindi:
+\begin{itemize}
+	\item Pagina "\underline{Inserisci Articolo}" -> Accessibile dalla parte più alta dell'header.\\ Presenta l'apposito form da cui possibile inserire i dettagli per inserire un articolo.
+	\item Pagina "\underline{Modifica Articolo}" -> Se si possiedono articoli nel DB, accedendo alla loro pagina di \textit{singolo articolo} è possibile raggiungere l'area di modifica tramite l'apposito link vicino all'immagine.\\
+	Da questa pagina è possibile visualizzare un form in cui è possibile modificare i campi di quel dato prodotto.
+\end{itemize}
+
+
+\begin{itemize}
+	\item "\underline{Admin}" -> Ha la possibilità di modificare la tipologia degli account registrati al sito da "Azienda -> utente standard" o viceversa.
+\end{itemize}
+
+\section{Design}
+	Abbiamo adottato uno stile moderno e semplice. Abbiamo preso spunto da vari siti e-commerce di ortaggi, sfruttando principalmente colori quali il verde, l'arancione, color lavagna per header e footer e il grigio per mantenere un tocco di eleganza.\\ Abbiamo cercato di mantenere un buon livello di contrasto per permettere la navigazione anche ad utenti con particolari problemi di vista.
+
+\subsection{Accessibilità}
+Il design si è basato su accessibilità e responsività, per la prima sono state adottate le seguenti scelte:
+\begin{itemize}
+	\item Il layout è responsive, cosi da essere accessibile da qualsiasi tipo di dispositivo e impedendo scroll orizzontali.
+	\item Il menù è presente in tutte le pagine, in caso di scroll della pagina (e JS attivato) resta fisso nella parte alta, lasciando però solo logo e pulsanti di interesse, cosi da non essere troppo opprimente.
+	\item I link sono chiaramente visibili e il loro scopo è chiaro e non permette ambiguità.
+	\item La profondità del sito è stata limitata, cosi da permettere all'utente di avere ben chiara la struttura già dal primo utilizzo, questo permette una navigazione più immediata e una sensazione di maggior sicurezza.
+	\item Si sono scelti due tipologie di font, uno per titoli e prezzi, accattivante, per attirare l'attenzione su questi due punti, il secondo, più chiaro e con meno grazie, per la descrizione ed altri campi, cosi facendo si affatica meno la lettura e si rende il tutto più fruibile.
+	\item Nel footer è stato posto un link "Torna su" per tornare facilmente all'header completo. In caso di JS attivo, questo link segue l'utente in ogni punto dello scroll. 
+\end{itemize}
+\subsection{Responsive}
+
+Il sito è stato sviluppato tenendo in considerazione le diverse dimensioni di dispositivo utilizzabile, risulta infatti perfettamente fruibile anche con schermi più piccoli, testato fino a 400px senza avere effetti disastrosi.
+
+\subsection{Verifica}
+Le verifiche e i test sono stati effettuati sui principali browser, quali \textit{Internet Explorer v10-11}, \textit{Microsoft Edge v16-v17},  \textit{Google Chrome v68},
+\textit{Mozilla Firefox} e \textit{Safari}, non è stato riscontrato nessun problema di navigazione e/o visualizzazione.
+\section{Progettazione tecnica}
+La progettazione tecnica suddivide il sito in parte front-end e back-end.
+\subsection{Front-end}
+
+La parte front-end si occupa nello specifico nella visualizzazione delle varie parti del sito.\\
+Le tecnologie utilizzate sono HTML, CSS e Javascript.\\
+Il codice è stato scritto interamente dal team.
+
+\subsubsection{HTML}
+
+Lo standard utilizzato per HTML è HTML5 in quanto quest’ultimo è supportato da tutti i recenti browser sia utilizzati su client desktop che mobile. 
+Nel corso dello sviluppo però si è constatato che l’impiego effettivo delle funzioni aggiuntive di HTML5 rispetto a versioni precedenti è stato limitato alla validazione dei form.
+
+\subsubsection{CSS}
+Lo standard utilizzato per il CSS è CSS3, sempre cercando di utilizzare attributi supportati dalla maggioranza dei browser.\\
+Gli aspetti più rilevanti del CSS sono:
+\begin{itemize}
+	\item Utilizzo di misure relative, in particolare \textbf{rem} per rendere il contenuto della pagina variabile, ed essendo relativo al documento html permette di tenere conto anche delle preferenze utente legate al browser.
+	\item I file .CSS sono stati diversificati in base alla pagina e prendono il nome di \textit{pagina} .CSS, e vengono importati solamente all'apertura di quest'ultima, cosi da evitare complessità e pesantezza in un unico file.\\Class e ID comuni sono stati salvati nel file \textit{Common.CSS}.
+\end{itemize}
+
+\subsubsection{JavaScript}
+Il linguaggio JavaScript è stato utilizzato solamente per migliorare l'esperienza utente in caso di ridimensionamento della pagina o scroll vari.\\ Il sito risulta totalmente navigabile anche senza JavaScript attivo.
+\newpage
+\subsection{BackEnd}
+Il back-end si occupa della parte server del sito, viene suddiviso in due parti: DB in MySQL e PhP.
+
+\subsubsection{Database MySQL}
+Il DB è stato progettato dal team dopo aver effettuato un'attenta analisi dei requisiti, il risultato è il seguente:
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{res/img/DB}
+	\caption{Database}
+	\label{Database Walk And Buy}
+\end{figure}
+Il database è stato opportunamente normalizzato e i campi sono correttamente identificati.
+
+\subsubsection{PhP}
+Il progetto è sviluppato secondo il pattern MVC (Model-View-Controller) le cui fondamenta sono state apprese principalmente mediante la consultazione di materiale reperibile sul web ed in particolare grazie al tutorial “The PHP Practitioner” il quale ha fortemente inspirato lo sviluppo del progetto.
+\begin{itemize}
+	\item Nella \textbf{root} del progetto è presente il file \textit{routes.php} che associa il controller a seconda della pagina richiesta dal server.
+	\item In \textbf{App} troviamo le seguenti directory:
+	\begin{itemize}
+		\item \textbf{Controller}: al cui interno sono reperibili tutti i controller sviluppati secondo il pattern MVC e si occupano dell’elaborazione dei dati prelevati dal database e li rendono disponibili alle varie view mediante HTML e CSS.
+		\item \textbf{Models}: due classi definite nel progetto, in particolare Articoli per la descrizione dei singoli articoli in vendita e Users per la definizione degli utenti.
+		\item \textbf{Views}: file che contengono principalmente codice HTML che permette la visualizzazione delle informazioni elaborate dai controller.
+	\end{itemize} 
+	\item In\textbf{Core} troviamo le classi fondamentali che permettono il funzionamento dell'applicativo secondo il pattern MVC:
+	\begin{itemize}
+		\item \textbf{App}: per la condivisione e inizializzazione di variabili condivise.
+		\item \textbf{Bootstrap}: esegue il caricamento delle classi descritte sopra e crea le variabili condivise mediante l’utilizzo di App.
+		\item \textbf{Request}: si occupa di gestire il recupero dei dati inviati al server con chiamate \textit{GET} o \textit{POST}.
+		\item \textbf{Router}: permette di effettuare il match tra ciò che viene richiesto al server e le routes disponibili, effettuando quindi il collegamento tra pagina richiesta e controller.
+		\item \textbf{Session}: si occupa della gestione della sessione.
+	\end{itemize} 
+\end{itemize}
+
+\subsubsection{Accessibilità}
+è stato tenuto conto dell'accessibilità per soddisfare la navigazione da parte di tutte le tipologie di utenti. Vengono elencate di seguito le principali attività che hanno permesso il raggiungimento di un livello soddisfacente di accessibilità:
+\begin{itemize}
+	\item Tutte le immagini sono provviste di attributo \textit{alt} e \textit{title} con descrizione significativa.
+	\item è stato utilizzato l'attributo \textit{tabindex} per permettere la navigazione da tastiera.
+	\item Si è evitato l'uso di tabelle, preferendo \textit{div}  dal contenuto lineare e semplice.
+	\item sono stati utilizzati \textit{label} ed aiuti testuali per aiutare l'utente a compilare i form.
+	\item è implementata la \textit{Pagina 404} in caso di rotta non riconosciuta, per non disorientare l'utente.
+\end{itemize}
+Per testare l'accessibilità sono stati effettuati test con \textit{Total Validator}, in particolare è stato utilizzato per testare la correttezza e l'accessibilità dei form secondo lo standard WCAG2-A.
+
+
+
+\section{Suddivisone del lavoro}
+Di seguito viene riportata la suddivisione del lavoro:
+\begin{itemize}
+	\item Marco Canovese:
+	\begin{itemize}
+		\item gestione struttura delle directory;
+		\item PhP;
+		\item parte di HTML;
+		\item parte del DB MySql;
+		\item parte dei form;
+		\item testing accessibilità del sito.
+	\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+	\item Federico Zanellato:
+	\begin{itemize}
+		\item parte HTML;
+		\item CSS;
+		\item parte del DB MySql;
+		\item parte dei form;
+		\item relazione;
+		\item JavaScript.
+	\end{itemize}
+\end{itemize}
+
+\end{document}
