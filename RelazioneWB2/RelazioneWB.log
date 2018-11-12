@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.11.29)  12 NOV 2018 13:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.11.29)  12 NOV 2018 19:46
 entering extended mode
 **./RelazioneWB.tex
 (RelazioneWB.tex
@@ -1708,7 +1708,7 @@ LaTeX Info: Redefining \selectfont on input line 10.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<StyleLatex/logo_home.png, id=126, 943.525pt x 949.5475pt>
+<StyleLatex/logo_home.png, id=146, 943.525pt x 949.5475pt>
 File: StyleLatex/logo_home.png Graphic file (type png)
 <use StyleLatex/logo_home.png>
 Package pdftex.def Info: StyleLatex/logo_home.png  used on input line 14. on in
@@ -1788,41 +1788,80 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--60
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 93--95
+<res/img/login.png, id=208, 947.79094pt x 661.72218pt>
+File: res/img/login.png Graphic file (type png)
+<use res/img/login.png>
+Package pdftex.def Info: res/img/login.png  used on input line 81. on input lin
+e 81.
+Package pdftex.def Info: Requested size: 418.25368pt x 292.0068pt on input line
+ 81.
+ [4 <./res/img/login.png>]
+<res/img/registrazione.png, id=215, 961.34157pt x 654.19406pt>
+File: res/img/registrazione.png Graphic file (type png)
+<use res/img/registrazione.png>
+Package pdftex.def Info: res/img/registrazione.png  used on input line 89. on i
+nput line 89.
+Package pdftex.def Info: Requested size: 418.25368pt x 284.62202pt on input lin
+e 89.
+ [5 <./res/img/registrazione.png>]
+<res/img/HeaderNA.png, id=222, 889.07156pt x 129.48375pt>
+File: res/img/HeaderNA.png Graphic file (type png)
+<use res/img/HeaderNA.png>
+Package pdftex.def Info: res/img/HeaderNA.png  used on input line 118. on input
+ line 118.
+Package pdftex.def Info: Requested size: 418.25368pt x 60.91267pt on input line
+ 118.
+<res/img/HeaderAut.png, id=223, 766.36313pt x 130.23656pt>
+File: res/img/HeaderAut.png Graphic file (type png)
+<use res/img/HeaderAut.png>
+Package pdftex.def Info: res/img/HeaderAut.png  used on input line 123. on inpu
+t line 123.
+Package pdftex.def Info: Requested size: 418.25368pt x 71.07985pt on input line
+ 123.
+ [6 <./res/img/HeaderNA.png> <./res/img/HeaderAut.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 136--138
 
  []
 
-[4] [5] [6] [7]
-<res/img/DB.png, id=204, 505.38812pt x 285.065pt>
+<res/img/Macro-cat.png, id=232, 796.47563pt x 615.80063pt>
+File: res/img/Macro-cat.png Graphic file (type png)
+<use res/img/Macro-cat.png>
+Package pdftex.def Info: res/img/Macro-cat.png  used on input line 140. on inpu
+t line 140.
+Package pdftex.def Info: Requested size: 418.25368pt x 323.37534pt on input lin
+e 140.
+<res/img/sotto-cat.png, id=233, 964.35281pt x 660.21657pt>
+File: res/img/sotto-cat.png Graphic file (type png)
+<use res/img/sotto-cat.png>
+Package pdftex.def Info: res/img/sotto-cat.png  used on input line 152. on inpu
+t line 152.
+Package pdftex.def Info: Requested size: 418.25368pt x 286.34566pt on input lin
+e 152.
+[7 <./res/img/Macro-cat.png>] [8 <./res/img/sotto-cat.png>] [9] [10] [11]
+<res/img/DB.png, id=261, 505.38812pt x 285.065pt>
 File: res/img/DB.png Graphic file (type png)
 <use res/img/DB.png>
-Package pdftex.def Info: res/img/DB.png  used on input line 190. on input line 
-190.
+Package pdftex.def Info: res/img/DB.png  used on input line 253. on input line 
+253.
 Package pdftex.def Info: Requested size: 418.25368pt x 235.92097pt on input lin
-e 190.
- [8 <./res/img/DB.png>] 
+e 253.
+
+[12 <./res/img/DB.png>] 
 AED: lastpage setting LastPage
-[9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 255.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 255.
+[13]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 318.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 318.
  (RelazioneWB.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 255.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 255.
-
-
-Package rerunfilecheck Warning: File `RelazioneWB.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `RelazioneWB.out':
-(rerunfilecheck)             Before: F364045BC615D37B8EDE7D4472CC3EF2;1939
-(rerunfilecheck)             After:  5BCBA09A9241E57FADFBB65A0CE0E830;1937.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 318.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 318.
+Package rerunfilecheck Info: File `RelazioneWB.out' has not changed.
+(rerunfilecheck)             Checksum: 7AA8F0FFF7638261830F34F5516754D6;2342.
  ) 
 Here is how much of TeX's memory you used:
- 22657 strings out of 493312
- 409660 string characters out of 3128086
- 490393 words of memory out of 3000000
- 25671 multiletter control sequences out of 15000+200000
+ 22707 strings out of 493312
+ 411006 string characters out of 3128086
+ 490816 words of memory out of 3000000
+ 25706 multiletter control sequences out of 15000+200000
  45278 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,11n,92p,808b,453s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1833,9 +1872,9 @@ blic/lm/lmbx10.pfb><C:/Users/zanel_000/AppData/Local/Programs/MiKTeX 2.9/fonts/
 type1/public/lm/lmbx12.pfb><C:/Users/zanel_000/AppData/Local/Programs/MiKTeX 2.
 9/fonts/type1/public/lm/lmr10.pfb><C:/Users/zanel_000/AppData/Local/Programs/Mi
 KTeX 2.9/fonts/type1/public/lm/lmri10.pfb>
-Output written on RelazioneWB.pdf (10 pages, 340987 bytes).
+Output written on RelazioneWB.pdf (14 pages, 2624297 bytes).
 PDF statistics:
- 244 PDF objects out of 1000 (max. 8388607)
- 41 named destinations out of 1000 (max. 500000)
- 263 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 305 PDF objects out of 1000 (max. 8388607)
+ 56 named destinations out of 1000 (max. 500000)
+ 333 words of extra memory for PDF output out of 10000 (max. 10000000)
 

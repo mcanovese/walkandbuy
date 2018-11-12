@@ -72,6 +72,24 @@ In particolare, tramite un link inserito nella pagina del profilo, ha la possibi
 \section{Analisi delle pagine}
 In questa sezione verranno analizzate tutte le pagine del sito con le diverse azioni che possono essere effettuate e i privilegi in base alla tipologia di utente che vi accede.\\
 Verranno esposte in base alle tipologie di account che vi accedono, dall'utente non autenticato fino all'amministratore.
+\subsection{Pagine di accesso e registrazione}
+Queste due pagine sono accessibili solo da utenti non autenticati, permettono all'utente di effettuare l'accesso se si è già registrati, oppure iscriversi se non lo si è già.
+\subsubsection{Accedi}
+Semplice schermata di Login, formato da un form centrato, viene richiesta l'\textbf{e-mail} e la \textbf{Password}.\\
+tramite link è possibile passare direttamente alla pagina di registrazione.
+	\begin{figure}[H]
+	\includegraphics[width=\linewidth]{res/img/login}
+	\caption{Pagina di Login}
+	\label{Pagina di Login}
+\end{figure}
+\newpage
+\subsubsection{Iscriviti}
+La pagina di iscrizione contiene un form un po' più corposo, in cui l'utente deve inserire i propri dati al fine di creare un profilo che gli permetterà di navigare e acquistare liberamente dal sito.
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{res/img/registrazione}
+	\caption{Pagina di registrazione}
+	\label{Pagina di registrazione}
+\end{figure}
 \subsection{Pagine accessibili da tutti}
 	\subsubsection{Header}
 		Menzione particolare va fatta all'header, presente in ogni singola pagina per rendere la navigazione chiara e semplice, essendo comune a tutte le pagine verrà esposta all'inizio.
@@ -96,17 +114,51 @@ Verranno esposte in base alle tipologie di account che vi accedono, dall'utente 
 			\item \textit{Conserve e Uova};
 			\item \textit{Vino e Bevande}.
 		\end{itemize}
-	
+	\begin{figure}[H]
+		\includegraphics[width=\linewidth]{res/img/HeaderNA}
+		\caption{Header visto da utente non autenticato}
+		\label{Header visto da utente non autenticato}
+	\end{figure}
+	\begin{figure}[H]
+		\includegraphics[width=\linewidth]{res/img/HeaderAut}
+		\caption{Header visto da utente autenticato}
+		\label{Header visto da utente autenticato, azienda in questo caso}
+	\end{figure}
 	\subsubsection{Footer}
 	Il footer, come l'header, è presente in tutte le pagine.\\
 	Riporta solamente dati anagrafici del consorzio proprietario del sito e sulla destra un comodo link \textbf{Torna su} per ritornare in testa alla pagina in modo immediato.
+	
 	\subsubsection{Homepage}
 	Landing page del sito, è raggiungibile da qualsiasi punto del sito cliccando sul logo in alto a sinistra.\\
-	Presenta in breve il servizio offerto e rende disponibili alcune immagini promozionali.\\
-	\subsubsection{Homepage}
-	\subsubsection{Homepage}
-	\subsubsection{Homepage}
+	Presenta in breve il servizio offerto e rende disponibili alcune immagini promozionali.
+\newpage
+	\subsubsection{Macro-Categoria}
+	Questa pagina contiene una lista di tutte le categorie facenti parte della macro-categoria scelta (ad es: macro-categoria \textit{Frutta e Verdura}, la pagina relativa contiene una lista di prodotti della categoria \textit{Frutta} e un'altra con i prodotti della categoria \textit{Verdura}  (\textit{Fig. 3})).\\
+	Di questi prodotti è possibile vedere il \textbf{titolo di categoria}; una lista limitata di prodotti di esempio con tanto di \textbf{foto}, \textbf{nome prodotto}, \textbf{prezzo} (e relativo \textbf{sconto} se presente), e \textbf{quantità}.\\
+
+	\begin{figure}[H]
+		\includegraphics[width=\linewidth]{res/img/Macro-cat}
+		\caption{Esempio pagina macro-categoria, in questo caso \textit{Frutta e Verdura}}
+		\label{Pagina Macro-categoria}
+	\end{figure}
+	Come si può vedere dalla figura tramite il bottone "\textit{Scoprili tutti}" è possibile ampliare la categoria scelta e visualizzare tutti i prodotti disponibili, entrando nella pagina di \textit{Sotto-categoria}.\\
+	E' possibile inoltre, se si è autenticati, aggiungere direttamente il prodotto al carrello oppure entrare nella pagina di \textit{Singolo prodotto}.
 	
+	\subsubsection{Sotto-categoria}
+	Si accede a questa pagina tramite bottone "\textit{Scoprili tutti}" in una delle  presente nella pagina \textit{Macro-categoria}.\\
+	Molto simile alla pagina precedente, tuttavia in questa schermata è possibile vedere tutti i prodotti disponibili di una determinata sotto-categoria.\\
+	Anche qui è possibile (se autenticati) aggiungere un prodotto al carrello oppure aprire la pagina di \textit{Singolo prodotto} per visionare ulteriori dati sul prodotto.
+	\begin{figure}[H]
+		\includegraphics[width=\linewidth]{res/img/sotto-cat}
+		\caption{Esempio pagina sotto-categoria, in questo caso \textit{Frutta}}
+		\label{Pagina Sotto-categoria}
+	\end{figure}
+
+	\subsubsection{Chi siamo e Come funziona}
+	Queste due pagine contengono informazioni utili riguardanti rispettivamente :il consorzio e lo scopo del sito (\textit{Chi siamo}) e come funziona quest'ultimo, con disponibilità del servizio e orari di assistenza clienti (\textit{Come funziona}).
+	 
+	\subsubsection{Chi siamo e Come funziona}
+	Queste due pagine contengono informazioni utili riguardanti rispettivamente :il consorzio e lo scopo del sito (\textit{Chi siamo}) e come funziona quest'ultimo, con disponibilità del servizio e orari di assistenza clienti (\textit{Come funziona}).
 \subsection{}
 \subsection{}
 \subsection{}
