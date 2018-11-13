@@ -14,24 +14,26 @@
 \contentsline {subsubsection}{\numberline {3.2.1}Header}{5}{subsubsection.3.2.1}
 \contentsline {subsubsection}{\numberline {3.2.2}Footer}{6}{subsubsection.3.2.2}
 \contentsline {subsubsection}{\numberline {3.2.3}Homepage}{6}{subsubsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.4}Macro-Categoria}{7}{subsubsection.3.2.4}
+\contentsline {subsubsection}{\numberline {3.2.4}Macro-Categoria}{6}{subsubsection.3.2.4}
 \contentsline {subsubsection}{\numberline {3.2.5}Sotto-categoria}{7}{subsubsection.3.2.5}
 \contentsline {subsubsection}{\numberline {3.2.6}Chi siamo e Come funziona}{8}{subsubsection.3.2.6}
-\contentsline {subsubsection}{\numberline {3.2.7}Chi siamo e Come funziona}{8}{subsubsection.3.2.7}
-\contentsline {subsection}{\numberline {3.3}}{8}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}}{8}{subsection.3.4}
-\contentsline {subsection}{\numberline {3.5}}{8}{subsection.3.5}
-\contentsline {section}{\numberline {4}Design}{9}{section.4}
-\contentsline {subsection}{\numberline {4.1}Accessibilit\IeC {\`a}}{10}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Responsive}{10}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Verifica}{10}{subsection.4.3}
-\contentsline {section}{\numberline {5}Progettazione tecnica}{10}{section.5}
-\contentsline {subsection}{\numberline {5.1}Front-end}{10}{subsection.5.1}
-\contentsline {subsubsection}{\numberline {5.1.1}HTML}{10}{subsubsection.5.1.1}
-\contentsline {subsubsection}{\numberline {5.1.2}CSS}{11}{subsubsection.5.1.2}
-\contentsline {subsubsection}{\numberline {5.1.3}JavaScript}{11}{subsubsection.5.1.3}
-\contentsline {subsection}{\numberline {5.2}BackEnd}{12}{subsection.5.2}
-\contentsline {subsubsection}{\numberline {5.2.1}Database MySQL}{12}{subsubsection.5.2.1}
-\contentsline {subsubsection}{\numberline {5.2.2}PhP}{12}{subsubsection.5.2.2}
-\contentsline {subsubsection}{\numberline {5.2.3}Accessibilit\IeC {\`a}}{13}{subsubsection.5.2.3}
-\contentsline {section}{\numberline {6}Suddivisone del lavoro}{13}{section.6}
+\contentsline {subsection}{\numberline {3.3}Pagine accessibili da utenti autenticati}{8}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Carrello}{8}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Profilo}{9}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3}Ordini}{9}{subsubsection.3.3.3}
+\contentsline {subsubsection}{\numberline {3.3.4}Singolo prodotto}{9}{subsubsection.3.3.4}
+\contentsline {subsubsection}{\numberline {3.3.5}Inserisci Articolo}{10}{subsubsection.3.3.5}
+\contentsline {section}{\numberline {4}Design}{10}{section.4}
+\contentsline {subsection}{\numberline {4.1}Accessibilit\IeC {\`a}}{11}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Responsive}{11}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Verifica}{11}{subsection.4.3}
+\contentsline {section}{\numberline {5}Progettazione tecnica}{11}{section.5}
+\contentsline {subsection}{\numberline {5.1}Front-end}{11}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}HTML}{11}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}CSS}{12}{subsubsection.5.1.2}
+\contentsline {subsubsection}{\numberline {5.1.3}JavaScript}{12}{subsubsection.5.1.3}
+\contentsline {subsection}{\numberline {5.2}BackEnd}{13}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {5.2.1}Database MySQL}{13}{subsubsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2}PhP}{13}{subsubsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.3}Accessibilit\IeC {\`a}}{14}{subsubsection.5.2.3}
+\contentsline {section}{\numberline {6}Suddivisone del lavoro}{14}{section.6}

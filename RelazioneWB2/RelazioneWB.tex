@@ -131,7 +131,7 @@ La pagina di iscrizione contiene un form un po' più corposo, in cui l'utente de
 	\subsubsection{Homepage}
 	Landing page del sito, è raggiungibile da qualsiasi punto del sito cliccando sul logo in alto a sinistra.\\
 	Presenta in breve il servizio offerto e rende disponibili alcune immagini promozionali.
-\newpage
+
 	\subsubsection{Macro-Categoria}
 	Questa pagina contiene una lista di tutte le categorie facenti parte della macro-categoria scelta (ad es: macro-categoria \textit{Frutta e Verdura}, la pagina relativa contiene una lista di prodotti della categoria \textit{Frutta} e un'altra con i prodotti della categoria \textit{Verdura}  (\textit{Fig. 3})).\\
 	Di questi prodotti è possibile vedere il \textbf{titolo di categoria}; una lista limitata di prodotti di esempio con tanto di \textbf{foto}, \textbf{nome prodotto}, \textbf{prezzo} (e relativo \textbf{sconto} se presente), e \textbf{quantità}.\\
@@ -157,48 +157,40 @@ La pagina di iscrizione contiene un form un po' più corposo, in cui l'utente de
 	\subsubsection{Chi siamo e Come funziona}
 	Queste due pagine contengono informazioni utili riguardanti rispettivamente :il consorzio e lo scopo del sito (\textit{Chi siamo}) e come funziona quest'ultimo, con disponibilità del servizio e orari di assistenza clienti (\textit{Come funziona}).
 	 
-	\subsubsection{Chi siamo e Come funziona}
-	Queste due pagine contengono informazioni utili riguardanti rispettivamente :il consorzio e lo scopo del sito (\textit{Chi siamo}) e come funziona quest'ultimo, con disponibilità del servizio e orari di assistenza clienti (\textit{Come funziona}).
-\subsection{}
-\subsection{}
-\subsection{}
-Nella parte pubblica, ovvero raggiungibili senza effettuare login, abbiamo le seguenti pagine:
-\begin{itemize}
-	\item \underline{Homepage} -> raggiungibile cliccando sul logo o comunque al primo accesso al sito.\\ Presenta in breve il servizio offerto e rende disponibili alcuni immagini promozionali.
-	\item Pagina \underline{"Macro-categoria"} -> si visualizza dopo aver cliccato su una delle voci del sotto-menù ove ogni categoria è rappresentata da un’icona e un nome identificativi.\\ La pagina si presenta a sua volta divisa in sottosezioni dedicate ad ogni sotto-categoria.\\
-	Da qui è possibile aggiungere al carrello un determinato prodotto oppure, cliccando sull'immagine passare alla pagina \textit{singolo prodotto}\\ \textbf{NOTA:}Queste ultime due funzionalità sono disponibili solo da utenti autenticati.
-	\item Pagina \underline{"Sotto-categoria"} -> si visualizza cliccando sul pulsante “\textit{scoprili tutti}” nella pagina dedicata alla macro-categoria.\\L’interfaccia rende disponibili tutti gli articoli di una determinata categoria, allo stesso modo della precedente pagina.
-	\item "\underline{Chi siamo}"  e "\underline{Come funziona}"-> sono semplici pagine di carattere informativo, raggiungibili dal menù superiore.
-	\item Pagina di \underline{Login} -> Raggiungibile tramite il pulsante "\textit{Accedi}" in alto a destra.\\
-	Permette di inserire le proprie credenziali per autenticarsi al sito.
-	\item Pagina di \underline{Iscrizione} -> Raggiungibile tramite il pulsante "\textit{Iscriviti}" in alto a destra oppure direttamente dalla pagina di "\textit{login}".\\
-	Permette di iscriversi dopo aver compilato un apposito form.
-\end{itemize}
-\textit{Login} e \textit{Registrazione} sono raggiungibili solo da utenti non autenticati (per ovvie ragioni).
+\subsection{Pagine accessibili da utenti autenticati}
+	\subsubsection{Carrello}
+	Raggiungibile cliccando sull'icona del carrello posta in alto a destra previa autenticazione.\\
+	La pagina si presenta con un riquadro centrale che presenta i prodotti presenti nel carrello.\\
+	Si ha la possibilità di entrare nella pagina relativa al singolo prodotto, in cui sono presenti maggiori dettagli, oppure è possibile aggiungere o rimuovere unità di prodotto, cliccando \textbf{+} o \textbf{-}; quando si è soddisfatti dei prodotti inseriti nel carrello, tramite il pulsante \textit{Procedi con l'acquisto} è possibile procedere ed inserire l'ordine, l'indirizzo di consegna quello utilizzato in fase di registrazione.
+	\begin{figure}[H]
+		\includegraphics[width=\linewidth]{res/img/carrello}
+		\caption{Pagina del carrello}
+		\label{Carrello}
+	\end{figure}
+	\subsubsection{Profilo}
+	Vi è possibile accedervi dall'icona di un omino stilizzato posta in alto a destra previa autenticazione.\\
+	La pagina del profilo si presenta con un box centrale contenente i dati anagrafici dell'utente, in basso a destra del box è presente un link "\textit{Modifica profilo}", il quale permette di accedere alla pagina di modifica dei valori.\\
+	\textbf{NOTA:} se si è amministratori, in questa pagina, sopra il box, è possibile cliccare sul link ed accedere all'area amministrativa.
+	
+	\subsubsection{Ordini}
+	Vi è possibile accedervi dall'icona di un blocco note posta in alto a destra previa autenticazione.\\
+	La pagina degli ordini si presenta con una lista di box contenenti le specifiche dei diversi ordini, con la data, il totale speso, lo stato, il metodo di pagamento e di spedizione.\\
+	In basso a destra di ogni box è presente un link "\textit{Dettagli ordine}" che rimanda alla pagina di dettaglio, in cui sono presenti i prodotti acquistati riferiti all'ordine scelto.
+	
+	\subsubsection{Singolo prodotto}
+	Si raggiunge cliccando l'immagine del prodotto nelle pagine di \textit{Categoria} e \textit{sotto-categoria}, oppure dal nome dell'articolo nel \textit{carrello} o nel \textit{dettaglio ordine}.\\ Permette di visualizzare più nel dettaglio un singolo prodotto, con la possibilità di aggiungerlo al carrello.\\
+	La pagina si presenta con l'immagine del prodotto sulla sinistra e una colonna di informazioni sulla destra.\\
+	\textbf{NOTA:} se si è proprietari del prodotto (o amministratori) è possibile, tramite il link posto sotto all'immagine, accedere al form di modifica dell'articolo.
+	\begin{figure}[H]
+		\includegraphics[width=\linewidth]{res/img/sing-prod+}
+		\caption{Pagina singolo articolo (Petto di pollo)}
+		\label{Pagina singolo articolo}
+	\end{figure}
+	
+	\subsubsection{Inserisci Articolo}
+	Raggiungibile \textit{SOLO} se si è un utente di tipo azienda (o amministratore), tramite un link posto sopra l'header.\\ Questa pagina permette di compilare un form e inserire un articolo nel database del sito e renderlo disponibile agli utenti per l'acquisto.\\
+	L'amministratore ha la possibilità di modificare o rimuovere gli articoli se non pertinenti o se presentano dati poco pertinenti.
 
-
-\begin{itemize}
-	\item Pagina "\underline{Carrello}" -> vi si accede cliccando sull’apposita icona posta nella parte destra dell'header da qualsiasi punto del sito, presenta la sagoma di un carrello.\\
-	permette di visualizzare tutti gli articoli con .
-	\item Pagina "\underline{Profilo}" ->  vi si accede cliccando sull’apposita icona posta nella parte destra dell'header da qualsiasi punto del sito, presenta la sagoma di un omino stilizzato.\\ Permette di visualizzare e, in caso di necessità, modificare i dettagli dell’utente autenticato.
-	\item Pagina "\underline{Ordini}" ->  vi si accede cliccando sull’apposita icona posta nella parte destra dell'header da qualsiasi punto del sito, presenta la sagoma di un piccolo blocco note.\\ Permette di visualizzare gli ordini effettuati (in caso di necessità è possibile raggiungere un successivo livello di profondità visualizzando i dettagli dell'ordine scelto).
-	\item Pagina "\underline{Singolo prodotto}" -> si raggiunge cliccando l'immagine del prodotto nelle pagine di \textit{Categoria} e \textit{sotto-categoria}, oppure dal nome dell'articolo nel \textit{carrello} o nel \textit{dettaglio ordine}.\\
-	Presenta maggiori dettagli del prodotto, con una schermata divisa da una grande foto sulla sinistra, e sulla destra le informazioni e la possibilità di aggiunta al carrello.
-\end{itemize}
-
-
-\textbf{NOTA:}La differenza tra azienda e utente standard è designabile solo dall'amministratore.
-Le pagine in più sono quindi:
-\begin{itemize}
-	\item Pagina "\underline{Inserisci Articolo}" -> Accessibile dalla parte più alta dell'header.\\ Presenta l'apposito form da cui possibile inserire i dettagli per inserire un articolo.
-	\item Pagina "\underline{Modifica Articolo}" -> Se si possiedono articoli nel DB, accedendo alla loro pagina di \textit{singolo articolo} è possibile raggiungere l'area di modifica tramite l'apposito link vicino all'immagine.\\
-	Da questa pagina è possibile visualizzare un form in cui è possibile modificare i campi di quel dato prodotto.
-\end{itemize}
-
-
-\begin{itemize}
-	\item "\underline{Admin}" -> Ha la possibilità di modificare la tipologia degli account registrati al sito da "Azienda -> utente standard" o viceversa.
-\end{itemize}
 
 \section{Design}
 	Abbiamo adottato uno stile moderno e semplice. Abbiamo preso spunto da vari siti e-commerce di ortaggi, sfruttando principalmente colori quali il verde, l'arancione, color lavagna per header e footer e il grigio per mantenere un tocco di eleganza.\\ Abbiamo cercato di mantenere un buon livello di contrasto per permettere la navigazione anche ad utenti con particolari problemi di vista.
