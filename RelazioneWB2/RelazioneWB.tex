@@ -199,6 +199,8 @@ La pagina di iscrizione contiene un form un po' più corposo, in cui l'utente de
 		\item un header fisso che accompagna l'utente in tutte le fasi della navigazione, permettendogli di passare a tutte le pagine più importanti da qualsiasi pagina in cui si trova;
 		\item per evitare il problema del disorientamento sono stati adottati titoli chiari e ben visibili, cosi da dare subito all'utente una coscienza istantanea di dove si trova;
 		\item durante lo scroll l'header viene limitato sulle dimensioni, cosi da non dare all'utente senso di soffocamento;
+		\item sono stati utilizzati \textit{label} ed aiuti testuali per aiutare l'utente a compilare i form.
+		\item è implementata la \textit{Pagina 404} in caso di rotta non riconosciuta, per non disorientare l'utente.
 		\item abbiamo adottato uno stile moderno e semplice prendendo spunto da vari siti e-commerce di ortaggi, sfruttando principalmente colori quali il verde, l'arancione, color lavagna per header e footer e il grigio per mantenere un tocco di eleganza.
 	\end{itemize} 
 	
@@ -306,8 +308,7 @@ Il progetto è sviluppato secondo il pattern MVC (Model-View-Controller) le cui 
 	\item Tutte le immagini sono provviste di attributo \textit{alt} e \textit{title} con descrizione significativa.
 	\item è stato utilizzato l'attributo \textit{tabindex} per permettere la navigazione da tastiera.
 	\item Si è evitato l'uso di tabelle, preferendo \textit{div}  dal contenuto lineare e semplice.
-	\item sono stati utilizzati \textit{label} ed aiuti testuali per aiutare l'utente a compilare i form.
-	\item è implementata la \textit{Pagina 404} in caso di rotta non riconosciuta, per non disorientare l'utente.
+	
 \end{itemize}
 Per testare l'accessibilità sono stati effettuati test con \textit{Total Validator}, in particolare è stato utilizzato per testare la correttezza e l'accessibilità dei form secondo lo standard WCAG2-A.
 
