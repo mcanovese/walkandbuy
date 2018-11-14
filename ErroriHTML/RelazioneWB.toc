@@ -1,0 +1,9 @@
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\contentsline {section}{\numberline {1}Introduzione}{2}{section.1}
+\contentsline {section}{\numberline {2}Homepage}{2}{section.2}
+\contentsline {section}{\numberline {3}Pagina Registrazione Utente}{3}{section.3}
+\contentsline {section}{\numberline {4}Pagina Categoria}{3}{section.4}
+\contentsline {section}{\numberline {5}Pagina Singolo Prodotto}{4}{section.5}
+\contentsline {section}{\numberline {6}Pannello Amministrativo}{4}{section.6}
+\contentsline {section}{\numberline {7}Inserimento Nuovo Articolo}{4}{section.7}
