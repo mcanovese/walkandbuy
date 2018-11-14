@@ -1,0 +1,106 @@
+% !TeX spellcheck = de_DE
+\input{StyleLatex/global.tex}
+\input{StyleLatex/layout.tex}
+\input{res/local}
+
+\title{\textbf{Errori HTML rilevati nel progetto}}
+\author{WalkAndBuy}
+
+\date{14 Novembre 2018}
+
+\begin{document}
+
+%\maketitle
+
+\makeFrontPage
+
+\tableofcontents
+
+\newpage
+
+\section{Introduzione}
+Il seguente documento intende prendere in analisi gli errori rilevati dal gruppo \textit{Walk and Buy} nel progetto didattico di Tecnologie Web.\\
+Quest'analisi si concentra prevalentemente sul codice HTML che risulta essere la parte con la maggior concentrazione di errori.
+\\
+E’ da tenere presente che la parte \textit{<head>} analizzata nella Home è la medesima in tutte le pagine del sito in quanto è frutto dell’incorporazione del file head.php.\\
+Per convenzione \textbf{L\#} è utilizzato se necessario per indicare la riga ove è presente l’errore.
+
+\section{Homepage}
+
+	Gli errori riscontrati nella homepage sono i seguenti:
+	\begin{figure}[H]
+		\includegraphics[width=\linewidth]{res/img/home}
+		\caption{Codice in testa alla home}
+		\label{Codice in testa alla home}
+	\end{figure}
+	\begin{itemize}
+		\item In \textbf{L1}, precedentemente alla dichiarazione DTD \textit{<!DOCTYPE html>} è presente l’apertura di un elemento \textit{<div>} che precede anche la dichiarazione del documento HTML che avviene in \textbf{L3}.\\
+		L’errore è risolvibile collocando l’apertura del \textit{<div>} in una posizione più consona a seguito dell’inizio del documento HTML;
+		\item In \textbf{L8} è presente un \textit{<link>} di riferimento a un font Google, l’attributo href però contiene una URL con spazio tra \textit{amatic} e \textit{SC}.\\
+		Tale dichiarazione è contraria alle norme dello standard che non prevedono la presenza di spazi;
+		\item in \textbf{L12} si fa riferimento ad un foglio di stile home.css che non esiste;
+		\item Tra \textbf{L19} e \textbf{L48} sono dichiarati alcuni \textit{<div>} che compongo il menù utente e il menù categorie, l’utilizzo di questi div risulta però errato in quanto alcuni di essi risultano aperti ma non chiusi nell’ordine corretto.\\
+		Anche in questo caso per porre correzione sarebbe sufficiente riordinare l’ordine di apertura/chiusura dei \textit{<div>} e inserire una chiusura ove necessario al fine di garantire le corrette dipendenze. 
+		
+	\end{itemize}
+\newpage
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{res/img/home2}
+	\caption{Pezzo codice HTML in home}
+	\label{Pezzo codice HTML in home}
+\end{figure}
+\begin{itemize}
+	\item In \textit{L52} è assente lo spazio tra l’attributo "\textit{class}" e "\textit{src}";
+	\item all’interno del \textit{<body>} sono presenti numerose immagini prive di attributo "\textit{alt}" il quale compromette l’accessibilità del sito web, in particolare risultano sprovviste dell’attributo le icone del menù categorie rendendo quindi inutilizzabile lo stesso da parte di screen reader;
+	\item l’\textbf{ID} css "\textit{myImg}" è utilizzato tre volte all’interno del medesimo documento, l’\textbf{ID} è concepito per un utilizzo univoco andrebbero definiti quindi tre ID differenti o in alternativa una \textbf{classe} all’interno del foglio di stile; in quanto risulta essere “legale” solamente la prima dichiarazione di “\textit{myImg}” all’interno del documento.
+\end{itemize}
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{res/img/home3}
+	\caption{Pezzo codice HTML in home}
+	\label{Pezzo codice HTML in home}
+\end{figure}
+\begin{itemize}
+	\item In \textbf{L111} è dichiarato un carattere speciale 	"\textit{\&egrave}" privo di punto e virgola terminale, la corretta dichiarazione è "\textit{\&egrave;}" ;
+	\item in caso di stampa della pagina non risultano visibili le voci del menù categorie, in quanto il font è di colore bianco. 
+\end{itemize}
+\section{Pagina Registrazione Utente}
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{res/img/regut}
+	\caption{Pezzo codice HTML in registrazione utente}
+	\label{Pezzo codice HTML in registrazione utente}
+\end{figure}
+\begin{itemize}
+	\item In \textbf{L156} è presente una \textit{<select>} che contiene più elementi figli, vi è un errore in quanto la \textit{<select>}  viene chiusa nella medesima linea senza includere correttamente gli elementi \textit{<option>}. \\ 
+	Nella medesima \textit{<select>} inoltre non è presente l’attributo "\textit{size}" per specificare quante voci per volta mostrare nella tendina di selezione. Sarebbe opportuno inserire anche un elemento "\textit{placeholder}";
+	\item Il tag \textit{<body>} viene chiuso prematuramente malgrado siano ancora aperti degli elementi figli.
+\end{itemize}
+\section{Pagina Categoria}
+\begin{itemize}
+	\item Oltre agli errori riferiti alla parte \textit{<head>}.
+	I pulsanti per aggiungere al carrello gli articoli in vetrina non sono corredati dell’attributo "\textit{alt}" risultano per cui inaccessibili e inutilizzabili da utenti che fanno ricorso a screen reader, medesime considerazioni valgono per il pulsante "\textit{scoprili tutti}";
+	
+	\item Stampando la pagina risulta completamente alterata la disposizione dei prodotti in vetrina, in particolare alcuni prodotti spariscono e non vengono stampati a causa della mancanza di un foglio di stile dedicato. 
+\end{itemize}
+\section{Pagina Singolo Prodotto}
+\begin{itemize}
+	\item In questa pagina è presente un carattere speciale dichiarato privo di punto e virgola.
+	Nell’elemento \textit{<button>} ovvero il pulsante per aggiungere al carrello è presente l’attributo "\textit{alt}" anziché l’attributo "\textit{title}" previsto per i button;
+	
+	\item \textbf{L142} è presente un elemento \textit{<h4>} chiuso erroneamente con un tag privo di /.  
+\end{itemize}
+\section{Pannello Amministrativo}
+\begin{itemize}
+	\item E’ presente l’attributo "\textit{type = ‘select’}" all’interno dell’elemento \textit{select,} il quale non è necessario. Ed è chiuso il tag \textit{<select>} nella medesima riga di apertura senza includere gli elementi figli \textit{<option>};
+	
+	\item Come rilevato nella pagina di registrazione anche in questa non è presente un attributo "\textit{size}" ed un "\textit{placeholder}" nella \textit{<select>}.   
+\end{itemize}
+
+\section{Inserimento Nuovo Articolo}
+\begin{itemize}
+	\item Nel form di inserimento ordine, si rilevano i medesimi errori riscontrati nelle altre pagine per quanto riguarda le \textit{<select>};
+	
+	\item \textit{<form>} viene chiuso prima della chiusura di tutti gli elementi figli contenuti in esso, in questo caso è presente un \textit{<div>} interno;   
+	
+	\item lato php mancano accurati controlli sui dati inseriti nei vari campi.
+\end{itemize}
+\end{document}
