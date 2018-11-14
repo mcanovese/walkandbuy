@@ -1,3 +1,4 @@
+% !TeX spellcheck = de_DE
 \input{StyleLatex/global.tex}
 \input{StyleLatex/layout.tex}
 \input{res/local}
@@ -193,21 +194,37 @@ La pagina di iscrizione contiene un form un po' più corposo, in cui l'utente de
 
 
 \section{Design}
-	Abbiamo adottato uno stile moderno e semplice. Abbiamo preso spunto da vari siti e-commerce di ortaggi, sfruttando principalmente colori quali il verde, l'arancione, color lavagna per header e footer e il grigio per mantenere un tocco di eleganza.\\ Abbiamo cercato di mantenere un buon livello di contrasto per permettere la navigazione anche ad utenti con particolari problemi di vista.
+	Il sito è impostato in modo tale da rendere la navigazione semplice ed intuitiva, per farlo il team ha deciso di adottare:
+	\begin{itemize}
+		\item un header fisso che accompagna l'utente in tutte le fasi della navigazione, permettendogli di passare a tutte le pagine più importanti da qualsiasi pagina in cui si trova;
+		\item per evitare il problema del disorientamento sono stati adottati titoli chiari e ben visibili, cosi da dare subito all'utente una coscienza istantanea di dove si trova;
+		\item durante lo scroll l'header viene limitato sulle dimensioni, cosi da non dare all'utente senso di soffocamento;
+		\item abbiamo adottato uno stile moderno e semplice prendendo spunto da vari siti e-commerce di ortaggi, sfruttando principalmente colori quali il verde, l'arancione, color lavagna per header e footer e il grigio per mantenere un tocco di eleganza.
+	\end{itemize} 
+	
+	
 
 \subsection{Accessibilità}
-Il design si è basato su accessibilità e responsività, per la prima sono state adottate le seguenti scelte:
+Per ottimizzare l'accessibilità sono state adottate le seguenti scelte:
 \begin{itemize}
-	\item Il layout è responsive, cosi da essere accessibile da qualsiasi tipo di dispositivo e impedendo scroll orizzontali.
-	\item Il menù è presente in tutte le pagine, in caso di scroll della pagina (e JS attivato) resta fisso nella parte alta, lasciando però solo logo e pulsanti di interesse, cosi da non essere troppo opprimente.
-	\item I link sono chiaramente visibili e il loro scopo è chiaro e non permette ambiguità.
-	\item La profondità del sito è stata limitata, cosi da permettere all'utente di avere ben chiara la struttura già dal primo utilizzo, questo permette una navigazione più immediata e una sensazione di maggior sicurezza.
-	\item Si sono scelti due tipologie di font, uno per titoli e prezzi, accattivante, per attirare l'attenzione su questi due punti, il secondo, più chiaro e con meno grazie, per la descrizione ed altri campi, cosi facendo si affatica meno la lettura e si rende il tutto più fruibile.
-	\item Nel footer è stato posto un link "Torna su" per tornare facilmente all'header completo. In caso di JS attivo, questo link segue l'utente in ogni punto dello scroll. 
+	\item Il layout è responsive, in caso di ridimensionamento della pagina, il contenuto si riduce di dimensioni e si sposta per rendere la navigazione gradevole ed efficacie ad ogni dimensione della scheda;
+	\item i link sono chiaramente distinguibili dal testo e hanno comportamenti coerenti grazie ad appositi attributi css hover e visited;
+	\item le immagini sono state marcate con l'attributo alt per dare un testo descrittivo alternativo in caso di mancato caricamento di quest'ultima, e title per dare un'ulteriore descrizione quando il mouse si sposta sopra l'immagine, il tutto rende la fruizione delle immagini più semplice e descrittiva;
+	\item per gli utenti con problemi alla vista è stato mantenuto un livello di contrasto elevato e un testo di dimensioni accettabili, anche nel caso di ridimensionamento della pagina;
+	\item sono stati inseriti gli attributi \textit{"tabindex"}, per dare un ordine prioritario alle tabulazioni e permettere di saltare agevolmente sezioni della pagina;
+	\item la profondità del sito è stata limitata, ogni pagina è infatti raggiungibile con massimo 4 click;
+	\item le famiglie di font scelte sono limitati a due, uno per titoli e prezzi, accattivante, per attirare l'attenzione su questi due punti, il secondo, più chiaro e con meno grazie, per la descrizione ed altri campi, cosi facendo si affatica meno la lettura e si rende il tutto più fruibile.
+	\item nel footer è stato posto un link "Torna su" per tornare facilmente all'header completo. In caso di JS attivo, questo link segue l'utente in ogni punto dello scroll. 
 \end{itemize}
 \subsection{Responsive}
 
-Il sito è stato sviluppato tenendo in considerazione le diverse dimensioni di dispositivo utilizzabile, risulta infatti perfettamente fruibile anche con schermi più piccoli, testato fino a 400px senza avere effetti disastrosi.
+Il sito è stato sviluppato tenendo in considerazione le diverse dimensioni di dispositivo utilizzabile, risulta infatti perfettamente fruibile anche con schermi più piccoli: fino a 400px di dimensione la navigazione risulta ottimale.
+
+In caso di ridimensionamento della scheda il contenuto viene ridimensionato.
+Si hanno 3 limiti di larghezza in cui l'interfaccia viene modificata per migliorare la navigazione:
+\begin{itemize}
+	\item 840px
+\end{itemize}di modifica dell'interfaccia
 
 \subsection{Verifica}
 Le verifiche e i test sono stati effettuati sui principali browser, quali \textit{Internet Explorer v10-11}, \textit{Microsoft Edge v16-v17},  \textit{Google Chrome v68},
