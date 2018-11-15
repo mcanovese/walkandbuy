@@ -6,7 +6,7 @@
 \title{\textbf{Relazione progetto TecWeb}}
 \author{WalkAndBuy}
 
-\date{11 Settembre 2018}
+\date{15 Novembre 2018}
 
 \begin{document}
 
@@ -44,8 +44,7 @@ I commercianti abilitati possono modificare gli articoli da essi pubblicati.\\
 Gli utenti una volta autenticati possono consultare il catalogo online, aggiungere e rimuovere articoli dal carrello e una volta selezionati tutti gli articoli di loro interesse, concludere l’ordine. \\
 Hanno inoltre a disposizione una pagina in cui possono visualizzare i singoli ordini effettuati.\\
 
-L’Associazione viene registrata tramite un account amministrativo ed ha potere di modificare qualsiasi articolo e di assegnare o revocare il ruolo di “azienda” ad un singolo utente. 
-\newpage
+L’Associazione viene registrata tramite un account amministrativo ed ha potere di modificare qualsiasi articolo e di assegnare o revocare il ruolo di “azienda” ad un singolo utente.
 \section{Descrizione dei tipi di utente}
 In questa sezione verranno analizzate le diverse tipologie di utenti che possono usufruire del sito, cosi da avere un chiaro target su cui costruire le varie pagine del sito.
 \subsection{Utente non autenticato}
@@ -68,7 +67,6 @@ Oltre a questo, nella pagina di dettaglio di un articolo, nel caso in cui questo
 L'amministratore è un utente speciale, rappresenta il consorzio, di conseguenza ha pieni poteri.\\
 In particolare, tramite un link inserito nella pagina del profilo, ha la possibilità di accedere al pannello amministrativo in cui ha la possibilità di modificare la tipologia di un utente registrato, da \textit{Azienda} a \textit{Standard} o viceversa
 
-\newpage
 
 \section{Analisi delle pagine}
 In questa sezione verranno analizzate tutte le pagine del sito con le diverse azioni che possono essere effettuate e i privilegi in base alla tipologia di utente che vi accede.\\
@@ -78,12 +76,12 @@ Queste due pagine sono accessibili solo da utenti non autenticati, permettono al
 \subsubsection{Accedi}
 Semplice schermata di Login, formato da un form centrato, viene richiesta l'\textbf{e-mail} e la \textbf{Password}.\\
 tramite link è possibile passare direttamente alla pagina di registrazione.
-	\begin{figure}[H]
+\begin{figure}[H]
 	\includegraphics[width=\linewidth]{res/img/login}
 	\caption{Pagina di Login}
 	\label{Pagina di Login}
 \end{figure}
-\newpage
+
 \subsubsection{Iscriviti}
 La pagina di iscrizione contiene un form un po' più corposo, in cui l'utente deve inserire i propri dati al fine di creare un profilo che gli permetterà di navigare e acquistare liberamente dal sito.
 \begin{figure}[H]
@@ -192,7 +190,7 @@ La pagina di iscrizione contiene un form un po' più corposo, in cui l'utente de
 	Raggiungibile \textit{SOLO} se si è un utente di tipo azienda (o amministratore), tramite un link posto sopra l'header.\\ Questa pagina permette di compilare un form e inserire un articolo nel database del sito e renderlo disponibile agli utenti per l'acquisto.\\
 	L'amministratore ha la possibilità di modificare o rimuovere gli articoli se non pertinenti o se presentano dati poco pertinenti.
 
-
+\newpage
 \section{Design}
 	Il sito è impostato in modo tale da rendere la navigazione semplice ed intuitiva, per farlo il team ha deciso di adottare:
 	\begin{itemize}
@@ -256,8 +254,12 @@ Il codice è stato scritto interamente dal team.
 
 \subsubsection{HTML}
 
-Lo standard utilizzato per HTML è HTML5 in quanto quest’ultimo è supportato da tutti i recenti browser sia utilizzati su client desktop che mobile. 
-Nel corso dello sviluppo però si è constatato che l’impiego effettivo delle funzioni aggiuntive di HTML5 rispetto a versioni precedenti è stato limitato alla validazione dei form.
+Lo standard utilizzato per HTML è \textit{HTML5} in quanto quest'ultimo è supportato da tutti i recenti browser, sia utilizzati su client desktop che mobile.\\
+Nel corso dello sviluppo si è constatato che l'impiego effettivo delle funzioni aggiuntive di \textit{HTML5} rispetto a versioni precedenti è limitato alla validazione dei form, in particolare con l'utilizzo dell'attributo "\textit{required}" il quale compromette la correttezza dei dati trasmessi.\\
+Nella progettazione e realizzazione del sito si è perseguito l’obiettivo di separare la struttura dalle informazioni.
+Le pagine delle categorie e dei prodotti sono realizzate partendo da un template popolato dinamicamente da un controller così da poter riutilizzare il sorgente di base in più categorie/prodotti.\\
+Il sorgente di header, footer e menù sono in documenti HTML dedicati che vengono inclusi in ogni pagina al fine di consentire il riutilizzo del codice in più pagine e semplificare l’eventuale aggiornamento e manutenzione. 
+
 
 \subsubsection{CSS}
 Lo standard utilizzato per il CSS è CSS3, sempre cercando di utilizzare attributi supportati dalla maggioranza dei browser.\\
@@ -269,7 +271,7 @@ Gli aspetti più rilevanti del CSS sono:
 
 \subsubsection{JavaScript}
 Il linguaggio JavaScript è stato utilizzato solamente per migliorare l'esperienza utente in caso di ridimensionamento della pagina o scroll vari.\\ Il sito risulta totalmente navigabile anche senza JavaScript attivo.
-\newpage
+
 \subsection{BackEnd}
 Il back-end si occupa della parte server del sito, viene suddiviso in due parti: DB in MySQL e PhP.
 
@@ -282,8 +284,17 @@ Il DB è stato progettato dal team dopo aver effettuato un'attenta analisi dei r
 \end{figure}
 Il database è stato opportunamente normalizzato e i campi sono correttamente identificati.
 
-\subsubsection{PhP}
-Il progetto è sviluppato secondo il pattern MVC (Model-View-Controller) le cui fondamenta sono state apprese principalmente mediante la consultazione di materiale reperibile sul web ed in particolare grazie al tutorial “The PHP Practitioner” il quale ha fortemente inspirato lo sviluppo del progetto.
+\subsubsection{PHP}
+La componente PHP rappresenta un punto focale del sito, il progetto è sviluppato secondo il pattern \textbf{MVC} (Model-View-Controller) le cui fondamenta sono state apprese principalmente mediante la consultazione di materiale reperibile sul web ed in particolare grazie al tutorial "\textit{The PHP Pratictioner}" il quale ha fortemente ispirato lo sviluppo del progetto.\\
+Ogni richiesta ricevuta dal server viene analizzata, successivamente il router implementato in PHP si occupa di restituire la componente necessaria per soddisfare la richiesta avvalendosi del controller.\\
+Il ruolo del controller è quello di richiedere le query dei dati ospitati sul database per successivamente presentarli all’utente attraverso l’utilizzo delle view associate.\\
+L’approccio scelto permette di apportare facilmente eventuali aggiornamenti e modifiche come la l’aggiunta di nuove pagine e l’aggiornamento degli indirizzi delle stesse. \\
+Le interazioni con il database avvengono attraverso \textbf{PDO} (PHP Data Object), un’interfaccia di PHP che permette di gestire facilmente l’accesso alla base di dati anche nel caso di migrazione verso un DBMS diverso.\\
+
+L’autenticazione degli utenti è gestita da un controller apposito il quale si occupa direttamente di verificare le credenziali dell’utente ed eventualmente creare la session.
+La verifica dell’esistenza di una session attiva viene effettuata dal "session controller" prima di restituire il contenuto di una pagina o effettuare operazioni sul database, per velocizzare questo controllo è stato implementato un metodo booleano che restituisce \textit{true} solo se l’utente è correttamente autenticato ed autorizzato ad effettuare l’operazione.
+\subsubsection{Struttura dell'applicazione}
+La struttura dei file del sito è la seguente:
 \begin{itemize}
 	\item Nella \textbf{root} del progetto è presente il file \textit{routes.php} che associa il controller a seconda della pagina richiesta dal server.
 	\item In \textbf{App} troviamo le seguenti directory:
@@ -302,15 +313,10 @@ Il progetto è sviluppato secondo il pattern MVC (Model-View-Controller) le cui 
 	\end{itemize} 
 \end{itemize}
 
-\subsubsection{Accessibilità}
-è stato tenuto conto dell'accessibilità per soddisfare la navigazione da parte di tutte le tipologie di utenti. Vengono elencate di seguito le principali attività che hanno permesso il raggiungimento di un livello soddisfacente di accessibilità:
-\begin{itemize}
-	\item Tutte le immagini sono provviste di attributo \textit{alt} e \textit{title} con descrizione significativa.
-	\item è stato utilizzato l'attributo \textit{tabindex} per permettere la navigazione da tastiera.
-	\item Si è evitato l'uso di tabelle, preferendo \textit{div}  dal contenuto lineare e semplice.
-	
-\end{itemize}
-Per testare l'accessibilità sono stati effettuati test con \textit{Total Validator}, in particolare è stato utilizzato per testare la correttezza e l'accessibilità dei form secondo lo standard WCAG2-A.
+\subsubsection{Test  validazione}
+
+Le pagine del sito web sono state validate mediante l’utilizzo degli applicativi web del \textbf{W3C} e mediante l’utilizzo di una utility di terze parti per la valutazione sintattica del codice \textit{JavaScript}.\\
+Per verificare la compatibilità del sito web sulle diverse piattaforme, sono stati utilizzati oltre a dispositivi fisici anche sistemi di testing virtuale reperibili sul web \textbf{powermapper.com} e \textit{lambdatest.com} che offrono test di compatibilità effettuati simultaneamente su più versioni di browser e di sistema operativo.
 
 
 

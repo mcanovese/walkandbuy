@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.14)  14 NOV 2018 17:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.14)  15 NOV 2018 10:03
 entering extended mode
 **./RelazioneWB.tex
 (RelazioneWB.tex
@@ -1381,7 +1381,7 @@ LaTeX Info: Redefining \selectfont on input line 11.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<StyleLatex/logo_home.png, id=154, 943.525pt x 949.5475pt>
+<StyleLatex/logo_home.png, id=158, 943.525pt x 949.5475pt>
 File: StyleLatex/logo_home.png Graphic file (type png)
 <use StyleLatex/logo_home.png>
 Package pdftex.def Info: StyleLatex/logo_home.png  used on input line 15.
@@ -1452,87 +1452,92 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--46
 
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 57--61
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--60
 
  []
 
-[3]
+[2]
 <res/img/login.png, id=218, 947.79094pt x 661.72218pt>
 File: res/img/login.png Graphic file (type png)
 <use res/img/login.png>
-Package pdftex.def Info: res/img/login.png  used on input line 82.
+Package pdftex.def Info: res/img/login.png  used on input line 80.
 (pdftex.def)             Requested size: 418.25368pt x 292.0068pt.
- [4 <./res/img/login.png>]
-<res/img/registrazione.png, id=225, 961.34157pt x 654.19406pt>
+ [3]
+<res/img/registrazione.png, id=224, 961.34157pt x 654.19406pt>
 File: res/img/registrazione.png Graphic file (type png)
 <use res/img/registrazione.png>
-Package pdftex.def Info: res/img/registrazione.png  used on input line 90.
+Package pdftex.def Info: res/img/registrazione.png  used on input line 88.
 (pdftex.def)             Requested size: 418.25368pt x 284.62202pt.
-<res/img/HeaderNA.png, id=226, 889.07156pt x 129.48375pt>
+ [4 <./res/img/login.png> <./res/img/registrazione.png>]
+<res/img/HeaderNA.png, id=232, 889.07156pt x 129.48375pt>
 File: res/img/HeaderNA.png Graphic file (type png)
 <use res/img/HeaderNA.png>
-Package pdftex.def Info: res/img/HeaderNA.png  used on input line 119.
+Package pdftex.def Info: res/img/HeaderNA.png  used on input line 117.
 (pdftex.def)             Requested size: 418.25368pt x 60.91267pt.
-<res/img/HeaderAut.png, id=227, 766.36313pt x 130.23656pt>
+<res/img/HeaderAut.png, id=233, 766.36313pt x 130.23656pt>
 File: res/img/HeaderAut.png Graphic file (type png)
 <use res/img/HeaderAut.png>
-Package pdftex.def Info: res/img/HeaderAut.png  used on input line 124.
+Package pdftex.def Info: res/img/HeaderAut.png  used on input line 122.
 (pdftex.def)             Requested size: 418.25368pt x 71.07985pt.
- [5 <./res/img/registrazione.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 137--139
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--137
 
  []
 
-<res/img/Macro-cat.png, id=234, 796.47563pt x 615.80063pt>
+[5 <./res/img/HeaderNA.png> <./res/img/HeaderAut.png>]
+<res/img/Macro-cat.png, id=241, 796.47563pt x 615.80063pt>
 File: res/img/Macro-cat.png Graphic file (type png)
 <use res/img/Macro-cat.png>
-Package pdftex.def Info: res/img/Macro-cat.png  used on input line 141.
+Package pdftex.def Info: res/img/Macro-cat.png  used on input line 139.
 (pdftex.def)             Requested size: 418.25368pt x 323.37534pt.
-[6 <./res/img/HeaderNA.png> <./res/img/HeaderAut.png>]
-<res/img/sotto-cat.png, id=243, 964.35281pt x 660.21657pt>
+<res/img/sotto-cat.png, id=242, 964.35281pt x 660.21657pt>
 File: res/img/sotto-cat.png Graphic file (type png)
 <use res/img/sotto-cat.png>
-Package pdftex.def Info: res/img/sotto-cat.png  used on input line 153.
+Package pdftex.def Info: res/img/sotto-cat.png  used on input line 151.
 (pdftex.def)             Requested size: 418.25368pt x 286.34566pt.
- [7 <./res/img/Macro-cat.png>]
+ [6 <./res/img/Macro-cat.png>]
 <res/img/carrello.png, id=250, 934.24031pt x 648.17157pt>
 File: res/img/carrello.png Graphic file (type png)
 <use res/img/carrello.png>
-Package pdftex.def Info: res/img/carrello.png  used on input line 167.
+Package pdftex.def Info: res/img/carrello.png  used on input line 165.
 (pdftex.def)             Requested size: 418.25368pt x 290.18108pt.
- [8 <./res/img/sotto-cat.png>]
+ [7 <./res/img/sotto-cat.png>]
 <res/img/sing-prod+.png, id=257, 654.19406pt x 649.67719pt>
 File: res/img/sing-prod+.png Graphic file (type png)
 <use res/img/sing-prod+.png>
-Package pdftex.def Info: res/img/sing-prod+.png  used on input line 186.
+Package pdftex.def Info: res/img/sing-prod+.png  used on input line 184.
 (pdftex.def)             Requested size: 418.25368pt x 415.3657pt.
- [9 <./res/img/carrello.png>] [10 <./res/img/sing-prod+.png>] [11] [12]
-<res/img/DB.png, id=281, 505.38812pt x 285.065pt>
+ [8 <./res/img/carrello.png>] [9 <./res/img/sing-prod+.png>] [10] [11]
+<res/img/DB.png, id=280, 505.38812pt x 285.065pt>
 File: res/img/DB.png Graphic file (type png)
 <use res/img/DB.png>
-Package pdftex.def Info: res/img/DB.png  used on input line 279.
+Package pdftex.def Info: res/img/DB.png  used on input line 281.
 (pdftex.def)             Requested size: 418.25368pt x 235.92097pt.
- [13 <./res/img/DB.png>]
 
+Underfull \hbox (badness 10000) in paragraph at lines 288--293
+
+ []
+
+[12 <./res/img/DB.png>] [13] 
 AED: lastpage setting LastPage
 [14]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 343.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 343.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 349.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 349.
  (RelazioneWB.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 343.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 343.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 349.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 349.
 Package rerunfilecheck Info: File `RelazioneWB.out' has not changed.
-(rerunfilecheck)             Checksum: 187B85931CAD75747401CAF97BF10BEE;2554.
+(rerunfilecheck)             Checksum: A023E951867524E61D9579D3B857E8EE;2642.
  ) 
 Here is how much of TeX's memory you used:
- 22469 strings out of 492970
- 408302 string characters out of 3126593
- 498551 words of memory out of 3000000
- 25784 multiletter control sequences out of 15000+200000
+ 22471 strings out of 492970
+ 408342 string characters out of 3126593
+ 499549 words of memory out of 3000000
+ 25785 multiletter control sequences out of 15000+200000
  45278 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,12n,92p,1202b,455s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 57i,12n,92p,1202b,443s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/ced21/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.e
 nc}{C:/Users/ced21/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.e
 nc}<C:/Users/ced21/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmbx
@@ -1540,9 +1545,9 @@ nc}<C:/Users/ced21/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmbx
 lmbx12.pfb><C:/Users/ced21/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
 /lm/lmr10.pfb><C:/Users/ced21/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
 lic/lm/lmri10.pfb>
-Output written on RelazioneWB.pdf (15 pages, 3355229 bytes).
+Output written on RelazioneWB.pdf (15 pages, 3358190 bytes).
 PDF statistics:
- 325 PDF objects out of 1000 (max. 8388607)
- 61 named destinations out of 1000 (max. 500000)
- 359 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 330 PDF objects out of 1000 (max. 8388607)
+ 62 named destinations out of 1000 (max. 500000)
+ 367 words of extra memory for PDF output out of 10000 (max. 10000000)
 
